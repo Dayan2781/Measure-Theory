@@ -2,6 +2,7 @@
 <!-- Гэрийн даалгавар 1 (σ-алгебр). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-sigma-algebra">
   <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
 
   <exercise xml:id="hw-sigma-algebra-1">
     <statement><p><m>X=\{1,2,3,4\}</m>, <m>\mathscr{E}=\{\{1\},\{1,2\}\}</m> байг. <m>\mathscr{E}_{\sigma}</m> төрөгдсөн <m>\sigma</m>-алгебрын бүх элементийг бич.</p></statement>
@@ -12,7 +13,7 @@
   </exercise>
 
   <exercise xml:id="hw-sigma-algebra-3">
-    <statement><p><m>f\colon X\to Y</m> буулгалт байг.
+    <statement><p>[Ульянов, 5.48, 5.49] <m>f\colon X\to Y</m> буулгалт байг.
       <ol marker="a)">
         <li><p><m>\mathscr{B}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр бол <m>f^{-1}(\mathscr{B})=\{f^{-1}(B): B\in\mathscr{B}\}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр гэж батал.</p></li>
         <li><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр бол <m>\{B\subset Y: f^{-1}(B)\in\mathscr{A}\}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр гэж батал.</p></li>
@@ -21,7 +22,15 @@
   </exercise>
 
   <exercise xml:id="hw-sigma-algebra-4">
-    <statement><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>Y\subset X</m> байг. <m>\mathscr{A}_Y=\{A\cap Y: A\in\mathscr{A}\}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр гэж батал. Хэрэв <m>Y\in\mathscr{A}</m> бол <m>\mathscr{A}_Y=\{A\in\mathscr{A}: A\subset Y\}</m> гэж харуул.</p></statement>
+    <statement><p>[Ульянов, 5.36–5.39] <m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>A_1,A_2,\ldots\in\mathscr{A}</m> байг.
+      <md>\limsup_{n\to\infty}A_n=\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_k,\qquad \liminf_{n\to\infty}A_n=\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}A_k</md>
+      гэе.
+      <ol marker="a)">
+        <li><p><m>\limsup A_n</m>, <m>\liminf A_n</m> нь <m>\mathscr{A}</m>-д харьяалагдах ба <m>\limsup A_n\supset\liminf A_n</m> гэж батал. <m>\limsup A_n</m> нь төгсгөлгүй олон <m>A_n</m>-д харьяалагдах цэгүүдийн, <m>\liminf A_n</m> нь төгсгөлөг тооноос бусад бүх <m>A_n</m>-д харьяалагдах цэгүүдийн олонлог гэж харуул.</p></li>
+        <li><p><m>\limsup A_n\neq\liminf A_n</m> байх дарааллын жишээ гарга.</p></li>
+        <li><p><m>\{A_n\}</m> өсөх эсвэл буурах дараалал бол <m>\limsup A_n=\liminf A_n</m> гэж батал.</p></li>
+        <li><p><m>\limsup A_n=\liminf A_n</m> боловч ямар ч <m>k\neq j</m> хувьд <m>A_k\subset A_j</m> биелэхгүй байх дарааллын жишээ гарга.</p></li>
+      </ol></p></statement>
   </exercise>
 
   <exercise xml:id="hw-sigma-algebra-5">

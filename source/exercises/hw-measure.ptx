@@ -2,13 +2,18 @@
 <!-- Гэрийн даалгавар 3 (хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-measure">
   <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
 
   <exercise xml:id="hw-measure-1">
     <statement><p><m>X=\N</m>, <m>\alg</m> нь <m>\N</m>-ийн бүх дэд олонлогийн бүл байг. <m>A</m> төгсгөлөг бол <m>\mu(A)=0</m>, төгсгөлгүй бол <m>\mu(A)=+\infty</m> гэж тодорхойлъё. <m>\mu</m> нь төгсгөлөг аддитив боловч хэмжээ биш гэж харуул.</p></statement>
   </exercise>
 
   <exercise xml:id="hw-measure-2">
-    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A,B\in\alg</m>, <m>A\subset B</m> байг. <m>\mu(A)\lt +\infty</m> бол <m>\mu(B\setminus A)=\mu(B)-\mu(A)</m> гэж батал. <m>\mu(A)=+\infty</m> үед энэ томьёо ямар учраас утгагүй болохыг жишээгээр тайлбарла.</p></statement>
+    <statement><p>[Ульянов, 6.14, 6.18] <m>\alg</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>\mu\colon\alg\to[0;+\infty]</m> нь <m>\mu(\emptyset)=0</m> байх төгсгөлөг аддитив функц байг.
+      <ol marker="a)">
+        <li><p><m>A_1\subset A_2\subset\ldots</m> байх <m>A_k\in\alg</m> бүрийн хувьд <m>\mu\Bigl(\bigcup\limits_kA_k\Bigr)=\lim\limits_k\mu(A_k)</m> биелдэг бол <m>\mu</m> хэмжээ (тоологдом аддитив) гэж батал.</p></li>
+        <li><p><m>\mu</m> зөвхөн төгсгөлөг утга авдаг ба <m>A_1\supset A_2\supset\ldots</m>, <m>\bigcap\limits_kA_k=\emptyset</m> байх <m>A_k\in\alg</m> бүрийн хувьд <m>\mu(A_k)\to 0</m> бол <m>\mu</m> хэмжээ гэж батал.</p></li>
+      </ol></p></statement>
   </exercise>
 
   <exercise xml:id="hw-measure-3">
@@ -20,11 +25,11 @@
   </exercise>
 
   <exercise xml:id="hw-measure-5">
-    <statement><p><m>\N</m>-ийн бүх дэд олонлогийн бүл дээр <m>\mu(A)=\sum\limits_{n\in A}2^{-n}</m> гэж тодорхойлъё.
+    <statement><p>[Ульянов, 6.20-тай харьцуул] <m>\N</m>-ийн бүх дэд олонлогийн бүл дээр <m>\mu(A)=\sum\limits_{n\in A}2^{-n}</m> гэж тодорхойлъё.
       <ol marker="a)">
         <li><p><m>\mu</m> нь <m>\mu(\N)=1</m> байх хэмжээ гэж батал.</p></li>
         <li><p>Тэгш тоонуудын олонлог болон <m>3</m>-д хуваагддаг тоонуудын олонлогийн хэмжээг ол.</p></li>
-        <li><p><m>\mu(A)=0</m> байх <m>A</m> олонлог зөвхөн <m>\emptyset</m> гэж харуул.</p></li>
+        <li><p><m>\mu(A)=0</m> байх <m>A</m> олонлог зөвхөн <m>\emptyset</m> гэж харуул. Дурын тоологдом олонлогийн бүх дэд олонлогийн бүл дээр ийм чанартай төгсгөлөг хэмжээ оршин байна гэж харуул.</p></li>
       </ol></p></statement>
   </exercise>
 </exercises>

@@ -2,9 +2,10 @@
 <!-- Гэрийн даалгавар 4 (гадаад хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-outer-measure">
   <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
 
   <exercise xml:id="hw-outer-measure-1">
-    <statement><p><m>A\subset\R</m> тоологдом бол <m>\mu^{\star}(A)=0</m>, тоологдом биш бол <m>\mu^{\star}(A)=1</m> гэж тодорхойлъё. <m>\mu^{\star}</m> нь <m>\R</m> дээрх гадаад хэмжээ гэж батал.</p></statement>
+    <statement><p>[Ульянов, 7.13] <m>A,B\subset\R</m> ба <m>\ls(A)</m>, <m>\ls(B)</m> төгсгөлөг бол <m>|\ls(A)-\ls(B)|\leqslant\ls(A\,\triangle\,B)</m> гэж батал. Энд <m>A\,\triangle\,B=(A\setminus B)\cup(B\setminus A)</m>.</p></statement>
   </exercise>
 
   <exercise xml:id="hw-outer-measure-2">
