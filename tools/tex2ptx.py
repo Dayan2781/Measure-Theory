@@ -674,6 +674,8 @@ def build_chapter(ch, src_dir, ctx):
     hw = Path(__file__).resolve().parent.parent / "source" / "exercises" / ("hw-%s.ptx" % ch["slug"])
     if hw.exists():
         parts.append('<xi:include href="./exercises/hw-%s.ptx"/>' % ch["slug"])
+    for extra_inc in ch.get("append", []):
+        parts.append('<xi:include href="./exercises/%s.ptx"/>' % extra_inc)
     tag = ch.get("tag", "chapter")
     src = "; ".join("%s:%s-%s" % (p["file"], p.get("from", 1), p.get("to", "")) for p in ch["pieces"])
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<!-- Эх файл: %s -->\n'

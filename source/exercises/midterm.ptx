@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Явцын шалгалт (1–8-р лекц). 4 хөнгөн, 3 дунд, 3 хүнд бодлого. Оюутны 10 хувилбар номонд орохгүй. -->
+<exercises xml:id="midterm">
+  <title>Явцын шалгалт</title>
+  <introduction><p>Энэ явцын шалгалт 1–8-р лекцийн сэдвийг хамарна: σ-алгебр, Борелийн σ-алгебр, гадаад хэмжээ ба хэмжээ, хэмжээний чанарууд, Лебегийн хэмжээ, Каратеодорийн теорем. Эхний 4 бодлого хөнгөн (7 оноо), дараагийн 3 нь дунд (10 оноо), сүүлийн 3 нь хүнд (14 оноо); нийт 100 оноо. Бодлого бүрийн хариуг бүрэн үндэслэлтэй бич.</p></introduction>
+
+  <exercise xml:id="midterm-1">
+    <title>Хөнгөн, 7 оноо</title>
+    <statement><p><m>X=\{1,2,3,4,5\}</m>, <m>\mathscr{E}=\{\{1,2\},\{2,3\}\}</m> байг. <m>\mathscr{E}</m>-ээр төрөгдөх <m>\mathscr{E}_{\sigma}</m> <m>\sigma</m>-алгебрын атомуудыг (хамгийн бага хоосон биш элементүүдийг) ол. <m>\mathscr{E}_{\sigma}</m> хэдэн элементтэй вэ? Хариугаа үндэсл.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-2">
+    <title>Хөнгөн, 7 оноо</title>
+    <statement><p><m>\Q\cap[0;1]</m> олонлог Борелийн олонлог гэж батал. Үүнийг задгай, битүү, <m>F_{\sigma}</m> эсвэл <m>G_{\delta}</m> олонлог хэлбэрээр илэрхийл.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-3">
+    <title>Хөнгөн, 7 оноо</title>
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A,B\in\alg</m> ба <m>\mu(A)=5</m>, <m>\mu(B)=7</m>, <m>\mu(A\cup B)=10</m> байг. <m>\mu(A\cap B)</m>, <m>\mu(A\setminus B)</m>, <m>\mu(A\,\triangle\,B)</m>-г ол. Хэмжээний ямар чанаруудыг ашигласнаа заа.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-4">
+    <title>Хөнгөн, 7 оноо</title>
+    <statement><p><m>A=\Q\cap[0;2]</m>, <m>B=[0;2]\setminus\Q</m> байг. Лебегийн гадаад хэмжээний чанаруудыг ашиглан <m>\ls(A)</m> ба <m>\ls(B)</m>-г ол.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-5">
+    <title>Дунд, 10 оноо</title>
+    <statement><p>Лебегийн хэмжээний тасралтгүй чанарыг ашиглан ол: a) <m>\lambda\Bigl(\bigcup_{n=1}^{\infty}[n;n+2^{-n}]\Bigr)</m>; b) <m>\lambda\Bigl(\bigcap_{n=1}^{\infty}\bigl(-\tfrac1n;1+\tfrac1n\bigr)\Bigr)</m>. Ашигласан чанарын нөхцөл биелж байгааг шалга.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-6">
+    <title>Дунд, 10 оноо</title>
+    <statement><p><m>X=\{1,2,3,4,5\}</m> олонлогийн <m>\mathcal{P}=\{\{1,2\},\{3\},\{4,5\}\}</m> хуваалтын хэсгүүдэд харгалзан <m>1,2,1</m> жин өгье. <m>A\subset X</m> бүрийн хувьд <m>\mu^{\star}(A)</m> нь <m>A</m>-тай огтлолцдог хэсгүүдийн жингийн нийлбэр байг. <m>\mu^{\star}</m> гадаад хэмжээ гэж батал. Бүх <m>\mu^{\star}</m>-хэмжигдэх олонлогийг ол.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-7">
+    <title>Дунд, 10 оноо</title>
+    <statement><p>Хоёртын задаргаандаа хоёр дараалсан <m>1</m> цифр агуулдаггүй <m>[0;1]</m> хэрчмийн тоонуудын олонлог Лебегээр хэмжигдэх гэж харуулж, хэмжээг нь ол. (Хоёр задаргаатай тоонууд тоологдом тул тэдгээрийг тооцохгүй байж болно.)</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-8">
+    <title>Хүнд, 14 оноо</title>
+    <statement><p><m>(X,\alg,\mu)</m> төгсгөлөг хэмжээт огторгуй, <m>A_n\in\alg</m> ба бүх <m>n</m>-д <m>\mu(A_n)=\mu(X)</m> байг. <m>\mu\Bigl(\bigcap\limits_nA_n\Bigr)=\mu(X)</m> гэж батал. <m>\mu</m> төгсгөлөг биш үед энэ нь үнэн үү?</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-9">
+    <title>Хүнд, 14 оноо</title>
+    <statement><p><m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>A\subset X</m> байг. Дурын <m>\veps\gt 0</m> хувьд <m>E\subset A</m>, <m>\mu^{\star}(A\setminus E)\lt\veps</m> байх <m>\mu^{\star}</m>-хэмжигдэх <m>E</m> олддог бол <m>A</m> хэмжигдэх гэж батал.</p></statement>
+  </exercise>
+  <exercise xml:id="midterm-10">
+    <title>Хүнд, 14 оноо</title>
+    <statement><p><m>A\subset[0;1]</m> Лебегээр хэмжигдэх, <m>\lambda(A)\gt\frac12</m> бол <m>x-y=\frac12</m> байх <m>x,y\in A</m> олдоно гэж батал.</p></statement>
+  </exercise>
+</exercises>

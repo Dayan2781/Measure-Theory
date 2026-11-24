@@ -144,4 +144,5 @@
 учир нь эхний интеграл <m>f(b)</m>-тэй тэнцүү, хоёр дахь интеграл <m>f(a)</m>-аас багагүй. Иймд <m>f'</m> интегралчлагдах ба тэнцэтгэл биш батлагдав.</p></proof></theorem>
 </section>
 <xi:include href="./exercises/sem-indefinite-integral.ptx"/>
+<xi:include href="./exercises/hw-indefinite-integral.ptx"/>
 </chapter>

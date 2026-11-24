@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 11limit theorem.tex:1-; seminar 9.tex:27-40 -->
+<!-- Эх файл: 11limit theorem.tex:1- -->
 <chapter xml:id="ch-limit-theorems" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Хязгаарын теоремууд</title>
 <section xml:id="sec-limit-theorems-1">
@@ -120,14 +120,6 @@ f(x)&amp; x\in A^c\\
 <m>t_n\to t_0, t_n\neq t_0 , t_n\in I</m> байх дурын  <m>\{t_n\}</m> дараалал авч үзвэл  (<xref ref="limit-theorems-x15-6-1"/>) нөхцөл ба Зааглагдсан нийлэлтийн тухай Лебегийн теоремоос <m>x\to f_t(x,t_0)</m> функц интегралчлагдах ба 
 <md>\lim\limits_n \dfrac{h(t_n)-h(t_0)}{t_n-t_0}=\intt_X f_t(x,t_0)d\mu</md> байна. Өөрөөр хэлбэл <md>\dfrac{d\big(\intt_X f(x,t) d\mu\big)}{dt}=\intt_X \dfrac{df(x,t)}{dt} d\mu</md> адилтгал биелнэ.</p></example>
 </section>
-<exercises xml:id="sem-limit-theorems"><title>Семинарын бодлогууд</title>
-<exercise><statement><p><m>A_1, A_2, \dots</m> нь <m>A</m> олонлогийн хэмжигдэх дэд олонлогууд ба <m>B_n = \{x \in A : x \text{ элемент нь } A_i \text{-уудаас хамгийн багадаа } n \text{ ширхэгт нь харьяалагдана}\}</m> гэе. Дараах тэнцэтгэл бишийг батал:
-<md>\mu(B_n) \le \frac{1}{n} \sum_{i=1}^{\infty} \mu(A_i).</md></p></statement></exercise>
-<exercise><statement><p><m>\{f_n(x)\}_{n=1}^{\infty}</m> ба <m>f(x)</m> нь <m>\La^1(A)</m> ангийн сөрөг бус функцүүд байг. <m>A</m> олонлог дээр <m>n \to \infty</m> үед <m>f_n(x) \Rightarrow f(x)</m> (хэмжээээр нийлэх) бөгөөд 
-<md>\lim_{n \to \infty} \int_A f_n(x) \, d\mu = \int_A f(x) \, d\mu</md>
-байг. Тэгвэл дурын хэмжигдэх дэд олонлог <m>B \subset A</m> (<m>B \in \mathscr{A}</m>)-ийн хувьд дараах хязгаар биелнэ гэж батал:
-<md>\lim_{n \to \infty} \int_B f_n(x) \, d\mu = \int_B f(x) \, d\mu.</md></p></statement></exercise>
-<exercise><statement><p><m>\mu(A) = \infty</m> ба <m>f(x) \in \La^1(A)</m> байг. Дурын <m>\varepsilon \gt  0</m> хувьд <m>\mu(B) \lt  \infty</m> байх, дараах нөхцөлийг хангах <m>B \subset A</m> (<m>B \in \mathscr{A}</m>) олонлог оршин байна гэж батал:
-<md>\int_{A \setminus B} |f(x)| \, d\mu \lt  \varepsilon.</md></p></statement></exercise>
-</exercises>
+<xi:include href="./exercises/sem-limit-theorems.ptx"/>
+<xi:include href="./exercises/hw-limit-theorems.ptx"/>
 </chapter>

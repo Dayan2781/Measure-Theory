@@ -32,4 +32,7 @@
         <li><p><m>\mu(A)=0</m> байх <m>A</m> олонлог зөвхөн <m>\emptyset</m> гэж харуул. Дурын тоологдом олонлогийн бүх дэд олонлогийн бүл дээр ийм чанартай төгсгөлөг хэмжээ оршин байна гэж харуул.</p></li>
       </ol></p></statement>
   </exercise>
+  <exercise xml:id="hw-measure-6">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A_1,A_2,\ldots\in\alg</m> ба <m>n\neq m</m> үед <m>\mu(A_n\cap A_m)=0</m> байг. <m>\mu\Bigl(\bigcup\limits_{n}A_n\Bigr)=\sum\limits_n\mu(A_n)</m> гэж батал.</p></statement>
+  </exercise>
 </exercises>

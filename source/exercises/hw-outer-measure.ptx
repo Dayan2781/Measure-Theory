@@ -25,4 +25,7 @@
     <statement><p>Лебегийн гадаад хэмжээний тодорхойлолтод задгай интервалуудын оронд битүү хэрчмүүдээр хучсан ч ижил утга гарна гэж батал:
       <md>\ls(A)=\inf\Bigl\{\sum_{i=1}^{\infty}(b_i-a_i): A\subset\bigcup_{i=1}^{\infty}[a_i;b_i]\Bigr\}.</md></p></statement>
   </exercise>
+  <exercise xml:id="hw-outer-measure-6">
+    <statement><p><m>A\subset\R</m> байг. <m>g(t)=\ls\bigl(A\cap(-\infty;t)\bigr)</m> <m>(t\in\R)</m> функц үл буурах бөгөөд <m>\ls(A)\lt\infty</m> үед <m>|g(t)-g(s)|\leqslant|t-s|</m> гэж батал.</p></statement>
+  </exercise>
 </exercises>

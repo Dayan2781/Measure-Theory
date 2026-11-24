@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 3-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-measure">
+  <title>Семинарын бодлогууд</title>
+  <introduction><p>Хэрэв өөрөөр заагаагүй бол <m>(X,\alg,\mu)</m> нь хэмжээт огторгуй байна.</p></introduction>
+
+  <exercise xml:id="sem-measure-1">
+    <statement><p><m>\mu</m> төгсгөлөг хэмжээ байг.
+      <ol marker="a)">
+        <li><p><m>A,B\in\alg</m> бол <m>\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)</m> гэж харуул.</p></li>
+        <li><p><m>A,B,C\in\alg</m> бол <m>\mu(A\cup B\cup C)</m>-ийн хувьд ижил төстэй томьёо гарга.</p></li>
+        <li><p>Дурын <m>n</m> ширхэг олонлогийн нэгдлийн хэмжээний томьёо гарга.</p></li>
+      </ol></p></statement>
+    <hint><p><m>A\cup B=A\sqcup(B\setminus A)</m> ба <m>B=(B\setminus A)\sqcup(A\cap B)</m>. c) хэсгийг <m>n</m>-ээр индукцээр батал.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-2">
+    <statement><p><m>(\R,\br)</m> дээр <m>\mu(A)</m> нь <m>A</m> олонлогийн рационал цэгийн тоо (төгсгөлгүй бол <m>+\infty</m>) гэж тодорхойлъё. <m>\mu</m> нь задгай дэд олонлог болгон дээр <m>+\infty</m> утга авдаг <m>\sigma</m>-төгсгөлөг хэмжээ гэж батал.</p></statement>
+    <hint><p><m>\mu=\sum_n\delta_{r_n}</m>, энд <m>\{r_n\}=\Q</m>. <m>\R=(\R\setminus\Q)\cup\bigcup_n\{r_n\}</m> нь төгсгөлөг хэмжээтэй олонлогуудын нэгдэл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-3">
+    <statement><p><m>\mu</m> нь <m>(\N,\mathscr{P}(\N))</m> дээрх тоолох хэмжээ байг. <m>\mu\Bigl(\bigcap\limits_{k=1}^{\infty}A_k\Bigr)\neq\lim\limits_{k\to\infty}\mu(A_k)</m> байх <m>\{A_k\}</m> буурах дарааллын жишээ гарга. Энэ нь дээрээс тасралтгүй чанарын ямар нөхцөл зөрчигдсөнийг харуулна вэ?</p></statement>
+    <hint><p><m>A_k=\{k,k+1,\ldots\}</m>. Бүх <m>\mu(A_k)=\infty</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-4">
+    <statement><p><m>\mu\colon\alg\to[0;+\infty]</m> тоологдом аддитив функц байг.
+      <ol marker="a)">
+        <li><p>Ямар нэг <m>A\in\alg</m> дээр <m>\mu(A)\lt\infty</m> бол <m>\mu(\emptyset)=0</m> гэж харуул.</p></li>
+        <li><p>Ерөнхий тохиолдолд <m>\mu(\emptyset)=0</m> гарахгүйг жишээгээр харуул.</p></li>
+      </ol></p></statement>
+    <hint><p><m>A=A\sqcup\emptyset\sqcup\emptyset\sqcup\ldots</m>. b) хэсэгт бүх олонлог дээр <m>+\infty</m> утга авах функц.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-5">
+    <statement><p><m>x\in X</m> байг. <m>x\in A</m> бол <m>\delta_x(A)=1</m>, эс бөгөөс <m>\delta_x(A)=0</m> гэж тодорхойлсон <m>\delta_x</m> функц <m>(X,\alg)</m> дээр хэмжээ гэж батал. Хоёр цэгэн масс <m>\delta_x=\delta_y</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>x,y</m> яг ижил хэмжигдэх олонлогуудад харьяалагдах явдал гэж харуул.</p></statement>
+    <hint><p>Үл огтлолцох олонлогуудын ядаж нэг л нь <m>x</m>-ийг агуулна.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-6">
+    <statement><p><m>\mu_1\leqslant\mu_2\leqslant\ldots</m> нь <m>(X,\alg)</m> дээрх хэмжээнүүдийн өсөх дараалал бол <m>\mu(A)=\lim\limits_k\mu_k(A)</m> функц хэмжээ гэж харуул.</p></statement>
+    <hint><p>Тоологдом аддитив чанарыг шалгахдаа давхар дарааллын хязгаарын байрыг солих: сөрөг биш гишүүдтэй, нэг индексээр өсдөг <m>a_{k,n}</m> хувьд <m>\lim_k\sum_na_{k,n}=\sum_n\lim_ka_{k,n}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-7">
+    <statement><p><m>\{x_k\}</m> бодит тоон дараалал, <m>\mu=\sum\limits_k\delta_{x_k}</m> нь <m>(\R,\br)</m> дээрх хэмжээ байг. <m>\mu</m> нь зааглагдсан олонлог бүр дээр төгсгөлөг байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>|x_k|\to\infty</m> гэж батал.</p></statement>
+    <hint><p><m>\mu([-M;M])</m> нь <m>|x_k|\leqslant M</m> байх <m>k</m> индексүүдийн тоо.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-8">
+    <statement><p>(Борел–Кантеллийн лемм) <m>A_k\in\alg</m>, <m>\sum_k\mu(A_k)\lt+\infty</m> бол төгсгөлгүй олон <m>A_k</m>-д харьяалагдах цэгүүдийн олонлог тэг хэмжээтэй гэж батал.</p></statement>
+    <hint><p>Тэр олонлог <m>\bigcap_n\bigcup_{k\geqslant n}A_k</m> ба <m>\mu\bigl(\bigcup_{k\geqslant n}A_k\bigr)\leqslant\sum_{k\geqslant n}\mu(A_k)\to 0</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-9">
+    <statement><p><m>E,F\in\alg</m>, <m>\mu(E\,\triangle\,F)=0</m> бол <m>\mu(E)=\mu(F)</m> гэж батал. Энд <m>E\,\triangle\,F=(E\setminus F)\cup(F\setminus E)</m>.</p></statement>
+    <hint><p><m>\mu(E)=\mu(E\cap F)+\mu(E\setminus F)=\mu(E\cap F)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measure-10">
+    <statement><p><m>E_1,E_2,\ldots\in\alg</m> байг.
+      <ol marker="a)">
+        <li><p><m>\mu\Bigl(\bigcup\limits_{n=1}^{\infty}\bigcap\limits_{k=n}^{\infty}E_k\Bigr)\leqslant\liminf\limits_{n\to\infty}\mu(E_n)</m> гэж батал.</p></li>
+        <li><p><m>\mu\Bigl(\bigcup\limits_{n=1}^{\infty}E_n\Bigr)\lt\infty</m> бол <m>\limsup\limits_{n\to\infty}\mu(E_n)\leqslant\mu\Bigl(\bigcap\limits_{n=1}^{\infty}\bigcup\limits_{k=n}^{\infty}E_k\Bigr)</m> гэж батал.</p></li>
+      </ol></p></statement>
+    <hint><p><m>B_n=\bigcap_{k\geqslant n}E_k</m> өсөх, <m>\mu(B_n)\leqslant\mu(E_n)</m>; доороос тасралтгүй чанарыг хэрэглэ. b) хэсэгт <m>\bigcup_{k\geqslant n}E_k</m> буурах ба дээрээс тасралтгүй чанар (төгсгөлөг нөхцөл хэрэгтэй).</p></hint>
+  </exercise>
+</exercises>

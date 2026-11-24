@@ -1,29 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<!-- 4-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-outer-measure">
   <title>Семинарын бодлогууд</title>
 
-  <exercise>
-    <statement><p><m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>Y\subset X</m> байг. <m>\nu^{\star}(A)=\mu^{\star}(A\cap Y)</m>, <m>A\subset X</m> гэж тодорхойлсон <m>\nu^{\star}</m> функц <m>X</m> дээр гадаад хэмжээ болохыг батал.</p></statement>
+  <exercise xml:id="sem-outer-measure-1">
+    <statement><p><m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>Y\subset X</m> байг. <m>\nu^{\star}(A)=\mu^{\star}(A\cap Y)</m> <m>(A\subset X)</m> функц <m>X</m> дээрх гадаад хэмжээ гэж батал.</p></statement>
+    <hint><p><m>\bigl(\bigcup A_n\bigr)\cap Y=\bigcup(A_n\cap Y)</m> ба <m>\mu^{\star}</m>-ийн хагас аддитив чанар.</p></hint>
   </exercise>
 
-  <exercise>
-    <statement><p><m>\mu^{\star}_1, \mu^{\star}_2</m> нь <m>X</m> дээрх гадаад хэмжээнүүд байг. <m>\mu^{\star}_1+\mu^{\star}_2</m> ба <m>\max\{\mu^{\star}_1,\mu^{\star}_2\}</m> функцүүд гадаад хэмжээ болох уу? Хариугаа батал.</p></statement>
+  <exercise xml:id="sem-outer-measure-2">
+    <statement><p><m>\mu^{\star}_1,\mu^{\star}_2</m> нь <m>X</m> дээрх гадаад хэмжээнүүд байг. <m>\mu^{\star}_1+\mu^{\star}_2</m> ба <m>\max\{\mu^{\star}_1,\mu^{\star}_2\}</m> функцүүд гадаад хэмжээ болох уу?</p></statement>
+    <hint><p>Хоёулаа болно. Максимумын хувьд <m>\mu^{\star}_i\bigl(\bigcup A_n\bigr)\leqslant\sum_n\mu^{\star}_i(A_n)\leqslant\sum_n\max\{\mu^{\star}_1,\mu^{\star}_2\}(A_n)</m>.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-outer-measure-3">
     <statement><p>Тоологдом олонлог бүрийн Лебегийн гадаад хэмжээ тэгтэй тэнцүү гэж батал.</p></statement>
+    <hint><p><m>\{x_n\}</m> цэгийг <m>\varepsilon 2^{-n}</m> урттай интервалаар хучих.</p></hint>
   </exercise>
 
-  <exercise>
-    <statement><p><m>a\lt b</m> бол <m>\ls([a,b])=\ls((a,b))=b-a</m> гэж батал.</p></statement>
+  <exercise xml:id="sem-outer-measure-4">
+    <statement><p><m>a\lt b</m> бол <m>\ls([a;b])=\ls((a;b))=b-a</m> гэж батал.</p></statement>
+    <hint><p><m>\leqslant</m> тал нь илт. <m>\geqslant</m> талыг харуулахдаа <m>[a;b]</m>-г хучих задгай интервалуудаас Гейне–Борелийн теоремоор төгсгөлөг дэд хучилт сонгож, тэдгээрийн уртын нийлбэр <m>b-a</m>-аас багагүйг индукцээр батал.</p></hint>
   </exercise>
 
-  <exercise>
-    <statement><p>Дурын <m>A\subset\R</m> ба <m>x\in\R</m> тооны хувьд <m>\ls(A+x)=\ls(A)</m>, мөн <m>c\gt 0</m> үед <m>\ls(cA)=c\,\ls(A)</m> гэж батал. Энд <m>A+x=\{a+x\mid a\in A\}</m>, <m>cA=\{ca\mid a\in A\}</m>.</p></statement>
+  <exercise xml:id="sem-outer-measure-5">
+    <statement><p>Дурын <m>A\subset\R</m>, <m>x\in\R</m> ба <m>c\gt 0</m> хувьд <m>\ls(A+x)=\ls(A)</m>, <m>\ls(cA)=c\,\ls(A)</m> гэж батал.</p></statement>
+    <hint><p><m>A</m>-г хучих <m>(a_i;b_i)</m> интервалууд <m>A+x</m>-ийг хучих <m>(a_i+x;b_i+x)</m>, <m>cA</m>-г хучих <m>(ca_i;cb_i)</m> интервалуудтай харилцан нэг утгатай харгалзана.</p></hint>
   </exercise>
 
-  <exercise>
-    <statement><p>Дурын <m>A\subset\R</m> ба <m>\veps\gt 0</m> тооны хувьд <m>A\subset G</m> ба <m>\ls(G)\leq\ls(A)+\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал.</p></statement>
+  <exercise xml:id="sem-outer-measure-6">
+    <statement><p>Дурын <m>A\subset\R</m> ба <m>\veps\gt 0</m> хувьд <m>A\subset G</m>, <m>\ls(G)\leqslant\ls(A)+\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал.</p></statement>
+    <hint><p>Тодорхойлолтоор <m>\sum(b_i-a_i)\lt\ls(A)+\veps</m> байх хучилт аваад <m>G=\bigcup(a_i;b_i)</m> гэ.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-7">
+    <statement><p>Зааглагдсан олонлогийн Лебегийн гадаад хэмжээ төгсгөлөг гэж харуул. Зааглагдаагүй боловч төгсгөлөг (тэг биш) гадаад хэмжээтэй олонлогийн жишээ гарга.</p></statement>
+    <hint><p><m>A\subset(-M;M)</m>. Жишээ: <m>\bigcup_n[n;n+2^{-n}]</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-8">
+    <statement><p><m>\ls(A)=0</m> бол <m>A</m> ямар ч интервал агуулахгүй гэж батал. Эсрэг нь үнэн үү?</p></statement>
+    <hint><p>Монотон чанар ба 4-р бодлого. Иррационал тоонуудын олонлог интервал агуулахгүй боловч гадаад хэмжээ нь тэг биш (5-р семинар).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-9">
+    <statement><p>Дурын <m>\veps\gt 0</m> хувьд бүх рационал тоог агуулсан, <m>\ls(G)\lt\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал. <m>G\neq\R</m> гэж харуул.</p></statement>
+    <hint><p><m>r_n</m>-ийг <m>\veps 2^{-n-1}</m> урттай задгай интервалаар хуч. <m>\ls(\R)=\infty</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-10">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^{\star}(A)=\inf\{\mu(B): B\in\alg,\ A\subset B\}</m> гэвэл <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ бөгөөд <m>\alg</m> дээр <m>\mu</m>-тэй давхцана гэж батал.</p></statement>
+    <hint><p><m>A_n\subset B_n</m>, <m>\mu(B_n)\lt\mu^{\star}(A_n)+\veps 2^{-n}</m> байх <m>B_n\in\alg</m> аваад <m>\bigcup B_n</m>-ийг ашигла.</p></hint>
   </exercise>
 </exercises>

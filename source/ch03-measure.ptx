@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 5measure1D.tex:1-; lecture 2-borel sigma algebra.tex:193-223; 6lebesgue measureD.tex:341-411 -->
+<!-- Эх файл: 5measure1D.tex:1- -->
 <chapter xml:id="ch-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Хэмжээ</title>
 <section xml:id="sec-measure-1">
@@ -104,50 +104,6 @@ n, &amp; A \mbox{ төгсгөлөг олонлог,} \ |A|=n \\
 <md>\mu(\cup_{k=1}^{\infty}B_k)=\mu(A_1)=\sum_{i=1}^k\mu(B_i)+\mu(A_{k+1})</md> болно. Өгсөн нөхцлөөс  <m>\lim_{k} \mu(A_k)=0</m> учир 
 <md>\mu(\cup_{i=1}^{\infty}B_i)=\lim_{k}(\sum_{j=1}^k\mu(B_j)+\mu(A_{k+1}))=\lim_{k} \sum_{i=1}^k\mu(B_i)</md> болж <m>\sigma</m>-аддитив чанар батлагдав.</p></li></ol></p></proof></theorem>
 </section>
-<exercises xml:id="sem-measure"><title>Семинарын бодлогууд</title>
-<subexercises xml:id="sem-measure-1"><title>Магадлалын сонгодог тодорхойлолт</title>
-<introduction><p>Бидний сайн мэдэх магадлалын сонгодог тодорхойлолт нь хэмжээний онолын үүднээс авч үзвэл төгсгөлөг олонлог дээр тодорхойлогдсон, бүтэн олонлогийн хэмжээ нь <m>1</m>-тэй тэнцүү байх тусгай хэмжээ (магадлалын хэмжээ) юм.</p>
-<p><m>X</m> нь төгсгөлөг бөгөөд хоосон биш олонлог (<m>|X| \lt  \infty</m>) байг. <m>\alg = \Pa</m> нь түүний бүх дэд олонлогуудын бүл (<m>\sigma</m>-алгебр) бол дурын эгэл үзэгдэл (элемент) ижил боломжтой байх тохиолдолд дурын <m>A \subset X</m> үзэгдлийн (олонлогийн) магадлалыг дараах байдлаар тодорхойлдог:
-<md>P(A) = \frac{|A|}{|X|}</md>
-үүнд <m>|A|</m> нь <m>A</m> олонлогийн элементийн тоо, <m>|X|</m> нь нийт эгэл үзэгдлийн тоо юм.</p></introduction>
-<exercise><statement><p>Дээрх томьёогоор тодорхойлогдсон сонгодог магадлал <m>P</m> нь <m>(X, \Pa)</m> огторгуй дээр хэмжээний аксиомуудыг хангах бөгөөд улмаар <m>P(X) = 1</m> байх магадлалын хэмжээ болдгийг батал.</p></statement></exercise>
-</subexercises>
-<subexercises xml:id="sem-measure-2"><title>Хэмжээтэй холбоотой бодлогууд</title>
-<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх төгсгөлөг хэмжээ байг. Тэгвэл 
-	<ol><li><p><m>A\in\alg</m>, <m>B\in\alg</m> бол
-		<md>\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)</md>
-		гэж харуул.</p></li><li><p><m>A\in\alg</m>, <m>B\in\alg</m>, <m>C\in\alg</m> бол
-		<md><mrow>\mu(A\cup B\cup C)&amp;=\mu(A)+\mu(B)+\mu(C)-</mrow><mrow>&amp;-\mu(A\cap B)-\mu(B\cap C)-\mu(C\cap A)+</mrow><mrow>&amp;+\mu(A\cap B\cap C)</mrow></md>
-		гэж харуул.</p></li><li><p>Дурын <m>n</m> ширхэг олонлогийн нэгдлийн хэмжээний хувьд томьёо гарга.</p></li></ol></p></statement></exercise>
-<exercise><statement><p><m>(\R,\br)</m> дээр <m>\mu</m> хэмжээг <m>\mu(A)</m> нь <m>A</m> олонлогийн рационал цэгийн тоо гэж тодорхойлъё. Мэдээж <m>A</m> олонлог төгсгөлгүй олон рационал цэгийг харьяалж байвал <m>\mu(A)=+\infty</m>. <m>\mu</m> нь <m>\R</m> огторгуйн задгай дэд олонлог болгон дээр төгсгөлгүй утга авдаг <m>\sigma-</m>төгсгөлөг хэмжээ гэж батал.</p></statement></exercise>
-<exercise><statement><p><m>\alg</m> нь <m>\N</m> натурал тоон олонлогийн бүх дэд олонлогуудын <m>\sigma-</m>алгебр, <m>\mu</m> нь <m>(\N,\alg)</m> дээрх тоолох хэмжээ байг. <m>\mu\Big(\bigcap\limits_{k=1}^{\infty}A_k\Big)\neq \lim\limits_{k\to\infty}\mu(A_k)</m> байх <m>\{A_k\}</m> буурах дарааллын жишээ гарга.</p></statement></exercise>
-<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй байг.
-	<ol><li><p><m>\mu</m> нь <m>\alg</m> дээр тодорхойлогдсон сөрөг биш утгатай, тоологдом аддитив функц байг. Хэрэв ямар нэг <m>A\in\alg</m> дээр <m>\mu(A)</m> төгсгөлөг бол <m>\mu(\vn)=0</m> (улмаар <m>\mu</m> нь хэмжээ болно) гэж харуул.</p></li><li><p>Ерөнхий тохиолдолд <m>\mu(\vn)=0</m> нөхцөл нь сөрөг бус ба тоологдом аддитив шинжүүдээс мөрдөн гарахгүй болохыг жишээгээр харуул.</p></li></ol></p></statement></exercise>
-<exercise><statement><p><m>X</m> хоосон биш олонлог, <m>\alg</m> нь <m>X</m> дээрх <m>\sigma-</m>алгебр, <m>x\in X</m> байг. <m>\delta_x\colon\alg\to[0;+\infty]</m> функцийг дараах байдлаар тодорхойлъё:
-	<md>\delta_x(A)=\begin{cases}
-	0,&amp; x\notin A\\ 
-	1,&amp; x\in A.
-	\end{cases}</md>
-	Ийнхүү тодорхойлогдсон <m>\delta_x</m> функц нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээр <m>\sigma-</m>аддитив хэмжээ болно гэж батал. <m>\delta_x</m>-ийг <m>x</m> төвтэй Дирак хэмжээ буюу <term>цэгэн масс</term><idx>цэгэн масс</idx> гэдэг.</p></statement></exercise>
-<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>x\in X</m>, <m>y\in X</m> байг. <m>\delta_x</m>, <m>\delta_y</m> хоёр цэгэн масс тэнцүү байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>x, y</m> хоёр цэг яг ижил хэмжигдэх олонлогуудад харьяалагдах явдал гэж харуул.</p></statement></exercise>
-<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй байг.
-	<ol><li><p><m>\forall A\in\alg</m> ба <m>\forall k</m> дугаарын хувьд <m>\mu_k(A)\llq\mu_{k+1}(A)</m> тэнцэтгэл биш биелдэг бол <m>\alg</m> дээрх хэмжээнүүдийн <m>\{\mu_k\}</m> дарааллыг өсөх дараалал гэе. Хэрэв <m>\{\mu_k\}</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээнүүдийн өсөх дараалал бол 
-		<md>\mu(A)=\lim\limits_{k\to\infty}\mu_k(A),\quad A\in\alg</md>
-		тэнцэтгэлээр тодорхойлогдох <m>\mu</m> функц <m>(X,\alg)</m> дээр хэмжээ болно гэж харуул.</p></li><li><p><m>\{\mu_k\}</m> нь <m>(X,\alg)</m> дээрх хэмжээнүүдийн дурын дараалал бол
-		<md>\mu(A)=\sum\limits_{k=1}^{\infty}\mu_k(A),\quad A\in\alg</md>
-		тэнцэтгэлээр тодорхойлогдох <m>\mu</m> функц <m>(X,\alg)</m> дээр хэмжээ болно гэж батал.</p></li></ol></p></statement></exercise>
-<exercise><statement><p><m>\{x_k\}</m> нь бодит тоон дараалал байг. <m>(\R,\br)</m> дээрх <m>\mu</m> хэмжээг <m>\mu=\sum\limits_k\delta_{x_k}</m> гэж тодорхойлъё. 
-	<ol><li><p><m>\mu</m> хэмжээ <m>\R</m> огторгуйн зааглагдсан дэд олонлог бүр дээр төгсгөлөг утгатай байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\lim\limits_{k\to\infty}|x_k|=+\infty</m> байх явдал гэж батал.</p></li><li><p>Ямар шинжтэй <m>\{x_k\}</m> дарааллын хувьд <m>\mu</m> хэмжээ <m>\sigma-</m>төгсгөлөг байх вэ?</p></li></ol></p></statement></exercise>
-<exercise><statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>\mu^{\bullet}\colon\alg\to[0;+\infty]</m> функцийг дараах байдлаар тодорхойлъё:
-	 <md>\mu^{\bullet}(A)=\sup\{\mu(B)\colon B\subset A \wedge B\in\alg\wedge \mu(B)\lt +\infty\},\quad A\in\alg.</md>
-	 <ol><li><p><m>\mu^{\bullet}</m> нь <m>(X,\alg)</m> дээр хэмжээ болно гэж батал.</p></li><li><p><m>\mu</m> хэмжээ <m>\sigma-</m>төгсгөлөг бол <m>\mu^{\bullet}</m> мөн <m>\sigma-</m>төгсгөлөг хэмжээ байна гэж харуул.</p></li><li><p><m>X</m> хоосон биш ба <m>\mu</m> хэмжээ дараах байдлаар тодорхойлогдсон бол <m>\mu^{\bullet}</m> хэмжээг ол:
-	 	<md>\mu(A)=\begin{cases}
-	 	+\infty,&amp; A\in\alg \wedge \ A\ne\vn\\ 
-	 	0,&amp;A=\vn.
-	 	\end{cases}</md></p></li></ol></p></statement></exercise>
-<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ, <m>\{A_k\}</m> нь хэмжигдэх олонлогуудын <m>\sum_k\mu(A_k)\lt +\infty</m> шинжтэй дараалал байг. Төгсгөлгүй олон <m>k</m> дугаарын хувьд <m>A_k</m> олонлогуудад зэрэг харьяалагдах цэгүүдийн олонлог тэг хэмжээтэй гэж батал.</p></statement></exercise>
-</subexercises>
-<xi:include href="./exercises/sem-measure-more.ptx"/>
-</exercises>
+<xi:include href="./exercises/sem-measure.ptx"/>
 <xi:include href="./exercises/hw-measure.ptx"/>
 </chapter>

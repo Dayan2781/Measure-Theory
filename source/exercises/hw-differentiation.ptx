@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 16 (дифференциалчлал). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-differentiation">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-differentiation-1">
+    <statement><p><m>f\in L^1(\R)</m> бол <m>F(x)=\int_{-\infty}^xf</m> жигд тасралтгүй гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-differentiation-2">
+    <statement><p><m>[0;1]</m> дээр <m>f=\chi_{\Q}</m> функц Риманы утгаар интегралчлагдахгүй ч Лебегийн утгаар интегралчлагдана; <m>F(x)=\int_0^xf</m>-г олж, <m>F^{\prime}=f</m> хаана биелэхийг тогтоо.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-differentiation-3">
+    <statement><p>Лебегийн цэг <m>x</m>-д (<m>\frac1{2h}\int_{x-h}^{x+h}|f-f(x)|\to 0</m>) <m>F^{\prime}(x)=f(x)</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-differentiation-4">
+    <statement><p>(Виталийн хучилт) Төгсгөлөг тооны интервалын бүлээс хос хосоороо үл огтлолцох <m>I_1,\ldots,I_k</m>-г сонгож, <m>\lambda(\bigcup I)\leqslant 3\sum\lambda(I_j)</m> байлгаж болно гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-differentiation-5">
+    <statement><p><m>E\subset[0;1]</m> хэмжигдэх, <m>0\lt\lambda(E)\lt 1</m> бол <m>F(x)=\lambda(E\cap[0;x])</m>-ийн уламжлал бараг бүх цэгт <m>\chi_E</m>-тэй тэнцүү гэж батал. Бүх зааглагдсан интервал <m>I</m>-д <m>0\lt\lambda(E\cap I)\lt\lambda(I)</m> байх <m>E</m> оршин байх уу?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-differentiation-6">
+    <statement><p><m>Mf</m> максимал функцийн хувьд <m>\lambda(\{Mf\gt t\})\leqslant\frac3t\|f\|_1</m> тэнцэтгэл бишийг Виталийн лемм ашиглан батал.</p></statement>
+  </exercise>
+
+</exercises>

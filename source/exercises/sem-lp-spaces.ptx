@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 13-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-lp-spaces">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-lp-spaces-1">
+    <statement><p><m>\mu(X) \lt  \infty</m> ба <m>1 \le p_1 \lt  p_2 \le \infty</m> бол <m>L^{p_2}(\mu) \subset L^{p_1}(\mu)</m> бөгөөд дурын <m>f \in L^{p_2}(\mu)</m> хувьд
+<md>\|f\|_{p_1} \le \mu(X)^{\frac{1}{p_1} - \frac{1}{p_2}} \|f\|_{p_2}</md>
+биелэхийг батал.</p></statement>
+    <hint><p>Гёльдерийн тэнцэтгэл бишийг <m>|f|^{p_1}\cdot 1</m>-д <m>r=\frac{p_2}{p_1}</m> илтгэгчтэй хэрэглэ.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-2">
+    <statement><p><m>\N</m> олонлог дээр тоолох хэмжээ өгөгдсөн үед үүсэх <m>L^p(\N)</m> огторгуйг <m>\ell^p</m> гэж тэмдэглэдэг. Хэрэв <m>1 \le p_1 \lt  p_2 \le \infty</m> бол <m>\ell^{p_1} \subset \ell^{p_2}</m> бөгөөд дурын <m>x = (x_n)_{n=1}^\infty \in \ell^{p_1}</m> хувьд <m>\|x\|_{p_2} \le \|x\|_{p_1}</m> болохыг харуул.</p></statement>
+    <hint><p><m>\|x\|_{p_1}=1</m> гэж нормчилбол <m>|x_n|\leqslant 1</m> тул <m>|x_n|^{p_2}\leqslant|x_n|^{p_1}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-3">
+    <statement><p><m>X = [0, 1]</m> хэрчим дээр Лебегийн хэмжээ <m>\lambda</m> өгөгдсөн байг. <m>p = \frac{1}{2}</m> үед
+<md>\|f\|_{1/2} = \left( \intt_0^1 |f(x)|^{1/2} \, dx \right)^2</md>
+илэрхийлэл нь гурвалжны тэнцэтгэл бишийг зөрчиж, норм болж чадахгүй гэдгийг <m>f = \chi_{[0, 1/2]}</m> ба <m>g = \chi_{[1/2, 1]}</m> функцүүдийн жишээн дээр харуул.</p></statement>
+    <hint><p><m>\|f\|_{1/2}=\|g\|_{1/2}=\frac14</m>, <m>\|f+g\|_{1/2}=1</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-4">
+    <statement><p><m>f \in L^p(\mu) \cap L^\infty(\mu)</m> (<m>1 \le p \lt  \infty</m>) бол
+<md>\lim_{q \to \infty} \|f\|_q = \|f\|_\infty</md>
+болохыг батал.</p></statement>
+    <hint><p><m>\|f\|_q\leqslant\|f\|_\infty^{1-p/q}\|f\|_p^{p/q}</m>; доороос <m>\{|f|\gt\|f\|_\infty-\veps\}</m> олонлог дээр үнэлэх.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-5">
+    <statement><p><m>([0;1],\lambda)</m> дээр <m>f(x)=x^{-\alpha}</m> <m>(\alpha\gt 0)</m> функц ямар <m>p</m>-ийн хувьд <m>L^p</m>-д харьяалагдах вэ? <m>L^1\setminus L^2</m> ба <m>L^2\setminus L^3</m>-ийн элемент гарга.</p></statement>
+    <hint><p><m>f\in L^p\iff\alpha p\lt 1</m>. Жишээ нь <m>x^{-2/3}</m>, <m>x^{-2/5}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-6">
+    <statement><p><m>(\R,\lambda)</m> дээр <m>L^1\not\subset L^2</m> ба <m>L^2\not\subset L^1</m> гэж жишээгээр харуул.</p></statement>
+    <hint><p><m>x^{-1/2}\chi_{(0;1)}</m> ба <m>\frac1{1+|x|}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-7">
+    <statement><p><m>f_n\to f</m> <m>L^p</m> нормоор нийлдэг бол хэмжээгээр нийлнэ гэж батал. Эсрэг нь үнэн үү?</p></statement>
+    <hint><p>Чебышёвын тэнцэтгэл биш: <m>\mu(\{|f_n-f|\geqslant\veps\})\leqslant\veps^{-p}\|f_n-f\|_p^p</m>. Эсрэг нь худал: <m>n\chi_{(0;1/n)}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-8">
+    <statement><p><m>f,g\in L^2(\mu)</m> бол <m>\|f+g\|_2^2+\|f-g\|_2^2=2\|f\|_2^2+2\|g\|_2^2</m> гэж батал. <m>p\neq 2</m> үед <m>L^p([0;1])</m>-д энэ тэнцэтгэл зөрчигдөх жишээ гарга.</p></statement>
+    <hint><p>Скаляр үржвэрийг задал. <m>f=\chi_{[0;1/2]}</m>, <m>g=\chi_{[1/2;1]}</m>: зүүн тал <m>2</m>, баруун тал <m>4\cdot 2^{-2/p}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-9">
+    <statement><p><m>L^\infty([0;1])</m> огторгуйд <m>\|f\|_\infty</m> нь норм болох ба <m>L^\infty([0;1])\subset L^p([0;1])</m> гэж батал. Хязгааргүй боловч бүх <m>p\lt\infty</m>-д <m>L^p</m>-д орох функцийн жишээ гарга.</p></statement>
+    <hint><p><m>|f|\leqslant\|f\|_\infty</m> бараг бүх цэгт. Жишээ: <m>\ln\frac1x</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lp-spaces-10">
+    <statement><p><m>f\in L^p(\mu)</m>, <m>g\in L^q(\mu)</m>, <m>\frac1p+\frac1q=\frac1r</m> <m>(r\geqslant 1)</m> бол <m>fg\in L^r(\mu)</m> ба <m>\|fg\|_r\leqslant\|f\|_p\|g\|_q</m> гэж батал.</p></statement>
+    <hint><p>Гёльдерийн тэнцэтгэл бишийг <m>|f|^r</m>, <m>|g|^r</m>-д <m>\frac pr</m>, <m>\frac qr</m> илтгэгчээр хэрэглэ.</p></hint>
+  </exercise>
+
+</exercises>

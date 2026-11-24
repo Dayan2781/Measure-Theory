@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 2-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-borel">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-borel-1">
+    <statement><p>Борелийн <m>\sigma</m>-алгебр <m>\br</m> нь <m>b</m> төгсгөл нь рационал тоо байх <m>(-\infty;b]</m> хэлбэрийн интервалуудын бүлээр төрөгдөнө гэж батал.</p></statement>
+    <hint><p><m>(-\infty;b]</m> битүү тул төрөгдсөн <m>\sigma</m>-алгебр <m>\br</m>-д агуулагдана. Эсрэгээр <m>(a;b)=\bigcup_n\bigl((-\infty;b_n]\setminus(-\infty;a_n]\bigr)</m> гэж рационал <m>a_n\downarrow a</m>, <m>b_n\uparrow b</m> ашиглан илэрхийл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-2">
+    <statement><p><m>\br</m> нь тоон шулууны бүх компакт дэд олонлогуудын бүлээр төрөгдөнө гэж харуул.</p></statement>
+    <hint><p>Компакт олонлог битүү тул Борелийн. Эсрэгээр битүү <m>F=\bigcup_n\bigl(F\cap[-n;n]\bigr)</m> нь компакт олонлогуудын тоологдом нэгдэл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-3">
+    <statement><p><m>\Q</m> рационал тоон олонлог нь <m>F_{\sigma}</m> боловч <m>G_{\delta}</m> биш гэж харуул.</p></statement>
+    <hint><p><m>\Q=\bigcup_n\{r_n\}</m>. <m>\Q=\bigcap G_n</m> гэж үзвэл <m>G_n</m> бүр нягт задгай, <m>\R\setminus\{r_n\}</m> мөн нягт задгай; эдгээр тоологдом олон нягт задгай олонлогийн огтлол хоосон болж Бэрийн теоремтой зөрчилдөнө.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-4">
+    <statement><p><m>F_{\sigma}</m> ч биш, <m>G_{\delta}</m> ч биш байх <m>\R</m> огторгуйн дэд олонлог олдоно гэж харуул.</p></statement>
+    <hint><p><m>A=(\Q\cap(-\infty;0))\cup\bigl((0;\infty)\setminus\Q\bigr)</m> олонлогийг авч, <m>F_{\sigma}</m> ба <m>G_{\delta}</m> олонлогийн задгай интервалтай огтлол мөн ийм төрлийн байхыг ашиглан 3-р бодлогод шилжүүл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-5">
+    <statement><p>Рационал тооны олонлог <m>\Q</m> нь Борелийн олонлог мөн үү? Түүний гүйцээлт болох иррационал тооны олонлог <m>\mathbb{I}=\R\setminus\Q</m> ямар олонлог вэ?</p></statement>
+    <hint><p>Ганц цэг битүү; тоологдом нэгдэл. <m>\mathbb{I}</m> нь <m>G_{\delta}</m> олонлог.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-6">
+    <statement><p>Канторын олонлог <m>C</m> нь задгай юу, битүү юу? Энэ олонлог Борелийн <m>\sigma</m>-алгебрт харьяалагдах уу?</p></statement>
+    <hint><p><m>C=\bigcap_nC_n</m>, энд <m>C_n</m> нь <m>2^n</m> битүү хэрчмийн нэгдэл. <m>C</m> дотоод цэггүй.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-7">
+    <statement><p>Хагас задгай интервалуудын бүл <m>\mathcal{S}=\{(a;b]: a\lt b\}</m>-ээр төрөгдөх <m>\sigma</m>-алгебр нь <m>\br</m>-тэй тэнцүү юу?</p></statement>
+    <hint><p><m>(a;b]=\bigcap_n(a;b+\tfrac1n)</m> ба <m>(a;b)=\bigcup_n(a;b-\tfrac1n]</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-8">
+    <statement><p>Хэрэв <m>A\subset\R</m> олонлогийн бүх цэг тусгаарлагдсан цэг (цэг бүрийн хувьд <m>A</m>-ийн өөр элементийг агуулаагүй орчин олддог) бол <m>A</m> нь Борелийн олонлог уу?</p></statement>
+    <hint><p>Цэг бүрт рационал төгсгөлтэй, өөр цэг агуулаагүй интервал онооно. Эдгээр нь ялгаатай тул <m>A</m> тоологдом.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-9">
+    <statement><p><m>\rn</m> дээрх Борелийн <m>\sigma</m>-алгебр <m>\brn</m>-ийг бүх задгай бөмбөрцгүүдийн бүлээр төрүүлж болох уу? Төв нь рационал координаттай, радиус нь рационал бөмбөрцгүүдээр төрүүлж болох уу?</p></statement>
+    <hint><p><m>\rn</m>-ийн задгай олонлог бүр рационал төвтэй, рационал радиустай бөмбөрцгүүдийн (тоологдом) нэгдэл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-borel-10">
+    <statement><p><m>f\colon\rn\to\R</m> тасралтгүй функц байг. <m>U=\{x\in\rn: f(x)\gt 0\}</m>, <m>V=\{x\in\rn: f(x)=0\}</m> олонлогууд ямар олонлог вэ? Тэдгээр Борелийн олонлог уу?</p></statement>
+    <hint><p><m>U=f^{-1}((0;\infty))</m> задгай, <m>V=f^{-1}(\{0\})</m> битүү.</p></hint>
+  </exercise>
+</exercises>

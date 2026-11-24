@@ -149,4 +149,5 @@ A:f(x)\lt r\}\cap\{x\in A:g(x)\lt t-r\}</md>
 <remark><p>Дээрх өгүүлбэрийн баталгаан дахь <m>B</m> олонлог нь тэг хэмжээтэй Борелийн олонлог болох Канторын олонлогийн дэд олонлог боловч өөрөө Борелийн олонлог биш байна. Энэ нь Борелийн <m>\sigma-</m>алгебр дээр Лебегийн хэмжээ гүйцэд биш хэмжээ болохыг харуулж байна.</p></remark>
 </section>
 <xi:include href="./exercises/sem-measurable-functions.ptx"/>
+<xi:include href="./exercises/hw-measurable-functions.ptx"/>
 </chapter>

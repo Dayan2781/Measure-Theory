@@ -28,4 +28,8 @@
     <statement><p><m>E\subset\R</m> нь <m>\ls</m>-хэмжигдэх, <m>x\in\R</m> бол <m>E+x</m> олонлог мөн <m>\ls</m>-хэмжигдэх гэж батал.</p></statement>
     <hint><p><m>\ls</m> шилжилтээр хувирдаггүйг (4-р бүлгийн семинарын бодлого) ашигла.</p></hint>
   </exercise>
+  <exercise xml:id="hw-caratheodory-6">
+    <statement><p><m>E</m> нь <m>\mu^{\star}</m>-хэмжигдэх, <m>F\subset X</m> ба <m>\mu^{\star}(E\,\triangle\,F)=0</m> бол <m>F</m> мөн <m>\mu^{\star}</m>-хэмжигдэх гэж батал.</p></statement>
+    <hint><p><m>F=(E\setminus(E\setminus F))\cup(F\setminus E)</m> ба 1-р бодлого.</p></hint>
+  </exercise>
 </exercises>

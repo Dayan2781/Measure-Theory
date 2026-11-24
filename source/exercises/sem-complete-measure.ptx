@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 8-р семинар: 10 бодлого, бодлого бүр заавартай. Эх LaTeX-ийн 28 бодлогоос сонгосон. -->
+<exercises xml:id="sem-complete-measure">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-complete-measure-1">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>(\alg_{\mu})_{\overline{\mu}}=\alg_{\mu}</m> ба <m>\overline{\overline{\mu}}=\overline{\mu}</m> байна гэж харуул.</p></statement>
+    <hint><p><m>\alg_{\mu}</m>-ийн тэг олонлог <m>N</m> нь <m>\alg</m>-ийн тэг олонлог <m>N_1</m>-д агуулагдана. Иймээс <m>\overline{\mu}</m>-тэг олонлогийн дэд олонлог аль хэдийн <m>\alg_{\mu}</m>-д байна.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-2">
+    <statement><p><ol marker="a)"><li><p><m>\br</m> <m>\sigma-</m>алгебрын 0 цэг дээр төвлөрсөн цэгэн массаар гүйцээлтийг ол.</p></li><li><p><m>\alg</m> нь <m>\R^2</m> дээрх бүх босоо шулуунуудын бүлийг агуулсан <m>\sigma-</m>алгебр байг. <m>\alg</m> <m>\sigma-</m>алгебрын <m>(0;0)</m> цэг дээр төвлөрсөн цэгэн массаар гүйцээлтийг ол.</p></li></ol></p></statement>
+    <hint><p>a) хэсэгт <m>0\notin N</m> бол <m>\delta_0(N)=0</m> тул <m>\R\setminus\{0\}</m>-ийн бүх дэд олонлог тэг олонлогт агуулагдана: гүйцээлт нь <m>\mathscr{P}(\R)</m>. b) хэсэгт <m>(0;0)</m>-г агуулахгүй хэмжигдэх олонлог болох <m>\R^2</m>-аас босоо шулууныг хасна: гүйцээлт нь мөн <m>\mathscr{P}(\R^2)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-3">
+    <statement><p><m>\mu</m> ба <m>\nu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх төгсгөлөг хэмжээнүүд байг.
+<ol marker="a)"><li><p><m>\alg_{\mu}</m>, <m>\alg_{\nu}</m> хоёр тэнцүү байх албагүйг жишээгээр харуул.</p></li><li><p><m>\alg_{\mu}=\alg_{\nu}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu-</m>тэг, <m>\nu-</m>тэг олонлогууд давхцах явдал гэж батал.</p></li></ol></p></statement>
+    <hint><p>a) хэсэгт <m>X=\{1,2\}</m>, <m>\alg=\{\emptyset,X\}</m>, <m>\mu(X)=0</m>, <m>\nu(X)=1</m> гэвэл <m>\alg_{\mu}=\mathscr{P}(X)</m>, <m>\alg_{\nu}=\alg</m>. b) хэсэгт гүйцээлт нь зөвхөн тэг олонлогуудын бүлээр тодорхойлогдоно.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-4">
+    <statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд 
+<md>A_0\subset A\subset A_1 \ \wedge \ \mu(A_0)=\mu_*(A) \ \wedge \ \mu(A_1)=\mu^*(A)</md>
+нөхцлийг хангах <m>A_0\in\alg</m>, <m>A_1\in\alg</m> олонлогууд олдоно гэж батал.</p></statement>
+    <hint><p><m>\mu(B_n)\lt\mu^*(A)+\frac1n</m> байх <m>B_n\supset A</m> аваад <m>A_1=\bigcap B_n</m>. Дотоод хэмжээний хувьд <m>C_n\subset A</m>, <m>\mu(C_n)\to\mu_*(A)</m> аваад <m>A_0=\bigcup C_n</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-5">
+    <statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^*(A)+\mu_*(A^c)=\mu(X)</m> тэнцэтгэл биелнэ гэж батал.</p></statement>
+    <hint><p><m>B\subset A^c</m>, <m>B\in\alg</m> байх нь <m>X\setminus B\supset A</m> байхтай эквивалент. <m>\mu(X)\lt\infty</m> үед <m>\mu(X\setminus B)=\mu(X)-\mu(B)</m>; <m>\mu(X)=\infty</m> үеийг тусад нь шалга.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-6">
+    <statement><p><m>\ls(A)=1</m>, <m>\lambda_*(A)=0</m> байх <m>A\subset[0;1]</m> олонлог оршин байна гэж харуул.</p></statement>
+    <hint><p>5-р бодлогоор <m>\lambda_*(A)=1-\ls([0;1]\setminus A)</m>. Иймээс <m>\ls(A)=\ls([0;1]\setminus A)=1</m> байх <m>A</m> хэрэгтэй: <m>[0;1]</m>-ийн эерэг хэмжээтэй битүү олонлог бүр <m>A</m>-тай ч, гүйцээлттэй нь ч огтлолцдог байхаар трансфинит индукцээр байгуул (Бернштейний олонлог).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-7">
+    <statement><p><m>\mathscr{P}(\R)</m> дээр <m>\mu^*_1, \mu^*_2,\ldots,\mu^*_6</m> функцүүдийг дараах байдлаар   тодорхойлъё:
+	<md>\mu^*_1(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	1,&amp; A\neq\vn
+	\end{cases},\quad A\subset \R;</md>
+	<md>\mu^*_2(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	+\infty,&amp; A\neq\vn
+	\end{cases},\quad A\subset \R;</md>
+	<md>\mu^*_3(A)=\begin{cases}
+	0,&amp; A \ \mbox{зааглагдсан}\\ 
+	1,&amp; A \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset \R;</md>
+	<md>\mu^*_4(A)=\begin{cases}
+	0,&amp; A \ \mbox{хоосон олонлог}\\ 
+	1,&amp; A \ \mbox{хоосон биш, зааглагдсан}\\ 
+	+\infty,&amp; A  \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset \R;</md>
+	<md>\mu^*_5(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	1,&amp; A \ \mbox{тоологдом биш}
+	\end{cases},\quad A\subset \R;</md>
+	<md>\mu^*_6(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	+\infty,&amp; A \ \mbox{тоологдом биш}
+	\end{cases}\quad A\subset \R.</md>
+	<ol marker="a)"><li><p>Эдгээр функцүүдээс аль нь гадаад хэмжээ болох вэ?</p></li><li><p>Гадаад хэмжээ болж байгаа <m>\mu^*_i</m> бүрийн хувьд <m>\R</m> огторгуйн <m>\mu^*-</m>хэмжигдэх дэд олонлогуудыг тодорхойл.</p></li></ol></p></statement>
+    <hint><p>Хагас аддитив чанарыг шалга: <m>\mu^*_3</m> нь тоологдом нэгдлийн хувьд зөрчигдөнө (<m>\R=\bigcup[-n;n]</m>). <m>\mu^*_1</m>-ийн хувьд <m>A=\{0\}</m>, <m>T=\{0,1\}</m> гэж Каратеодорийн нөхцлийг шалга.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-8">
+    <statement><p><m>A\subset\R</m> олонлог бүрийн хувьд <m>\lambda(B)=\ls(A)</m> ба <m>A\subset B</m> байх <m>B</m> Борелийн олонлог олдоно гэж батал.</p></statement>
+    <hint><p><m>A\subset G_n</m>, <m>\lambda(G_n)\lt\ls(A)+\frac1n</m> байх задгай <m>G_n</m> аваад <m>B=\bigcap G_n</m> (<m>G_{\delta}</m>). <m>\ls(A)=\infty</m> бол <m>B=\R</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-9">
+    <statement><p><m>\R^2</m> дээрх Лебегийн хэмжээний хувьд
+	<ol marker="a)"><li><p>шулуун шугам тэг хэмжээтэй;</p></li><li><p>тойрог тэг хэмжээтэй гэж тус тус харуул.</p></li></ol></p></statement>
+    <hint><p>a) хэсэгт шулууны <m>[-n;n]</m> дээрх хэсгийг нийт талбай нь <m>\veps</m>-оос бага тэгш өнцөгтүүдээр хучаад тоологдом нэгдэл ав. b) хэсэгт тойргийг <m>n</m> тэнцүү нумд хувааж, нум бүрийг <m>\frac{C}{n}</m> талтай квадратаар хуч: нийт талбай <m>\frac{C^2}{n}\to 0</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-complete-measure-10">
+    <statement><p><m>0\lt \alpha\lt 1</m> байх <m>\alpha</m> тоо бүрийн хувьд <m>\lambda(C)=\alpha</m> байх хоосон дотортой, битүү <m>C\subset[0,1]</m> олонлог олдоно гэж харуул.</p></statement>
+    <hint><p>Канторын олонлогийн байгуулалтад <m>k</m>-р алхамд <m>2^{k-1}</m> завсрын голоос урт нь <m>(1-\alpha)3^{-k}</m> байх задгай интервалыг ав. Хасагдсан нийт урт <m>1-\alpha</m>, үлдэгдэл битүү, интервал агуулахгүй.</p></hint>
+  </exercise>
+
+</exercises>

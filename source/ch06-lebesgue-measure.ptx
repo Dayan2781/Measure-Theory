@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 6lebesgue measureD.tex:231-339; 7lebesgue measure regular.tex:1-; 7lebesgue measure regular.tex:161-181 -->
+<!-- Эх файл: 6lebesgue measureD.tex:231-339; 7lebesgue measure regular.tex:1- -->
 <chapter xml:id="ch-lebesgue-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Лебегийн хэмжээ</title>
 <section xml:id="sec-lebesgue-measure-1">
@@ -106,17 +106,6 @@ E_k,E\in\bigcup_{\beta\lt \alpha}\Balg_{\beta}\Big\}</md>
 олонлогоос зөвхөн тэг хэмжээтэй олонлогоор ялгаатай.</em> Иймд интеграл, хэмжээтэй холбоотой
 бараг бүх асуудлыг Борелийн олонлог дээр шийдээд, тэг хэмжээтэй засварыг нэмэхэд хангалттай.</p></remark>
 </section>
-<exercises xml:id="sem-lebesgue-measure"><title>Семинарын бодлогууд</title>
-<exercise><statement><p><m>(a;\infty)</m>, <m>[a;b]</m>, <m>\{a\}</m> олонлогууд Лебегээр хэмжигдэхийг Теорем <xref ref="lebesgue-measure-blht"/>-ээс гарга.</p></statement></exercise>
-<exercise><statement><p>Теорем <xref ref="lebesgue-measure-blht"/>-ийн баталгааг <m>B=(0;1)</m> олонлогийн хувьд давтан бич.</p></statement></exercise>
-<exercise><statement><p><m>\ls(N)=0</m> бол <m>N\in\PZM_{\ls}</m> гэдгийг Каратеодорийн нөхцлөөр шууд батал.</p></statement></exercise>
-<exercise><statement><p><m>\rn</m> дээр <m>\brn\subseteq\PZM_{\ls_n}</m> болохыг хагас задгай кубуудаар төрөгдөх <m>\sigma</m>-алгебрыг ашиглаж батал.</p></statement></exercise>
-<exercise><statement><p><m>A\in\PZM_{\ls}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь дурын <m>\veps\gt 0</m>-ийн
-хувьд <m>A\subseteq U</m>, <m>\ls(U\setminus A)\lt \veps</m> байх задгай <m>U</m> олдох явдал гэж батал
-(<m>\ls(A)\lt \infty</m> үед).</p></statement></exercise>
-<exercise><statement><p><m>\operatorname{card}\PZM_{\ls}=2^{\cont}</m> болохыг харуул (дээрээс нь үнэлэхдээ
-<m>\PZM_{\ls}\subseteq\mathscr{P}(\R)</m> гэдгийг ашигла).</p></statement></exercise>
-<exercise><statement><p>Канторын олонлогийн Борелийн биш дэд олонлог оршин байдгийг Теорем <xref ref="lebesgue-measure-strict"/>-аас
-гарга. Яагаад энэ баталгаа тодорхой жишээ өгөхгүй вэ?</p></statement></exercise>
-</exercises>
+<xi:include href="./exercises/sem-lebesgue-measure.ptx"/>
+<xi:include href="./exercises/hw-lebesgue-measure.ptx"/>
 </chapter>
