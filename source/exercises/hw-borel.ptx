@@ -26,4 +26,8 @@
     <statement><p><m>A\in\br</m>, <m>x\in\R</m>, <m>c\neq 0</m> бол <m>A+x=\{a+x: a\in A\}</m> ба <m>cA=\{ca: a\in A\}</m> олонлогууд Борелийн олонлог гэж батал.</p></statement>
     <hint><p><m>\{A\subset\R: A+x\in\br\}</m> бүлийг авч үз.</p></hint>
   </exercise>
+  <exercise xml:id="hw-borel-6">
+    <statement><p><m>f_n\colon\R\to\R</m> <m>(n\in\N)</m> тасралтгүй функцүүд байг. <m>\{f_n(x)\}</m> дараалал нийлэх <m>x</m> цэгүүдийн олонлог Борелийн олонлог гэж батал.</p></statement>
+    <hint><p>Кошигийн шалгуураар уг олонлог <m>\bigcap\limits_{k}\bigcup\limits_{N}\bigcap\limits_{m,n\geqslant N}\{x: |f_n(x)-f_m(x)|\leqslant\frac1k\}</m> байна.</p></hint>
+  </exercise>
 </exercises>

@@ -107,4 +107,5 @@ E_k,E\in\bigcup_{\beta\lt \alpha}\Balg_{\beta}\Big\}</md>
 бараг бүх асуудлыг Борелийн олонлог дээр шийдээд, тэг хэмжээтэй засварыг нэмэхэд хангалттай.</p></remark>
 </section>
 <xi:include href="./exercises/sem-lebesgue-measure.ptx"/>
+<xi:include href="./exercises/hw-lebesgue-measure.ptx"/>
 </chapter>

@@ -86,4 +86,5 @@
 <md>\mu=c\lambda</md> байна.</p></proof></theorem>
 </section>
 <xi:include href="./exercises/sem-regularity.ptx"/>
+<xi:include href="./exercises/hw-regularity.ptx"/>
 </chapter>

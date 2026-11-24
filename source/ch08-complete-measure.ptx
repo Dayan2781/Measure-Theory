@@ -96,4 +96,5 @@
 <m>\emptyset\in\mathscr{C}</m> нь илт тул <m>\mathscr{C}</m> нь задгай олонлогуудыг агуулсан <m>\sigma</m>-алгебр, улмаар <m>\mathscr{C}=\brn</m>.</p></proof></lemma>
 </section>
 <xi:include href="./exercises/sem-complete-measure.ptx"/>
+<xi:include href="./exercises/hw-complete-measure.ptx"/>
 </chapter>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 6 (Лебегийн хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-lebesgue-measure">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-lebesgue-measure-1">
+    <statement><p><m>E\subset\R</m> Лебегээр хэмжигдэх, <m>x\in\R</m>, <m>c\neq 0</m> бол <m>E+x</m>, <m>cE</m> олонлогууд хэмжигдэх бөгөөд <m>\lambda(E+x)=\lambda(E)</m>, <m>\lambda(cE)=|c|\,\lambda(E)</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-measure-2">
+    <statement><p>Канторын олонлогийн гүйцээлт <m>[0;1]\setminus C</m>-ийн бүрэлдэхүүн интервалуудын уртыг нэмж <m>\lambda(C)=0</m> гэж батал. Гуравтын задаргаандаа <m>1</m> цифр агуулдаг <m>[0;1]</m>-ийн тоонуудын олонлогийн хэмжээг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-measure-3">
+    <statement><p><m>E\subset\R</m> хэмжигдэх, <m>\lambda(E)\lt\infty</m> бол <m>\lambda(E\setminus[-n;n])\to 0</m> <m>(n\to\infty)</m> гэж батал. <m>\lambda(E)=\infty</m> үед энэ нь үнэн үү?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-measure-4">
+    <statement><p><m>\{r_n\}</m> нь <m>[0;1]</m>-ийн бүх рационал тоонуудын дараалал, <m>0\lt\veps\lt\frac12</m> ба <m>U=\bigcup_n(r_n-\veps 2^{-n};r_n+\veps 2^{-n})</m> байг. <m>F=[0;1]\setminus U</m> олонлог битүү, дотоод цэггүй бөгөөд <m>\lambda(F)\geqslant 1-2\veps</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-measure-5">
+    <statement><p><m>A\subset[0;1]</m> хэмжигдэх, <m>\lambda(A)\gt\frac12</m> бол <m>a+b=1</m> байх <m>a,b\in A</m> олдоно гэж батал.</p></statement>
+    <hint><p><m>1-A=\{1-a: a\in A\}</m> олонлогийн хэмжээ ба <m>\lambda(A\cup B)+\lambda(A\cap B)=\lambda(A)+\lambda(B)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-measure-6">
+    <statement><p><m>f\colon[0;1]\to\R</m> тасралтгүй бол түүний график <m>\Gamma_f=\{(x,f(x)): x\in[0;1]\}</m> нь <m>\lambda_2(\Gamma_f)=0</m> гэж батал.</p></statement>
+    <hint><p>Жигд тасралтгүй чанар: <m>|x-y|\leqslant\frac1n</m> бол <m>|f(x)-f(y)|\lt\veps</m>.</p></hint>
+  </exercise>
+</exercises>
