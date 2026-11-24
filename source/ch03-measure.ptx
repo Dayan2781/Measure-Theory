@@ -149,4 +149,5 @@ n, &amp; A \mbox{ төгсгөлөг олонлог,} \ |A|=n \\
 </subexercises>
 <xi:include href="./exercises/sem-measure-more.ptx"/>
 </exercises>
+<xi:include href="./exercises/hw-measure.ptx"/>
 </chapter>

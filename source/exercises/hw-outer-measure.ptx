@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 4 (гадаад хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-outer-measure">
+  <title>Гэрийн даалгавар</title>
+
+  <exercise xml:id="hw-outer-measure-1">
+    <statement><p><m>A\subset\R</m> тоологдом бол <m>\mu^{\star}(A)=0</m>, тоологдом биш бол <m>\mu^{\star}(A)=1</m> гэж тодорхойлъё. <m>\mu^{\star}</m> нь <m>\R</m> дээрх гадаад хэмжээ гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-outer-measure-2">
+    <statement><p>Канторын олонлог <m>C</m>-ийн хувьд <m>\ls(C)=0</m> гэж батал. Ингэснээр тоологдом биш боловч Лебегийн гадаад хэмжээ нь тэг байх олонлог оршин байна.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-outer-measure-3">
+    <statement><p><m>A\subset\R</m>, <m>\ls(A)=0</m> бол <m>\ls(\{x^2: x\in A\})=0</m> гэж батал.</p></statement>
+    <hint><p>Эхлээд <m>A\subset[-n;n]</m> үед бод. <m>[-n;n]</m> дээр <m>|x^2-y^2|\leqslant 2n|x-y|</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-outer-measure-4">
+    <statement><p><m>A\subset[0;1]</m>, <m>\ls(A)=1</m> байг. <m>[0;1]\setminus A</m> олонлог ямар ч интервал агуулахгүй гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-outer-measure-5">
+    <statement><p>Лебегийн гадаад хэмжээний тодорхойлолтод задгай интервалуудын оронд битүү хэрчмүүдээр хучсан ч ижил утга гарна гэж батал:
+      <md>\ls(A)=\inf\Bigl\{\sum_{i=1}^{\infty}(b_i-a_i): A\subset\bigcup_{i=1}^{\infty}[a_i;b_i]\Bigr\}.</md></p></statement>
+  </exercise>
+</exercises>

@@ -256,4 +256,5 @@
       <statement><p><m>\N</m> натурал тоон олонлог дээрх бүх <m>\sigma</m>-алгебрыг ол.</p></statement>
     </exercise>
   </exercises>
+  <xi:include href="./exercises/hw-sigma-algebra.ptx"/>
 </chapter>

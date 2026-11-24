@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 2 (Борелийн σ-алгебр). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-borel">
+  <title>Гэрийн даалгавар</title>
+
+  <exercise xml:id="hw-borel-1">
+    <statement><p><m>\br</m> нь <m>[a;b)</m> <m>(a\lt b)</m> хэлбэрийн хагас задгай интервалуудын бүлээр төрөгдөнө гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-borel-2">
+    <statement><p><m>f\colon\R\to\R</m> тасралтгүй функц бол <m>B\in\br</m> бүрийн хувьд <m>f^{-1}(B)\in\br</m> гэж батал.</p></statement>
+    <hint><p><m>\{B\subset\R: f^{-1}(B)\in\br\}</m> бүл <m>\sigma</m>-алгебр бөгөөд бүх задгай олонлогийг агуулахыг харуул.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-borel-3">
+    <statement><p><m>f\colon\R\to\R</m> дурын функц байг. <m>f</m> тасралтгүй байх цэгүүдийн олонлог <m>G_{\delta}</m> олонлог, улмаар Борелийн олонлог гэж батал.</p></statement>
+    <hint><p><m>\omega_f(x)=\inf\limits_{\delta\gt 0}\sup\{|f(y)-f(z)|: y,z\in(x-\delta;x+\delta)\}</m> гэвэл <m>\{x: \omega_f(x)\lt \frac1n\}</m> олонлогууд задгай байна.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-borel-4">
+    <statement><p>Аравтын бутархай задаргаандаа <m>7</m> цифр огт агуулдаггүй <m>[0;1]</m> хэрчмийн тоонуудын олонлог Борелийн олонлог гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-borel-5">
+    <statement><p><m>A\in\br</m>, <m>x\in\R</m>, <m>c\neq 0</m> бол <m>A+x=\{a+x: a\in A\}</m> ба <m>cA=\{ca: a\in A\}</m> олонлогууд Борелийн олонлог гэж батал.</p></statement>
+    <hint><p><m>\{A\subset\R: A+x\in\br\}</m> бүлийг авч үз.</p></hint>
+  </exercise>
+</exercises>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 1 (σ-алгебр). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-sigma-algebra">
+  <title>Гэрийн даалгавар</title>
+
+  <exercise xml:id="hw-sigma-algebra-1">
+    <statement><p><m>X=\{1,2,3,4\}</m>, <m>\mathscr{E}=\{\{1\},\{1,2\}\}</m> байг. <m>\mathscr{E}_{\sigma}</m> төрөгдсөн <m>\sigma</m>-алгебрын бүх элементийг бич.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-sigma-algebra-2">
+    <statement><p><m>A_1,\ldots,A_n</m> нь <m>X</m> олонлогийн хос хосоороо үл огтлолцох, хоосон биш дэд олонлогууд бөгөөд <m>A_1\cup\ldots\cup A_n=X</m> байг. <m>\{A_1,\ldots,A_n\}_{\sigma}</m> нь <m>\bigcup\limits_{i\in I}A_i</m> <m>(I\subset\{1,\ldots,n\})</m> хэлбэрийн бүх олонлогуудаас тогтоно гэж батал. Энэ <m>\sigma</m>-алгебр хэдэн элементтэй вэ?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-sigma-algebra-3">
+    <statement><p><m>f\colon X\to Y</m> буулгалт байг.
+      <ol marker="a)">
+        <li><p><m>\mathscr{B}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр бол <m>f^{-1}(\mathscr{B})=\{f^{-1}(B): B\in\mathscr{B}\}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр гэж батал.</p></li>
+        <li><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр бол <m>\{B\subset Y: f^{-1}(B)\in\mathscr{A}\}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр гэж батал.</p></li>
+        <li><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр бол <m>\{f(A): A\in\mathscr{A}\}</m> бүл <m>Y</m> дээрх <m>\sigma</m>-алгебр байх албагүйг жишээгээр харуул.</p></li>
+      </ol></p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-sigma-algebra-4">
+    <statement><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>Y\subset X</m> байг. <m>\mathscr{A}_Y=\{A\cap Y: A\in\mathscr{A}\}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр гэж батал. Хэрэв <m>Y\in\mathscr{A}</m> бол <m>\mathscr{A}_Y=\{A\in\mathscr{A}: A\subset Y\}</m> гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-sigma-algebra-5">
+    <statement><p>Төгсгөлөг <m>\sigma</m>-алгебрын элементийн тоо <m>2^n</m> хэлбэртэй байна гэж батал.</p></statement>
+    <hint><p><m>x\in X</m> бүрийн хувьд <m>x</m>-ийг агуулах бүх элементийн огтлолыг авч үзээд, эдгээр олонлогууд <m>X</m>-ийг хос хосоороо үл огтлолцох хэсгүүдэд хуваахыг харуул. Дараа нь бодлого 2-ыг ашигла.</p></hint>
+  </exercise>
+</exercises>

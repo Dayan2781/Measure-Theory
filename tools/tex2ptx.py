@@ -175,6 +175,8 @@ class Ctx:
 
 
 # ---------------------------------------------------------------- math
+REF_ONLY = re.compile(r"^(?:[\s(),]|\\ref\{[^}]*\})*\\ref\{[^}]*\}(?:[\s(),]|\\ref\{[^}]*\})*$")
+
 def xml_math(s):
     s = s.replace("\\bEgIn{", "\\begin{").replace("\\eNd{", "\\end{")
     s = s.replace("&", "&amp;").replace("<", "\\lt ").replace(">", "\\gt ")
@@ -255,7 +257,12 @@ def conv_inline(t, ctx):
                     break
                 j += 1
             flush()
-            out.append("<m>%s</m>" % xml_math(t[i + 1:j].strip()))
+            inner = t[i + 1:j].strip()
+            if REF_ONLY.match(inner):
+                # math that holds only references, e.g. $(\ref{a}) , (\ref{b})$: emit as text with xrefs
+                out.append(re.sub(r"\\ref\{([^}]*)\}", lambda mm: ctx.ref(mm.group(1)), re.sub(r"\s+", " ", inner)))
+            else:
+                out.append("<m>%s</m>" % xml_math(inner))
             i = j + 1
         elif t.startswith("\\(", i):
             j = t.index("\\)", i)
@@ -664,6 +671,9 @@ def build_chapter(ch, src_dir, ctx):
     extra = Path(__file__).resolve().parent.parent / "source" / "exercises" / ("sem-%s.ptx" % ch["slug"])
     if not exgroups and extra.exists():
         parts.append('<xi:include href="./exercises/sem-%s.ptx"/>' % ch["slug"])
+    hw = Path(__file__).resolve().parent.parent / "source" / "exercises" / ("hw-%s.ptx" % ch["slug"])
+    if hw.exists():
+        parts.append('<xi:include href="./exercises/hw-%s.ptx"/>' % ch["slug"])
     tag = ch.get("tag", "chapter")
     src = "; ".join("%s:%s-%s" % (p["file"], p.get("from", 1), p.get("to", "")) for p in ch["pieces"])
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<!-- Эх файл: %s -->\n'
