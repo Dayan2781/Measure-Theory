@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<!-- 9-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-measurable-functions">
   <title>Семинарын бодлогууд</title>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-1">
     <statement><p><m>(X,\A)</m> хэмжигдэх огторгуй, <m>f\colon X\to\R</m> байг. Дараах нөхцөлүүд эн чацуу гэж батал:
       <ol marker="a)">
         <li><p>дурын <m>c\in\R</m> хувьд <m>\{x\mid f(x)\gt c\}\in\A</m>;</p></li>
@@ -11,25 +11,52 @@
         <li><p>дурын <m>c\in\Q</m> хувьд <m>\{x\mid f(x)\lt c\}\in\A</m>.</p></li>
       </ol>
     </p></statement>
+    <hint><p><m>\{f\geqslant c\}=\bigcap_n\{f\gt c-\frac1n\}</m>, <m>\{f\gt c\}=\bigcup_{q\in\Q,\,q\gt c}\{f\geqslant q\}</m> гэх мэт илэрхийллүүд.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-2">
     <statement><p><m>f, g</m> нь <m>(X,\A)</m> дээрх хэмжигдэх функцүүд бол <m>\{x\mid f(x)\lt g(x)\}</m> ба <m>\{x\mid f(x)=g(x)\}</m> олонлогууд хэмжигдэх олонлог болохыг батал.</p></statement>
+    <hint><p><m>\{f\lt g\}=\bigcup_{q\in\Q}\bigl(\{f\lt q\}\cap\{q\lt g\}\bigr)</m>; <m>\{f=g\}</m> нь <m>\{f\lt g\}\cup\{g\lt f\}</m>-ийн гүйцээлт.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-3">
     <statement><p><m>f\colon\R\to\R</m> монотон функц бол Борелээр хэмжигдэх функц болохыг батал.</p></statement>
+    <hint><p>Үл буурах <m>f</m>-ийн хувьд <m>\{f\gt c\}</m> нь интервал (эсвэл хоосон, эсвэл <m>\R</m>).</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-4">
     <statement><p><m>f\colon X\to\R</m> функцийн хувьд <m>|f|</m> хэмжигдэх боловч <m>f</m> хэмжигдэхгүй байх жишээ гарга.</p></statement>
+    <hint><p>Үл хэмжигдэх <m>E</m> аваад <m>f=\chi_E-\chi_{E^c}</m>.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-5">
     <statement><p><m>\{f_n\}</m> нь <m>(X,\A)</m> дээрх хэмжигдэх функцүүдийн дараалал бол <m>\{x\mid \lim\limits_{n\to\infty}f_n(x)\text{ оршин байна}\}</m> олонлог хэмжигдэх олонлог болохыг батал.</p></statement>
+    <hint><p>Уг олонлог <m>\{\limsup f_n=\liminf f_n\}</m> бөгөөд <m>\limsup f_n</m>, <m>\liminf f_n</m> хэмжигдэх.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-measurable-functions-6">
     <statement><p><m>f\colon X\to[0,\infty]</m> хэмжигдэх функц бол <m>0\leq\varphi_1\leq\varphi_2\leq\ldots</m> ба бүх <m>x\in X</m> цэгт <m>\varphi_n(x)\to f(x)</m> байх энгийн хэмжигдэх функцүүдийн дараалал <m>\{\varphi_n\}</m> олдоно гэж батал. Хэрэв <m>f</m> зааглагдсан бол нийлэлт жигд байхыг харуул.</p></statement>
+    <hint><p><m>\varphi_n=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\{\frac{k-1}{2^n}\leqslant f\lt\frac k{2^n}\}}+n\chi_{\{f\geqslant n\}}</m>.</p></hint>
   </exercise>
+
+  <exercise xml:id="sem-measurable-functions-7">
+    <statement><p><m>f\colon X\to\R</m> хэмжигдэх, <m>\varphi\colon\R\to\R</m> тасралтгүй бол <m>\varphi\circ f</m> хэмжигдэх гэж батал. Ялангуяа <m>f^2</m>, <m>|f|^p</m>, <m>e^f</m> хэмжигдэх.</p></statement>
+    <hint><p><m>\{\varphi\circ f\gt c\}=f^{-1}\bigl(\varphi^{-1}((c;\infty))\bigr)</m>, <m>\varphi^{-1}((c;\infty))</m> задгай тул Борелийн.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measurable-functions-8">
+    <statement><p><m>f,g</m> хэмжигдэх бол <m>f+g</m>, <m>fg</m>, <m>\max\{f,g\}</m> хэмжигдэх гэж батал.</p></statement>
+    <hint><p><m>\{f+g\gt c\}=\bigcup_{q\in\Q}\{f\gt q\}\cap\{g\gt c-q\}</m>; <m>fg=\frac14\bigl((f+g)^2-(f-g)^2\bigr)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measurable-functions-9">
+    <statement><p><m>f\colon\R\to\R</m> дифференциалчлагдах бол <m>f^{\prime}</m> Борелээр хэмжигдэх гэж батал.</p></statement>
+    <hint><p><m>f^{\prime}(x)=\lim_n n\bigl(f(x+\frac1n)-f(x)\bigr)</m>: тасралтгүй функцүүдийн цэгэн хязгаар.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-measurable-functions-10">
+    <statement><p><m>(X,\alg,\mu)</m> гүйцэд хэмжээт огторгуй, <m>f</m> хэмжигдэх ба <m>g=f</m> бараг бүх цэгт бол <m>g</m> хэмжигдэх гэж батал. Гүйцэд биш үед энэ нь үнэн үү?</p></statement>
+    <hint><p><m>\{g\gt c\}</m> ба <m>\{f\gt c\}</m> нь тэг олонлогийн дэд олонлогоор ялгаатай. Гүйцэд биш: <m>(\R,\br,\lambda)</m>, Канторын олонлогийн Борелийн биш дэд олонлогийн характеристик функц.</p></hint>
+  </exercise>
+
 </exercises>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 12 (хязгаарын теоремууд). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-limit-theorems">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-limit-theorems-1">
+    <statement><p><m>\lim\limits_{n\to\infty}\int_0^\infty\frac{dx}{(1+\frac xn)^nx^{1/n}}</m>-г ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-limit-theorems-2">
+    <statement><p><m>f\in\La^1(\R)</m> бол <m>F(t)=\int_{\R}f(x)\cos(tx)\,dx</m> тасралтгүй гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-limit-theorems-3">
+    <statement><p><m>f_n\geqslant 0</m>, <m>f_n\to f</m> бараг бүх цэгт ба <m>\int f_n\to\int f\lt\infty</m> бол <m>\int|f_n-f|\to 0</m> гэж батал.</p></statement>
+    <hint><p><m>|f_n-f|\leqslant f_n+f</m>-д Фатугийн лемм (эсвэл <m>(f-f_n)^+\leqslant f</m>).</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-limit-theorems-4">
+    <statement><p><m>\sum_{n=1}^{\infty}\int_X|f_n|\,d\mu\lt\infty</m> бол <m>\sum f_n</m> бараг бүх цэгт абсолют нийлэх ба <m>\int\sum f_n=\sum\int f_n</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-limit-theorems-5">
+    <statement><p><m>F(t)=\int_0^\infty e^{-tx}\frac{\sin x}{x}\,dx</m> <m>(t\gt 0)</m> гэвэл <m>F^{\prime}(t)=-\frac1{1+t^2}</m> гэж интегралын тэмдгийн дор дифференциалчлах замаар харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-limit-theorems-6">
+    <statement><p>(Фатугийн леммийн урвуу) <m>f_n\leqslant g</m>, <m>g\in\La^1</m> бол <m>\limsup\int f_n\leqslant\int\limsup f_n</m> гэж батал.</p></statement>
+  </exercise>
+
+</exercises>

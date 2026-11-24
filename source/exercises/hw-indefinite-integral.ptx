@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 15 (тодорхойгүй интеграл). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-indefinite-integral">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-indefinite-integral-1">
+    <statement><p><m>f(x)=\begin{cases}x^2\sin\frac1x,&amp;x\neq 0\\0,&amp;x=0\end{cases}</m> функц <m>[-1;1]</m> дээр абсолют тасралтгүй гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-indefinite-integral-2">
+    <statement><p><m>[0;2]</m> дээр <m>f(x)=|x-1|+\chi_{[1;2]}(x)</m>-ийн бүрэн өөрчлөлтийг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-indefinite-integral-3">
+    <statement><p>Зааглагдсан өөрчлөлттэй функц бараг бүх цэгт дифференциалчлагдах бөгөөд <m>f^{\prime}\in L^1</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-indefinite-integral-4">
+    <statement><p>Абсолют тасралтгүй функц тэг хэмжээтэй олонлогийг тэг хэмжээтэй олонлогт буулгана гэж батал. Канторын функцийн хувьд энэ нь үнэн үү?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-indefinite-integral-5">
+    <statement><p><m>f</m> нь <m>[a;b]</m> дээр абсолют тасралтгүй бол <m>f(b)-f(a)=\int_a^bf^{\prime}\,d\lambda</m> гэж батал. Канторын функцийн хувьд <m>\int_0^1f^{\prime}</m>-ийг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-indefinite-integral-6">
+    <statement><p><m>F</m> нь <m>[a;b]</m> дээр Липшицийн <m>L</m> тогтмолтой бол бараг бүх цэгт <m>|F^{\prime}|\leqslant L</m> бөгөөд <m>F(x)=F(a)+\int_a^xF^{\prime}</m> гэж батал.</p></statement>
+  </exercise>
+
+</exercises>

@@ -838,13 +838,6 @@
    "pieces": [
     {
      "file": "10integralD.tex"
-    },
-    {
-     "file": "seminar 9.tex",
-     "from": 2,
-     "to": 26,
-     "append": "\n\\end{enumerate}\n",
-     "kind": "exercises"
     }
    ],
    "fix": [
@@ -954,13 +947,6 @@
    "pieces": [
     {
      "file": "11limit theorem.tex"
-    },
-    {
-     "file": "seminar 9.tex",
-     "from": 27,
-     "to": 40,
-     "kind": "exercises",
-     "prefix": true
     }
    ],
    "fix": [
@@ -1096,12 +1082,6 @@
      "file": "Lp.tex",
      "from": 2,
      "to": 164
-    },
-    {
-     "file": "Lp.tex",
-     "from": 166,
-     "to": 193,
-     "kind": "exercises"
     }
    ],
    "fix": [
@@ -1357,12 +1337,6 @@
        null
       ]
      ]
-    },
-    {
-     "file": "seminar 9.tex",
-     "from": 42,
-     "kind": "exercises",
-     "title": "Риманы ба Лебегийн интегралын холбоо"
     }
    ],
    "fix": [

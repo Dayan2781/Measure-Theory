@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<!-- 15-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-indefinite-integral">
   <title>Семинарын бодлогууд</title>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-1">
     <statement><p>Монотон функцийн тасралтгүй биш цэгүүдийн олонлог хамгийн ихдээ тоологдом гэж батал.</p></statement>
+    <hint><p>Үсрэлт бүрт <m>(f(x-);f(x+))</m> интервалд рационал тоо онооно; эдгээр интервал үл огтлолцоно.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-2">
     <statement><p><m>[a,b]</m> дээр Липшицийн нөхцөл хангах функц зааглагдсан өөрчлөлттэй бөгөөд абсолют тасралтгүй функц болохыг батал.</p></statement>
+    <hint><p><m>\sum|f(b_i)-f(a_i)|\leqslant L\sum(b_i-a_i)</m>.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-3">
     <statement><p><m>f(x)=x\sin\dfrac{1}{x}</m> (<m>x\neq0</m>), <m>f(0)=0</m> функц <m>[0,1]</m> дээр тасралтгүй боловч зааглагдсан өөрчлөлттэй биш гэж харуул. <m>g(x)=x^2\sin\dfrac{1}{x}</m> функцийн хувьд ямар байх вэ?</p></statement>
+    <hint><p><m>x_k=\frac1{(k+\frac12)\pi}</m> цэгүүдээр хуваавал өөрчлөлт <m>\sum\frac{c}{k}=\infty</m>. <m>g</m>-ийн уламжлал зааглагдсан тул <m>g</m> Липшиц.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-4">
     <statement><p><m>f</m> нь <m>[a,b]</m> дээр зааглагдсан өөрчлөлттэй бол хоёр монотон үл буурах функцийн ялгавар хэлбэрээр бичигдэнэ гэж батал.</p></statement>
+    <hint><p><m>v(x)=\bigvee_a^x[f]</m> ба <m>v-f</m> хоёулаа үл буурах.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-5">
     <statement><p>Канторын функц <m>[0,1]</m> дээр тасралтгүй, монотон үл буурах боловч абсолют тасралтгүй биш гэж харуул.</p></statement>
+    <hint><p>Канторын олонлог дээр хэмжээ <m>0</m>, гэвч өсөлт <m>1</m>: хучих интервалуудын нийт урт бага боловч функцийн өсөлт <m>1</m>.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-indefinite-integral-6">
     <statement><p><m>f\in L^1([a,b])</m> ба <m>F(x)=\int_a^x f\,d\lambda</m> бол <m>F</m> абсолют тасралтгүй бөгөөд <m>\bigvee\limits_a^b[F]=\int_a^b|f|\,d\lambda</m> гэж батал.</p></statement>
+    <hint><p><m>\sum|F(b_i)-F(a_i)|\leqslant\int_{\cup(a_i;b_i)}|f|</m>; интегралын абсолют тасралтгүй чанар. Өөрчлөлтийн хувьд <m>\{f\gt 0\}</m>, <m>\{f\lt 0\}</m>-ийг интервалуудаар ойртго.</p></hint>
   </exercise>
+
+  <exercise xml:id="sem-indefinite-integral-7">
+    <statement><p><m>f(x)=\sqrt x</m> функц <m>[0;1]</m> дээр абсолют тасралтгүй боловч Липшицийн нөхцөл хангахгүй гэж харуул.</p></statement>
+    <hint><p><m>\sqrt x=\int_0^x\frac{dt}{2\sqrt t}</m>; <m>\frac{\sqrt h}{h}\to\infty</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-indefinite-integral-8">
+    <statement><p>Абсолют тасралтгүй хоёр функцийн үржвэр <m>[a;b]</m> дээр абсолют тасралтгүй гэж батал.</p></statement>
+    <hint><p>Хоёулаа зааглагдсан: <m>|fg(b_i)-fg(a_i)|\leqslant M(|f(b_i)-f(a_i)|+|g(b_i)-g(a_i)|)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-indefinite-integral-9">
+    <statement><p><m>f(x)=x^2\cos\frac{\pi}{x^2}</m> (<m>x\neq 0</m>), <m>f(0)=0</m> функц <m>[0;1]</m> дээр хаа сайгүй дифференциалчлагдах боловч зааглагдсан өөрчлөлттэй биш гэж харуул.</p></statement>
+    <hint><p><m>x_k=k^{-1/2}</m> цэгүүдэд <m>f(x_k)=\frac{(-1)^k}{k}</m>; гармоник цуваа.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-indefinite-integral-10">
+    <statement><p><m>f</m> нь <m>[a;b]</m> дээр абсолют тасралтгүй бөгөөд бараг бүх цэгт <m>f^{\prime}=0</m> бол <m>f</m> тогтмол гэж батал.</p></statement>
+    <hint><p><m>f(x)-f(a)=\int_a^xf^{\prime}\,d\lambda=0</m> (Лебегийн Ньютон–Лейбницийн томьёо).</p></hint>
+  </exercise>
+
 </exercises>

@@ -1,35 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<!-- 14-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-product-measure">
   <title>Семинарын бодлогууд</title>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-1">
     <statement><p><m>\br\times\br=\mathscr{B}_{\R^2}</m> гэж батал.</p></statement>
+    <hint><p><m>(a;b)\times(c;d)</m> нь <m>\br\times\br</m>-д; <m>\R^2</m>-ийн задгай олонлог бүр рационал тэгш өнцөгтүүдийн тоологдом нэгдэл. Эсрэгээр проекц <m>(x,y)\mapsto x</m> тасралтгүй.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-2">
     <statement><p><m>E\in\alg_1\times\alg_2</m> бол дурын <m>x\in X_1</m> хувьд <m>E_x=\{y\in X_2\mid (x,y)\in E\}\in\alg_2</m> гэж батал. Эсрэг өгүүлбэр үнэн үү?</p></statement>
+    <hint><p><m>\{E: E_x\in\alg_2\ \forall x\}</m> нь тэгш өнцөгтүүдийг агуулсан <m>\sigma</m>-алгебр. Эсрэг нь худал: <m>N\times\{0\}</m>, <m>N</m> нь <m>\br</m>-д үл хамаарах.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-3">
     <statement><p><m>f\colon X_1\to\R</m> нь <m>\alg_1</m>-хэмжигдэх, <m>g\colon X_2\to\R</m> нь <m>\alg_2</m>-хэмжигдэх бол <m>h(x,y)=f(x)g(y)</m> функц <m>\alg_1\times\alg_2</m>-хэмжигдэх болохыг батал.</p></statement>
+    <hint><p><m>(x,y)\mapsto f(x)</m> хэмжигдэх: <m>\{f(x)\gt c\}\times X_2</m>. Хэмжигдэх функцүүдийн үржвэр хэмжигдэх.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-4">
     <statement><p><m>X_1=X_2=[0,1]</m>, <m>\mu</m> нь Лебегийн хэмжээ, <m>\nu</m> нь тоолох хэмжээ, <m>D=\{(x,x)\mid x\in[0,1]\}</m> байг.
       <md>\int_{X_1}\Big(\int_{X_2}\chi_D\,d\nu\Big)d\mu \neq \int_{X_2}\Big(\int_{X_1}\chi_D\,d\mu\Big)d\nu</md>
     гэж харуулж, энэ нь Фубиний теоремын аль нөхцөлийг зөрчиж байгааг тайлбарла.</p></statement>
+    <hint><p>Эхний интеграл: <m>\int\chi_D\,d\nu=1</m> тул <m>1</m>; хоёр дахь: <m>\int\chi_D\,d\mu=0</m> тул <m>0</m>. <m>\nu</m> нь <m>\sigma</m>-төгсгөлөг биш.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-5">
     <statement><p><m>[0,1]^2</m> дээр
       <md>f(x,y)=\begin{cases}\dfrac{x^2-y^2}{(x^2+y^2)^2}, &amp; (x,y)\neq(0,0),\\ 0, &amp; (x,y)=(0,0)\end{cases}</md>
     функцийн давталттай хоёр интегралыг бодож, тэдгээр нь ялгаатай гэж харуул. <m>f\notin L^1([0,1]^2)</m> гэдгийг шалга.</p></statement>
+    <hint><p><m>\frac{\partial}{\partial y}\frac{y}{x^2+y^2}=\frac{x^2-y^2}{(x^2+y^2)^2}</m>: давталттай интегралууд <m>\frac\pi4</m> ба <m>-\frac\pi4</m>.</p></hint>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="sem-product-measure-6">
     <statement><p><m>f\geq 0</m> хэмжигдэх функц бол
       <md>\int_X f\,d\mu=\int_0^{\infty}\mu(\{x\mid f(x)\gt t\})\,dt</md>
     гэж Фубиний теоремыг ашиглан батал.</p></statement>
+    <hint><p><m>\int_Xf\,d\mu=\int_X\int_0^\infty\chi_{\{t\lt f(x)\}}\,dt\,d\mu</m> ба Тонеллийн теорем.</p></hint>
   </exercise>
+
+  <exercise xml:id="sem-product-measure-7">
+    <statement><p>Фубиний теоремыг ашиглан <m>\int_0^\infty\frac{e^{-ax}-e^{-bx}}{x}\,dx=\ln\frac ba</m> <m>(0\lt a\lt b)</m> гэж батал.</p></statement>
+    <hint><p><m>\frac{e^{-ax}-e^{-bx}}{x}=\int_a^be^{-xy}\,dy</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-product-measure-8">
+    <statement><p><m>\int_{\R^2}e^{-(x^2+y^2)}\,d\lambda_2</m>-ийг туйлын координатад шилжүүлж (эсвэл Тонеллийн теоремоор) бодоод <m>\int_{\R}e^{-x^2}dx=\sqrt\pi</m> гэж гарга.</p></statement>
+    <hint><p>Тонеллийн теоремоор <m>\int e^{-x^2-y^2}=\bigl(\int e^{-x^2}\bigr)^2</m>, туйлын координатад <m>\pi</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-product-measure-9">
+    <statement><p><m>E\subset\R^2</m> хэмжигдэх ба бараг бүх <m>x</m>-ийн хувьд <m>\lambda(E_x)=0</m> бол <m>\lambda_2(E)=0</m> гэж батал. Ялангуяа тасралтгүй функцийн график тэг хэмжээтэй.</p></statement>
+    <hint><p><m>\lambda_2(E)=\int\lambda(E_x)\,dx</m>. Графикийн <m>x</m>-хэрчим нь нэг цэг.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-product-measure-10">
+    <statement><p><m>f\in L^1(\R)</m>, <m>g\in L^1(\R)</m> бол <m>h(x)=\int_{\R}f(x-y)g(y)\,dy</m> бараг бүх <m>x</m>-д тодорхойлогдох ба <m>\|h\|_1\leqslant\|f\|_1\|g\|_1</m> гэж батал.</p></statement>
+    <hint><p><m>\iint|f(x-y)||g(y)|\,dx\,dy=\|f\|_1\|g\|_1</m> (Тонелли, шилжилтийн инвариант).</p></hint>
+  </exercise>
+
 </exercises>
