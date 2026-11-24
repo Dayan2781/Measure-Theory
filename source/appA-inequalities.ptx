@@ -5,12 +5,11 @@
 <section xml:id="sec-inequalities-1">
 <title>Тэнцэтгэл бишүүд</title>
 <theorem><title>Юнгийн тэнцэтгэл биш</title><statement><p><idx>Юнгийн тэнцэтгэл биш</idx></p>
-<p><m>p\gt 1, \quad\dfrac1p +\dfrac1q =1\quad</m> бол <m>\quad\forall~ a,b \in
-\mathbb{R}^+\quad</m> тоонуудын хувьд  
+<p><m>p\gt 1, \quad\dfrac1p +\dfrac1q =1\quad</m> бол <m>\quad\forall~ a,b \geqslant 0\quad</m> тоонуудын хувьд  
 <md number="yes" xml:id="inequalities-yuong">a\cdot b\leqslant
-\frac{a^p}p+\frac{b^q}q</md> тэнцэтгэл биш биелнэ.<m>\quad a^p=b^q\quad</m> үед л тэнцэлдээ хүрнэ.</p></statement><proof><p><m>f(t)=t^{\frac{1}{p}}-\dfrac{t}{p}-\dfrac{1}{q}</m> функц авч үзье.  <m>f'(t)=\dfrac{1}{p}(t^{-\frac{1}{q}}-1)</m> байна. Энэ функцийн <m>t\geq 0</m>  мужид хамгийн их утга <m>f(1)=0</m> байх нь илт.  Өөрөөр хэлбэл 
+\frac{a^p}p+\frac{b^q}q</md> тэнцэтгэл биш биелнэ.<m>\quad a^p=b^q\quad</m> үед л тэнцэлдээ хүрнэ.</p></statement><proof><p><m>b=0</m> үед тэнцэтгэл биш илт тул <m>b\gt 0</m> гэе. <m>f(t)=t^{\frac{1}{p}}-\dfrac{t}{p}-\dfrac{1}{q}</m> функц авч үзье.  <m>f'(t)=\dfrac{1}{p}(t^{-\frac{1}{q}}-1)</m> байна. Энэ функцийн <m>t\geq 0</m>  мужид (<m>f'(t)\gt 0</m>, <m>0\lt t\lt 1</m> ба <m>f'(t)\lt 0</m>, <m>t\gt 1</m> тул) хамгийн их утга <m>f(1)=0</m> байх нь илт.  Өөрөөр хэлбэл 
 <md number="yes" xml:id="inequalities-ineq1">t^{\frac{1}{p}}\leq \dfrac{t}{p}+\dfrac{1}{q}</md>
- байна. (<xref ref="inequalities-ineq1"/>)-д <m>t=\dfrac{a^p}{b^q}</m> гэвэл <md>\left(\dfrac{a^p}{b^q}\right)^{\frac{1}{p}}\leq \dfrac{1}{p}\dfrac{a^p}{b^q}+\dfrac{1}{q}</md>  болно.  <m>q-\dfrac{q}{p}=1</m> болохыг тооцвол <md>a\cdot b\leqslant
+ байна. (<xref ref="inequalities-ineq1"/>)-д <m>t=\dfrac{a^p}{b^q}</m> гэвэл <md>\left(\dfrac{a^p}{b^q}\right)^{\frac{1}{p}}\leq \dfrac{1}{p}\dfrac{a^p}{b^q}+\dfrac{1}{q}</md>  болно. Хоёр талыг <m>b^q</m>-ээр үржүүлж, <m>q-\dfrac{q}{p}=1</m> болохыг тооцвол <md>a\cdot b\leqslant
 \frac{a^p}p+\frac{b^q}q</md> болж батлагдана.  <m>t=1</m> буюу <m>a^p=b^q~</m> үед л тэнцэл биелэх нь илт.</p></proof></theorem>
 <definition><statement><p>Дараах тэмдэглэгээнүүдийг цаашид хэрэглэх болно. <idx><m>\ell_p</m> </idx><idx><m>\mathbb{C}^n</m></idx><idx><m>\mathbb{R}^n</m></idx>
 <md>\mathbb{R}^n=\{(x_1,x_2, \cdots ,x_n)\mid x_1,x_2, \cdots ,x_n\in \mathbb{R}\}</md> 
@@ -35,15 +34,15 @@ b_k|^q\Big)^{\frac1q}=B</md> гэе.  Юнгийн тэнцэтгэл биший
 \limits_{k=1}^n |a_kb_k| \leqslant \frac1{pA^p}\cdot\sum
 \limits_{k=1}^n | a_k| ^p+\frac1{qB^q}\cdot\sum
 \limits_{k=1}^n | b_k| ^q=1</md>
-болж тэнцэтгэл биш батлагдна.</p></li><li><p><m>\displaystyle\quad \sum \limits_{k=1}^{+\infty }|a_k|^p,
+болж тэнцэтгэл биш батлагдана.</p></li><li><p><m>\displaystyle\quad \sum \limits_{k=1}^{+\infty }|a_k|^p,
 \quad\sum \limits_{k=1}^{+\infty }|b_k|^q\quad</m> цуваанууд нийлэх ба
 <m>\quad\forall ~n~\in~ \mathbb{N}</m> -ийн хувьд (<xref ref="inequalities-held1"/>) ёсоор
 <md number="yes" xml:id="inequalities-held3">\Big|\sum\limits_{k=1}^na_kb_k\Big| \leqslant \sum \limits_{k=1}^n|a_k|
 \cdot |b_k| \leqslant \Big(\sum\limits_{k=1}^n|a_k|^p\Big)^{\frac1p}\cdot \Big(\sum
 \limits_{k=1}^n|b_k|^q\Big)^{\frac1q}</md>
-байх учир <m>\displaystyle\quad\sum\limits_{k=1}^{+\infty }a_kb_k\quad</m> цуваа абсолют нийлэх ба (<xref ref="inequalities-held3"/>) томъёонд
+байх учир <m>\displaystyle\quad\sum\limits_{k=1}^{+\infty }a_kb_k\quad</m> цуваа абсолют нийлэх ба (<xref ref="inequalities-held3"/>) томьёонд
 <m>\quad n\rightarrow +\infty\quad</m> үеийн хязгаарт шилжвэл (<xref ref="inequalities-held2"/>) тэнцэтгэл биш гарна.</p></li></ol></p></proof></theorem>
-<theorem><title>Коши-Буняковский-Шварцийн тэнцэтгэл биш</title><statement><p><idx>Шварцийн тэнцэтгэл биш</idx>
+<theorem><title>Коши-Буняковский-Шварцын тэнцэтгэл биш</title><statement><p><idx>Шварцын тэнцэтгэл биш</idx>
     
 <ol marker="a)"><li><p><m>(a_1, a_2, \cdots , a_n) ,  (b_1, b_2, \cdots ,b_n)\in \mathbb{C}^n</m> бол 
 <md number="yes" xml:id="inequalities-cauch1">\Big|\sum \limits_{k=1}^na_kb_k\Big| \leqslant \sqrt{\sum
@@ -65,7 +64,7 @@ b_k|^q\Big)^{\frac1q}=B</md> гэе.  Юнгийн тэнцэтгэл биший
 <m>\quad q=\dfrac{p}{p-1}\quad</m> гэж тэмдэглэвэл
 <md>\quad\dfrac1p+\dfrac1q=1\quad</md> болно.
 <ol marker="a)"><li><p><md>\sum\limits_{k=1}^n|a_k+b_k|^p=\sum\limits_{k=1}^n|a_k+b_k| \cdot |a_k+b_k|^{p-1}\leqslant</md>
-<md>\sum \limits_{k=1}^n|a_k| \cdot |a_k+b_k|^{p-1}+\sum\limits_{k=1}^n|b_k| \cdot |a_k+b_k|^{p-1}</md> болно. Эдгээр хоёр нэмэгдэхүүн тус бүрт Гёлдерын тэнцэтгэл биш хэрэглэн ихэсгэвэл
+<md>\sum \limits_{k=1}^n|a_k| \cdot |a_k+b_k|^{p-1}+\sum\limits_{k=1}^n|b_k| \cdot |a_k+b_k|^{p-1}</md> болно. Эдгээр хоёр нэмэгдэхүүн тус бүрт Гёльдерийн тэнцэтгэл биш хэрэглэн ихэсгэвэл
 <md>\Big(\sum
 \limits_{k=1}^n|a_k|^p\Big)^{\frac1p}\cdot \Big(\sum
 \limits_{k=1}^n|a_k+b_k|^{q(p-1)}\Big)^{\frac1q}+</md>

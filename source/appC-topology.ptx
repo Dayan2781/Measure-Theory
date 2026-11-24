@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Эх файл: 14nemelt.tex:1- -->
 <appendix xml:id="app-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Олонлогийн чадал ба топологи</title>
+<title>Топологи ба буулгалт</title>
 <section xml:id="sec-topology-1">
-<title>Олонлогийн чадалын тухай</title>
-<p><m>X</m> олонлог байг.</p>
-</section>
-<section xml:id="sec-topology-2">
 <title>Топологи огторгуй</title>
 <p>Бид <m>\mathbb{R}^n</m> дээр болон <m>\mathbb{C}^n</m> дээр хязгаар, нийлэлт, тасралтгүй чанар гэсэн ойлголтуудтай танилцсан билээ.</p>
 <example><title><m>\mathbb{R}</m>  дээрх функцийн хязгаар</title><p><md>f:(c;d)=I\to \mathbb{R}</md> функц ба   <m>a\in I, A\in\mathbb{R}</m> байг. Бид 
 <md>\lim\limits_{x\to a}f(x)=A</md>
-тодорхойлолтыг доорх байдлуудаар томъёолож болдог.
+тодорхойлолтыг доорх байдлуудаар томьёолож болдог.
 <ol marker="a)"><li><p><m>\forall\epsilon\gt 0</m> хувьд <m>\exists\delta\gt 0:</m> 
 <md>0\lt |x-a|\lt \delta\Longrightarrow |f(x)-A|\lt \epsilon</md></p></li><li><p><m>\forall\epsilon\gt 0</m> хувьд <m>\exists\delta\gt 0:</m> 
 <md>0\lt d(x,a)\lt \delta\Longrightarrow d(f(x),A)\lt \epsilon</md></p></li><li><p><m>\forall U\subset \mathbb{R} , A\in U</m> задгай олонлогийн хувьд <m>\exists G\subset I , a\in G</m> задгай олонлог: 
@@ -25,7 +21,7 @@ x&amp; |x|\geq 1
 \end{array}
 \right.</m> гэвэл <m>\mathbb{R}</m> дээр 
 <md>d_1(x,y)=|x-y|,</md>
-<md>d_2(x,y)=|h(x)-h(y)|</md> томъёонуудаар зай тодорхойлож болно. <m>(\mathbb{R}, d_1)</m> ба <m>(\mathbb{R}, d_2)</m> метрик огторгуйнууд авч үзье. <m>f(x)=x+2</m> функц <m>(\mathbb{R}, d_1)</m> огторгуйд тасралтгүй байдаг тул  <m>d_1</m> зайгаар  <m>b)</m> тодорхойлолтоор <m>\lim\limits_{x\to 1} f(x)=f(1)=3</m> байна.</p>
+<md>d_2(x,y)=|h(x)-h(y)|</md> томьёонуудаар зай тодорхойлож болно. <m>(\mathbb{R}, d_1)</m> ба <m>(\mathbb{R}, d_2)</m> метрик огторгуйнууд авч үзье. <m>f(x)=x+2</m> функц <m>(\mathbb{R}, d_1)</m> огторгуйд тасралтгүй байдаг тул  <m>d_1</m> зайгаар  <m>b)</m> тодорхойлолтоор <m>\lim\limits_{x\to 1} f(x)=f(1)=3</m> байна.</p>
 <p>Одоо <m>d_2</m> зайгаар  <m>b)</m> тодорхойлолтоор <m>\lim\limits_{x\to 1} f(x)=3</m> байх эсэхийг үзье. <m>0\lt r , y\in\mathbb{R}</m> үед 
 <md>O_d(y,r)=\{x\in\mathbb{R}\mid d(y,x)\lt r\}</md> олонлогийг <m>d</m> метрикийн  <m>y</m> төвтэй <m>r</m> радиустай задгай бөмбөрцөг гэе.  <m>0\lt r\lt 1</m> үед 
 <md>O_{d_2}(1,r)=\{x\mid |h(1)-h(x)|\lt r\}=\{x\mid |1-h(x)|\lt r\}=(-1;r-1)\cup [1;r+1)</md> байна. Нөгөө талаас <md>O_{d_2}(3,1)=\{x\mid |h(3)-h(x)|\lt 1\}=\{x\mid |3-h(x)|\lt 1\}=\{x\mid 2\lt h(x)\lt 4\}=(2;4)</md> байна. Тодорхойлолт <m>b)</m>-д  <m>\epsilon=1</m> гэвэл 
@@ -33,7 +29,7 @@ x&amp; |x|\geq 1
  байх боломжгүй. Иймд <m>d_2</m> метрикээр <m>\lim\limits_{x\to 1} f(x) \neq 3</m> байна. Иймд <m>f(x)=x+2</m> функц <m>d_1</m> зайгаар тасралтгүй боловч <m>d_2</m> зайгаар тасралттай байна.</p></example>
 <p>Ямар тохиолдолд <m>d_1</m> зайгаар тасралтгүй функц бүр  <m>d_2</m> зайгаар тасралтгүй байх вэ?</p>
 <definition><title>Топологи</title><statement><p><m>X</m> хоосон биш олонлог, <m>\mathcal{F}</m> түүний дэд олонлогуудын бүл байг.</p>
-<p><m>\mathcal{F}</m> бүл дараах нөхцлүүдийг хангадаг бол түүнийг  <m>X</m> олонлог дээрх топологи, <m>(X, \mathcal{F})</m>  хосыг топологи огторгуй гэнэ. 
+<p><m>\mathcal{F}</m> бүл дараах нөхцөлүүдийг хангадаг бол түүнийг  <m>X</m> олонлог дээрх топологи, <m>(X, \mathcal{F})</m>  хосыг топологи огторгуй гэнэ. 
 <ol marker="i)"><li><p><m>\emptyset \in \mathcal{F} , X \in \mathcal{F}</m></p></li><li><p><m>\{A_i \mid i\in I\}\subset  \mathcal{F}</m> бол <m>\cup_{i\in I}A_i\in \mathcal{F}</m></p></li><li><p><m>A , B\in \mathcal{F}</m> бол <m>A \cap B\in \mathcal{F}</m></p></li></ol>
 Хэрэв <m>A\in\mathcal{F}</m> бол <m>A</m>-г задгай олонлог гэнэ.</p></statement></definition>
 <example><p><m>X</m> хоосон биш олонлог байг. 
@@ -42,27 +38,27 @@ x&amp; |x|\geq 1
 <md>\mathcal{F}=\{A\mid A\subset X\}</md> топологи болно.</p></example>
 <example><p><m>X</m> хоосон биш олонлог, <m>A\subset X , A\neq \emptyset</m> байг. 
 <md>\mathcal{F}=\{\emptyset , A , X\}</md> топологи болно.</p></example>
-<example><title>Зарискийн топологи</title><p><m>X</m> төгсгөлгүй олонлог байг. 
-<md>\mathcal{F}=\{ A\subset X\mid A \text{ төгсгөлөг эсвэл }  X\setminus A \text{ төгсгөлөг }  \}</md> гэвэл <m>(X,\mathcal{F})</m> топологи огторгуй болно.</p></example>
+<example><title>Кофинит топологи</title><p><m>X</m> төгсгөлгүй олонлог байг. 
+<md>\mathcal{F}=\{ A\subset X\mid A=\emptyset \text{ эсвэл }  X\setminus A \text{ төгсгөлөг }  \}</md> гэвэл <m>(X,\mathcal{F})</m> топологи огторгуй болно.</p></example>
 <example xml:id="topology-exm2-1"><p><m>X=\mathbb{R}</m>  байг. 
 <md>\mathcal{F}=\{\emptyset , \mathbb{R}\}\cup \{(x;\infty)\mid x\in \mathbb{R}\}</md> гэвэл <m>(X,\mathcal{F})</m> топологи огторгуй болох нь илт. 
 Энэ топологиор <m>(0;1)</m> олонлог задгай биш байна.</p></example>
 <definition><title>Битүү олонлог</title><statement><p><m>(X,\mathcal{F})</m> топологи огторгуй , <m>A\in\mathcal{F}</m> бол  <m>A^c=X\setminus A</m> олонлогийг битүү олонлог гэнэ. <m>\emptyset , X</m> олонлогууд нэгэн зэрэг задгай ба битүү олонлог болно.</p></statement></definition>
 <example xml:id="topology-exm2-2"><p><m>X=\mathbb{R}</m>  байг. 
-<md>\mathcal{F}=\{\emptyset , \mathbb{R}\}\cup \{(x;\infty)\mid x\in \mathbb{R}\}</md> топологид зөвхөн <m>(-\infty;x]</m> хэлбэртэй олонлогууд битүү байна. Энэ топологиор <m>(0;1)</m> олонлог  задгай ч биш, битүү ч биш байна.</p></example>
-<example><p><m>X</m> хоосон биш олонлог, <m>\mathcal{L}</m> түүний дэд олонлогуудын бүл байг. <m>\mathcal{L}\subset \mathcal{F_{\alpha}}</m> ба <m>\mathcal{F_{\alpha}}</m> топологи бол
+<md>\mathcal{F}=\{\emptyset , \mathbb{R}\}\cup \{(x;\infty)\mid x\in \mathbb{R}\}</md> топологид зөвхөн <m>\emptyset</m>, <m>\mathbb{R}</m> ба <m>(-\infty;x]</m> хэлбэрийн олонлогууд битүү байна. Энэ топологиор <m>(0;1)</m> олонлог  задгай ч биш, битүү ч биш байна.</p></example>
+<example><p><m>X</m> хоосон биш олонлог, <m>\mathcal{L}</m> түүний дэд олонлогуудын бүл байг. <m>\mathcal{L}</m> бүлийг агуулах бүх топологиудыг <m>\mathcal{F_{\alpha}}</m> гэвэл
 <md>\mathcal{F}=\cap  \mathcal{F_{\alpha}}</md> топологи болох ба түүнийг  <m>\mathcal{L}</m> бүлээр төрөгдсөн топологи гэнэ.</p></example>
 <definition><statement><p><m>(X,\mathcal{F})</m> топологи огторгуй, <m>E\subset X</m> байг.
-<ol marker="a)"><li><p><m>\overline{E}=\cap\{C\subset X\mid E\subseteq C, C-\text{битүү}\}</m> олонлогийг <m>E</m> олонлогийн битүүрэл гэнэ.</p></li><li><p><m>A\supset  E</m> байх задгай олонлог  <m>A</m>-г <m>E</m> олонлогийн орчин гэнэ.</p></li><li><p><m>x\in E</m> хувьд <m>A\subseteq E</m> байх <m>\{x\}</m> олонлогийн (<m>x</m> цэгийн ) орчин <m>A</m> олддог бол <m>x</m> цэгийг <m>E</m> олонлогийн дотоод цэг гэнэ.</p></li><li><p><m>E</m> олонлогийн бүх дотоод цэгүүдийн олонлогийг түүний дотор гээд <m>int E</m> гэж тэмдэглэнэ.</p></li><li><p><m>\partial E=int E\cap\overline{E}</m> олонлогийг <m>E</m> олонлогийн хил гэнэ.</p></li><li><p><m>x\in X</m> байг. <m>x</m> цэгийн дурын орчин <m>A</m> хувьд 
-<md>A\cap E\neq \emptyset</md> бол <m>x</m>-г <m>E</m> олонлогийн хязгаарын цэг гэнэ. Хэрэв <m>x</m> цэг <m>E</m> олонлогийн хязгаарын цэг биш бол тусгаарлагдсан цэг гэнэ.</p></li></ol></p></statement></definition>
+<ol marker="a)"><li><p><m>\overline{E}=\cap\{C\subset X\mid E\subseteq C, C-\text{битүү}\}</m> олонлогийг <m>E</m> олонлогийн битүүрэл гэнэ.</p></li><li><p><m>A\supset  E</m> байх задгай олонлог  <m>A</m>-г <m>E</m> олонлогийн орчин гэнэ.</p></li><li><p><m>x\in E</m> хувьд <m>A\subseteq E</m> байх <m>\{x\}</m> олонлогийн (<m>x</m> цэгийн ) орчин <m>A</m> олддог бол <m>x</m> цэгийг <m>E</m> олонлогийн дотоод цэг гэнэ.</p></li><li><p><m>E</m> олонлогийн бүх дотоод цэгүүдийн олонлогийг түүний дотор гээд <m>\operatorname{int} E</m> гэж тэмдэглэнэ.</p></li><li><p><m>\partial E=\overline{E}\setminus \operatorname{int} E</m> олонлогийг <m>E</m> олонлогийн хил гэнэ.</p></li><li><p><m>x\in X</m> байг. <m>x</m> цэгийн дурын орчин <m>A</m> хувьд 
+<md>A\cap (E\setminus\{x\})\neq \emptyset</md> бол <m>x</m>-г <m>E</m> олонлогийн хязгаарын цэг гэнэ. Хэрэв <m>x\in E</m> цэг <m>E</m> олонлогийн хязгаарын цэг биш бол тусгаарлагдсан цэг гэнэ.</p></li></ol></p></statement></definition>
 <example><p><m>X=\mathbb{R}</m>, 
 <m>\mathcal{L}=\{(a;b)\mid a,b\in\mathbb{R}\}</m>  гэе.  <m>\mathcal{L}</m> бүлээр төрөгдөх <m>\mathcal{F}</m> топологийг <m>\mathbb{R}</m> дээрх стандарт топологи гэнэ. Энд 
-<m>(a;\infty)=\cup_{k\in\mathbb{N}} (a;a+k)</m> тул <m>(a;\infty)\in \mathcal{F}</m> , <m>(-\infty;a)=\cup_{k\in\mathbb{N}} (a-k;a)</m> тул <m>(-\infty;a)\in \mathcal{F}</m> болно. <m>[a;b]=((-\infty;a)\cup (b;\infty))^c</m> тул <m>[a;b]</m> битүү олонлог болох ба <m>a=b</m> бол <m>\{a\}</m> мөн битүү болно. <m>A\in\mathcal{F}</m> бол <m>A</m>  заавал задгай <m>(a;b)</m> завсарыг агуулна. Рациональ тоонуудын олонлог <m>Q</m> авч үзье.
- Хэрэв <m>x\in int Q</m> гэвэл 
-<md>\exists A\in \mathcal{F} , x\in A , A\subset Q</md> байна. <m>A</m> задгай учир <m>(a;b)\subset A\subset Q</m> байх зөрчил үүснэ. Иймд  <m>int Q</m> хоосон байна.</p>
-<p><m>Q</m> олонлогийн битүүрэлийг олъё. Хэрэв <m>Q\subset F</m> , <m>F</m> битүү бол <m>Q^c\supset F^c</m> болно. <m>F^c</m> хоосон биш задгай бол ямар нэг  <m>(a;b)\subset F^c\subset Q^c</m> зөрчил үүснэ. Иймд  <m>F^c</m> хоосон болно. Иймд <m>F=\mathbb{R}</m> болж <m>\overline{Q}=\mathbb{R}</m> болов.</p></example>
+<m>(a;\infty)=\cup_{k\in\mathbb{N}} (a;a+k)</m> тул <m>(a;\infty)\in \mathcal{F}</m> , <m>(-\infty;a)=\cup_{k\in\mathbb{N}} (a-k;a)</m> тул <m>(-\infty;a)\in \mathcal{F}</m> болно. <m>[a;b]=((-\infty;a)\cup (b;\infty))^c</m> тул <m>[a;b]</m> битүү олонлог болох ба <m>a=b</m> бол <m>\{a\}</m> мөн битүү болно. <m>A\in\mathcal{F}</m>, <m>A\neq\emptyset</m> бол <m>A</m>  заавал задгай <m>(a;b)</m> завсрыг агуулна. Рационал тоонуудын олонлог <m>Q=\mathbb{Q}</m> авч үзье.
+ Хэрэв <m>x\in \operatorname{int} Q</m> гэвэл 
+<md>\exists A\in \mathcal{F} , x\in A , A\subset Q</md> байна. <m>A</m> задгай учир <m>(a;b)\subset A\subset Q</m> байх зөрчил үүснэ. Иймд  <m>\operatorname{int} Q</m> хоосон байна.</p>
+<p><m>Q</m> олонлогийн битүүрлийг олъё. Хэрэв <m>Q\subset F</m> , <m>F</m> битүү бол <m>Q^c\supset F^c</m> болно. <m>F^c</m> хоосон биш задгай бол ямар нэг  <m>(a;b)\subset F^c\subset Q^c</m> зөрчил үүснэ. Иймд  <m>F^c</m> хоосон болно. Иймд <m>F=\mathbb{R}</m> болж <m>\overline{Q}=\mathbb{R}</m> болов.</p></example>
 </section>
-<section xml:id="sec-topology-3">
+<section xml:id="sec-topology-2">
 <title>Буулгалт</title>
 <p><m>M,~N</m>   дурын олонлогууд болог.</p>
 <definition><title>Буулгалт</title><statement><p>Хэрэв  <m>M</m>  олонлогийн элемент нэг бүрд  <m>N</m>  олонлогийн ямар нэг элемент харгалзуулж болж байвал  <m>M</m>  олонлог дээр тодорхойлогдсон  <m>N</m>  олонлогоос утгаа авах буулгалт тодорхойлогдлоо гэдэг.  <m>M</m>  олонлогийн  <m>x</m>  элементэд харгалзах  <m>N</m> олонлогийн  <m>y</m>  элементийг  <m>y=f(x)</m>  гэж тэмдэглээд дээрх тохиолдолд
@@ -71,43 +67,36 @@ x&amp; |x|\geq 1
 N~ |~ y=f(x),~ x~\in~ M~ \}</m>   олонлогийг утгын муж,
    <m>y=f(x)</m>-ийг  <m>x</m>  элементийн  дүр,  <m>x</m>-ийг  <m>y</m> 
 элементийн эх дүр гэдэг.</p>
-<p>Хэрэв <m>B\subset f(M)</m> хувьд 
-<md>f^{-1}(B)=\{x\in X\mid f(x)\in B\}</md> олонлогийг <m>B</m>  олонлогийн эх дүр гэдэг.</p>
+<p>Хэрэв <m>B\subset N</m> бол 
+<md>f^{-1}(B)=\{x\in M\mid f(x)\in B\}</md> олонлогийг <m>B</m>  олонлогийн эх дүр гэдэг.</p>
 <p>Бид   <m>M~\subset~ \overline{\mathbb{R}}, ~N~\subset~
 \overline{\mathbb{R}}</m>   тохиолдолд  буулгалтыг функц гэж нэрлэж заншсан .</p>
 <p>Хэрэв   <m>N~\subset~ \mathbb{R}</m>   бол буулгалтыг функционал гэнэ.</p>
 <p>Өөрөөр хэлбэл тоон шулуунаас утгаа авах буулгалтыг функционал гэнэ.</p></statement></definition>
-<definition><title>Иньекц , сюръекц , биекц</title><statement><p><ol marker="a)"><li><p>Ялгаатай элементүүдийн дүр ялгаатай
-байх буулгалтыг иньекц гэнэ. Өөрөөр хэлбэл:
-<md>(~f~~ \text{иньекц}~)\qquad\Longleftrightarrow\qquad(\forall~
+<definition><title>Инъекц , сюръекц , биекц</title><statement><p><ol marker="a)"><li><p>Ялгаатай элементүүдийн дүр ялгаатай
+байх буулгалтыг инъекц гэнэ. Өөрөөр хэлбэл:
+<md>(~f~~ \text{инъекц}~)\qquad\Longleftrightarrow\qquad(\forall~
 x_1,~x_2~\in~ M, x_1\neq x_2\qquad \Longrightarrow \qquad f(x_1)\neq f(x_2)).</md></p></li><li><p>Хэрэв   <m>f(M)=N</m>,   өөрөөр хэлбэл:   <m>\forall ~y~\in~ N,~ \exists~ x~\in~ M~:~ f(x)=y</m>  
-бол  <m>f</m>-ийг сюръекц гэнэ.</p></li><li><p>Иньекц ч болдог, сюръекц ч болдог буулгалтыг биекц эсвэл харилцан нэгэн утгатай буулгалт гэнэ.</p></li></ol></p></statement></definition>
-<definition><title>Урвуу буулгалт</title><statement><p>Одоо  <m>f</m>-ийг харилцан нэгэн утгатай гэж үзье. Тэгвэл <term>b)</term> ёсоор
-<md>\forall~ y~\in~ N,~~ \exists ^1~ x~\in~ M~:~ f(x)=y,</md>
-<term>a)</term> ёсоор
-<md>\forall
-~y_{1},~y_{2}~\in~ N,~ y_{1}~\neq~ y_{2} \quad \Longrightarrow \quad \exists~
-x_{1},~ x_{2}~\in~ M~</md>
-<md>~x_{1}~\neq ~x_{2},~f(x_{i})=y_{i}
-\quad(~i=\overline{1,2}~)</md> болно. Өөрөөр хэлбэл:  <m>N</m>-ийг  <m>M</m>-д буулгах ямар нэг
+бол  <m>f</m>-ийг сюръекц гэнэ.</p></li><li><p>Инъекц ч болдог, сюръекц ч болдог буулгалтыг биекц эсвэл харилцан нэгэн утгатай буулгалт гэнэ.</p></li></ol></p></statement></definition>
+<definition><title>Урвуу буулгалт</title><statement><p>Одоо  <m>f</m>-ийг харилцан нэгэн утгатай гэж үзье. Тэгвэл <term>b)</term> ёсоор <m>\forall y\in N</m> хувьд <m>f(x)=y</m> байх <m>x\in M</m> олдох ба <term>a)</term> ёсоор ийм <m>x</m> ганц байна. Өөрөөр хэлбэл:  <m>N</m>-ийг  <m>M</m>-д буулгах ямар нэг
   <m>\varphi :N\rightarrow M</m>   буулгалт   <m>x=\varphi (y)</m>  
 <m>\Longleftrightarrow</m>   <m>y=f(x)</m>   дүрмээр тодорхойлогдоно. Ингэж тодорхойлогдох  <m>\varphi</m>  буулгалтыг  <m>f</m>-ийн урвуу буулгалт гээд
   <m>\varphi =f^{-1}</m>   гэж тэмдэглэнэ.
 <md>\forall~ x~\in~ M~:~ f^{-1}(f(x))=x,\quad \forall~ y~\in~ N~:~ f(f^{-1}(y))=y</md>
 байх нь ойлгомжтой.</p></statement></definition>
 </section>
-<section xml:id="sec-topology-4">
+<section xml:id="sec-topology-3">
 <title>Топологи огторгуй дахь тасралтгүй буулгалт</title>
 <p><m>(X, \mathcal{F_X} ) , (Y, \mathcal{F_Y})</m> топологи огторгуйнууд байг.</p>
 <definition><title>Цэг дээр тасралтгүй буулгалт</title><statement><p><m>f : X \to Y</m> буулгалт <m>x_0\in X</m> байг. Хэрэв <m>f(x_0)</m> цэгийн дурын орчин <m>V</m> ( <m>f(x_0)</m> цэгийг агуулсан дурын задгай олонлог  <m>V\in\mathcal{F_Y}</m> )  хувьд
-<md>f^{-1}(V)\subseteq U</md> байх <m>x_0\in X</m> цэгийн орчин <m>U</m> олддог бол <m>f : X \to Y</m> буулгалтыг <m>x_0\in X</m> цэг дээр  тасралтгүй буулгалт гэнэ.</p></statement></definition>
+<md>f(U)\subseteq V</md> байх <m>x_0\in X</m> цэгийн орчин <m>U</m> олддог бол <m>f : X \to Y</m> буулгалтыг <m>x_0\in X</m> цэг дээр  тасралтгүй буулгалт гэнэ.</p></statement></definition>
 <definition><title>Тасралтгүй буулгалт</title><statement><p><m>f : X \to Y</m> буулгалтын хувьд <m>Y</m> олонлогийн аливаа задгай олонлогийн эх дүр <m>X</m> олонлогт задгай бол  <md>f : X \to Y</md> буулгалтыг тасралтгүй буулгалт гэнэ. Өөрөөр хэлбэл <m>B\in \mathcal{F_Y}</m> үед <m>f^{-1}(B)\in \mathcal{F_X}</m> бол <md>f : X \to Y</md> буулгалтыг  тасралтгүй буулгалт гэнэ.</p></statement></definition>
 <theorem><statement><p><m>(X, \mathcal{F_X} ) , (Y, \mathcal{F_Y})</m> топологи огторгуйнууд байг. 
 <m>f : X \to Y</m> буулгалт тасралтгүй байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь  <m>\forall x\in X</m> цэг ба <m>f(x)</m> цэгийн дурын орчин <m>V</m> хувьд
-<md>f^{-1}(V)\subseteq U</md> байх <m>x</m> цэгийн орчин <m>U</m> олддог байх юм.</p></statement></theorem>
+<md>f(U)\subseteq V</md> байх <m>x</m> цэгийн орчин <m>U</m> олддог байх юм.</p></statement></theorem>
 <example><p><m>(X, \mathcal{F_X} ) , (Y, \mathcal{F_Y})</m> топологи огторгуйнууд байг. 
 <m>f : X \to Y</m> буулгалт байг. 
-<ol><li><p><m>f(x)=y_0</m> тогтмол  буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_X}=\mathcal{P_X}</m> бол дурын   буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_Y}=\{\emptyset, Y\}</m> бол дурын   буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_Y}=\mathcal{P_Y}</m> бол дурын   буулгалт тасралтгүй.</p></li></ol></p></example>
+<ol><li><p><m>f(x)=y_0</m> тогтмол  буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_X}=\mathcal{P_X}</m> (<m>X</m>-ийн бүх дэд олонлогийн бүл) бол дурын   буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_Y}=\{\emptyset, Y\}</m> бол дурын   буулгалт тасралтгүй.</p></li><li><p>Хэрэв <m>\mathcal{F_X}=\{\emptyset, X\}</m> ба <m>\mathcal{F_Y}=\mathcal{P_Y}</m> бол зөвхөн тогтмол буулгалт тасралтгүй.</p></li></ol></p></example>
 <p><m>(X,\rho_{X}),~ (Y,\rho_{Y})</m>   метрик огторгуйнууд,
   <m>f:X\rightarrow Y</m>   буулгалт,    <m>x_{0}\in X</m>  
 цэг тус тус өгсөн гэе.</p>
@@ -117,7 +106,7 @@ x_{1},~ x_{2}~\in~ M~</md>
 f(O_{\delta }(x_{0}))~\subset~ O_{\varepsilon }(f(x_{0}))</md> бол  <m>f</m> 
 буулгалтыг  <m>x_{0}</m>  цэг дээр тасралтгүй байна гэдэг.</p></statement></definition>
 <p>Тодорхойлолтоос харахад буулгалт тодорхойлогдох мужийн тусгаарлагдсан цэг дээрээ тасралтгүй байх нь илт.</p>
-<definition><statement><p>Хэрэв   <m>x_0</m>   нь нягтралын цэг ба
+<definition><statement><p>Хэрэв
 <md>\forall \varepsilon \gt 0, \exists
 \delta =\delta (\varepsilon ,x_{0}),\forall x\in X: \rho_{X}(x_{0},x)\lt \delta \Longrightarrow 
 \rho_{Y}(f(x_{0}),f(x))\lt \varepsilon</md> бол  <m>f</m>  буулгалтыг  <m>x_{0}</m> 
@@ -139,8 +128,8 @@ f(x_{0})</m>   бол  <m>f</m>-ийг  <m>x_{0}</m>  цэг дээр тасра
  <m>Y</m>  дээр  )  бол  <m>f</m>-ийг гомеоморф буулгалт буюу гомеоморфизм гэнэ.
  <m>X</m>-ийг  <m>Y</m>-д буулгах гомеоморфизм олдох тохиолдолд  <m>X</m>  ба  <m>Y</m>-ийг
 гомеоморф огторгуйнууд гэж нэрлэнэ.</p></statement></definition>
-<example><p><m>X=\mathbb{R},~ Y=]-1,1[,~ \rho(x,y)=|x-y|</m>   бол
-  <m>(\mathbb{R},\rho )</m>   ба <m>(]-1,1[,\rho )</m>   нь гомеоморф огторгуйнууд болно.
+<example><p><m>X=\mathbb{R},~ Y=(-1;1),~ \rho(x,y)=|x-y|</m>   бол
+  <m>(\mathbb{R},\rho )</m>   ба <m>((-1;1),\rho )</m>   нь гомеоморф огторгуйнууд болно.
 Учир нь   <m>y=f(x)=\dfrac{2}{\pi}\cdot \arctg x,</m>   <m>(~f^{-1}(y)=\tg
 \dfrac{\pi y}{2}~)</m> нь гомеоморфизм болох нь илт.</p></example>
 <definition><statement><p>Хэрэв   <m>f:X\rightarrow Y</m>   нь харилцан нэгэн утгатай ба   <m>\forall~ x_{1},~x_{2}~\in~ X~:~
@@ -154,9 +143,9 @@ f(x_{0})</m>   бол  <m>f</m>-ийг  <m>x_{0}</m>  цэг дээр тасра
 нэгэн ижил огторгуйнууд мэтээр үзэх болно.</p>
 <example><p><m>X=\mathbb{R}</m>   олонлог   <m>\rho
 (x,y)=\left|\dfrac{x}{1+|x|}-\dfrac{y}{1+|y|}\right|</m>   зайтайгаар ердийн   <m>\rho
-(x,y)=|x-y|</m>   зайтай   <m>]-1,1[=Y</m>   интервалтай  изометр байна. Изометр буулгалт нь   <m>f(x)=\dfrac{x}{1+|x|}</m>   дүрмээр тодорхойлогдоно.</p></example>
+(x,y)=|x-y|</m>   зайтай   <m>(-1;1)=Y</m>   интервалтай  изометр байна. Изометр буулгалт нь   <m>f(x)=\dfrac{x}{1+|x|}</m>   дүрмээр тодорхойлогдоно.</p></example>
 <example><p><m>C[0,1]</m>   ба   <m>C[a,b]</m>  
 огторгуйнууд изометр байна. Изометр буулгалт нь
-  <m>f(x(t))=x(a(1-t)+bt)</m>   дүрмээр тодорхойлогдоно.</p></example>
+  <m>(fx)(t)=x(a(1-t)+bt)</m>, <m>x\in C[a,b]</m>, <m>t\in[0,1]</m>   дүрмээр тодорхойлогдоно.</p></example>
 </section>
 </appendix>
