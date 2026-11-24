@@ -76,11 +76,24 @@
 		<md>\mu(U)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset U\}.</md></p></li></ul></p></statement></definition>
 <p>Теорем <xref ref="regularity-lhrch"/> ёсоор <m>(\rn,\brn)</m> дээрх ч, <m>(\rn,\mkln)</m> дээрх ч Лебегийн хэмжээ регуляр хэмжээ байна.</p>
 <proposition><statement><p><m>(\rn,\brn)</m> дээрх төгсгөлөг <m>\mu</m> хэмжээ бүр   регуляр байна. Түүнчлэн, <m>A\subset\rn</m> Борелийн олонлог бүрийн хувьд дараах тэнцэл биелнэ:
-	<md>\mu(A)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset A\}.</md></p></statement></proposition>
-<p>Эхлээд дараах леммийг баталъя.</p>
-<lemma><statement><p><m>(\rn,\brn)</m> дээрх төгсгөлөг <m>\mu</m> хэмжээ байг. <m>A\subset\rn</m>  Борелийн олонлог бүрийн хувьд дараах хоёр тэнцэл биелнэ:
+	<md>\mu(A)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset A\}.</md></p></statement><proof><p>Баталгаанд энэ өгүүлбэрийн дараах леммийн (5), (6) тэнцлүүдийг ашиглана.</p>
+<p><m>a.</m> <m>\mu</m> төгсгөлөг тул компакт олонлог бүрийн хувьд <m>\mu(K)\leqslant\mu(\rn)\lt +\infty</m>.</p>
+<p><m>b.</m> Энд <m>\alg=\brn</m> тул энэ нөхцөл нь леммийн (5) тэнцэл юм.</p>
+<p>Одоо <m>A\in\brn</m>, <m>\varepsilon\gt 0</m> байг. Леммийн (6) тэнцлээр <m>\mu(A\setminus C)\lt \dfrac{\varepsilon}{2}</m> байх битүү <m>C\subset A</m> олонлог олдоно. <m>K_m=C\cap[-m;m]^n</m> гэвэл <m>K_m</m> нь битүү, зааглагдсан тул компакт олонлог бөгөөд <m>K_1\subset K_2\subset\ldots</m>, <m>\bigcup\limits_{m=1}^{\infty}K_m=C</m> байна. Хэмжээний доороос тасралтгүй чанараар <m>\mu(K_m)\to\mu(C)</m> тул <m>\mu(C\setminus K_m)\lt \dfrac{\varepsilon}{2}</m> байх <m>m</m> олдоно. Тэгвэл <m>K_m\subset A</m> компакт ба
+<md>\mu(A)-\mu(K_m)=\mu(A\setminus C)+\mu(C\setminus K_m)\lt \varepsilon</md>
+тул <m>\mu(A)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset A\}</m> батлагдав.</p>
+<p><m>c.</m> Энэ нөхцөл нь саяын баталсан тэнцлийн <m>A=U</m> задгай үеийн тухайн тохиолдол юм. Иймд <m>\mu</m> регуляр хэмжээ байна.</p></proof></proposition>
+<p>Одоо баталгаанд ашигласан леммийг баталъя.</p>
+<lemma xml:id="complete-measure-finreglem"><statement><p><m>(\rn,\brn)</m> дээрх төгсгөлөг <m>\mu</m> хэмжээ байг. <m>A\subset\rn</m>  Борелийн олонлог бүрийн хувьд дараах хоёр тэнцэл биелнэ:
 	<md>\mu(A)=\inf\{\mu(U): U \ \mbox{задгай ба} \ A\subset U\};\tag{5}</md>
-	<md>\mu(A)=\sup\{\mu(C): C \ \mbox{битүү ба} \ C\subset A\}.\tag{6}</md></p></statement></lemma>
+	<md>\mu(A)=\sup\{\mu(C): C \ \mbox{битүү ба} \ C\subset A\}.\tag{6}</md></p></statement><proof><p><m>\mu</m> төгсгөлөг тул (5), (6) тэнцлүүд хамтдаа дараах нөхцөлтэй эквивалент: дурын <m>\varepsilon\gt 0</m> тооны хувьд
+<md>C\subset A\subset U,\qquad \mu(U\setminus C)\lt \varepsilon \tag{7}</md>
+байх битүү <m>C</m>, задгай <m>U</m> олонлогууд олдоно. Үнэхээр (7) биелвэл <m>\mu(U)-\mu(A)\lt \varepsilon</m>, <m>\mu(A)-\mu(C)\lt \varepsilon</m> байна. Эсрэгээр (5), (6) биелвэл <m>\mu(U\setminus A)\lt \dfrac{\varepsilon}{2}</m>, <m>\mu(A\setminus C)\lt \dfrac{\varepsilon}{2}</m> байх <m>U</m>, <m>C</m> олдох тул (7) биелнэ.</p>
+<p>(7) нөхцөлийг хангадаг бүх Борелийн олонлогуудын бүлийг <m>\mathscr{C}</m> гэе. <m>\mathscr{C}</m> нь бүх задгай олонлогийг агуулсан <m>\sigma</m>-алгебр гэж харуулбал <m>\mathscr{C}=\brn</m> болж лемм батлагдана.
+<ol><li><p><m>U</m> задгай олонлог байг. <m>U=\rn</m> бол <m>C=U</m> гэж авна. Үгүй бол <m>C_k=\{x\in\rn: \rho(x,U^c)\geqslant\frac1k\}</m> олонлогууд битүү, <m>C_1\subset C_2\subset\ldots\subset U</m> ба <m>U^c</m> битүү тул <m>\bigcup\limits_{k}C_k=U</m> байна. Доороос тасралтгүй чанараар <m>\mu(C_k)\to\mu(U)</m> тул хангалттай их <m>k</m> хувьд <m>\mu(U\setminus C_k)\lt \varepsilon</m> болно. Иймд <m>U\in\mathscr{C}</m>.</p></li><li><p><m>A\in\mathscr{C}</m> ба <m>C\subset A\subset U</m> нь (7)-г хангадаг бол <m>U^c\subset A^c\subset C^c</m>, <m>U^c</m> битүү, <m>C^c</m> задгай бөгөөд <m>C^c\setminus U^c=U\setminus C</m> тул <m>A^c\in\mathscr{C}</m>.</p></li><li><p><m>A_k\in\mathscr{C}</m> <m>(k\in\N)</m>, <m>A=\bigcup\limits_{k}A_k</m> байг. <m>C_k\subset A_k\subset U_k</m>, <m>\mu(U_k\setminus C_k)\lt \dfrac{\varepsilon}{2^{k+1}}</m> байх битүү <m>C_k</m>, задгай <m>U_k</m> олонлогууд авъя. <m>U=\bigcup\limits_kU_k</m> задгай. <m>\mu</m> төгсгөлөг тул доороос тасралтгүй чанараар <m>\mu\Bigl(\bigcup\limits_{k}C_k\setminus\bigcup\limits_{k=1}^{N}C_k\Bigr)\lt \dfrac{\varepsilon}{2}</m> байх <m>N</m> олдоно. <m>C=\bigcup\limits_{k=1}^NC_k</m> битүү, <m>C\subset A\subset U</m> ба
+<md>U\setminus C\subset\bigcup\limits_k(U_k\setminus C_k)\cup\Bigl(\bigcup\limits_{k}C_k\setminus C\Bigr)</md>
+тул <m>\mu(U\setminus C)\lt \sum\limits_k\dfrac{\varepsilon}{2^{k+1}}+\dfrac{\varepsilon}{2}=\varepsilon</m>. Иймд <m>A\in\mathscr{C}</m>.</p></li></ol>
+<m>\emptyset\in\mathscr{C}</m> нь илт тул <m>\mathscr{C}</m> нь задгай олонлогуудыг агуулсан <m>\sigma</m>-алгебр, улмаар <m>\mathscr{C}=\brn</m>.</p></proof></lemma>
 </section>
 <exercises xml:id="sem-complete-measure"><title>Семинарын бодлогууд</title>
 <subexercises xml:id="sem-complete-measure-1"><title>Гүйцэд ба регуляр хэмжээ</title>
