@@ -1,0 +1,16 @@
+@@
+\begin{proof}
+$\mu$ төгсгөлөг тул (5), (6) тэнцлүүд хамтдаа дараах нөхцөлтэй эквивалент: дурын $\varepsilon>0$ тооны хувьд
+$$C\subset A\subset U,\qquad \mu(U\setminus C)<\varepsilon \eqno(7)$$
+байх битүү $C$, задгай $U$ олонлогууд олдоно. Үнэхээр (7) биелвэл $\mu(U)-\mu(A)<\varepsilon$, $\mu(A)-\mu(C)<\varepsilon$ байна. Эсрэгээр (5), (6) биелвэл $\mu(U\setminus A)<\dfrac{\varepsilon}{2}$, $\mu(A\setminus C)<\dfrac{\varepsilon}{2}$ байх $U$, $C$ олдох тул (7) биелнэ.
+
+(7) нөхцөлийг хангадаг бүх Борелийн олонлогуудын бүлийг $\mathscr{C}$ гэе. $\mathscr{C}$ нь бүх задгай олонлогийг агуулсан $\sigma$-алгебр гэж харуулбал $\mathscr{C}=\brn$ болж лемм батлагдана.
+\begin{enumerate}
+\item $U$ задгай олонлог байг. $U=\rn$ бол $C=U$ гэж авна. Үгүй бол $C_k=\{x\in\rn: \rho(x,U^c)\geqslant\frac1k\}$ олонлогууд битүү, $C_1\subset C_2\subset\ldots\subset U$ ба $U^c$ битүү тул $\bigcup\limits_{k}C_k=U$ байна. Доороос тасралтгүй чанараар $\mu(C_k)\to\mu(U)$ тул хангалттай их $k$ хувьд $\mu(U\setminus C_k)<\varepsilon$ болно. Иймд $U\in\mathscr{C}$.
+\item $A\in\mathscr{C}$ ба $C\subset A\subset U$ нь (7)-г хангадаг бол $U^c\subset A^c\subset C^c$, $U^c$ битүү, $C^c$ задгай бөгөөд $C^c\setminus U^c=U\setminus C$ тул $A^c\in\mathscr{C}$.
+\item $A_k\in\mathscr{C}$ $(k\in\N)$, $A=\bigcup\limits_{k}A_k$ байг. $C_k\subset A_k\subset U_k$, $\mu(U_k\setminus C_k)<\dfrac{\varepsilon}{2^{k+1}}$ байх битүү $C_k$, задгай $U_k$ олонлогууд авъя. $U=\bigcup\limits_kU_k$ задгай. $\mu$ төгсгөлөг тул доороос тасралтгүй чанараар $\mu\Bigl(\bigcup\limits_{k}C_k\setminus\bigcup\limits_{k=1}^{N}C_k\Bigr)<\dfrac{\varepsilon}{2}$ байх $N$ олдоно. $C=\bigcup\limits_{k=1}^NC_k$ битүү, $C\subset A\subset U$ ба
+$$U\setminus C\subset\bigcup\limits_k(U_k\setminus C_k)\cup\Bigl(\bigcup\limits_{k}C_k\setminus C\Bigr)$$
+тул $\mu(U\setminus C)<\sum\limits_k\dfrac{\varepsilon}{2^{k+1}}+\dfrac{\varepsilon}{2}=\varepsilon$. Иймд $A\in\mathscr{C}$.
+\end{enumerate}
+$\emptyset\in\mathscr{C}$ нь илт тул $\mathscr{C}$ нь задгай олонлогуудыг агуулсан $\sigma$-алгебр, улмаар $\mathscr{C}=\brn$.
+\end{proof}

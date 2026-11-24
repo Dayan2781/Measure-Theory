@@ -617,8 +617,10 @@ def build_chapter(ch, src_dir, ctx):
     for spec in ch["pieces"]:
         raw = read_piece(src_dir, spec)
         for old, new in ch.get("fix", []):
-            if old not in raw and spec is ch["pieces"][-1]:
-                pass
+            if new.startswith("@add:"):
+                # new text kept in tools/additions/<name>.tex; "@@" in it stands for old
+                add = (Path(__file__).resolve().parent / "additions" / (new[5:] + ".tex")).read_text(encoding="utf-8")
+                new = add.replace("@@", old)
             raw = raw.replace(old, new)
         raw = preprocess(raw)
         if spec.get("kind") == "exercises":

@@ -1,0 +1,67 @@
+@@
+
+Үржвэр хэмжээг байгуулахад дараах ойлголт, теорем хэрэгтэй.
+\begin{dfn}\label{monclassdef}
+$X$ олонлогийн дэд олонлогуудын $\mathcal{M}$ бүл дараах хоёр нөхцөлийг хангадаг бол түүнийг \textbf{монотон анги}\index{монотон анги} гэнэ:
+\begin{enumerate}[a)]
+\item $\{A_k\}\subset\mathcal{M}$ нь өсөх дараалал бол $\bigcup\limits_{k=1}^{\infty}A_k\in\mathcal{M}$;
+\item $\{A_k\}\subset\mathcal{M}$ нь буурах дараалал бол $\bigcap\limits_{k=1}^{\infty}A_k\in\mathcal{M}$.
+\end{enumerate}
+\end{dfn}
+$\sigma$-алгебр бүр монотон анги байна. Монотон ангиудын огтлол монотон анги байх нь илт тул $X$-ийн дэд олонлогуудын дурын $\mathscr{E}$ бүлийг агуулах хамгийн бага монотон анги оршин байна.
+\begin{thm}[Монотон ангийн тухай теорем]\label{monclass}
+$\mathscr{E}$ нь $X$ дээрх алгебр, $\mathcal{M}$ нь $\mathscr{E}$-г агуулах хамгийн бага монотон анги бол $\mathcal{M}=\mathscr{E}_{\sigma}$ байна.
+\end{thm}
+\begin{proof}
+$\mathscr{E}_{\sigma}$ нь $\mathscr{E}$-г агуулах монотон анги тул $\mathcal{M}\subset\mathscr{E}_{\sigma}$. Урвуу агуулагдлыг батлахын тулд $\mathcal{M}$ алгебр гэж харуулахад хангалттай. Учир нь өсөх дарааллын нэгдлээр битүү алгебр нь $\sigma$-алгебр байна (1-р бүлгийн монотон дарааллын тухай лемм), тэгвэл $\mathcal{M}\supset\mathscr{E}_{\sigma}$ болно.
+
+$A\subset X$ бүрийн хувьд
+$$\mathcal{K}(A)=\{B\subset X: A\setminus B\in\mathcal{M},\ B\setminus A\in\mathcal{M},\ A\cup B\in\mathcal{M}\}$$
+гэе. Тодорхойлолт тэгш хэмтэй тул $B\in\mathcal{K}(A)\Longleftrightarrow A\in\mathcal{K}(B)$. $\{B_k\}\subset\mathcal{K}(A)$ өсөх дараалал бол $\{A\setminus B_k\}$ буурах, $\{B_k\setminus A\}$, $\{A\cup B_k\}$ өсөх дараалал бөгөөд
+$$A\setminus\bigcup_kB_k=\bigcap_k(A\setminus B_k),\quad \Bigl(\bigcup_kB_k\Bigr)\setminus A=\bigcup_k(B_k\setminus A),\quad A\cup\bigcup_kB_k=\bigcup_k(A\cup B_k)$$
+тул $\bigcup_kB_k\in\mathcal{K}(A)$. Буурах дарааллын хувьд ижлээр шалгана. Иймд $\mathcal{K}(A)$ монотон анги.
+
+$A\in\mathscr{E}$ бол $\mathscr{E}$ алгебр тул $\mathscr{E}\subset\mathcal{K}(A)$, улмаар $\mathcal{M}\subset\mathcal{K}(A)$. Тэгвэл $B\in\mathcal{M}$, $A\in\mathscr{E}$ бол $B\in\mathcal{K}(A)$, өөрөөр хэлбэл $A\in\mathcal{K}(B)$. Иймд $B\in\mathcal{M}$ бүрийн хувьд $\mathscr{E}\subset\mathcal{K}(B)$, улмаар $\mathcal{M}\subset\mathcal{K}(B)$. Энэ нь $\mathcal{M}$ бүл ялгавар ба нэгдлээр битүү гэсэн үг. $X\in\mathscr{E}\subset\mathcal{M}$ тул $B\in\mathcal{M}$ бол $X\setminus B\in\mathcal{M}$. Иймд $\mathcal{M}$ алгебр байна.
+\end{proof}
+\begin{lem}\label{rectalg}
+Хэмжигдэх тэгш өнцөгтүүдийн хос хосоороо үл огтлолцох төгсгөлөг нэгдлүүдийн $\mathcal{F}$ бүл нь $X_1\times X_2$ дээрх алгебр бөгөөд $\mathcal{F}_{\sigma}=\alg_1\times\alg_2$ байна.
+\end{lem}
+\begin{proof}
+$(A_1\times A_2)\cap(B_1\times B_2)=(A_1\cap B_1)\times(A_2\cap B_2)$ ба
+$$(A_1\times A_2)^c=(A_1^c\times X_2)\cup(A_1\times A_2^c)$$
+нь үл огтлолцох нэгдэл тул тэгш өнцөгтийн гүйцээлт $\mathcal{F}$-д орно. Хоёр тэгш өнцөгтийн огтлол тэгш өнцөгт тул $\mathcal{F}$-ийн хоёр элементийн огтлол $\mathcal{F}$-д орно. $E=\bigcup\limits_{i=1}^{m}R_i\in\mathcal{F}$ бол $E^c=\bigcap\limits_{i=1}^{m}R_i^c\in\mathcal{F}$. Мөн $E\cup F=(E^c\cap F^c)^c$. Иймд $\mathcal{F}$ алгебр. $\mathcal{R}\subset\mathcal{F}\subset\alg_1\times\alg_2$ тул $\mathcal{F}_{\sigma}=\alg_1\times\alg_2$.
+\end{proof}
+\begin{thm}\label{secmeas}
+$\mu_1$, $\mu_2$ нь $\sigma$-төгсгөлөг хэмжээнүүд, $A\in\alg_1\times\alg_2$ байг. Тэгвэл $x_2\mapsto\mu_1(A_{x_2})$ функц $\alg_2$-хэмжигдэх, $x_1\mapsto\mu_2(A_{x_1})$ функц $\alg_1$-хэмжигдэх бөгөөд
+$$\int\limits_{X_2}\mu_1(A_{x_2})\,d\mu_2=\int\limits_{X_1}\mu_2(A_{x_1})\,d\mu_1 \eqno(*)$$
+байна.
+\end{thm}
+\begin{proof}
+Өмнөх теоремоор огтлолууд хэмжигдэх тул функцүүд тодорхойлогдоно.
+
+\textbf{1. $\mu_1$, $\mu_2$ төгсгөлөг үе.} Теоремын дүгнэлт биелэх $A\in\alg_1\times\alg_2$ олонлогуудын бүлийг $\mathcal{M}$ гэе.
+
+$A=A_1\times A_2$ тэгш өнцөгт бол $\mu_1(A_{x_2})=\mu_1(A_1)\chi_{A_2}(x_2)$, $\mu_2(A_{x_1})=\mu_2(A_2)\chi_{A_1}(x_1)$ тул хоёр функц хэмжигдэх бөгөөд $(*)$-ийн хоёр тал $\mu_1(A_1)\mu_2(A_2)$-тэй тэнцүү. Үл огтлолцох $A,B\in\mathcal{M}$ бол $(A\cup B)_{x_2}=A_{x_2}\cup B_{x_2}$ нь үл огтлолцох нэгдэл тул $\mu_1((A\cup B)_{x_2})=\mu_1(A_{x_2})+\mu_1(B_{x_2})$; нөгөө огтлолын хувьд ч ижил. Интегралын аддитив чанараар $A\cup B\in\mathcal{M}$. Иймд $\mathcal{F}\subset\mathcal{M}$.
+
+$\mathcal{M}$ монотон анги гэж харуулъя. $A_k\in\mathcal{M}$ өсөх дараалал, $A=\bigcup_kA_k$ бол $(A_k)_{x_2}$ өсөж $A_{x_2}$ руу тэмүүлэх тул доороос тасралтгүй чанараар $\mu_1((A_k)_{x_2})\uparrow\mu_1(A_{x_2})$. Хэмжигдэх функцүүдийн хязгаар хэмжигдэх ба монотон нийлэлтийн тухай теоремоор интегралууд нийлнэ. Нөгөө огтлолын хувьд ч ижил тул $A\in\mathcal{M}$. $A_k\in\mathcal{M}$ буурах дараалал бол $\mu_1$ төгсгөлөг тул дээрээс тасралтгүй чанараар $\mu_1((A_k)_{x_2})\downarrow\mu_1(A_{x_2})$; эдгээр функцүүд $\mu_1(X_1)$ тогтмолоор зааглагдах ба $\mu_2$ төгсгөлөг тул тогтмол функц интегралчлагдана. Зааглагдсан нийлэлтийн тухай Лебегийн теоремоор интегралууд нийлэх тул $\bigcap_kA_k\in\mathcal{M}$.
+
+Лемм \ref{rectalg} ба Теорем \ref{monclass}-ээр $\mathcal{M}\supset\mathcal{F}_{\sigma}=\alg_1\times\alg_2$.
+
+\textbf{2. Ерөнхий үе.} $X_1=\bigcup_kE_k$, $X_2=\bigcup_kF_k$, $E_1\subset E_2\subset\ldots$, $F_1\subset F_2\subset\ldots$, $\mu_1(E_k)<\infty$, $\mu_2(F_k)<\infty$ байх хэмжигдэх олонлогууд авъя (төгсгөлөг хэмжээтэй олонлогуудын эхний $k$-гийн нэгдлийг авбал өсөх дараалал болно). $\mu_1^k(B)=\mu_1(B\cap E_k)$, $\mu_2^k(B)=\mu_2(B\cap F_k)$ нь төгсгөлөг хэмжээнүүд бөгөөд $\int g\,d\mu_2^k=\int_{F_k}g\,d\mu_2$ (энгийн функцийн хувьд шалгаад монотон нийлэлтийн тухай теоремыг хэрэглэнэ). 1-р алхмаар $x_2\mapsto\mu_1(A_{x_2}\cap E_k)$, $x_1\mapsto\mu_2(A_{x_1}\cap F_k)$ функцүүд хэмжигдэх ба
+$$\int\limits_{X_2}\chi_{F_k}(x_2)\,\mu_1(A_{x_2}\cap E_k)\,d\mu_2=\int\limits_{X_1}\chi_{E_k}(x_1)\,\mu_2(A_{x_1}\cap F_k)\,d\mu_1.$$
+$k\to\infty$ үед интеграл доорх функцүүд үл буурахаар харгалзан $\mu_1(A_{x_2})$, $\mu_2(A_{x_1})$ руу нийлэх тул эдгээр хязгаар функцүүд хэмжигдэх бөгөөд монотон нийлэлтийн тухай теоремоор $(*)$ батлагдана.
+\end{proof}
+\begin{thm}[Үржвэр хэмжээ]\label{prodmeas}
+$\mu_1$, $\mu_2$ нь $\sigma$-төгсгөлөг хэмжээнүүд байг. $A\in\alg_1\times\alg_2$ бүрийн хувьд
+$$(\mu_1\times\mu_2)(A)=\int\limits_{X_2}\mu_1(A_{x_2})\,d\mu_2=\int\limits_{X_1}\mu_2(A_{x_1})\,d\mu_1$$
+гэж тодорхойлбол $\mu_1\times\mu_2$ нь $\alg_1\times\alg_2$ дээрх $\sigma$-төгсгөлөг хэмжээ бөгөөд
+$$(\mu_1\times\mu_2)(A_1\times A_2)=\mu_1(A_1)\cdot\mu_2(A_2),\qquad A_1\in\alg_1,\ A_2\in\alg_2$$
+байна. Энэ чанартай хэмжээ $\alg_1\times\alg_2$ дээр цор ганц. $\mu_1\times\mu_2$-ийг $\mu_1$, $\mu_2$ хэмжээнүүдийн \textbf{үржвэр хэмжээ}\index{үржвэр хэмжээ} гэнэ.
+\end{thm}
+\begin{proof}
+Теорем \ref{secmeas}-ээр $\mu=\mu_1\times\mu_2$ зөв тодорхойлогдоно. $\mu(\emptyset)=0$. $A=\bigcup_kA_k$ нь үл огтлолцох нэгдэл бол $A_{x_2}=\bigcup_k(A_k)_{x_2}$ мөн үл огтлолцох нэгдэл тул $\mu_1(A_{x_2})=\sum_k\mu_1((A_k)_{x_2})$. Сөрөг биш функцүүдийн цувааг гишүүнчлэн интегралчилж болох (монотон нийлэлтийн тухай теорем) тул $\mu(A)=\sum_k\mu(A_k)$. Иймд $\mu$ хэмжээ. Тэгш өнцөгт дээрх утгыг Теорем \ref{secmeas}-ийн баталгааны 1-р алхамд тооцсон. Дээрх $E_k$, $F_k$ олонлогуудын хувьд $X_1\times X_2=\bigcup_k(E_k\times F_k)$ ба $\mu(E_k\times F_k)<\infty$ тул $\mu$ нь $\sigma$-төгсгөлөг.
+
+Цор ганц чанар. $\nu$ нь $\alg_1\times\alg_2$ дээрх, тэгш өнцөгт дээр $\mu$-тэй тэнцүү хэмжээ байг. Аддитив чанараар $\nu=\mu$ нь $\mathcal{F}$ дээр биелнэ. $Q_k=E_k\times F_k$ гээд
+$$\mathcal{M}_k=\{A\in\alg_1\times\alg_2: \nu(A\cap Q_k)=\mu(A\cap Q_k)\}$$
+гэе. $A\in\mathcal{F}$ бол $A\cap Q_k\in\mathcal{F}$ тул $\mathcal{F}\subset\mathcal{M}_k$. Доороос тасралтгүй чанараар $\mathcal{M}_k$ өсөх дарааллын нэгдлээр битүү; $\nu(Q_k)=\mu(Q_k)<\infty$ тул дээрээс тасралтгүй чанараар буурах дарааллын огтлолоор битүү. Теорем \ref{monclass}-ээр $\mathcal{M}_k=\alg_1\times\alg_2$. $Q_k$ өсөх дараалал тул $A\in\alg_1\times\alg_2$ бүрийн хувьд $\nu(A)=\lim_k\nu(A\cap Q_k)=\lim_k\mu(A\cap Q_k)=\mu(A)$.
+\end{proof}
