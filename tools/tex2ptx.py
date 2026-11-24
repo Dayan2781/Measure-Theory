@@ -459,7 +459,7 @@ def images(x, ctx):
         name = Path(path).stem.lower() + ".png"
         ctx.figs.append((path, name))
         return '</p><image source="images/%s" width="%s"/><p>' % (name, width)
-    x = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{([^}]*)\}", rep, x)
+    x = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{?([^\s{}<]+)\}?", rep, x)
     x = re.sub(r"<p>\s*</p>", "", x)
     return x
 

@@ -62,8 +62,8 @@
 <m>(\R^n, \mathscr{P}(\R^n))</m> хэмжигдэх огторгуйд
  <md>I=\{(x_1, x_2,\ldots , x_n)\in\R^n\mid a_i\lt x_i\lt b_i , i=1, 2, \ldots , n\}</md> олонлогийг <m>n</m> хэмжээст задгай интервал гэе.</p>
 <p><m>n=1</m> үед нэг хэмжээст задгай интервал нь тоон шулуун дээрх ердийн задгай интервал бөгөөд <m>n=2</m> үед хоёр хэмжээст задгай интервал нь талууд нь координатын тэнхлэгүүдтэй параллель задгай тэгш өнцөгт, <m>n=3</m> үед гурван хэмжээст задгай интервал нь талсууд нь координатын хавтгайнуудтай параллель задгай тэгш өнцөгт параллелепипед юм.</p>
-<p>\includegraphics[width=0.45\textwidth]picture/pic4.png</p>
-<p>\includegraphics[width=0.4\textwidth]picture/pic5.png</p>
+<image source="images/pic4.png" width="45%"/>
+<image source="images/pic5.png" width="40%"/>
 <p><md>\vol(I)=\prod\limits_{i=1}^n(b_i-a_i)</md>
 тоог  <m>n-</m>хэмжээст  <m>I</m> интервалын <term>эзлэхүүн</term> гэе. <idx><m>n-</m>хэмжээст интервалын эзлэхүүн</idx>
   <m>A\in\mathscr{P}(\R^n)</m> олонлогийн хувьд 
