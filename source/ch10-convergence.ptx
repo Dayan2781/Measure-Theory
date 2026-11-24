@@ -1,17 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 12niilelt.tex; 11limit theorem.tex (1-р хэсэг) -->
+<!-- Эх файл: 12niilelt.tex:1- -->
 <chapter xml:id="ch-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Нийлэлтүүд</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-convergence">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Нийлэлтүүд</title>
+<section xml:id="sec-convergence-1">
+<title>Нийлэлтүүд</title>
+<p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A\in\alg</m>, <m>f</m> нь <m>A</m> дээр тодорхойлогдсон хэмжигдэх функц, <m>\{f_k\}_{k=1}^{\infty}</m> нь <m>A</m> дээр тодорхойлогдсон хэмжигдэх функцүүдийн дараалал байг.</p>
+<definition><statement><p><m>A_0=\{x\in A: f(x)=\lim\limits_{k\to\infty}f_k(x)\}</m>
+байг. 
+<md>\exists N\in\alg , N\supset A_0^c , \mu(N)=0</md>
+байвал <m>\{f_k\}_{k=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>f</m> функц рүү <m>\mu-</m> бараг нийлж байна<idx>бараг нийлэлт</idx> гэдэг.</p></statement></definition>
+<definition><statement><p><m>\forall \varepsilon\gt 0</m> хувьд
+<md>\lim\limits_{k\to\infty}\mu\{x\in A: |f_k(x)-f(x)|\gt \varepsilon\}=0</md>
+бол <m>\{f_k\}_{k=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>f</m> функц рүү <m>\mu-</m> хэмжээгээр нийлж байна<idx>хэмжээгээр нийлэх нийлэлт</idx> гэнэ.
+<m>f_k\Rightarrow f</m> гэж бичнэ.</p></statement></definition>
+<proposition><statement><p>Төгсгөлөг хэмжээт олонлог дээр <m>\mu-</m>бараг нийлж байгаа дараалал уг олонлог дээр  <m>\mu-</m> хэмжээгээр нийлнэ.</p></statement><proof><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A\in\alg</m>, <m>\mu(A)\lt +\infty</m> ба
+<m>\{f_k\}_{k=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр  <m>f</m> функц рүү <m>\mu-</m>бараг нийлж 
+байг. Дурын <m>\varepsilon\gt 0</m> тоо авъя.
+<md>A_k=\{x\in A: |f_k(x)-f(x)|\gt \varepsilon\}\qquad(k=1,2,\ldots)</md>
+олонлогуудыг байгуулъя. 
+<md>B_n=\bigcup\limits_{k=n}^{\infty}A_k\quad (n=1,2,\ldots)</md>
+гэе. <m>B_n</m> олонлогуудын огтлолцол нь
+<md>B=\{x\in A: f(x)\neq \lim\limits_{k\to\infty}f_k(x)\}</md>
+олонлогт агуулагдана. Нөхцөл ёсоор <m>\mu(B)=0</m>. Иймд
+<md>\mu\Bigl(\bigcap\limits_{n=1}^{\infty}B_n\Bigr)=0.</md>
+<m>\{B_n\}_{n=1}^{\infty}</m> нь буурах дараалал тул өгүүлбэр 1.3.4 b) ёсоор
+<md>\lim\limits_{n\to\infty}\mu(B_n)=0.</md>
+<m>A_n\subset B_n</m> тул <m>\lim\limits_{n\to\infty}\mu(A_n)=0</m>. Өгүүлбэр батлагдлаа.</p></proof></proposition>
+<remark><p><em>Дээрх өгүүлбэрт байгаа олонлог төгсгөлөг хэмжээтэй байх нөхцөл нь чухал. Төгсгөлгүй хэмжээтэй олонлог дээр бараг нийлдэг функцэн дараалал уг олонлог дээрээ хэмжээгээр 
+нийлэх албагүй. 
+</em></p></remark>
+<remark><p><em>Хэмжээгээр нийлэх нийлэлтээс бараг нийлэлт мөрдөн гарахгүй гэдгийг дараах жишээгээр харуулъя.
+</em></p></remark>
+<example><p><m>(0,1]</m> олонлог дээр <m>k\in\N</m> тоо бүрийн хувьд <m>f^{(k)}_1, \ldots, f^{(k)}_k</m> функцүүдийг дараах  байдлаар байгуулъя:
+<md>f^{(k)}_i=
+\begin{cases}
+1,&amp; \cfrac{i-1}k\lt x\leqslant\cfrac{i}{k},\\ 
+0,&amp; x-\mbox{ийн бусад утгууд дээр}.
+\end{cases}</md>
+<m>A_i^{(k)}=\{x\in (0,1]: f_i^{(k)}=1 \}</m> гэвэл</p>
+<p><md>\lambda(A_i^{(k)})=\cfrac{i}{k}-\cfrac{i-1}{k}=\cfrac{1}{k}\underset{k\to\infty}{\longrightarrow}0.</md>
+<m>\{f^{(k)}_i\}</m> дараалал Лебегийн хэмжээгээр нийлж байна.  
+<m>x\in (0,1]</m> бүр дээр <m>\{f^{(k)}_i\}</m> дараалал төгсгөлгүй олон нэг ба төгсгөлгүй олон
+ тэгээс тогтоно. Иймд бидний авч үзэж буй дараалал <m>(0,1]</m> завсрын нэг ч цэг дээр нийлэхгүй.</p></example>
+<theorem><title>Риссийн теорем</title><statement><p><m>\{f_n\}_{n=1}^{\infty}</m> дараалал <m>f</m> функц рүү <m>\mu-</m>хэмжээгээр нийлж байвал уг дараалал <m>f</m> функц рүү <m>\mu-</m> бараг нийлдэг дэд дараалалтай байна.</p></statement><proof><p><md>\lim\limits_{n\to\infty}\mu\{x\in A: |f_n(x)-f(x)|\gt \varepsilon\}=0</md> тэнцэтгэл бүх <m>\varepsilon\gt 0</m> тоонуудын хувьд биелнэ. Иймд 
+<m>\mu\{x\in A: |f_{n_1}(x)-f(x)|\gt 1\}\leqslant \frac12</m>
+байхаар <m>n_1\in\N</m> дугаар олдоно. <m>n_1\lt n_2\in\N</m> дугаарыг
+<m>\mu\left\{x\in A: |f_{n_2}(x)-f(x)|\gt \frac12\right\}\leqslant \frac14</m>
+байхаар сонгоё, гэх мэтчилэнгээр <m>n_{k-1}\lt n_k</m> дугаарыг
+<md>\mu\left\{x\in A: |f_{n_k}(x)-f(x)|\gt \frac{1}{k}\right\}\leqslant \frac{1}{2^k}</md>
+байхаар сонгох замаар <m>\{n_k\}_{k=1}^{\infty}\subset\N</m> эрс өсөх дарааллыг байгуулъя.
+<md>A_k=\left\{x\in A: |f_{n_k}(x)-f(x)|\gt \frac{1}{k}\right\}\qquad(k=1,2,\ldots)</md>
+гэе. Хэрэв <m>x\notin \bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k</m> бол <m>x\notin \bigcup\limits_{k=j}^{\infty}A_k</m> байх <m>j</m> дугаар олдох ба <m>k=j, j+1, \ldots</m> дугааруудын хувьд 
+<md>|f_{n_k}(x)-f(x)|\leqslant\frac1k</md>
+тэнцэтгэл биш биелнэ. Энэ нь  <m>\bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k</m> олонлогийн гадна талд <m>\{f_{n_k}\}_{k=1}^{\infty}</m> дараалал нийлнэ гэсэн үг юм. Байгуулалт ёсоор
+<md>\mu\Bigl(\bigcup\limits_{k=j}^{\infty}A_k\Bigr)\leqslant\sum\limits_{k=j}^{\infty}\mu(A_k)\leqslant \sum\limits_{k=j}^{\infty}\frac{1}{2^k}=\frac{1}{2^{j-1}}.</md>
+<m>B_j=\bigcup\limits_{k=j}^{\infty}A_k</m> олонлогууд буурах дараалал үүсгэх тул
+<md>\mu\Bigl(\bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k\Bigr)\mu\Bigl(\bigcap\limits_{j=1}^{\infty}B_j\Bigr)=
+\lim\limits_{j\to\infty}\mu(B_j)=\lim\limits_{j\to\infty}\frac{1}{2^{j-1}}=0.</md>
+Бидний авч үзсэн <m>\mu-</m>хэмжээгээр нийлэх <m>\{f_{n}\}_{n=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>\mu-</m>бараг нийлэх <m>\{f_{n_k}\}_{k=1}^{\infty}</m> дэд дараалалтай байна.</p></proof></theorem>
+</section>
+<xi:include href="./exercises/sem-convergence.ptx"/>
 </chapter>

@@ -1,17 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 4sigma algD.tex; lecture 2-borel sigma algebra.tex -->
+<!-- Эх файл: 4sigma algD.tex:143-263; 4sigma algD.tex:265-276; 4sigma algD.tex:278-335; 4sigma algD.tex:337-367 -->
 <chapter xml:id="ch-borel" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Борелийн σ-алгебр</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-borel">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Борелийн <m>\sigma</m>-алгебр</title>
+<section xml:id="sec-borel-1">
+<title>Борелийн <m>\sigma</m>-алгебр</title>
+<definition><statement><p><m>X</m> метрик огторгуй байг. <m>X</m>-н бүх задгай олонлогуудаас тогтох
+<md>\mathscr{O}:= \{ A\, | \, A\subset X, A \text{ задгай олонлог}\}</md> бүлээр төрөгдөх <m>\sigma</m>-алгебр <m>\mathscr{O}_{\sigma}</m>-г <m>X</m> дээрх <term>Борелийн <m>\sigma</m>-алгебр</term><idx>Борелийн <m>\sigma</m>-алгебр</idx> гээд <m>\mathscr{B}_X</m> гэж тэмдэглэнэ.</p></statement></definition>
+<proposition xml:id="borel-bsa1"><statement><p>Борелийн <m>\sigma</m>-алгебр <m>\mathscr{B}_X</m> нь 
+<ol marker="a)"><li><p>бүх задгай олонлогуудыг агуулна.</p></li><li><p>бүх битүү олонлогуудыг агуулна.</p></li><li><p>битүү олонлогуудын тоологдом нэгдлүүдийг агуулна.</p></li><li><p>задгай олонлогуудын тоологдом огтлолцлуудыг агуулна.</p></li><li><p>бүх битүү олонлогуудаар төрөгдөх <m>\sigma</m>-алгебртай давхацна.</p></li></ol></p></statement><proof><p><ol marker="a)"><li><p>Тодорхойлолтоос гарна.</p></li><li><p><m>B</m> битүү олонлог  бол <m>B^c</m> задгай тул <m>B^c\in\mathscr{B}_X</m> байна. Иймд <md>B^c\in\mathscr{B}_X\Leftrightarrow B=(B^c)^c\in\mathscr{B}_X</md></p></li><li><p>Тодорхойлолтоос гарна.</p></li><li><p>Тодорхойлолтоос гарна.</p></li><li><p>Өгүүлбэр <xref ref="prop-generated-compare"/>-с мөрдөнө.</p></li></ol></p></proof></proposition>
+<theorem xml:id="borel-bsar1"><title><m>\mathbb{R}</m> дээрх Борелийн <m>\sigma</m>-алгебр</title><statement><p><m>\mathscr{B}_{\mathbb{R}}</m> нь дараах бүлүүдээр төрөгдөнө.
+<ol marker="a)"><li><p><m>\{(a, b)\,|\, a\lt b\}</m></p></li><li><p><m>\{[a, b]\,|\, a\lt b\}</m></p></li><li><p><m>\{(a, b]\,|\, a\lt b\}</m> эсвэл <m>\{[a, b)\,|\, a\lt b\}</m></p></li><li><p><m>\{(a, \infty)\,|\, a\in\R \}</m> эсвэл <m>\{(-\infty, a)\,|\, a\in\R \}</m></p></li><li><p><m>\{[a, \infty)\,|\, a\in\R \}</m> эсвэл <m>\{(-\infty, a]\,|\, a\in\R \}</m></p></li></ol></p></statement><proof><p><ol marker="a)"><li><p><m>\mathscr{O}=\{A \mid \R\supset  A \text{ задгай }\}</m>, <m>\mathscr{E}=\{(a, b)\,|\, a\lt b\}</m> гэе. Бид <m>\mathscr{E}_{\sigma}=\mathscr{O}_{\sigma}=\mathcal{B} _{\R}</m> гэж батлахын тулд Өгүүлбэр <xref ref="prop-generated-compare"/>. ёсоор <m>\mathscr{E}\subset\mathscr{O}_{\sigma}</m> ба <m>\mathscr{O}\subset\mathscr{E}_{\sigma}</m> гэж харуулбал хангалттай.
+<md>\mathscr{E} \subset \mathscr{O}\subset\mathscr{B}_{\R}\Lra \mathscr{E}_{\sigma}\subset \mathscr{B}_{\R}</md> болно. <m>\mathscr{O}\subset \mathscr{E}_{\sigma}</m> харуулахын тулд <m>A</m> задгай бол <m>A\in \mathscr{E}_{\sigma}</m> баталъя. 
+<m>A</m> задгай тул цэг бүр нь орчныхоо хамтаар агуулагдах ёстой. 
+<md>x\in A\Lra \exists\varepsilon \gt 0 , (x-\varepsilon, x+\varepsilon)\subset A.</md> 
+Дурын ялгаатай 2 бодит тооны хооронд рационал тоо оршин байдаг тул 
+<md>\exists p_x, q_x\in\mathbb{Q} , x-\varepsilon\lt  p_x\lt x\lt q_x\lt x+\varepsilon\Lra x\in(p_x,q_x)\subset A</md> болно. Иймд <m>A=\BCD{x\in A}{}(p_x,q_x)</m> болно. Рационал төгсгөлтэй хэрчмүүд тоологдом байх тул <m>A</m> олонлог задгай интервалуудын тоологдом нэгдэл болж байна. Иймд <m>A\in \mathscr{E}_{\sigma}\Lra\mathscr{O}\subset \mathscr{E}_{\sigma}</m> болж батлагдав.</p></li><li><p><m>\mathcal{G}=\{[a, b]\,|\, a\lt b\}</m> гэе. Хэрэв <m>n_0\gt \dfrac{2}{b-a}</m> бол 
+<md>(a,b)=\BCD{n\in\N, n\gt n_0}{}[a+\frac{1}{n},b-\frac{1}{n}]\Lra (a,b)\in\mathcal{G}_{\sigma}</md> байна. Иймд
+<md>\mathscr{E}\subset \mathcal{G}_{\sigma}\Lra \mathscr{E}_{\sigma}=\mathscr{B}_{\R}\subset \mathcal{G}_{\sigma}.</md>
+<md>(a,\infty)=\BCD{n\in\N,n\gt a}{}(a,n)\Lra (a,\infty)\in\mathscr{E}_{\sigma}=\mathscr{B}_{\R}</md>  байна. Эндээс 
+<md>(a,\infty)^c=(-\infty,a] \in\mathscr{B}_{\R}</md> болно. Ижлээр  <m>[a,\infty)\in\mathscr{B}_{\R}</m> байна. Иймд <md>[a,b]=(-\infty,b]\cap [a,\infty)\in\mathscr{B}_{\R}\Lra \mathcal{G}\subset\mathscr{B}_{\R}\Lra \mathcal{G}_{\sigma}\subset\mathscr{B}_{\R}</md> болно. Иймд <m>\mathcal{G}_{\sigma}=\mathscr{B}_{\R}</m> батлагдав.</p></li><li><p>Баталгаа өмнөх хэсэгтэй төстэй.</p></li><li><p><m>\mathcal{S}=\{(a, \infty)\,|\, a\in\R \}</m>  гэе. <m>(a, \infty)</m> задгай олонлог тул 
+<md>(a, \infty)\in\mathscr{O}\Lra \mathcal{S}_{\sigma}\subset \mathscr{O}_{\sigma}=\mathscr{B}_{\R}</md> болно.
+Нөгөө талаас <md>(a,b)=(-\infty,b)\cap(a,\infty)=(\BC{n\in\N}{}(b-\frac{1}{n},\infty))^c\cap(a,\infty)</md> тул <md>(a,b)\in\mathcal{S}_{\sigma}\Lra \mathscr{E}\subset \mathcal{S}_{\sigma}\Lra \mathscr{E}_{\sigma}=\mathscr{B}_{\R}\subset \mathcal{S}_{\sigma}</md> болно. Иймд <m>\mathcal{S}_{\sigma}=\mathscr{B}_{\R}</m> батлагдав.   
+ <m>e)</m> баталгаа ижил.</p></li></ol></p></proof></theorem>
+<remark><p>Бид лемма <xref ref="borel-bsar1"/>-н а) хэсгийн баталгаанаас дараах үр дүнг харж болно.</p>
+<p><m>\R</m> огторгуйн дурын задгай <m>A</m> олонлогийг тоологдом тооны задгай интервалуудын нэгдэлд <md>A=\BCD{x\in A}{}(p_x,q_x)</md> гэж тавьж чадаж байна.</p></remark>
+<example xml:id="borel-tsbh"><p><m>a\in\R</m> бол <m>\{a\}=[a-1;a]\cap [a;a+1]</m> тул <m>\{a\}\in\mathscr{B}_{\R}</m> байна. Өөрөөр хэлбэл ганц цэгээс тогтсон олонлог бүр Борелээр хэмжигдэх олонлог байна. <m>\sigma</m>-алгебрын <m>(\sigma 2)</m> аксиомыг анхаарвал тоологдом олонлог бүр Борелээр хэмжигднэ. Тухайлбал <m>\Q</m> олонлог Борелээр хэмжигдэнэ.</p></example>
+<theorem><statement><p><m>\R^n</m> дээрх Борелийн <m>\sigma-</m>алгебр <m>\mathscr{B}_{\R^n}</m> нь
+<ul marker=""><li><p>a) <m>\R^n</m> огторгуйн бүх битүү дэд олонлогуудын бүлээр;</p></li><li><p>b) <m>\rn</m> огторгуйн бүх <m>\{(x_1,\dots,x_n): x_i\leqslant b_i, \ i=1,\ldots,n\}</m>   хэлбэрийн олонлогуудын бүлээр;</p></li><li><p>c) <m>\rn</m> огторгуйн бүх <m>\{(x_1,\dots,x_n): a_i\lt  x_i\leqslant b_i, \ i=1,\ldots,n\}</m> хэлбэрийн олонлогуудын бүлээр</p></li></ul>
+тус тус төрөгдөнө.</p></statement><proof><p>Теорем <xref ref="borel-bsar1"/>- ийн баталгаатай төстэй хийгдэнэ.</p></proof></theorem>
+<p><m>\brn</m> нь <m>\rn</m> огторгуйн бүх задгай дэд олонлогууд, тэдгээрийн гүйцээлтүүд болох битүү дэд олонлогууд, тэдгээрийн тоологдом нэгдлүүд болон огтлолцлуудыг агуулах нь тодорхой.</p>
+<p>Дурын тооны задгай олонлогийн нэгдэл, төгсгөлөг тооны задгай олонлогийн огтлолцол тус тус задгай олонлог байдаг ба дурын тооны битүү олонлогийн огтлолцол, төгсгөлөг тооны битүү олонлогийн нэгдэл тус тус битүү олонлог байдгийг бид мэднэ.</p>
+<p>Задгай олонлогуудын тоологдом нэгдэл задгай олонлог байх албагүй бөгөөд битүү олонлогуудын тоологдом огтлолцол битүү олонлог байх албагүй гэдгийг жишээн дээр харж болно.</p>
+<definition><statement><p><m>\rn</m> огторгуйн задгай дэд олонлогуудын тоологдом огтлолцол дүрсэнд тавигддаг олонлогийг <m>G_{\delta}</m> (жи-дельта), битүү дэд олонлогуудын тоологдом нэгдэл дүрсэнд тавигдах олонлогийг <m>F_{\sigma}</m> (эф-сигма) олонлог гэж тус тус нэрлэдэг.</p></statement></definition>
+<proposition><statement><p><m>\rn</m> огторгуйн битүү дэд олонлог бүр <m>G_{\delta}</m>, задгай дэд олонлог бүр <m>F_{\sigma}</m> байна.</p></statement><proof><p>Эхлээд <m>\rn</m> огторгуйн задгай олонлог бүрийг тоологдом тооны битүү кубуудын нэгдэл дүрсэнд тавьж болно гэж харуулъя. <m>G\subset \rn</m> задгай олонлог байг. <m>\rn</m> огторгуйг бүхэл тоон координатуудтай цэгүүд дээр оройтой 1 ирмэгтэй битүү кубуудээр торлоё.  Бүх ийм кубууд 
+<ul marker=""><li><p>I. <m>G</m> олонлогт бүхлээрээ агуулагддаг;</p></li><li><p>I\!I. <m>G</m> ба <m>G^c</m> олонлогуудтай хоёулантай нь хоосон биш огтолцоотой;</p></li><li><p>I\!I\!I. <m>G^c</m> олонлогт бүхлээрээ агуулагддаг</p></li></ul> 
+гэсэн гурван төрөл байна. I төрлийн кубуудыг авна. I\!I\!I төрлийн кубуудыг орхино. I\!I төрлийн кубуудыг дахин <m>\frac12</m> ирмэгтэй <m>2^n</m> ширхэг кубэд хувааж өмнөх алхмыг давтъя.</p>
+<p>\includegraphics[width=0.8\textwidth]picture/pic2JD.png</p>
+<p>Энэ үйл явцыг төгсгөлгүй үргэлжлүүлье. Бүх сонгож авсан кубуудын бүлийг <m>\mathcal{Q}</m> гэж тэмдэглэвэл 
+<md>\bigcup\limits_{Q\in\mathcal{Q}}Q\subset G\quad\mbox{ба}\quad |\mathcal{Q}|=\aleph_0</md>
+байх нь тодорхой. <m>\forall x\in G</m> байг. <m>G</m> олонлог задгай тул бүх цэгээ ямар нэг <m>O(x)</m> орчных нь хамт агуулах ёстой. 
+<m>x\in Q_x\subset O(x)\subset G</m> байх <m>2^{-N}</m> ирмэгтэй <m>Q_x\in \mathcal{Q}</m> куб олдоно.  <m>G\subset\bigcup\limits_{Q\in\mathcal{Q}}Q</m>. Эндээс 
+<md>G=\bigcup\limits_{Q\in\mathcal{Q}}Q</md>
+болов. <m>\rn</m> огторгуйн задгай дэд олонлог бүр <m>F_{\sigma}</m> байна.</p>
+<p><m>F\subset\rn</m> битүү олонлог байг. <m>F^c</m> задгай олонлог байх бөгөөд баталгааны эхний хэсэгт харуулсан ёсоор битүү олонлогуудын тоологдом нэгдэл дүрсэнд тавигдана:
+<md>F^c=\bigcup\limits_{i=1}^{\infty}F_i,\quad F_i\subset\rn, \ F_i-\mbox{битүү}\quad i=1,2,\ldots.</md>
+<md>F=(F^c)^c=\Bigl(\bigcup\limits_{i=1}^{\infty}F_i\Bigr)^c=\bigcap\limits_{i=1}^{\infty}F^c_i,\quad F_i^c-\mbox{задгай}.</md>
+<m>\rn</m> огторгуйн битүү дэд олонлог бүр <m>G_{\delta}</m> байна.</p></proof></proposition>
+<p><m>\mathcal{G}</m> нь <m>\rn</m> огторгуйн бүх задгай дэд олонлогуудын бүл, <m>\mathcal{F}</m> нь <m>\rn</m> огторгуйн бүх битүү дэд олонлогуудын бүл, <m>\mathcal{G}_{\delta}</m> нь бүх <m>G_{\delta}</m> олонлогуудын бүл, <m>\mathcal{F}_{\sigma}</m> нь бүх <m>F_{\sigma}</m> олонлогуудын бүл байг. <m>F_{\sigma}</m> олонлогуудын тоологдом нэгдэл дүрсэн дээр тавигдах бүх олонлогуудын бүлийг <m>\mathcal{F}_{\sigma\sigma}</m>, <m>F_{\sigma}</m> олонлогуудын тоологдом огтлолцол дүрсэн дээр тавигдах бүх олонлогуудын бүлийг <m>\mathcal{F}_{\sigma\delta}</m>, <m>G_{\delta}</m> олонлогуудын тоологдом нэгдэл дүрсэн дээр тавигдах бүх олонлогуудын бүлийг <m>\mathcal{G}_{\delta\sigma}</m>, <m>G_{\delta}</m> олонлогуудын тоологдом огтлолцол дүрсэн дээр тавигдах бүх олонлогуудын бүлийг <m>\mathcal{G}_{\delta\delta}</m> гэхчлэн тэмдэглэвэл дараах харьцаанууд биелнэ:</p>
+<p>\includegraphics[width=0.5\textwidth]picture/pic1JD.png</p>
+<p>Эдгээр бүлүүд нь хоорондоо давхцахгүй бөгөөд эдгээр бүлүүдийн алинд ч харьяалагдахгүй борелийн олонлог оршин байна.</p>
+</section>
+<exercises xml:id="sem-borel"><title>Семинарын бодлогууд</title>
+<subexercises xml:id="sem-borel-1"><title>Ерөнхий бодлого</title>
+<exercise><statement><p>Борелийн <m>\sigma-</m>алгебр <m>\mathscr{B}_{\R}</m> нь  <m>b</m> төгсгөл нь рационал тоо байх <m>(-\infty;b]</m> хэлбэрийн интервалуудын бүлээр төрөгдөнө гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\mathscr{B}_{\R}</m> нь тоон шулууны бүх компакт дэд олонлогуудын бүлээр төрөгдөнө гэж харуул.</p></statement></exercise>
+<exercise><statement><p><m>\Q</m> рационал тоон олонлог нь <m>F_{\sigma}</m> боловч <m>G_{\delta}</m> биш гэж харуул.</p></statement></exercise>
+<exercise><statement><p><m>F_{\sigma}</m> ч биш, <m>G_{\delta}</m> ч  биш байх <m>\R</m> огторгуйн дэд олонлог олдоно гэж харуул.</p></statement></exercise>
+</subexercises>
+<subexercises xml:id="sem-borel-2"><title><m>\R</m> дээрх Борелийн <m>\sigma</m>-алгебр, задгай ба битүү олонлог</title>
+<exercise><statement><p>ℝ дээрх задгай олонлогуудын тоологдом огтлолцол заавал задгай олонлог байх албагүйг жишээгээр харуул. Мөн үүн дээр үндэслэн задгай олонлогуудын тоологдом огтлолцол (<m>G_\delta</m> олонлог) Борелийн <m>\sigma</m>-алгебрт харьяалагдах уу?</p></statement></exercise>
+<exercise><statement><p>Дурын <m>c \in \R</m> цэгийн хувьд <m>\{c\}</m> олонлог нь Борелийн олонлог мөн үү? Батал.</p></statement></exercise>
+<exercise><statement><p>Рационал тооны олонлог <m>\Q</m> нь Борелийн олонлог мөн үү? Түүний бүрдвэр болох иррационал тооны олонлог <m>\mathbb{I} = \R \setminus \Q</m> ямар олонлог вэ?</p></statement></exercise>
+<exercise><statement><p>Канторын олонлог (<m>C</m>) нь задгай юу, битүү юу? Тэрээр Борелийн <m>\sigma</m>-алгебрт харьяалагдах уу?</p></statement></exercise>
+<exercise><statement><p>Борелийн <m>\sigma</m>-алгебр <m>\br</m> нь бүх задгай интервалуудаар <m>\mathcal{O} = \{(a, b) : a, b \in \R\}</m> үүсгэгддэг. Тэгвэл хагас задгай интервалуудаар <m>\mathcal{S} = \{(a, b] : a, b \in \R\}</m> үүсгэгдсэн <m>\sigma</m>-алгебр нь <m>\br</m>-тэй тэнцүү байх уу?</p></statement></exercise>
+<exercise><statement><p><m>A</m> нь <m>\R</m> дээрх задгай олонлог, <m>B</m> нь битүү олонлог байг. <m>A \setminus B</m> болон <m>B \setminus A</m> олонлогууд ямар шинж чанартай байх вэ?</p></statement></exercise>
+<exercise><statement><p>ℝ огторгуйд нэгэн зэрэг задгай бөгөөд битүү байж чадах олонлогуудыг ол.</p></statement></exercise>
+<exercise><statement><p>Хэрэв <m>A \subset \R</m> олонлогийн бүх цэгүүд тусгаарлагдсан (isolated цэг буюу цэг бүрийн хувьд <m>A</m>-гийн өөр ямар ч элементийг агуулаагүй орчин олддог) бол <m>A</m> нь Борелийн олонлог байж чадах уу?</p></statement></exercise>
+</subexercises>
+<subexercises xml:id="sem-borel-3"><title><m>\R^n</m> дээрх задгай ба битүү олонлог</title>
+<exercise><statement><p><m>\rn</m> огторгуйд <m>B(x, r) = \{y \in \rn : \|x - y\| \lt  r\}</m> харьцаагаар тодорхойлогдох задгай бөмбөрцөг задгай олонлог мөн үү? <m>\rn</m> дээрх Борелийн <m>\sigma</m>-алгебр <m>\brn</m>-ийг бүх задгай бөмбөрцгүүдийн цуглуулгаар үүсгэж болох уу?</p></statement></exercise>
+<exercise><statement><p><m>A \subset \R</m> болон <m>B \subset \R</m> нь харгалзан задгай олонлогууд бол тэдгээрийн Декартын үржвэр <m>A \times B</m> нь <m>\R^2</m> дээр задгай олонлог мөн үү? Хэрэв <m>A, B</m> битүү бол яах вэ?</p></statement></exercise>
+<exercise><statement><p><m>f: \rn \to \R</m> нь тасралтгүй функц байг. Тэгвэл <m>U = \{x \in \rn : f(x) \gt  0\}</m> олонлог задгай юу, битүү юу? Мөн <m>V = \{x \in \rn : f(x) = 0\}</m> олонлог ямар байх вэ?</p></statement></exercise>
+<exercise><statement><p><m>\rn</m> огторгуйн дурын хязгаарлагдмал бөгөөд битүү олонлогийг (Компакт олонлог) Борелийн <m>\sigma</m>-алгебрт харьяалагдана гэж хэлж болох уу? Үүнийг хэмжээний онолтой хэрхэн холбох вэ?</p></statement></exercise>
+</subexercises>
+</exercises>
 </chapter>

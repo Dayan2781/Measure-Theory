@@ -1,17 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 6lebesgue measureD.tex; lecture 4 -->
+<!-- Эх файл: 6lebesgue measureD.tex:1-127 -->
 <chapter xml:id="ch-outer-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Гадаад хэмжээ</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-outer-measure">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Гадаад хэмжээ</title>
+<section xml:id="sec-outer-measure-1">
+<title>Гадаад хэмжээ</title>
+<p>Энэ хэсэгт бид хэмжээ байгуулах үндсэн аргуудын нэг Гадаад хэмжээний тухай үзнэ. Гадаад хэмжээг ашиглан Лебегийн хэмжээ гэгдэх <m>\R^n</m> дэхь хэмжээг байгуулах болно.</p>
+<definition><title>Гадаад хэмжээ</title><statement><p><m>X</m> хоосон биш олонлог, <m>\mathscr{P}(X)</m> нь <m>X</m>-н бүх дэд олонлогуудын бүл байг. 
+<md>\mu^{\star}:\mathscr{P}(X)\longrightarrow [0;\infty]</md> функц дараах нөхцөлүүдийг 
+хангадаг бол түүнийг <m>X</m> дээрх <term>гадаад хэмжээ </term><idx>гадаад хэмжээ </idx> гэнэ. 
+<ul marker=""><li><p><term><m>(\mu^{\star}1).</m></term> <m>\mu^{\star}(\emptyset)=0</m></p></li><li><p><term><m>(\mu^{\star}2).</m></term> Хэрэв <m>A\subseteq B\subseteq X</m> бол <m>\mu^{\star}(A)\leq\mu^{\star}(B)</m></p></li><li><p><term><m>(\mu^{\star}3).</m></term> <m>X</m>-н тоологдом дэд олонлогуудын бүл <m>\{A_n\}</m> хувьд 
+<md>\mu^{\star}(\bigcup_n A_n)\leq \sum_n \mu^{\star}(A_n).</md></p></li></ul></p></statement></definition>
+<remark><p><ol marker="a)"><li><p><m>(\mu^*2)</m> аксиомыг гадаад хэмжээний монотон чанар, <m>(\mu^*3)</m> аксиомыг гадаад хэмжээний хагас аддитив чанар гэдэг.</p></li><li><p>Гадаад хэмжээ нь <m>\mathscr{P}(X)</m> дээр тодорхойлогдсон монотон, хагас аддитив 
+<m>[0;\infty]</m> олонлогоос утга авдаг функц юм.</p></li><li><p><m>X</m> дээрх гадаад хэмжээ нь хэмжээ болох албагүй. Учир нь хагас аддитив чанараас аддитив чанар биелэх албагүй.</p></li><li><p><m>X</m> дээрх хэмжээ нь гадаад хэмжээ болох албагүй. Учир нь түүний тодорхойлогдож байгаа <m>\sigma</m>-алгебр нь <m>\mathscr{P}(X)</m> байх албагүй.</p></li></ol></p></remark>
+<example><p>Дараах жишээнүүдэд <m>X</m> хоосон биш олонлог, <m>\mathscr{P}(X)</m> нь <m>X</m>-н бүх дэд олонлогуудын бүл <m>\mu^{\star}:\mathscr{P}(X)\to [0;\infty]</m> байг. 
+<ol marker="a)"><li><p><m>\mu^{\star}(\emptyset)=0</m> ба <m>\quad A\neq\emptyset</m> бол  <m>\mu^{\star}(A)=1</m> функц гадаад хэмжээ болно.</p></li><li><p><m>\mu^{\star}(A)=\left\{
+\begin{array}{cl}
+0&amp;  A \text { тоологдом}\\ 
+1&amp;  A \text { тоологдом биш} 
+\end{array}
+\right.</m> функц гадаад хэмжээ болно.</p></li><li><p><m>X</m> ямар нэг төгсгөлгүй олонлог байг. 
+<md>\mu^{\star}(A)=\left\{
+\begin{array}{cl}
+0&amp;  A \text { төгсгөлөг}\\ 
+1&amp;  A \text { төгсгөлгүй} 
+\end{array}
+\right.</md> функц гадаад хэмжээ болохгүй. Учир нь хагас аддитив чанар хангахгүй.</p></li></ol></p></example>
+<p><term>Лебегийн гадаад хэмжээ</term>
+ <m>(\R, \mathscr{P}(\R))</m> хэмжигдэх огторгуйн <m>A\in\mathscr{P}(\R)</m> олонлогийн хувьд 
+ <md>\mathscr{L}_A=\{\{(a_i;b_i)\}_{i=1}^{\infty}|A\subseteq \cup_{i=1}^{\infty}(a_i;b_i), a_i, b_i\in\R\}</md> гэе. <m>\mathscr{L}_A</m> нь дараалал бүр нь <m>A</m> олонлогийн задгай хучилт байх задгай интервалуудын дарааллуудаас тогтох хоосон биш олонлог байна. Өөрөөр хэлбэл<m>\mathscr{L}_A</m> нь <m>A</m> олонлогийн бүх тоологдом задгай хучилтуудын бүл юм. <m>\mathscr{L}_A</m> хоосон биш байхыг харуулъя.</p>
+<p><m>q_i</m> нь <m>i</m>-р рационал тоо, <m>\alpha</m> дурын эерэг тоо бол <m>\R=\cup_{q_i\in\mathbb{Q}}(q_i-\alpha;q_i+\alpha)</m> байх нь илт. <m>Q_i=(q_i-\alpha;q_i+\alpha)</m> гэе. <m>x\in\R</m> бол <m>q_k\in (x;x+\alpha)</m> байх рационал тоо олдоно. Иймд <m>x\lt q_k\lt x+\alpha\Rightarrow q_k-\alpha\lt x\lt q_k\lt q_k+\alpha</m> тул <m>x\in Q_k</m> байна. <m>\mathbb{Q}</m> олонлог тоологдом тул <m>I=\{i\in\N| Q_i\cap A\neq \emptyset\}</m> олонлог тоологдом байна. Иймд <m>A\subseteq \cup_{i\in I} Q_i</m> тул <m>\cup_{i\in I} Q_i\in\mathscr{L}_A</m> байна.    
+ Одоо <m>\ls:\mathscr{P}(\R)\to [0;\infty]</m> функцийг дараах байдлаар тодорхойлъё. <m>A\in \mathscr{P}(\R)</m> бол 
+<md number="yes" xml:id="outer-measure-loutmes1">\ls(A)=\displaystyle\inf\{\sum_{i=1}^{\infty}(b_i-a_i) | \{(a_i;b_i)\}_{i=1}^{\infty}\in\mathscr{L}_A\}</md></p>
+<theorem xml:id="outer-measure-lebmes1"><statement><p><m>\ls</m> нь <m>\R</m> дээр гадаад хэмжээ болно.</p></statement><proof><p>Хоосон олонлогийн хувьд <m>\ls(\emptyset)=0</m> байхыг харуулъя. Тэгээс их <m>\veps</m> тоо бүрийн хувьд <m>\sum\limits_{i}(b_i-a_i)\lt \veps</m>  байх <m>\{(a_i;b_i)\}_{i=1}^{\infty}</m>  дараалал олдоно. Энд <m>(a_i;b_i)</m> интервалыг урт нь <m>2^{-i}\veps</m> байхаар дураар сонгож болох ба эдгээрийн нэгдэл <m>\emptyset</m>-г агуулах нь тодорхой.  <m>\veps</m> дурын тул
+<md>\ls(\emptyset)=\inf\{\sum\limits_{i}(b_i-a_i)\}=0</md> байна.</p>
+<p>Монотон чанарыг харуулъя.  
+<m>A\subseteq B</m> бол <m>B</m> олонлогийн хучилт бүр <m>A</m> олонлогийн хучилт болох нь тодорхой. Өөрөөр хэлбэл <m>\mathscr{L}_A\supseteq \mathscr{L}_B</m> байна. Эндээс доод торгон хилийн чанар ёсоор  
+<md>\ls(A)\leq \inf\{\sum\limits_{i}(b_i-a_i)| \{a_i;b_i\}\in\mathscr{L}_B\}=\ls(B)</md> байна.</p>
+<p>Тоологдом хагас аддитив чанарыг харуулъя.  
+<m>\{A_n\}_{n=1}^{\infty}</m> нь <m>\R</m>-н дэд олонлогуудын дурын дараалал байг. Хэрэв 
+<md>\sum_{n=1}^{\infty} \ls(A_n)=\infty</md> бол тоологдом хагас аддитив чанар  
+<md>\ls(\cup_{n=1}^{\infty}A_n)\leq\sum_{n=1}^{\infty} \ls(A_n)=\infty</md> биелнэ.
+ Одоо 
+ <md>\sum_{n=1}^{\infty} \ls(A_n)\lt \infty</md> гэе. Дурын <m>\veps\gt 0</m> тооны хувьд <m>A_n</m> олонлог бүрийн <m>\{(a_{n,i};b_{n,i})\}_{i=1}^{\infty}</m> хучилтыг 
+<md>\sum_{i=1}^{\infty}(b_{n,i}-a_{n,i})\lt \ls(A_n)+\dfrac{\veps}{2^n}</md> байхаар сонгож 
+болох нь <m>\inf</m>-н тодорхойлолтоос илт. 
+ <md>\cup_{n=1}^{\infty}(\{(a_{n,i};b_{n,i})\}_{i=1}^{\infty})</md> дараалал нь <m>\cup_{n=1}^{\infty} A_n</m> олонлогийн тоологдом задгай хучилт болно. Учир нь тоологдом ширхэг тоологдом чадалтай олонлогийн нэгдэл тоологдом чадалтай байдаг. Иймд 
+<md><mrow number="yes" xml:id="outer-measure-outmes1">
+\ls(\cup_{n=1}^{\infty}A_n)\leq &amp;\sum_{n=1}^{\infty} \sum_{i=1}^{\infty}(b_{n,i}-a_{n,i})</mrow><mrow>\lt  &amp;\sum_{n=1}^{\infty}(\ls(A_n)+\dfrac{\veps}{2^n})=\sum_{n=1}^{\infty}\ls(A_n)+\veps</mrow></md> биелнэ. <m>(\ref{outmes1})</m> тэнцэтгэл бишид  <m>\veps</m> дурын тоо тул 
+<md>\ls(\cup_{n=1}^{\infty}A_n)\leq \sum_{n=1}^{\infty}\ls(A_n)</md> болж тоологдом хагас аддитив чанар батлагдав.</p></proof></theorem>
+<definition><statement><p><m>(\ref{loutmes1})</m> томьёогоор тодорхойлогдох <m>\ls</m> гадаад хэмжээг <term>Лебегийн гадаад хэмжээ</term><idx>Лебегийн гадаад хэмжээ</idx> гэнэ.</p></statement></definition>
+<proposition xml:id="outer-measure-inoutmes1"><statement><p><m>\R_1</m> дэхь интервалын Лебегийн гадаад хэмжээ нь түүний урттай тэнцүү.</p></statement><proof><p>Эхлээд битүү зааглагдсан интервал <m>[a;b]</m>-г авч үзье. <m>[a;b]</m> интервалын урт нь <m>b-a</m> билээ. Дурын <m>\veps\gt 0</m> тооны хувьд нэгдэл нь <m>a</m> , <m>b</m> цэгүүдийг агуулах, уртуудын нийлбэр нь <m>\veps</m> байх <m>\{a_i;b_i\}_{i=1}^{\infty}</m> дараалал олдоно. Тэгвэл 
+<md>[a;b]\subset (a;b)\cup(\cup_{i}(a_i;b_i))</md> тул <m>\ls([a;b])\leq (b-a)+\veps</m> байна. 
+<m>\veps</m> дурын тул  <m>\ls([a;b])\leq (b-a)</m> байна.   
+<m>[a;b]</m> олонлогийн дурын хучилт <m>\cup_{i}(c_i;d_i)</m> авч үзье. <m>[a;b]</m> компакт олонлог тул <m>\cup_{i}(c_i;d_i)</m> задгай хучилтаас түүнийг хучих төгсгөлөг интервалууд олдоно. 
+Тэдгээрийг <m>(c_i;d_i) , i=1,2, \ldots n</m> гэж үзвэл 
+<md>b-a\leq \sum_{i=1}^n (d_i-c_i)\leq \sum_{i=1}^{\infty} (d_i-c_i)</md> болно. Энд дурын задгай хучилт авсан тул <m>b-a</m> тоо доод хил болж байна. Иймд торгон хилийн заримаар <m>\ls([a;b])\geq (b-a)</m> болж өмнөх хэсэгтэй хамт харвал <m>\ls([a;b])= (b-a)</m> байна.</p>
+<p><m>I</m> дурын зааглагдсан <m>(a;b)</m> эсвэл <m>[a;b)</m> эсвэл <m>(a;b]</m> хэлбэрийн интервал бол <m>[a+\veps/2;b-\veps/2]</m> түүнд агуулагдсан мөн <m>[a-\veps/2;b+\veps/2]</m> түүнийг агуулсан битүү интервалууд учир гадаад хэмжээний монотон чанараар
+<md>b-a-\veps\leq \ls(I)\leq b-a+\veps</md> болно. Иймд <m>\ls(I)= b-a</m> байна.</p>
+<p>Хэрэв <m>I</m>  зааглагдаагүй интервал бол түүний урт <m>\infty</m> байх ба түүнд агуулагдах дурын урттай битүү интервал олдох тул гадаад хэмжээний монотон чанараас илт.</p></proof></proposition>
+<p>Одоо <m>\R^n</m> огторгуй дээрх Лебегийн гадаад хэмжээтэй танилцъя.
+<m>(\R^n, \mathscr{P}(\R^n))</m> хэмжигдэх огторгуйд
+ <md>I=\{(x_1, x_2,\ldots , x_n)\in\R^n\mid a_i\lt x_i\lt b_i , i=1, 2, \ldots , n\}</md> олонлогийг <m>n</m> хэмжээст задгай интервал гэе.</p>
+<p><m>n=1</m> үед нэг хэмжээст задгай интервал нь тоон шулуун дээрх ердийн задгай интервал бөгөөд <m>n=2</m> үед хоёр хэмжээст задгай интервал нь талууд нь координатын тэнхлэгүүдтэй параллель задгай тэгш өнцөгт, <m>n=3</m> үед гурван хэмжээст задгай интервал нь талсууд нь координатын хавтгайнуудтай параллель задгай тэгш өнцөгт параллелепипед юм.</p>
+<p>\includegraphics[width=0.45\textwidth]picture/pic4.png</p>
+<p>\includegraphics[width=0.4\textwidth]picture/pic5.png</p>
+<p><md>\vol(I)=\prod\limits_{i=1}^n(b_i-a_i)</md>
+тоог  <m>n-</m>хэмжээст  <m>I</m> интервалын <term>эзлэхүүн</term> гэе. <idx><m>n-</m>хэмжээст интервалын эзлэхүүн</idx>
+  <m>A\in\mathscr{P}(\R^n)</m> олонлогийн хувьд 
+ <md>\mathscr{I}_A=\{\{I_i\}_{i=1}^{\infty}|A\subseteq \cup_{i} I_i, I_i-n\text{ хэмжээст задгай интервал }\}</md> гэе.</p>
+<p><m>\mathscr{I}_A</m> нь <m>n</m> хэмжээст задгай интервалуудын дарааллуудаас тогтох хоосон
+биш олонлог байна. <m>\R</m> дээрх Лебегийн гадаад хэмжээтэй ижлээр</p>
+<p><m>\ls_n:\mathscr{P}(\R)\to [0;\infty]</m> функцийг дараах байдлаар тодорхойлъё. 
+<md number="yes" xml:id="outer-measure-loutmes2">\ls_n(A)=\inf\{\sum_{i=1}^{\infty} vol(I_i) | \{I_i\}_{i=1}^{\infty} \in\mathscr{I}_A\}</md></p>
+<theorem><statement><p><m>\ls_n</m> нь <m>\R^n</m> дээр гадаад хэмжээ болно. <m>n</m> хэмжээст задгай интервалын  
+Лебегийн гадаад хэмжээ нь түүний эзлэхүүнтэй тэнцүү байна.</p></statement><proof><p>Теорем <xref ref="outer-measure-lebmes1"/> ба өгүүлбэр <xref ref="outer-measure-inoutmes1"/> баталгаатай төстэй.</p></proof></theorem>
+</section>
+<xi:include href="./exercises/sem-outer-measure.ptx"/>
 </chapter>

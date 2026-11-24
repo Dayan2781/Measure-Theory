@@ -1,0 +1,362 @@
+{
+ "src": "/mnt/user-data/uploads/hemjeenii onol/Real_analysis_lecture",
+ "out": "/home/user/measure-theory/source",
+ "solutions": "/home/user/solutions",
+ "chapters": [
+  {
+   "slug": "borel",
+   "id": "ch-borel",
+   "file": "ch02-borel.ptx",
+   "title": "Борелийн <m>\\sigma</m>-алгебр",
+   "pieces": [
+    {
+     "file": "4sigma algD.tex",
+     "from": 143,
+     "to": 263
+    },
+    {
+     "file": "4sigma algD.tex",
+     "from": 265,
+     "to": 276,
+     "kind": "exercises",
+     "title": "Ерөнхий бодлого",
+     "skip": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "file": "4sigma algD.tex",
+     "from": 278,
+     "to": 335,
+     "kind": "exercises",
+     "title": "<m>\\R</m> дээрх Борелийн <m>\\sigma</m>-алгебр, задгай ба битүү олонлог"
+    },
+    {
+     "file": "4sigma algD.tex",
+     "from": 337,
+     "to": 367,
+     "kind": "exercises",
+     "title": "<m>\\R^n</m> дээрх задгай ба битүү олонлог"
+    }
+   ]
+  },
+  {
+   "slug": "measure",
+   "id": "ch-measure",
+   "file": "ch03-measure.ptx",
+   "title": "Хэмжээ",
+   "pieces": [
+    {
+     "file": "5measure1D.tex",
+     "title": "Хэмжээ ба түүний чанарууд"
+    },
+    {
+     "file": "lecture 2-borel sigma algebra.tex",
+     "from": 193,
+     "to": 223,
+     "kind": "exercises",
+     "title": "Магадлалын сонгодог тодорхойлолт хэмжээ болох нь"
+    }
+   ]
+  },
+  {
+   "slug": "outer-measure",
+   "id": "ch-outer-measure",
+   "file": "ch04-outer-measure.ptx",
+   "title": "Гадаад хэмжээ",
+   "pieces": [
+    {
+     "file": "6lebesgue measureD.tex",
+     "from": 1,
+     "to": 127
+    }
+   ],
+   "fix": [
+    [
+     "0&  $A$ \\text { тоологдом}",
+     "0&  A \\text { тоологдом}"
+    ],
+    [
+     "1&  $A$ \\text { тоологдом биш}",
+     "1&  A \\text { тоологдом биш}"
+    ],
+    [
+     "0&  $A$ \\text { төгсгөлөг}",
+     "0&  A \\text { төгсгөлөг}"
+    ],
+    [
+     "1&  $A$ \\text { төгсгөлгүй}",
+     "1&  A \\text { төгсгөлгүй}"
+    ]
+   ]
+  },
+  {
+   "slug": "caratheodory",
+   "id": "ch-caratheodory",
+   "file": "ch05-caratheodory.ptx",
+   "title": "Каратеодорийн теорем",
+   "pieces": [
+    {
+     "file": "6lebesgue measureD.tex",
+     "from": 128,
+     "to": 230,
+     "title": "<m>\\mu^{\\star}</m>-хэмжигдэх олонлог ба Каратеодорийн теорем"
+    },
+    {
+     "file": "lecture 5-Cartoideriin theorem.tex",
+     "from": 105,
+     "kind": "exercises"
+    }
+   ]
+  },
+  {
+   "slug": "lebesgue-measure",
+   "id": "ch-lebesgue-measure",
+   "file": "ch06-lebesgue-measure.ptx",
+   "title": "Лебегийн хэмжээ",
+   "pieces": [
+    {
+     "file": "6lebesgue measureD.tex",
+     "from": 231,
+     "to": 339
+    },
+    {
+     "file": "7lebesgue measure regular.tex",
+     "from": 1,
+     "to": 182
+    },
+    {
+     "file": "6lebesgue measureD.tex",
+     "from": 341,
+     "to": 411,
+     "kind": "exercises"
+    }
+   ]
+  },
+  {
+   "slug": "regularity",
+   "id": "ch-regularity",
+   "file": "ch07-regularity.ptx",
+   "title": "Хэмжээний регуляр чанар",
+   "pieces": [
+    {
+     "file": "7lebesgue measure regular.tex",
+     "from": 183,
+     "to": 358
+    }
+   ]
+  },
+  {
+   "slug": "complete-measure",
+   "id": "ch-complete-measure",
+   "file": "ch08-complete-measure.ptx",
+   "title": "Гүйцэд хэмжээ",
+   "pieces": [
+    {
+     "file": "8complete measure.tex",
+     "from": 1,
+     "to": 184
+    },
+    {
+     "file": "8complete measure.tex",
+     "from": 186,
+     "to": 233,
+     "kind": "exercises",
+     "title": "Гүйцэд ба регуляр хэмжээ"
+    },
+    {
+     "file": "8complete measure.tex",
+     "from": 235,
+     "kind": "exercises",
+     "title": "Гадаад хэмжээ ба хэмжээ"
+    }
+   ]
+  },
+  {
+   "slug": "measurable-functions",
+   "id": "ch-measurable-functions",
+   "file": "ch09-measurable-functions.ptx",
+   "title": "Хэмжигдэх функц",
+   "pieces": [
+    {
+     "file": "9measureable functionJ.tex"
+    }
+   ]
+  },
+  {
+   "slug": "convergence",
+   "id": "ch-convergence",
+   "file": "ch10-convergence.ptx",
+   "title": "Нийлэлтүүд",
+   "pieces": [
+    {
+     "file": "12niilelt.tex"
+    }
+   ]
+  },
+  {
+   "slug": "integral",
+   "id": "ch-integral",
+   "file": "ch11-integral.ptx",
+   "title": "Интеграл",
+   "pieces": [
+    {
+     "file": "10integralD.tex"
+    },
+    {
+     "file": "seminar 9.tex",
+     "from": 2,
+     "to": 26,
+     "append": "\n\\end{enumerate}\n",
+     "kind": "exercises"
+    }
+   ]
+  },
+  {
+   "slug": "limit-theorems",
+   "id": "ch-limit-theorems",
+   "file": "ch12-limit-theorems.ptx",
+   "title": "Хязгаарын теоремууд",
+   "pieces": [
+    {
+     "file": "11limit theorem.tex"
+    },
+    {
+     "file": "seminar 9.tex",
+     "from": 27,
+     "to": 40,
+     "kind": "exercises",
+     "prefix": true
+    }
+   ]
+  },
+  {
+   "slug": "lp-spaces",
+   "id": "ch-lp-spaces",
+   "file": "ch13-lp-spaces.ptx",
+   "title": "<m>L^p</m> огторгуй",
+   "pieces": [
+    {
+     "file": "Lp.tex",
+     "from": 2,
+     "to": 164
+    },
+    {
+     "file": "Lp.tex",
+     "from": 166,
+     "to": 193,
+     "kind": "exercises"
+    }
+   ]
+  },
+  {
+   "slug": "product-measure",
+   "id": "ch-product-measure",
+   "file": "ch14-product-measure.ptx",
+   "title": "Үржвэр хэмжээ ба Фубиний теорем",
+   "pieces": [
+    {
+     "file": "13product sigma algebre.tex"
+    }
+   ]
+  },
+  {
+   "slug": "indefinite-integral",
+   "id": "ch-indefinite-integral",
+   "file": "ch15-indefinite-integral.ptx",
+   "title": "Лебегийн тодорхойгүй интеграл",
+   "pieces": [
+    {
+     "file": "14.tex",
+     "from": 2,
+     "title": "Оршил"
+    }
+   ]
+  },
+  {
+   "slug": "differentiation",
+   "id": "ch-differentiation",
+   "file": "ch16-differentiation.ptx",
+   "title": "Уламжлал ба интегралын холбоо",
+   "pieces": [
+    {
+     "file": "15.tex",
+     "ranges": [
+      [
+       2,
+       54
+      ],
+      [
+       81,
+       120
+      ],
+      [
+       55,
+       80
+      ],
+      [
+       121,
+       null
+      ]
+     ]
+    },
+    {
+     "file": "seminar 9.tex",
+     "from": 42,
+     "kind": "exercises",
+     "title": "Риманы ба Лебегийн интегралын холбоо"
+    }
+   ],
+   "fix": [
+    [
+     "(\\ref{ineq1.1}) тэнцэтгэл бишийг батлахын тулд хучилтын тухай Виталийн лемм гэж\nнэрлэгддэг дараах леммийг авч үзье.",
+     "(\\ref{ineq1.1}) тэнцэтгэл бишийг батлахын тулд хучилтын тухай Виталийн лемм (Лемм \\ref{vital}) ашиглана."
+    ]
+   ]
+  },
+  {
+   "slug": "inequalities",
+   "id": "app-inequalities",
+   "tag": "appendix",
+   "file": "appA-inequalities.ptx",
+   "title": "Тэнцэтгэл бишүүд",
+   "pieces": [
+    {
+     "file": "1inequality.tex",
+     "title": "Тэнцэтгэл бишүүд"
+    }
+   ]
+  },
+  {
+   "slug": "metric-spaces",
+   "id": "app-metric-spaces",
+   "tag": "appendix",
+   "file": "appB-metric-spaces.ptx",
+   "title": "Метрик огторгуй",
+   "pieces": [
+    {
+     "file": "2metric space.tex",
+     "title": "Метрик огторгуй"
+    }
+   ]
+  },
+  {
+   "slug": "topology",
+   "id": "app-topology",
+   "tag": "appendix",
+   "file": "appC-topology.ptx",
+   "title": "Олонлогийн чадал ба топологи",
+   "pieces": [
+    {
+     "file": "14nemelt.tex",
+     "title": "Олонлогийн чадлын тухай"
+    }
+   ]
+  }
+ ]
+}

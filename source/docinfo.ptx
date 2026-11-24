@@ -60,5 +60,10 @@
     \newcommand{\BCD}[2]{\bigcup\limits_{#1}^{#2}}
     \newcommand{\sgn}{\operatorname{sgn}}
     \newcommand{\vol}{\operatorname{vol}}
+    \newcommand{\intt}{\displaystyle\int}
+    \newcommand{\llq}{\leq}
+    \newcommand{\tg}{\operatorname{tg}}
+    \newcommand{\arctg}{\operatorname{arctg}}
+    \newcommand{\nicefrac}[2]{{#1}/{#2}}
   </macros>
 </docinfo>

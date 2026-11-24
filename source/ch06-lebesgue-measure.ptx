@@ -1,17 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 7lebesgue measure regular.tex (1–4-р хэсэг) -->
+<!-- Эх файл: 6lebesgue measureD.tex:231-339; 7lebesgue measure regular.tex:1-182; 6lebesgue measureD.tex:341-411 -->
 <chapter xml:id="ch-lebesgue-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Лебегийн хэмжээ</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-lebesgue-measure">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Лебегийн хэмжээ</title>
+<section xml:id="sec-lebesgue-measure-1">
+<title>Лебегийн хэмжээ</title>
+<definition><statement><p>Каратеордерийн теорем (<xref ref="caratheodory-ghthb"/>) ёсоор <m>\ls_n</m>- Лебегийн гадаад хэмжээтэй уялдсан  <m>\lambda_n</m> 
+хэмжээг <md>\PZM=\{A\big| A\subset\R^n, A \text{ нь } \ls_n \text{ хэмжигдэх}\}</md>
+ <m>\sigma</m>-алгебр дээр байгуулж болно. Энэ <m>\lambda_n</m>  хэмжээг <term>Лебегийн хэмжээ</term><idx>Лебегийн хэмжээ</idx>, <m>\PZM</m>-г <term>Лебегийн 
+ <m>\sigma</m>-алгебр</term><idx>Лебегийн <m>\sigma</m>-алгебр</idx>, <m>A\in\PZM</m> олонлогийг <term>Лебегээр хэмжигдэх олонлог</term>, <idx>Лебегээр хэмжигдэх олонлог</idx> <m>(\R^n, \PZM, \ls_n )</m> -г <term>Лебегийн огторгуй </term> <idx>Лебегийн огторгуй </idx> гэнэ. Цаашид <m>\lambda_1</m> хэмжээг товчоор <m>\lambda</m> гэж бичнэ.</p></statement></definition>
+<p>Лебегийн <m>\sigma</m>-алгебрын зарим чанаруудтай танилцъя.</p>
+<theorem xml:id="lebesgue-measure-blht"><statement><p><m>\R</m> дээрх Борелийн олонлог бүр Лебегээр хэмжигдэнэ.</p></statement><proof><p><m>(-\infty; b)</m> хэлбэрийн олонлогуудаар төрөгдөх <m>\sigma</m>-алгебр нь Борелийн <m>\sigma</m>-алгебр байдгийг  
+бид баталсан. Хэрэв <m>(-\infty; b)</m> хэлбэрийн олонлог бүр Лебегээр хэмжигдэхийг баталчихвал Борелийн олонлог бүр хэмжигдэх нь батлагдах юм. Иймд 
+<m>B=(-\infty; b)\in\PZM_{\ls}</m> баталъя.  
+<m>\forall A\subset\R</m> хувьд  <md>\ls(A)\geq\ls(A\cap B)+\ls(A\cap B^c)</md> батлахад хангалттай байдаг. Дурын <m>\veps\gt 0</m> тоо бүрийн хувьд 
+<md>\sum_{i=1}^{\infty}(b_i-a_i)\lt \ls(A)+\veps</md> байхаар <m>A</m> олонлогийн задгай хучилт 
+<m>\{(a_i;b_i)\}_{i=1}^{\infty}</m>-г сонгож болно. Учир нь <m>\ls(A)</m> нь <m>\inf</m> байдаг. 
+<m>(a_i; b_i)\cap B</m> ба <m>(a_i; b_i)\cap B^c</m>  олонлогууд нь хоосон огтлолцох, нэгдэл нь 
+<m>(a_i; b_i)</m> байх задгай интервалууд байна. (Зарим тохиолдолд хоосон байж болно.) 
+<m>(a_i; b_i)\cap B</m> ба <m>(a_i; b_i)\cap B^c</m> нь интервалууд учир 
+<md number="yes" xml:id="lebesgue-measure-x10">b_n-a_n=\ls((a_n;b_n))=\ls((a_i; b_i)\cap B)+\ls((a_i; b_i)\cap B^c)</md> байна. 
+Мөн <m>(a_i; b_i)\cap B</m> нь <m>A\cap B</m> олонлогийн задгай хучилт, <m>(a_i; b_i)\cap B^c</m> нь <m>A\cap B^c</m> олонлогийн задгай хучилт болох учир (<xref ref="lebesgue-measure-x10"/>) ба  <m>\ls</m>-н хагас аддтив чанарыг хэрэглэвэл 
+<md><mrow>\ls(A\cap B)+\ls(A\cap B^c)\leq &amp;\sum_{i=1}^{\infty}\ls((a_i;b_i)\cap B)+\sum_{i=1}^{\infty}\ls((a_i;b_i)\cap B^c)</mrow><mrow number="yes" xml:id="lebesgue-measure-x11">= &amp;\sum_{i=1}^{\infty}(b_i-a_i)\lt \ls(A)+\veps</mrow></md>
+(<xref ref="lebesgue-measure-x11"/>) тэнцэтгэл бишид <m>\veps</m> дурын тоо тул <m>\veps\to 0</m> хязгаар авбал 
+<md>\ls(A\cap B)+\ls(A\cap B^c)\leq\ls(A)</md> болж батлагдав.</p></proof></theorem>
+<p>Бид <m>\R</m> олонлогийн нэг цэгээс тогтсон олонлог бүр Борелийн олонлог байдгийг мэднэ. <m>(</m> Жишээ <xref ref="borel-tsbh"/> хар.<m>)</m></p>
+<p><m>a\in\R</m> бол 
+<md>\{a\}=\cap_{n=1}^{\infty} [a;a+\frac{1}{n}]</md> тул олонлогийн буурах дарааллын чанараар 
+<md>\lambda(\{a\})=\lim_{n}\lambda([a;a+\frac{1}{n}])=\lim_{n}\frac{1}{n}=0</md> 
+байна. Эндээс тоологдмоос хэтрэхгүй олонлог бүр Лебегээр хэмжигдэх бөгөөд хэмжээ нь тэг байна. Тухайлбал <m>\lambda(\Q)=0</m>  байна.</p>
+<theorem xml:id="lebesgue-measure-x12"><statement><p><m>\R^n</m> дээрх Борелийн олонлог бүр Лебегээр хэмжигдэнэ.</p></statement><proof><p>Теорем <xref ref="lebesgue-measure-blht"/> баталгаатай төстэй хийгдэнэ.</p></proof></theorem>
+<p><m>\mathscr{P}(\R^n)</m>, Лебегийн <m>\sigma</m>-алгебр <m>\PZM_{\ls_n}</m> ба  Борелийн <m>\sigma</m>-алгебр  <m>\mathscr{B}_{\R^n}</m> нь 
+ <md>\mathscr{B}_{\R^n} \subseteq \PZM_{\ls_n}\subseteq\mathscr{P}(\R^n)</md> харьцаатай 
+байх нь Теорем <xref ref="lebesgue-measure-x12"/>-с харагдаж байна. Энэ агуулагдлаас бидэнд дараах хоёр асуулт урган гарч байна. 
+ <ol marker="a)"><li><p><m>\PZM_{\ls_n}=\mathscr{P}(\R^n)</m> байх уу? Өөрөөр хэлбэл  <m>\R^n</m>- н бүх дэд 
+олонлог Лебегээр хэмжигдэх үү?</p></li><li><p><m>\mathscr{B}_{\R^n}=\PZM_{\ls_n}</m> байх уу? Өөрөөр хэлбэл  <m>\R^n</m>-д Борелээр 
+хэмжигдэх Лебегээр хэмжигдэх хоёр ижил үү?</p></li></ol> Эдгээр асуултуудын хариулт  <m>"</m>үгүй <m>"</m> бөгөөд дараах жишээ   
+ <m>\PZM_{\ls_n}\neq\mathscr{P}(\R^n)</m> байхыг харуулна. <m>\mathscr{B}_{\R^n}\neq\PZM_{\ls_n}</m> байхыг дараа үзэх болно.</p>
+<example xml:id="lebesgue-measure-nonmset"><title>Лебегээр хэмжигдэхгүй олонлог</title><p><m>\R</m> дээр <m>\sim</m> харьцааг 
+<md>x\sim y\Leftrightarrow x-y\in\Q</md> гэж тодорхойлъё. Энэ <m>\sim</m> харьцаа эквивалентын харьцаа болох нь илт.  
+<md>\overline{x}=\{y\in\R\mid x\sim y\}</md> гэе. <m>\overline{x}</m> олонлогийг <m>\sim</m> эквивалентын харьцааны <m>x</m> элементийг агуулсан эквивалентын анги гэнэ. <m>\R</m> нь үл огтлолцох  эквивалентын ангиудад хуваагдах бөгөөд <m>x\in\R</m> тоог агуулах анги нь <m>\overline{x}=x+\Q</m> байна. Иймд эквивалентын анги бүр нь <m>\R</m>-д нягт олонлог байна. Иймээс <m>\overline{x}\cap (0;1)\neq\emptyset</m> байна. <m>(0;1)</m> олонлогийн <m>\overline{x}</m> анги бүрээс нэг элемент агуулсан дэд олонлогийг <m>E</m> гэе. Ийм олонлог оршин байх нь Сонголтын аксиом (Цорны лемм)-оос илт. <m>(-1;1)</m> завсарт орших бүх рационал тоонууд тоологдом учир дугаарлаж болох ба <m>\{r_n\}_n</m> нь  <m>(-1;1)</m> завсарт орших <m>n</m>-р рационал тоо байг. <m>E_n=E+r_n</m> гэе. <m>E_n</m> олонлогууд дараах чанаруудтай байхыг амархан шалгаж болно.
+<ol><li><p><m>n\neq m</m> үед  <m>E_n\cap E_m=\emptyset</m></p></li><li><p><m>E_n\subset (-1;2)</m> байх нь илт. Тиймээс  <m>\cup_{i=1}^{\infty} E_i\subset (-1;2)</m> байна.</p></li><li><p><m>(0;1)\subset \cup_{i=1}^{\infty} E_i</m></p></li></ol>
+<m>E</m> олонлогийг Лебегээр хэмжигддэг гэж үзье.  Лебегийн хэмжээ зөөлтөөр инвариант учраас <m>\lambda(E)=\lambda(E_n)</m> байна. <m>E_n, E_m</m> хоосон огтлолцох учир хэмжээний аддитив чанараар
+<md>\lambda(\cup_{i=1}^{k}E_n)=\sum\limits_{i=1}^{k}\lambda(E_n)=k\lambda(E)</md> болно. 
+Мөн хэмжээний доороос тасралтгүй чанараар 
+<md>\lambda(\cup_{i=1}^{\infty} E_i)=\lim\limits_{n\to\infty}\lambda(\cup_{i=1}^n E_i)=\lim\limits_{n\to\infty}n\lambda(E)</md> болно. Хэмжээний монотон чанараар 
+<md>1=\lambda((0;1))\leq\lambda(\cup_{i=1}^{\infty}E_i)\leq \lambda((-1;2))=3</md> байна. Гэтэл
+<md>1\leq\lim\limits_{n\to\infty}n\lambda(E)\leq 3</md> байх боломжгүй. Иймд <m>E</m> олонлог Лебегээр хэмжигдэхгүй олонлог байна.</p></example>
+<p>Бид Лебегийн хэмжээ нь урт, талбай, эзлэхүүний өргөтгөл болохыг мэднэ. <m>\Q</m> олонлог тоологдом цэгтэй боловч түүний урт тэг байхыг баталсан . Тэгвэл урт нь тэг байдаг олонлог хэр олон цэгтэй байж болох вэ? Дараах жишээ континуум чадалтай боловч Лебегийн хэмжээ нь тэг байх олонлогийн жишээг үзүүлнэ. Гэвч <m>(0;1)</m> хэрчим бас континуум чадалтай боловч түүний урт 1 байдаг.</p>
+<example><title>Канторын олонлог</title><p><idx>Канторын олонлог</idx>
+<m>C_0=[0,1]</m> байг. <m>C_0</m> хэрчмээс <m>\left]\frac13,\frac23\right[</m> задгай интервалыг хасахад үлдсэн хэсгийг <m>C_1</m> гэе. <m>C_1</m> олонлогоос <m>\left]\frac19,\frac29\right[</m> ба <m>\left]\frac79,\frac89\right[</m> задгай интервалуудыг хасахад үлдсэн хэсгийг <m>C_2</m> гэх мэтчилэнгээр <m>C_n \ (n=3,4\ldots)</m> олонлогуудыг индукцээр байгуулъя.  <m>C_n</m> нь тус бүр нь <m>\dfrac{1}{3^n}</m> урттай <m>2^n</m> ширхэг битүү интервалын нэгдэл болно.</p>
+<p>Жишээ нь: <m>C_0=[0;1] , C_1=[0;1/3]\cup[2/3;1]</m>
+<md>C_2=[0;1/9]\cup[2/9;3/9]\cup[6/9;7/9]\cup[8/9;1]</md> болно.</p>
+<p><md>C=\bigcap\limits_{n=0}^{\infty}C_n</md>
+олонлогийг Канторын олонлог гэдэг.</p>
+<p>\includegraphics[width=0.4\textwidth]picture/sempic5.png</p></example>
+<proposition><statement><p>Канторын олонлог нь континуум чадалтай компакт олонлог бөгөөд түүний Лебегийн хэмжээ нь тэг байна.</p></statement><proof><p>Төгсгөлөг тооны битүү олонлогуудын нэгдэл битүү тул <m>C_n</m> бүр битүү. Канторын олонлог нь битүү олонлогуудын огтлолцол тул битүү. Битүү зааглагдсан олонлог учраас компакт юм.  Тиймээс Борелоор хэмжигдэх тул Лебегээр хэмжигдэнэ.</p>
+<p>Континуум чадалтай болохыг нь баталъя. <m>x\in[0,1]</m> бүрийн гуравтын тооллын системд бичье:
+<md>x=\frac{a_1}{3}+\frac{a_2}{3^2}+\ldots+\frac{a_n}{3^n}+\ldots.</md>
+Энд <m>a_n</m> нь <m>0,1,2</m> утгын аль нэгийг авна. аравтын бутархайн адил зарим тоо хоёрдмол бичлэгтэй. Жишээлбэл,
+<md>\frac13=\frac{1}{3}+\frac{0}{3^2}+\ldots+\frac{0}{3^n}+\ldots=\frac{0}{3}+\frac{2}{3^2}+\ldots+\frac{2}{3^n}+\ldots.</md>
+Гуравтын бичлэгт нь (хоёр хэлбэрийн ядаж аль нэгэнд нь) ганц ч удаа 1 цифр 
+тааралддаггүй тоонууд л зөвхөн Канторын олонлогт харьяалагдана гэдгийг хялбар харж болно. Иймд Канторын олонлогийн <m>x</m> цэг бүрт зөвхөн 0, 2 хоёр цифрээс тогтох
+<md>a_1.a_2,\ldots, a_n,\ldots</md>  дарааллыг харилцан нэгэн утгатай харгалзуулж чадна. Ийм дарааллуудын олонлог континуум чадалтай тул Канторын олонлог мөн континуум чадалтай.</p>
+<p>Эцэст нь Канторын олонлогийн Лебегийн хэмжээг олъё.  Хэмжээний аддитив чанар ба 
+интервалын Лебегийн хэмжээ урттай тэнцүү  байдаг тул
+<md>\lambda(C_n)=\Bigl(\frac{2}{3}\Bigr)^n\qquad (n=1,2,\ldots).</md> 
+<m>\{C_n\}</m> нь олонлогийн буурах дараалал тул хэмжээний дээрээс тасралтгүй чанараар  
+<md>\lambda(C)=\lambda\Bigl(\bigcap\limits_{n=0}^{\infty}C_n\Bigr)=\lim\limits_{n\to\infty}\lambda(C_n)=\lim\limits_{n\to\infty}\Bigl(\frac{2}{3}\Bigr)^n=0</md> байна.</p></proof></proposition>
+</section>
+<section xml:id="sec-lebesgue-measure-2">
+<title>Лебегийн <m>\sigma</m>-алгебр</title>
+<definition><statement><p><m>\ls</m> нь <m>\R</m> дээрх Лебегийн гадаад хэмжээ байг. <m>B\subseteq\R</m> олонлог нь дурын
+<m>A\subseteq\R</m>-ийн хувьд
+<md number="yes" xml:id="lebesgue-measure-car">\ls(A)=\ls(A\cap B)+\ls(A\cap B^{c})</md>
+нөхцлийг хангаж байвал <m>B</m>-г <term>Лебегээр хэмжигдэх</term> гэнэ. Ийм олонлогуудын бүлийг
+<m>\PZM_{\ls}</m> гэж тэмдэглээд <term>Лебегийн <m>\sigma</m>-алгебр </term> гэнэ. <m>\lambda:=\ls\big|_{\PZM_{\ls}}</m>
+нь Лебегийн хэмжээ.</p></statement></definition>
+<p>Каратеодорийн теоремоор <m>\PZM_{\ls}</m> нь <m>\sigma</m>-алгебр , <m>\lambda</m> нь түүн дээрх хэмжээ болдог.
+Хагас аддитив чанараар <xref ref="lebesgue-measure-car"/>-ийн <m>\leq</m> тал үргэлж биелдэг тул практикт зөвхөн
+<md number="yes" xml:id="lebesgue-measure-car2">\ls(A)\geq\ls(A\cap B)+\ls(A\cap B^{c})</md>
+тэнцэтгэл бишийг, тэр тусмаа <m>\ls(A)\lt \infty</m> үед л шалгахад хангалттай.</p>
+</section>
+<section xml:id="sec-lebesgue-measure-3">
+<title>Борелийн олонлог бүр Лебегээр хэмжигдэнэ</title>
+<lemma xml:id="lebesgue-measure-halfline"><statement><p><m>b\in\R</m> бол <m>B=(-\infty;b)</m> олонлог Лебегээр хэмжигдэнэ.</p></statement><proof><p><m>A\subseteq\R</m> дурын олонлог, <m>\ls(A)\lt \infty</m> гэе (эсрэг тохиолдолд <xref ref="lebesgue-measure-car2"/> илт).
+Дурын <m>\veps\gt 0</m>-ийн хувьд <m>\ls(A)</m> нь доод торгон хил байдгаас
+<md number="yes" xml:id="lebesgue-measure-cover">A\subseteq\bigcup_{i=1}^{\infty}(a_i;b_i),\qquad
+\sum_{i=1}^{\infty}(b_i-a_i)\lt \ls(A)+\veps</md>
+байх задгай хучилт олдоно.</p>
+<p><m>i</m> бүрийн хувьд
+<md>(a_i;b_i)\cap B=(a_i;\min\{b_i,b\}),\qquad
+(a_i;b_i)\cap B^{c}=[\,\max\{a_i,b\};b_i)</md>
+(аль нэг нь хоосон байж болно). Эдгээр нь интервалууд бөгөөд уртуудынх нь нийлбэр яг
+<m>b_i-a_i</m> байх тул, интервалын гадаад хэмжээ нь урттайгаа тэнцүү байдгаар
+<md number="yes" xml:id="lebesgue-measure-split">\ls\big((a_i;b_i)\cap B\big)+\ls\big((a_i;b_i)\cap B^{c}\big)=b_i-a_i .</md></p>
+<p><m>\{(a_i;b_i)\cap B\}_i</m> нь <m>A\cap B</m>-ийн, <m>\{(a_i;b_i)\cap B^{c}\}_i</m> нь <m>A\cap B^{c}</m>-ийн
+хучилт тул монотон ба тоологдом хагас аддитив чанараар
+<md><mrow>\ls(A\cap B)+\ls(A\cap B^{c})
+&amp;\leq\sum_{i=1}^{\infty}\ls\big((a_i;b_i)\cap B\big)+\sum_{i=1}^{\infty}\ls\big((a_i;b_i)\cap B^{c}\big)</mrow><mrow>&amp;\overset{\eqref{split}}{=}\sum_{i=1}^{\infty}(b_i-a_i)
+\overset{\eqref{cover}}{\lt }\ls(A)+\veps .</mrow></md>
+<m>\veps\gt 0</m> дурын тул <m>\veps\to0</m> хязгаарт шилжвэл <xref ref="lebesgue-measure-car2"/> биелж, <m>B\in\PZM_{\ls}</m>.</p></proof></lemma>
+<theorem xml:id="lebesgue-measure-borelsub"><title>Борелийн агуулагдал</title><statement><p><m>\Balg(\R)\subseteq\PZM_{\ls}</m>, өөрөөр хэлбэл Борелийн олонлог бүр Лебегээр хэмжигдэнэ.</p></statement><proof><p><m>\mathscr{E}=\{(-\infty;b)\mid b\in\R\}</m> гэе. Бидний мэдэх ёсоор
+<m>\sigma(\mathscr{E})=\Balg(\R)</m>.</p>
+<p>Лемм <xref ref="lebesgue-measure-halfline"/>-ээр <m>\mathscr{E}\subseteq\PZM_{\ls}</m>. Каратеодорийн теоремоор
+<m>\PZM_{\ls}</m> нь <m>\sigma</m>-алгебр  бөгөөд <m>\sigma(\mathscr{E})</m> нь <m>\mathscr{E}</m>-г агуулсан хамгийн
+бага <m>\sigma</m>-алгебр  тул
+<md>\Balg(\R)=\sigma(\mathscr{E})\subseteq\PZM_{\ls}.</md></p></proof></theorem>
+<remark><p>Баталгааны бүтцийг тогтоон авах нь чухал: <em>(i)</em> үүсгэгч олонлогуудын хувьд
+Каратеодорийн нөхцлийг шууд шалгана, <em>(ii)</em> бусад хэсэг нь минимал <m>\sigma</m>-алгебр -ын
+чанараар илт. <m>\rn</m> дээр ч ижил аргаар <m>\Balg(\rn)\subseteq\PZM_{\ls_n}</m> батлагдана
+(үүсгэгчээр нь хагас задгай кубүүдийг авна).</p></remark>
+<corollary><statement><p>Задгай, битүү, <m>F_{\sigma}</m>, <m>G_{\delta}</m> олонлог бүр, мөн тоологдом олонлог бүр Лебегээр
+хэмжигдэнэ. Тухайлбал <m>\lambda(\Q)=0</m>.</p></statement></corollary>
+</section>
+<section xml:id="sec-lebesgue-measure-4">
+<title>Агуулагдал эрс байх нь: <m>\Balg(\R)\subsetneq\PZM_{\ls}</m></title>
+<lemma xml:id="lebesgue-measure-cantornull"><statement><p>Канторын олонлог <m>C</m>-ийн дэд олонлог бүр Лебегээр хэмжигдэх бөгөөд хэмжээ нь тэг. Иймд
+<md>\operatorname{card}\PZM_{\ls}\geq 2^{\cont},\qquad \cont=2^{\aleph_0}.</md></p></statement><proof><p><m>\lambda(C)=0</m> болохыг бид мэднэ. Лебегийн хэмжээ гүйцэд тул тэг хэмжээтэй олонлогийн
+дэд олонлог бүр хэмжигдэх ба хэмжээ нь тэг. (Шууд баталгаа: <m>D\subseteq C</m> бол
+<m>\ls(D)\leq\ls(C)=0</m>, харин <m>\ls(E)=0</m> байх олонлог дурын <m>A</m>-гийн хувьд
+<m>\ls(A\cap E)+\ls(A\cap E^{c})=0+\ls(A\cap E^{c})\leq\ls(A)</m> тул хэмжигдэнэ.)</p>
+<p><m>C</m> нь континуум чадалтай тул <m>\operatorname{card}\mathscr{P}(C)=2^{\cont}</m> бөгөөд
+<m>\mathscr{P}(C)\subseteq\PZM_{\ls}</m>.</p></proof></lemma>
+<lemma xml:id="lebesgue-measure-borelcard"><statement><p><m>\operatorname{card}\Balg(\R)=\cont</m>.</p></statement><proof><p><m>\geq</m>: <m>\{(-\infty;b)\mid b\in\R\}\subseteq\Balg(\R)</m> тул <m>\operatorname{card}\Balg(\R)\geq\cont</m>.</p>
+<p><m>\leq</m>: Борелийн <m>\sigma</m>-алгебр -ыг трансфинит индукцээр давхаргалж байгуулна. <m>\Balg_0</m> нь
+рационал төгсгөлтэй задгай интервалуудын бүл (<m>\operatorname{card}\Balg_0=\aleph_0</m>).
+Тоологдмоос хэтрэхгүй ординал <m>\alpha\lt \omega_1</m> бүрийн хувьд
+<md>\Balg_{\alpha}=\Big\{\bigcup_{k=1}^{\infty}E_k\ \text{ба}\ E^{c}\ \Big|\
+E_k,E\in\bigcup_{\beta\lt \alpha}\Balg_{\beta}\Big\}</md>
+гэвэл <m>\Balg(\R)=\bigcup_{\alpha\lt \omega_1}\Balg_{\alpha}</m> болно (баруун тал нь <m>\sigma</m>-алгебр  бөгөөд
+<m>\Balg_0</m>-ийг агуулсан хамгийн бага ийм бүл болно).</p>
+<p>Индукцээр <m>\operatorname{card}\Balg_{\alpha}\leq\cont</m>: хэрэв
+<m>\operatorname{card}\bigcup_{\beta\lt \alpha}\Balg_{\beta}\leq\cont</m> бол түүний
+тоологдом дэд дарааллуудын тоо <m>\cont^{\aleph_0}=\cont</m>. <m>\omega_1</m> нь
+<m>\aleph_1\leq\cont</m> ширхэг ординалтай тул
+<md>\operatorname{card}\Balg(\R)\leq\aleph_1\cdot\cont=\cont.</md></p></proof></lemma>
+<theorem xml:id="lebesgue-measure-strict"><statement><p><m>\Balg(\R)\subsetneq\PZM_{\ls}</m>. Тодруулбал Лебегээр хэмжигдэх боловч Борелийн биш
+олонлог оршин байна.</p></statement><proof><p>Лемм <xref ref="lebesgue-measure-borelcard"/>-ээр <m>\operatorname{card}\Balg(\R)=\cont</m>, Лемм <xref ref="lebesgue-measure-cantornull"/>-ээр
+<m>\operatorname{card}\PZM_{\ls}\geq2^{\cont}\gt \cont</m>. Иймд
+<m>\PZM_{\ls}\setminus\Balg(\R)\neq\vn</m>. Үнэндээ Канторын олонлогийн <m>2^{\cont}</m> ширхэг дэд
+олонлогийн зөвхөн <m>\cont</m> ширхэг нь л Борелийн олонлог байж чадна.</p></proof></theorem>
+<remark><p>Энэ баталгаа нь <em>оршихуйн</em> баталгаа: тодорхой нэг жишээ үзүүлэхгүй. Тодорхой жишээ
+байгуулж болдог: аналитик (Суслиний) олонлогийн Борелийн биш жишээ, эсвэл
+<m>f(x)=\varphi(x)+x</m> (Канторын шатан функц <m>\varphi</m>) гомеоморфизмын тусламжтайгаар
+хэмжигдэхгүй олонлогийн урвуу дүрсээр байгуулдаг.</p></remark>
+</section>
+<section xml:id="sec-lebesgue-measure-5">
+<title>Хоёр дахь агуулагдал: <m>\PZM_{\ls}\subsetneq\mathscr{P}(\R)</m></title>
+<theorem><statement><p>Витали олонлог <m>E</m> Лебегээр хэмжигдэхгүй. Иймд <m>\PZM_{\ls}\neq\mathscr{P}(\R)</m>.</p></statement><proof><p><m>x\sim y\iff x-y\in\Q</m> эквивалентын ангиудаас тус бүрээс нэг цэг сонгож
+<m>E\subseteq(0;1)</m> байгуулна (сонголтын аксиом). <m>\{r_n\}</m> нь <m>(-1;1)</m> дэх рационал
+тоонууд, <m>E_n=E+r_n</m> бол <m>E_n</m>-үүд үл огтлолцох,
+<md>(0;1)\subseteq\bigcup_{n}E_n\subseteq(-1;2).</md>
+Хэрэв <m>E</m> хэмжигдэх бол зөөлтөөр инвариант чанар ба тоологдом аддитив чанараар
+<md>1\leq\sum_{n=1}^{\infty}\lambda(E)\leq3</md>
+болох ба зүүн тал нь <m>\lambda(E)=0</m> үед <m>0</m>, <m>\lambda(E)\gt 0</m> үед <m>\infty</m> болох тул
+зөрчил үүснэ.</p></proof></theorem>
+<theorem><title>Нэгтгэл</title><statement><p><md>\Balg(\R)\ \subsetneq\ \PZM_{\ls}\ \subsetneq\ \mathscr{P}(\R),</md>
+бөгөөд <m>\PZM_{\ls}</m> нь <m>\Balg(\R)</m>-ийн <m>\lambda</m>-гүйцээлт байна:
+<md>A\in\PZM_{\ls}\iff \exists\,E,F\in\Balg(\R):\ E\subseteq A\subseteq F,\ \lambda(F\setminus E)=0.</md></p></statement></theorem>
+<remark><p>Сүүлийн тэнцэл нь практик ач холбогдолтой: <em>Лебегээр хэмжигдэх олонлог бүр Борелийн
+олонлогоос зөвхөн тэг хэмжээтэй олонлогоор ялгаатай.</em> Иймд интеграл, хэмжээтэй холбоотой
+бараг бүх асуудлыг Борелийн олонлог дээр шийдээд, тэг хэмжээтэй засварыг нэмэхэд хангалттай.</p></remark>
+<p>Бодлогууд
+<ol><li><p><m>(a;\infty)</m>, <m>[a;b]</m>, <m>\{a\}</m> олонлогууд Лебегээр хэмжигдэхийг Лемм
+<xref ref="lebesgue-measure-halfline"/>-ээс гарга.</p></li><li><p>Лемм <xref ref="lebesgue-measure-halfline"/>-ийн баталгааг <m>B=(0;1)</m> олонлогийн хувьд давтан бич.</p></li><li><p><m>\ls(N)=0</m> бол <m>N\in\PZM_{\ls}</m> гэдгийг Каратеодорийн нөхцлөөр шууд батал.</p></li><li><p><m>\rn</m> дээр <m>\Balg(\rn)\subseteq\PZM_{\ls_n}</m> болохыг хагас задгай кубүүдийг үүсгэгч
+болгон ашиглаж батал.</p></li><li><p><m>A\in\PZM_{\ls}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь дурын <m>\veps\gt 0</m>-ийн
+хувьд <m>A\subseteq U</m>, <m>\ls(U\setminus A)\lt \veps</m> байх задгай <m>U</m> олдох явдал гэж батал
+(<m>\ls(A)\lt \infty</m> үед).</p></li><li><p><m>\operatorname{card}\PZM_{\ls}=2^{\cont}</m> болохыг харуул (дээрээс нь үнэлэхдээ
+<m>\PZM_{\ls}\subseteq\mathscr{P}(\R)</m> гэдгийг ашигла).</p></li><li><p>Канторын олонлогийн Борелийн биш дэд олонлог оршин байдгийг Теорем <xref ref="lebesgue-measure-strict"/>-аас
+гарга. Яагаад энэ баталгаа тодорхой жишээ өгөхгүй вэ?</p></li><li><p><m>f(x)=\varphi(x)+x</m> (<m>\varphi</m> –- Канторын шатан функц) нь <m>[0;1]</m>-ийг <m>[0;2]</m> дээр
+буулгах өсөх гомеоморфизм бөгөөд <m>\lambda(f(C))=1</m> болохыг харуул.</p></li><li><p>Өмнөх бодлогыг үргэлжлүүлж, <m>f(C)</m> дотор хэмжигдэхгүй олонлог <m>V</m> авбал <m>f^{-1}(V)</m>
+нь Лебегээр хэмжигдэх (тэг хэмжээтэй) боловч Борелийн биш олонлог болохыг батал.</p></li><li><p>Лебегээр хэмжигдэх <m>g</m> функц ба тасралтгүй <m>h</m> функцийн хувьд <m>g\circ h</m> хэмжигдэх
+байх албагүй болохыг өмнөх бодлогын олонлогийг ашиглан тайлбарла.</p></li></ol></p>
+</section>
+<exercises xml:id="sem-lebesgue-measure"><title>Семинарын бодлогууд</title>
+<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх төгсгөлөг хэмжээ байг. Тэгвэл 
+	<ol><li><p><m>A\in\alg</m>, <m>B\in\alg</m> бол
+		<md>\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)</md>
+		гэж харуул.</p></li><li><p><m>A\in\alg</m>, <m>B\in\alg</m>, <m>C\in\alg</m> бол
+		<md><mrow>\mu(A\cup B\cup C)&amp;=\mu(A)+\mu(B)+\mu(C)-</mrow><mrow>&amp;-\mu(A\cap B)-\mu(B\cap C)-\mu(C\cap A)+</mrow><mrow>&amp;+\mu(A\cap B\cap C)</mrow></md>
+		гэж харуул.</p></li><li><p>Дурын <m>n</m> ширхэг олонлогийн нэгдлийн хэмжээний хувьд томьёо гарга.</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>(\R,\br)</m> дээр <m>\mu</m> хэмжээг <m>\mu(A)</m> нь <m>A</m> олонлогийн рационал цэгийн тоо гэж тодорхойлъё. Мэдээж <m>A</m> олонлог төгсгөлгүй олон рационал цагийг харьяалж байвал <m>\mu(A)=+\infty</m>. <m>\mu</m> нь <m>\R</m> огторгуйн задгай дэд олонлог болгон дээр төгсгөлгүй утга авдаг <m>\sigma-</m>төгсгөлөг хэмжээ гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\alg</m> нь <m>\N</m> натурал тоон олонлогийн бүх дэд олонлогуудын <m>\sigma-</m>алгебр, <m>\mu</m> нь <m>(\N,\alg)</m> дээрх тоолох хэмжээ (жишээ 1.3.2) байг. <m>\mu\Big(\bigcup\limits_{k=1}^{\infty}A_k\Big)\neq \lim\limits_{k\to\infty}\mu(A_k)</m> байх <m>\{A_k\}</m> буурах дарааллын жишээ гарга.</p></statement></exercise>
+<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй байг.
+	<ol><li><p><m>\mu</m> нь <m>\alg</m> дээр тодорхойлогдсон сөрөг биш утгатай, тоологдом аддитив функц байг. Хэрэв ямар нэг <m>A\in\alg</m> дээр <m>\mu(A)</m> төгсгөлөг бол <m>\mu(\vn)=0</m> (улмаар <m>\mu</m> нь хэмжээ болно) гэж харуул.</p></li><li><p>Ерөнхий тохиолдолд <m>\mu(\vn)=0</m> нөхцөл нь сөрөг бус ба тоологдом аддитив шинжүүдээс мөрдөн гарахгүй болохыг жишээгээр харуул.</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>X</m> хоосон биш олонлог, <m>\alg</m> нь <m>X</m> дээрх <m>\sigma-</m>алгебр, <m>x\in X</m> байг. <m>\delta_x\colon\alg\to[0;+\infty]</m> функцийг дараах байдлаар тодорхойлъё:
+	<md>\delta_x(A)=\begin{cases}
+	0,&amp; x\notin A\\ 
+	1,&amp; x\in A.
+	\end{cases}</md>
+	Ийнхүү тодорхойлогдсон <m>\delta_x</m> функц нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээр <m>\sigma-</m>аддитив хэмжээ болно гэж батал. <m>\delta_x-</m>ийг <term>цэгэн масс</term><idx>цэгэн масс</idx> гэдэг.</p></statement></exercise>
+<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>x\in X</m>, <m>y\in X</m> байг. <m>\delta_x</m>, <m>\delta_y</m> хоёр цэгэн масс тэнцүү байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>x, y</m> хоёр цэг яг ижил хэмжигдэх олонлогуудад харьяалагдах явдал гэж харуул.</p></statement></exercise>
+<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй байг.
+	<ol><li><p><m>\forall A\in\alg</m> ба <m>\forall k</m> дугаарын хувьд <m>\mu_k(A)\llq\mu_{k+1}(A)</m> тэнцэтгэл биш биелдэг бол <m>\alg</m> дээрх хэмжээнүүдийн <m>\{\mu_k\}</m> дарааллыг өсөх дараалал гэе. Хэрэв <m>\{\mu_k\}</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээнүүдийн өсөх дараалал бол 
+		<md>\mu(A)=\lim\limits_{k\to\infty}\mu_k(A),\quad A\in\alg</md>
+		тэнцэтгэлээр тодорхойлогдох <m>\mu</m> функц <m>(X,\alg)</m> дээр хэмжээ болно гэж харуул.</p></li><li><p><m>\{\mu_k\}</m> нь <m>(X,\alg)</m> дээрх хэмжээнүүдийн дурын дараалал бол
+		<md>\mu(A)=\sum\limits_{k=1}^{\infty}\mu_k(A),\quad A\in\alg</md>
+		тэнцэтгэлээр тодорхойлогдох <m>\mu</m> функц <m>(X,\alg)</m> дээр хэмжээ болно гэж батал.</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>\{x_k\}</m> нь бодит тоон дараалал байг. <m>(\R,\br)</m> дээрх <m>\mu</m> хэмжээг <m>\mu=\sum\limits_k\delta_{x_k}</m> гэж тодорхойлъё. 
+	<ol><li><p><m>\mu</m> хэмжээ <m>\R</m> огторгуйн зааглагдсан дэд олонлог бүр дээр төгсгөлөг утгатай байх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\lim\limits_{k\to\infty}|x_k|=+\infty</m> байх явдал гэж батал.</p></li><li><p>Ямар шинжтэй <m>\{x_k\}</m> дарааллын хувьд <m>\mu</m> хэмжээ <m>\sigma-</m>төгсгөлөг байх вэ?</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>\mu^{\bullet}\colon\alg\to[0;+\infty]</m> функцийг дараах байдлаар тодорхойлъё:
+	 <md>\mu^{\bullet}(A)=\sup\{\mu(B)\colon B\subset A \wedge B\in\alg\wedge \mu(B)\lt +\infty\},\quad A\in\alg.</md>
+	 <ol><li><p><m>\mu^{\bullet}</m> нь <m>(X,\alg)</m> дээр хэмжээ болно гэж батал.</p></li><li><p><m>\mu</m> хэмжээ <m>\sigma-</m>төгсгөлөг бол <m>\mu^{\bullet}</m> мөн <m>\sigma-</m>төгсгөлөг хэмжээ байна гэж харуул.</p></li><li><p><m>X</m> хоосон биш ба <m>\mu</m> хэмжээ дараах байдлаар тодорхойлогдсон бол <m>\mu^{\bullet}</m> хэмжээг ол:
+	 	<md>\mu(A)=\begin{cases}
+	 	+\infty,&amp; A\in\alg \wedge \ A\ne\vn\\ 
+	 	0,&amp;A=\vn.
+	 	\end{cases}</md></p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ, <m>\{A_k\}</m> нь хэмжигдэх олонлогуудын <m>\sum_k\mu(A_k)\lt +\infty</m> шинжтэй дараалал байг. Төгсгөлгүй олон <m>k</m> дугаарын хувьд <m>A_k</m> олонлогуудад зэрэг харьяалагдах цэгүүдийн олонлог тэг хэмжээтэй гэж батал.</p></statement></exercise>
+</exercises>
 </chapter>

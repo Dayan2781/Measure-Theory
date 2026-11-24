@@ -1,17 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: Lp.tex; Юнг, Гёльдерийн тэнцэтгэл бишийг энэ бүлэгт батална (1inequality.tex-ээс) -->
+<!-- Эх файл: Lp.tex:2-164; Lp.tex:166-193 -->
 <chapter xml:id="ch-lp-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title><m>L^p</m> огторгуй</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-lp-spaces">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title><m>L^p</m> огторгуй</title>
+<section xml:id="sec-lp-spaces-1">
+<title><m>L^p</m> огторгуй</title>
+<p>Энэ бүлэгт бид хэмжигдэх функцүүдийн <m>L^p</m> огторгуй, түүний дээрх үндсэн тэнцэтгэл бишүүд болон Банахын огторгуй болох гүйцэд чанарыг судална. Цаашид <m>(X, \PZM, \mu)</m> нь бэхлэгдсэн хэмжээтэй огторгуй байг.</p>
+</section>
+<section xml:id="sec-lp-spaces-2">
+<title><m>L^p</m> огторгуйн тодорхойлолт ба норм</title>
+<definition><statement><p><m>1 \leq p \lt  \infty</m> бодит тоо байг. <m>\PZM</m>-хэмжигдэх <m>f: X \to \R</m> (эсвэл <m>\mathbb{C}</m>) функцийн хувьд
+<md>\|f\|_p := \left( \intt_X |f|^p \, d\mu \right)^{1/p} \lt  \infty</md>
+нөхцөл биелж байвал <m>f</m> функцийг <term><m>p</m>-зэргээр интегралчлагдах функц</term> гэнэ. Ийм бүх функцийн олонлогийг <m>\La^p(X, \PZM, \mu)</m> буюу товчоор <m>\La^p(\mu)</m> гэж тэмдэглэнэ.</p></statement></definition>
+<remark><p><m>\La^p(\mu)</m> олонлог нь шугаман огторгуй үүсгэнэ. Учир нь дурын <m>\alpha \in \R</m> хувьд <m>\|\alpha f\|_p = |\alpha|\|f\|_p \lt  \infty</m> ба <m>a, b \ge 0</m> үед <m>|a+b|^p \le 2^{p-1}(a^p + b^p)</m> тэнцэтгэл биш биелдэг тул <m>f, g \in \La^p(\mu)</m> бол
+<md>\intt_X |f+g|^p \, d\mu \le 2^{p-1} \left( \intt_X |f|^p \, d\mu + \intt_X |g|^p \, d\mu \right) \lt  \infty</md>
+болж <m>f+g \in \La^p(\mu)</m> байна. Гэвч <m>\|f\|_p = 0 \iff f = 0</m> (<m>\mu</m>-бараг бүх цэгт) тул <m>\|\cdot\|_p</m> нь <m>\La^p(\mu)</m> дээр жинхэнэ норм биш, зөвхөн <term>хагас норм</term> (seminorm) болно.</p></remark>
+<definition><statement><p><m>\La^p(\mu)</m> огторгуй дээр <m>f \sim g \iff \mu(\{x \in X : f(x) \neq g(x)\}) = 0</m> эквивалент харьцаа тодорхойлъё. Энэ харьцаагаар үүсэх эквивалент ангиудын фактор огторгуйг
+<md>L^p(X, \PZM, \mu) := \La^p(X, \PZM, \mu) / \sim</md>
+гэж тэмдэглэнэ. Цаашид тэмдэглэгээг хялбарчлах үүднээс <m>f \in L^p(\mu)</m> гэж бичихдээ эквивалент ангийг төлөөлөх нэг функцээр ойлгоно.</p></statement></definition>
+<p>Одоо <m>p = \infty</m> тохиолдлыг авч үзье.</p>
+<definition><statement><p><m>\PZM</m>-хэмжигдэх <m>f: X \to \R</m> функцийн <term>гол супремум</term> (essential supremum)-ыг
+<md>\|f\|_\infty := \operatorname*{ess\,sup}_{x \in X} |f(x)| = \inf \left\{ M \ge 0 : \mu\big(\{x \in X : |f(x)| \gt  M\}\big) = 0 \right\}</md>
+гэж тодорхойлно (хэрэв баруун талын олонлог хоосон бол <m>\|f\|_\infty = \infty</m>). <m>\|f\|_\infty \lt  \infty</m> байх хэмжигдэх функцүүдийн эквивалент ангиудын олонлогийг <m>L^\infty(X, \PZM, \mu)</m> гэж тэмдэглэнэ.</p></statement></definition>
+<proposition><statement><p>Дурын <m>f \in L^\infty(\mu)</m> функцийн хувьд <m>|f(x)| \le \|f\|_\infty</m> нөхцөл <m>\mu</m>-бараг бүх цэгт биелнэ.</p></statement><proof><p>Гол супремумын тодорхойлолт ёсоор <m>n \in \N</m> бүрийн хувьд <m>\mu(E_n) = 0</m> байх <m>E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty + \frac{1}{n}\}</m> олонлог олдоно. Тэгвэл <m>E = \bigcup_{n=1}^\infty E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty\}</m> олонлогийн хувьд <m>\mu(E) \le \sum_{n=1}^\infty \mu(E_n) = 0</m> болно.</p></proof></proposition>
+</section>
+<section xml:id="sec-lp-spaces-3">
+<title>Үндсэн тэнцэтгэл бишүүд</title>
+<p><m>1 \le p \le \infty</m> үед <m>\frac{1}{p} + \frac{1}{q} = 1</m> нөхцөлийг хангах <m>q \in [1, \infty]</m> тоог <m>p</m>-тэй <term>хосмог илтгэгч</term> гэнэ (<m>p=1</m> үед <m>q=\infty</m>, <m>p=\infty</m> үед <m>q=1</m> гэж ойлгоно).</p>
+<lemma><title>Юнгийн тэнцэтгэл биш</title><statement><p><m>1 \lt  p, q \lt  \infty</m> нь <m>\frac{1}{p} + \frac{1}{q} = 1</m> байх хосмог илтгэгчид ба <m>a, b \ge 0</m> бол
+<md number="yes" xml:id="lp-spaces-eq-young">ab \le \frac{a^p}{p} + \frac{b^q}{q}</md>
+биелэх ба тэнцэтгэл зөвхөн <m>a^p = b^q</m> үед тогтоно.</p></statement><proof><p><m>a=0</m> эсвэл <m>b=0</m> үед илэрхий. <m>a, b \gt  0</m> үед <m>\ln x</m> функцийн хотгор чанарыг ашиглавал <m>\frac{1}{p} + \frac{1}{q} = 1</m> тул
+<md>\ln(ab) = \frac{1}{p} \ln(a^p) + \frac{1}{q} \ln(b^q) \le \ln\left( \frac{a^p}{p} + \frac{b^q}{q} \right)</md>
+болно. Логарифм функц эрс өсөх тул <xref ref="lp-spaces-eq-young"/> тэнцэтгэл биш гарна.</p></proof></lemma>
+<theorem><title>Гёльдерийн тэнцэтгэл биш</title><statement><p><m>1 \le p, q \le \infty</m> нь <m>\frac{1}{p} + \frac{1}{q} = 1</m> байх хосмог илтгэгчид ба <m>f \in L^p(\mu)</m>, <m>g \in L^q(\mu)</m> бол <m>fg \in L^1(\mu)</m> байх ба
+<md number="yes" xml:id="lp-spaces-eq-holder">\|fg\|_1 = \intt_X |fg| \, d\mu \le \|f\|_p \|g\|_q</md>
+тэнцэтгэл биш биелнэ. Тухайлбал, <m>p = q = 2</m> үед үүнийг <term>Коши-Буняковский-Шварцын тэнцэтгэл биш</term> гэнэ.</p></statement><proof><p><ol><li><p><m>p = 1, q = \infty</m> тохиолдолд <m>|f(x)g(x)| \le |f(x)|\|g\|_\infty</m> (<m>\mu</m>-б.х.с.) тул хоёр талыг <m>X</m> мужид интегралчилбал <m>\|fg\|_1 \le \|f\|_1 \|g\|_\infty</m> гарна.</p></li><li><p><m>1 \lt  p \lt  \infty</m> тохиолдолд хэрэв <m>\|f\|_p = 0</m> эсвэл <m>\|g\|_q = 0</m> бол <m>fg = 0</m> (<m>\mu</m>-б.х.с.) тул тэнцэтгэл бишийн хоёр тал тэгтэй тэнцүү. Иймд <m>\|f\|_p \gt  0</m> ба <m>\|g\|_q \gt  0</m> гэе. <m>x \in X</m> бүрийн хувьд
+<md>a = \frac{|f(x)|}{\|f\|_p}, \qquad b = \frac{|g(x)|}{\|g\|_q}</md>
+гэж аваад Юнгийн <xref ref="lp-spaces-eq-young"/> тэнцэтгэл бишийг хэрэглэвэл:
+<md>\frac{|f(x)g(x)|}{\|f\|_p \|g\|_q} \le \frac{1}{p} \frac{|f(x)|^p}{\|f\|_p^p} + \frac{1}{q} \frac{|g(x)|^q}{\|g\|_q^q}.</md>
+Үүний хоёр талыг <m>X</m> олонлог дээгүүр интегралчилбал:
+<md>\frac{1}{\|f\|_p \|g\|_q} \intt_X |fg| \, d\mu \le \frac{1}{p \|f\|_p^p} \intt_X |f|^p \, d\mu + \frac{1}{q \|g\|_q^q} \intt_X |g|^q \, d\mu = \frac{1}{p} + \frac{1}{q} = 1.</md>
+Эндээс <xref ref="lp-spaces-eq-holder"/> тэнцэтгэл биш батлагдав.</p></li></ol></p></proof></theorem>
+<theorem><title>Минковскийн тэнцэтгэл биш</title><statement><p><m>1 \le p \le \infty</m> ба <m>f, g \in L^p(\mu)</m> бол <m>f + g \in L^p(\mu)</m> байх ба
+<md number="yes" xml:id="lp-spaces-eq-minkowski">\|f + g\|_p \le \|f\|_p + \|g\|_p</md>
+гурвалжны тэнцэтгэл биш биелнэ.</p></statement><proof><p><m>p = 1</m> ба <m>p = \infty</m> тохиолдлууд нь <m>|f+g| \le |f| + |g|</m> тэнцэтгэл бишээс шууд мөрдөнө. Одоо <m>1 \lt  p \lt  \infty</m> ба <m>\|f+g\|_p \gt  0</m> гэж үзье. <m>(p-1)q = p</m> гэдгийг тооцвол <m>|f+g|^{p-1} \in L^q(\mu)</m> болно. Гурвалжны тэнцэтгэл бишээр
+<md>|f+g|^p = |f+g||f+g|^{p-1} \le |f||f+g|^{p-1} + |g||f+g|^{p-1}.</md>
+Хоёр талыг интегралчлаад, баруун талын хоёр интегралд тус бүрд нь Гёльдерийн тэнцэтгэл бишийг хэрэглэвэл:
+<md><mrow>\intt_X |f+g|^p \, d\mu &amp;\le \intt_X |f||f+g|^{p-1} \, d\mu + \intt_X |g||f+g|^{p-1} \, d\mu</mrow><mrow>&amp;\le \|f\|_p \left( \intt_X |f+g|^{(p-1)q} \, d\mu \right)^{1/q} + \|g\|_p \left( \intt_X |f+g|^{(p-1)q} \, d\mu \right)^{1/q}</mrow><mrow>&amp;= \big(\|f\|_p + \|g\|_p\big) \|f+g\|_p^{p/q}.</mrow></md>
+Тэнцэтгэл бишийн хоёр талыг <m>\|f+g\|_p^{p/q} \gt  0</m> тоонд хувааж, <m>p - \frac{p}{q} = p\left(1 - \frac{1}{q}\right) = 1</m> гэдгийг ашиглавал <xref ref="lp-spaces-eq-minkowski"/> гарна.</p></proof></theorem>
+<corollary><statement><p><m>1 \le p \le \infty</m> бүрийн хувьд <m>(L^p(X, \PZM, \mu), \|\cdot\|_p)</m> нь нормчлогдсон шугаман огторгуй болно.</p></statement></corollary>
+</section>
+<section xml:id="sec-lp-spaces-4">
+<title><m>L^p</m> огторгуйн гүйцэд чанар</title>
+<p>Нормчлогдсон огторгуйд Кошийн дараалал бүр нийлж байвал түүнийг <term>Банахын огторгуй</term> гэнэ. Дараах лемм гүйцэд чанарыг шалгахад хэрэглэгдэнэ.</p>
+<lemma><statement><p>Нормчлогдсон шугаман огторгуй <m>(V, \|\cdot\|)</m> гүйцэд байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\sum_{k=1}^\infty \|g_k\| \lt  \infty</m> байх дурын <m>\{g_k\}_{k=1}^\infty \subset V</m> дарааллын хувьд <m>\sum_{k=1}^\infty g_k</m> цуваа <m>V</m> огторгуйд нормоороо нийлэх явдал юм.</p></statement></lemma>
+<theorem><title>Рисс-Фишерийн теорем</title><statement><p><m>1 \le p \le \infty</m> үед <m>L^p(X, \PZM, \mu)</m> нь гүйцэд нормчлогдсон огторгуй буюу <term>Банахын огторгуй</term> болно.</p></statement><proof><p>Эхлээд <m>1 \le p \lt  \infty</m> тохиолдлыг авч үзье. <m>\sum_{k=1}^\infty \|g_k\|_p = M \lt  \infty</m> байх <m>\{g_k\}_{k=1}^\infty \subset L^p(\mu)</m> дараалал өгөгдсөн байг. <m>x \in X</m> цэг бүрд
+<md>G_n(x) = \sum_{k=1}^n |g_k(x)|, \qquad G(x) = \sum_{k=1}^\infty |g_k(x)|</md>
+функцүүдийг тодорхойлъё. Минковскийн тэнцэтгэл биш ёсоор
+<md>\|G_n\|_p \le \sum_{k=1}^n \|g_k\|_p \le M.</md>
+<m>0 \le G_1^p \le G_2^p \le \dots</m> ба <m>\lim_{n\to\infty} G_n^p = G^p</m> тул Левигийн монотон нийлэлтийн теорем ёсоор
+<md>\intt_X G^p \, d\mu = \lim_{n\to\infty} \intt_X G_n^p \, d\mu \le M^p \lt  \infty.</md>
+Эндээс <m>G \in L^p(\mu)</m> бөгөөд <m>G(x) \lt  \infty</m> (<m>\mu</m>-б.х.с.) болно. Иймд <m>E = \{x \in X : G(x) = \infty\}</m> олонлогийн хувьд <m>\mu(E) = 0</m> ба <m>x \in X \setminus E</m> цэг бүр дээр <m>\sum_{k=1}^\infty g_k(x)</m> тоон цуваа абсолют нийлнэ. Иймд
+<md>f(x) = \begin{cases} \sum_{k=1}^\infty g_k(x), &amp; x \in X \setminus E, \\  0, &amp; x \in E \end{cases}</md>
+гэж тодорхойлбол <m>f</m> нь хэмжигдэх функц болох ба <m>|f(x)| \le G(x)</m> тул <m>f \in L^p(\mu)</m> байна. Одоо <m>S_n = \sum_{k=1}^n g_k</m> гэвэл <m>|f(x) - S_n(x)| \le 2G(x)</m> тул
+<md>|f(x) - S_n(x)|^p \le 2^p G(x)^p \in L^1(\mu).</md>
+Түүнчлэн <m>x \in X \setminus E</m> үед <m>\lim_{n\to\infty} |f(x) - S_n(x)|^p = 0</m> тул Лебегийн мажорант нийлэлтийн теорем ёсоор
+<md>\lim_{n\to\infty} \|f - S_n\|_p^p = \lim_{n\to\infty} \intt_X |f - S_n|^p \, d\mu = 0.</md>
+Тиймээс <m>\sum_{k=1}^\infty g_k</m> цуваа <m>L^p(\mu)</m> нормоор <m>f</m> функц рүү нийлнэ.</p>
+<p><m>p = \infty</m> тохиолдолд <m>\{f_n\}_{n=1}^\infty \subset L^\infty(\mu)</m> нь Кошийн дараалал байг. <m>k, m, n \in \N</m> бүрийн хувьд
+<md>E_k = \{x \in X : |f_k(x)| \gt  \|f_k\|_\infty\}, \qquad F_{m,n} = \{x \in X : |f_m(x) - f_n(x)| \gt  \|f_m - f_n\|_\infty\}</md>
+олонлогууд тэг хэмжээтэй тул <m>N = \left(\bigcup_{k=1}^\infty E_k\right) \cup \left(\bigcup_{m,n=1}^\infty F_{m,n}\right)</m> олонлогийн хувьд <m>\mu(N) = 0</m> байна. <m>X \setminus N</m> олонлог дээр <m>\{f_n\}</m> дараалал жигд Кошийн дараалал болох тул ямар нэг <m>f</m> функц рүү жигд нийлэх ба <m>\|f_n - f\|_\infty \to 0</m> болно.</p></proof></theorem>
+</section>
+<exercises xml:id="sem-lp-spaces"><title>Семинарын бодлогууд</title>
+<exercise><statement><p><m>\mu(X) \lt  \infty</m> ба <m>1 \le p_1 \lt  p_2 \le \infty</m> бол <m>L^{p_2}(\mu) \subset L^{p_1}(\mu)</m> бөгөөд дурын <m>f \in L^{p_2}(\mu)</m> хувьд
+<md>\|f\|_{p_1} \le \mu(X)^{\frac{1}{p_1} - \frac{1}{p_2}} \|f\|_{p_2}</md>
+биелэхийг батал.</p></statement></exercise>
+<exercise><statement><p><m>\N</m> олонлог дээр тоолох хэмжээ өгөгдсөн үед үүсэх <m>L^p(\N)</m> огторгуйг <m>\ell^p</m> гэж тэмдэглэдэг. Хэрэв <m>1 \le p_1 \lt  p_2 \le \infty</m> бол <m>\ell^{p_1} \subset \ell^{p_2}</m> бөгөөд дурын <m>x = (x_n)_{n=1}^\infty \in \ell^{p_1}</m> хувьд <m>\|x\|_{p_2} \le \|x\|_{p_1}</m> болохыг харуул.</p></statement></exercise>
+<exercise><statement><p><m>X = [0, 1]</m> хэрчим дээр Лебегийн хэмжээ <m>\lambda</m> өгөгдсөн байг. <m>p = \frac{1}{2}</m> үед
+<md>\|f\|_{1/2} = \left( \intt_0^1 |f(x)|^{1/2} \, dx \right)^2</md>
+илэрхийлэл нь гурвалжны тэнцэтгэл бишийг зөрчиж, норм болж чадахгүй гэдгийг <m>f = \chi_{[0, 1/2]}</m> ба <m>g = \chi_{[1/2, 1]}</m> функцүүдийн жишээн дээр харуул.</p></statement></exercise>
+<exercise><statement><p><m>f \in L^p(\mu) \cap L^\infty(\mu)</m> (<m>1 \le p \lt  \infty</m>) бол
+<md>\lim_{q \to \infty} \|f\|_q = \|f\|_\infty</md>
+болохыг батал.</p></statement></exercise>
+</exercises>
 </chapter>

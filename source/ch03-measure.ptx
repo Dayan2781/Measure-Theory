@@ -1,17 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 5measure1D.tex; lecture 3-hemjee.tex -->
+<!-- Эх файл: 5measure1D.tex:1-; lecture 2-borel sigma algebra.tex:193-223 -->
 <chapter xml:id="ch-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Хэмжээ</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-measure">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Хэмжээ</title>
+<section xml:id="sec-measure-1">
+<title>Хэмжээ ба түүний чанарууд</title>
+<p>a</p>
+<definition><title>Төгсгөлөг аддитив хэмжээ</title><statement><p><m>X</m> олонлог, <m>\mathscr{A}</m> түүн дээрх 
+алгебр байг.  <md>m:\mathscr{A} \to[0,\infty]</md> функц дараах аксиомуудыг хангадаг бол 
+түүнийг  <m>\mathscr{A}</m> дээрх <term>төгсгөлөг аддитив хэмжээ</term> гэнэ.  <idx>төгсгөлөг аддитив хэмжээ</idx>
+<ul marker=""><li><p><m>(m1)</m> <m>m(\emptyset)=0</m></p></li><li><p><m>(m2)</m> <m>E_1, E_2\in\mathscr{A}</m> үл огтлолцох олонлогууд бол 
+<md>m(E_1\cup E_2)=m(E_1)+m(E_2)</md></p></li></ul></p></statement></definition>
+<p><m>(m2)</m> аксиомыг хэмжээний төгсгөлөг аддитив чанар гэдэг.</p>
+<example><title>Дирак хэмжээ</title><p><m>X</m> хоосон биш олонлог, <m>\mathscr{A}</m> нь түүн дээрх алгебр, <m>x_0\in X , A\in\mathscr{A}</m> байг.
+<md>m(A)=\begin{cases}
+0,&amp; x_0\notin A,\\ 
+1,&amp;x_0\in A
+\end{cases}</md> функц төгсгөлөг аддитив хэмжээ болно. Энэ хэмжээг <m>x_0</m> төвтэй Дирак хэмжээ гэнэ. <m>x_0</m> цэгийг жинтэй цэг гэдэг.</p></example>
+<proposition xml:id="measure-mmp1"><title>Хэмжээний монотон чанар</title><statement><p><m>X\neq\varnothing</m>, <m>\alg</m> нь <m>X</m> олонлог дээрх алгебр, <m>m\colon\alg\to[0,+\infty]</m> төгсгөлөг аддитив хэмжээ байг. Тэгвэл
+<md>A,B\in\alg, A\subset B\ \Rightarrow \ m(A)\leqslant m(B)</md></p></statement><proof><p><m>A, B\in\alg</m> тул  <m>(a2)</m> ба <m>(a3')</m> ёсоор <m>B\setminus A=B\cap A^c\in\alg</m> байна. Иймд <m>B=A\cup (B\setminus A)</m>. <m>A\cap (B\setminus A)=\emptyset</m> болохыг тооцон хэмжээний төгсгөлөг аддитив чанар ба хэмжээ сөрөг биш утгатайг ашиглавал 
+<md>m(B)=m(A\cup (B\setminus A))=m(A)+m(B\setminus A)\geqslant m(A).</md></p></proof></proposition>
+<proposition xml:id="measure-mpad1"><title>Хэмжээний төгсгөлөг хагас аддитив чанар</title><statement><p><m>X\neq\varnothing</m>, <m>\alg</m> түүн дээрх алгебр, <m>m\colon\alg\to[0,+\infty]</m> төгсгөлөг аддитив хэмжээ байг. <m>A, B\in\alg</m> бол
+<md>m(A\cup B)\leqslant m(A)+m(B).</md> 
+Хэрэв <m>m(X)\lt +\infty</m> бол 
+<md number="yes" xml:id="measure-mou1">m(A\cup B)=m(A)+m(B)-m(A\cap B).</md></p></statement><proof><p>Хэмжээний төгсгөлөг аддитив чанар болон монотон чанар ёсоор
+<md>m(A\cup B)=m(A\cup (B\setminus A))=m(A)+m(B\setminus A)\leqslant m(A)+m(B).</md></p>
+<p><m>m(X)\lt +\infty</m> бол <m>m(A)\lt +\infty</m>, <m>m(B)\lt +\infty</m> байх бөгөөд
+<md>m(A)+m(B)=m(A)+m(B\setminus A)+m(A\cap B)=m(A\cup B)+m(A\cap B).</md>
+Эндээс (<xref ref="measure-mou1"/>) мөрдөн гарна.</p></proof></proposition>
+<definition><title>Хэмжээ</title><statement><p><m>X</m> хоосон биш олонлог, <m>\mathscr{A}</m> түүн дээрх <m>\sigma</m>-алгебр байг. 
+<md>\mu:\mathscr{A} \to[0,\infty]</md> функц доорх чанаруудыг хангадаг бол түүнийг <m>\mathscr{A}</m> дээрх <term>хэмжээ</term><idx>хэмжээ</idx> гэнэ. 
+<ul marker=""><li><p><m>(\mu1)</m> <m>\mu(\emptyset)=0</m></p></li><li><p><m>(\mu2)</m> <m>\{E_n\}_{n\in\N}\subset\mathscr{A}</m> тоологдом аль ч хоёр нь  үл огтлолцох олонлогууд бол 
+<md>\mu(\BCD{j=1}{\infty}E_j)=\sum\limits_{j=1}^{\infty}\mu(E_j)</md></p></li></ul></p></statement></definition>
+<p>Энэ тодорхойлолтод дурдсан хэмжээг зарим үед <term><m>\sigma</m>-аддитив хэмжээ</term><idx><m>\sigma</m>-аддитив хэмжээ</idx> эсвэл <term>тоологдом аддитив хэмжээ</term><idx>тоологдом аддитив хэмжээ</idx> гэдэг. Мөн <m>(\mu2)</m> аксиомыг хэмжээний тоологдом аддитив чанар гэдэг. Мэдээж хэмжээ бүр төгсгөлөг аддитив хэмжээ байна.</p>
+<definition><statement><p><m>X</m> хоосон биш олонлог, <m>\mathscr{A}</m> түүн дээрх <m>\sigma-</m>алгебр, <m>\mu</m> нь <m>\mathscr{A}</m> дээр тодорхойлогдсон тоологдом аддитив хэмжээ бол
+<m>(X,\mathscr{A},\mu)</m> гурвалыг <term>хэмжээт огторгуй</term><idx>хэмжээт огторгуй</idx> гэдэг.</p></statement></definition>
+<example><title>Тоолох хэмжээ</title><p><m>X</m> хоосон биш олонлог, <m>\mathscr{A}</m> нь түүн дээрх <m>\sigma-</m>алгебр байг.
+<md>\mu(A)=\begin{cases}
+n &amp; A \mbox{ төгсгөлөг олонлог,} \ |A|=n \\ 
++\infty &amp; \mbox{бусад үед}
+\end{cases}</md>
+функц тоологдом аддитив хэмжээ болно. Энэ хэмжээг тоолох хэмжээ гэдэг.</p></example>
+<example><title>Төгсгөлөг аддитив, тоологдом аддитив биш хэмжээ</title><p><m>\mathscr{A}=\mathscr{P}(\N)</m> байг.
+<m>\mu:\mathscr{A}\to[0,\infty]</m> функцийг дараах дараах байдлаар тодорхойлъё. 
+<md>\mu(A)=\left\{
+\begin{array}{cl}
+0&amp; \text{ $A$ төгсгөлөг олонлог}\\ 
+\infty&amp; \text{бусад үед}
+\end{array}
+\right.</md>
+Дээрх  <m>\mu(A)</m> хэмжээ нь зөв тодорхойлогдсон төгсгөлөг аддитив хэмжээ болох нь доорх баталгаанаас харагдана. 
+<ol><li><p><m>A_1, A_2, \ldots , A_n\subset \N</m> ба бүгд төгсгөлөг элементтэй бол бол <m>\bigcup\limits_{i=1}^{n}A_i</m> мөн төгсгөлөг байх бөгөөд 
+<md>\mu(\bigcup\limits_{i=1}^{n}A_i)=\sum\limits_{i=1}^{n}\mu(A_i)=\sum\limits_{i=1}^{n} 0=0</md> байна.</p></li><li><p>Хэрэв <m>A_1, A_2, \ldots , A_n\subset \N</m> ба ядаж нэг нь төгсгөлгүй олон элементтэй бол бол <m>\bigcup\limits_{i=1}^{n}A_i</m> мөн төгсгөлгүй олон элементтэй байх бөгөөд 
+<md>\infty=\mu(\bigcup\limits_{i=1}^{n}A_i)=\sum\limits_{i=1}^{n}\mu(A_i)=\infty</md> байна.</p></li></ol>
+Одоо дээрх хэмжээ <m>\sigma</m>-аддитив чанар хангадаггүй болохыг харуулъя.   
+<m>B_i=\{i\}</m>  гэвэл <m>\bigcup\limits_{i=1}^{\infty}B_i=\N</m> тул 
+<md>\infty=\mu(\N)=\mu(\bigcup\limits_{i=1}^{\infty}B_i)\neq \sum\limits_{i=1}^{\infty}\mu(B_i)=\sum\limits_{i=1}^{\infty}0=0.</md></p></example>
+<definition><title>Хэмжээг ангилах</title><statement><p><m>(X, \mathscr{A}, \mu)</m> хэмжээт огторгуй байг. 
+<ol marker="a)"><li><p><m>\mu(X)\lt \infty</m> бол <m>\mu</m> хэмжээг <term>төгсгөлөг хэмжээ</term><idx>төгсгөлөг хэмжээ</idx></p></li><li><p><m>\mu(X)=1</m> бол <m>\mu</m> хэмжээг <term>магадлалын хэмжээ</term><idx>магадлалын хэмжээ</idx></p></li><li><p><m>E_i\in\mathscr{A}, \mu(E_i)\lt \infty</m>  ба <m>X=\bigcup\limits_{i=1}^{\infty}E_i</m>  бол <m>\mu</m> хэмжээг <term><m>\sigma</m>-төгсгөлөг хэмжээ</term><idx><m>\sigma</m>-төгсгөлөг хэмжээ</idx></p></li><li><p><m>X</m> метрик огторгуй , <m>\mathscr{A}=\mathcal{B_X}</m> бол <m>\mu</m> хэмжээг <term>Борелийн хэмжээ</term><idx>Борелийн хэмжээ</idx></p></li><li><p><m>\forall x\in X</m> хувьд  <m>\{x\}\in\A</m> байг. Хэрэв <m>\forall x\in X</m> хувьд  <m>\mu(\{x\})=0</m> бол <m>\mu</m> хэмжээг <term>тасралтгүй хэмжээ</term><idx>тасралтгүй хэмжээ</idx></p></li><li><p><m>\mu(D^c)=0</m> байх тоологдом олонлог <m>D\subset X</m> олддог бол <m>\mu</m> хэмжээг <term>дискрет хэмжээ</term><idx>дискрет хэмжээ</idx></p></li></ol> гэж тус тус нэрлэнэ.</p></statement></definition>
+<example><title>Магадлалын хэмжээ</title><p><m>X</m> ямар нэг тоологдом биш олонлог,
+<md>\mathscr{A}=\{ E\in\mathscr{P}(X) | E \text{  тоологдом эсвэл } E^c \text{  тоологдом олонлог} \}</md> нь <m>X</m> дээрх <m>\sigma</m>-алгебр болох ба <m>E\in\mathscr{A}</m> бол 
+<md>\mu(E)=\left\{
+\begin{array}{cc}
+0&amp; E \text{ тоологдом}\\ 
+1&amp; E^c \text{ тоологдом}
+\end{array}
+\right.</md>-нь <m>X</m> дээрх хэмжээ болно. <m>\mu(X)=1</m> учир магадлалын хэмжээ болно.</p></example>
+<example><title>Дискрет хэмжээ</title><p><m>X</m> хоосон биш олонлог ба <m>\mathscr{A} =\mathscr{P}(X)</m>, <m>x_0\in X</m> байг. <m>\mu</m> нь <m>x_0</m> төвтэй Дирак хэмжээ байг. 
+<ol marker="a)."><li><p><m>\mu</m> нь тасралтгүй хэмжээ биш байна. Учир нь <m>\mu(x_0)=1\neq 0</m> байна.</p></li><li><p><m>D=\{x_0\}</m> гэвэл <m>D</m> тоологдом олонлог, <m>\mu(D^c)=0</m> учир <m>\mu</m> дискрет хэмжээ байна.</p></li></ol></p></example>
+<example><title>Сөрөг бус функцээр хэмжээ үүсгэх</title><p><m>X</m> ямар нэг олонлог, <m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>f: X\to [0;\infty]</m> байг. <m>E\in\mathscr{A}</m> бол <md>\mu(E)=\sum\limits_{x\in E}f(x)</md> <m>X</m> дээр хэмжээ болно.   
+Энд <m>\sum\limits_{x\in E}f(x)</m>-г хэрхэн тодорхойлохыг авч үзье. Хэрэв  
+<ul><li><p><m>\exists x\in E</m>, <m>f(x)=\infty</m> бол <m>\sum\limits_{x\in E}f(x)=\infty</m> байна.</p></li><li><p><m>\forall x\in E</m> ба <m>f(x)\lt \infty</m> бол <m>P=\{x\in E | f(x)\gt 0\}</m> гэе.</p>
+<p>Хэрэв  <m>P</m> олонлог төгсгөлөг элементтэй бол 
+<md>\sum\limits_{x\in E}f(x)=\sum\limits_{x\in P}f(x)</md> төгсгөлөг тоо гарна.</p>
+<p>Хэрэв  <m>P</m> олонлог тоологдом элементтэй, өөрөөр хэлбэл <m>P=\{x_1, x_2, \ldots \}</m> бол <md>\sum\limits_{x\in E}f(x)=\lim\limits_{n\to\infty}\sum\limits_{i=1}^nf(x_i)</md> сөрөг бус гишүүдтэй цувааны нийлбэр болно.</p>
+<p>Хэрэв  <m>P</m> олонлог тоологдом биш элементтэй бол 
+<md>\sum\limits_{x\in E}f(x)=\infty</md> болно. Учир нь <m>X_n=\{x\in E | f(x)\gt \dfrac{1}{n}\}</m> олонлогуудын ядаж нэг нь тоологдмоос олон элементтэй байна.  <m>X_m</m> тоологдом биш бол
+<md>\sum\limits_{x\in E}f(x)\geq \sum\limits_{x\in X_m}f(x)\gt \dfrac{1}{m}\times\infty=\infty.</md></p></li></ul></p></example>
+<theorem xml:id="measure-huch1"><title>Хэмжээний үндсэн чанарууд</title><statement><p><m>(X, \mathscr{A}, \mu)</m> хэмжээт огторгуй, <m>E, F, E_1, E_2, \ldots \in\mathscr{A}</m> байг.
+<ol marker="a)"><li><p><m>(</m><term>Монотон чанар</term><idx>Монотон чанар</idx><m>)</m> Хэрэв <m>E\subset F</m> бол <m>\mu(E)\leq \mu(F).</m></p></li><li><p><m>(</m><term>Хагас аддитив чанар</term><idx>Хагас аддитив чанар</idx><m>)</m> <m>\mu(\bigcup\limits_{i=1}^{\infty} E_i)\leq \sum\limits_{i=1}^{\infty} \mu(E_i).</m>  
+<m>(</m> Энд үл огтлолцох байхыг шаардахгүй байгааг анхаар!<m>)</m></p></li><li><p><m>(</m><term>Доороосоо тасралтгүй чанар</term><idx>Доороосоо тасралтгүй чанар</idx><m>)</m> <m>E_1\subset E_2\subset E_3\subset\ldots</m>   олонлогийн өсөх дараалал бол
+<md>\mu(\bigcup\limits_{i=1}^{\infty} E_i)=\lim\limits_{n} \mu(E_n).</md></p></li><li><p><m>(</m><term>Дээрээсээ тасралтгүй чанар</term><idx>Дээрээсээ тасралтгүй чанар</idx><m>)</m> <m>\mu(E_1)\lt \infty,</m>  <m>E_1\supset E_2\supset E_3\supset\ldots</m>  олонлогийн буурах дараалал бол
+<md>\mu(\bigcap\limits_{i=1}^{\infty} E_i)=\lim\limits_{n} \mu(E_n).</md></p></li></ol></p></statement><proof><p><ol marker="a)"><li><p><m>E\cap(F\setminus E)=\emptyset</m> , <m>\mu(F\setminus E)\geq 0</m> болохыг санавал 
+<md>\mu(E)\leq \mu(E)+\mu(F\setminus E)=\mu(F)</md> болно.</p></li><li><p><m>E_0=\emptyset , F_k=E_k\setminus (\bigcup\limits_{i=0}^{k-1}E_i)\quad (k\in\N)</m> гэе. <m>F_k</m> олонлогууд үл огтлолцох, <m>F_k\subset E_k</m> бөгөөд <m>\bigcup\limits_{i=1}^{n}E_i=\bigcup\limits_{i=1}^{n}F_i</m> байна. Өмнөх хэсгийг санавал <m>\mu(F_k)\leq \mu(E_k)</m> байна. Иймд 
+<md>\mu(\bigcup\limits_{i=1}^{\infty}E_i)=\mu(\bigcup\limits_{i=1}^{\infty}F_i)= \sum\limits_{i=1}^{\infty}\mu(F_i)\leq\sum\limits_{i=1}^{\infty}\mu(E_i)</md></p></li><li><p><m>E_1, E_i\setminus E_{i-1} (i=2, 3, 4, \ldots )</m>  олонлогууд үл огтлолцох ба 
+<md>E_n=\bigcup\limits_{i=1}^{n}E_i=E_1\cup (\bigcup\limits_{i=2}^{n}(E_i\setminus E_{i-1})</md> тул 
+<md>\mu(\bigcup\limits_{i=1}^{\infty}E_i)=\mu(E_1)+\sum\limits_{i=2}^{\infty}\mu(E_i\setminus E_{i-1})</md> <md>=\lim\limits_{n}[\mu(E_1)+\sum\limits_{i=2}^{n}\mu(E_i\setminus E_{i-1})]=\lim\limits_{n}\mu(E_n)</md> байна.</p></li><li><p><m>n\in\N</m> хувьд <m>F_n=E_1\setminus E_n</m> гэвэл <m>F_1\subset F_2\subset F_3\subset\ldots</m> тул өмнөх хэсгийг ашиглавал 
+<md number="yes" xml:id="measure-x3-1">\mu(\bigcup\limits_{i1}^{\infty}F_i)=\lim\limits_{n}\mu(F_n)=\lim\limits_{n}\mu(E_1\setminus E_n)</md> болно.  <md>\mu(E_1)=\mu(E_n\cup(E_1\setminus E_n))=\mu(E_n)+\mu(E_1\setminus E_n)</md> байх ба <m>\mu(E_n)\lt \infty</m> тул 
+<md number="yes" xml:id="measure-x3-2">\mu(E_1\setminus E_n)=\mu(E_1)-\mu(E_n)</md>
+ байна. 
+(<xref ref="measure-x3-1"/>)-т  (<xref ref="measure-x3-2"/>)-г орлуулбал 
+<md number="yes" xml:id="measure-x3-3">\mu(\bigcup\limits_{i=1}^{\infty}F_i)=\mu(E_1)-\lim\limits_{n}\mu(E_n)</md>
+ болно. <m>F_n=E_1\setminus E_n=E_1\cap E_n^c</m> тул 
+<md number="yes" xml:id="measure-x3-4">\bigcup\limits_{i=1}^{\infty}F_i=E_1\cap(\bigcup\limits_{i=1}^{\infty}E^c_i)=E_1\cap(\bigcap\limits_{i=1}^{\infty}E_i)^c=E_1\setminus(\bigcap\limits_{i=1}^{\infty}E_i)</md> болно. (<xref ref="measure-x3-4"/>)-г 
+<md number="yes" xml:id="measure-x3-5">\mu(\bigcup\limits_{i=1}^{\infty}F_i)=\mu(E_1\setminus(\bigcap\limits_{i=1}^{\infty}E_i))=\mu(E_1)-\mu(\bigcap\limits_{i=1}^{\infty}E_i))</md> гэж бичиж болох ба (<xref ref="measure-x3-3"/>), (<xref ref="measure-x3-5"/>)-аас 
+<m>\mu(\bigcap\limits_{i=1}^{\infty}E_i))=\lim\limits_{n}\mu(E_n)</m> болж батлагдав.</p></li></ol></p></proof></theorem>
+<theorem><title>Төгсгөлөг аддитив хэмжээ <m>\sigma</m>-аддитив байх</title><statement><p><m>(X,\mathscr{A}, \mu)</m> хэмжээт огторгуй, <m>\mu</m>  төгсгөлөг аддитив хэмжээ байг. Дараах нөхцөлүүдийн аль нэгийг хангаж байвал <m>\mu</m> нь <m>\sigma</m>-аддитив хэмжээ байна.   
+<ol marker="a)"><li><p><m>\{A_k\}_{k\in\N}\subset \A</m> олонлогийн өсдөг дараалал бүрийн хувьд 
+<md>\lim_{k} \mu(A_k)=\mu(\cup_{k}A_k)</md></p></li><li><p><m>\{A_k\}_{k\in\N}\subset \A</m>, <m>\cap_{k}A_k=\emptyset</m> байх олонлогийн буурах дараалал бүрийн хувьд 
+<md>\lim_{k} \mu(A_k)=0</md></p></li></ol></p></statement><proof><p>Бид  <m>\mu</m>-г хэмжээ болохыг харуулахын тулд <m>\sigma</m>-аддитив чанар өөрөөр хэлбэл <m>B_k\in\A</m> байх үл огтлолцох тоологдом ширхэг олонлогуудын хувьд <m>\mu(\cup_{k=1}^{\infty} B_k)=\sum_{k=1}^{\infty}\mu(B_i)</m> чанар хангахыг харуулна. 
+<ol marker="a)"><li><p><m>A_k=\cup_{i=1}^{k}B_i</m> гэе.  <m>A_k</m> нь олонлогийн өсдөг дараалал бөгөөд 
+<md>\cup_{i=1}^kB_i=\cup_{i=1}^kA_i</md> байна. <m>\mu</m> төгсгөлөг аддитив учир дурын <m>k\in\N</m> хувьд
+<md>\mu(A_k)=\mu(\cup_{i=1}^kB_i)=\sum_{i=1}^k\mu(B_i)</md> болно. Өгсөн нөхцлөөс 
+<md>\mu(\cup_{k=1}^{\infty}B_k)=\mu(\cup_{k=1}^{\infty}A_k)=\lim_{k} \mu(A_k)=\lim_{k} \sum_{i=1}^k\mu(B_i)</md> болж <m>\sigma</m>-аддитив чанар батлагдав.</p></li><li><p><m>A_k=\cup_{i=k}^{\infty}B_i</m> гэе.  <m>A_k</m> нь <m>\cap_{k}^{\infty}A_k=\emptyset</m> байх олонлогийн буурдаг дараалал байна. <m>\mu</m> төгсгөлөг аддитив учир  
+<md>\mu(\cup_{k=1}^{\infty}B_k)=\mu(A_1)=\sum_{i=1}^k\mu(B_i)+\mu(A_{k+1})</md> болно. Өгсөн нөхцлөөс  <m>\lim_{k} \mu(A_k)=0</m> учир 
+<md>\mu(\cup_{i=1}^{\infty}B_i)=\lim_{k}(\sum_{j=1}^k\mu(B_j)+\mu(A_{k+1}))=\lim_{k} \sum_{i=1}^k\mu(B_i)</md> болж <m>\sigma</m>-аддитив чанар батлагдав.</p></li></ol></p></proof></theorem>
+</section>
+<exercises xml:id="sem-measure"><title>Семинарын бодлогууд</title>
+<introduction><p>Бидний сайн мэдэх магадлалын сонгодог тодорхойлолт нь хэмжээний онолын үүднээс авч үзвэл төгсгөлөг олонлог дээр тодорхойлогдсон, бүтэн олонлогийн хэмжээ нь <m>1</m>-тэй тэнцүү байх тусгай хэмжээ (магадлалын хэмжээ) юм.</p>
+<p><m>X</m> нь төгсгөлөг бөгөөд хоосон биш олонлог (<m>|X| \lt  \infty</m>) байг. <m>\alg = \Pa</m> нь түүний бүх дэд олонлогийн систем (<m>\sigma</m>-алгебр) бол дурын эгэл үзэгдэл (элемент) ижил боломжтой байх тохиолдолд дурын <m>A \subset X</m> үзэгдлийн (олонлогийн) магадлалыг дараах байдлаар тодорхойлдог:
+<md>P(A) = \frac{|A|}{|X|}</md>
+үүнд <m>|A|</m> нь <m>A</m> олонлогийн элементийн тоо, <m>|X|</m> нь нийт эгэл үзэгдлийн тоо юм.</p></introduction>
+<exercise><statement><p>Дээрх томьёогоор тодорхойлогдсон сонгодог магадлал <m>P</m> нь <m>(X, \Pa)</m> огторгуй дээр хэмжээний аксиомуудыг хангах бөгөөд улмаар <m>P(X) = 1</m> байх магадлалын хэмжээ (probability measure) болдгийг батал.</p></statement></exercise>
+</exercises>
 </chapter>
