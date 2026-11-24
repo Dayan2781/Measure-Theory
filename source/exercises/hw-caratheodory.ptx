@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 5 (Каратеодорийн теорем). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-caratheodory">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>Энэ хэсгийн бодлогуудад <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ байна.</p></introduction>
+
+  <exercise xml:id="hw-caratheodory-1">
+    <statement><p><m>\mu^{\star}(A)=0</m> бол <m>A</m> олонлог <m>\mu^{\star}</m>-хэмжигдэх гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-caratheodory-2">
+    <statement><p><m>A</m> нь <m>\mu^{\star}</m>-хэмжигдэх, <m>B\subset X</m> дурын олонлог бол
+      <md>\mu^{\star}(A\cup B)+\mu^{\star}(A\cap B)=\mu^{\star}(A)+\mu^{\star}(B)</md>
+    гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-caratheodory-3">
+    <statement><p><m>X</m> нь дор хаяж хоёр элементтэй олонлог, <m>\mu^{\star}(\emptyset)=0</m>, <m>A\neq\emptyset</m> бол <m>\mu^{\star}(A)=1</m> байг. <m>\mu^{\star}</m> гадаад хэмжээ болохыг шалгаад, бүх <m>\mu^{\star}</m>-хэмжигдэх олонлогийг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-caratheodory-4">
+    <statement><p><m>E_1,\ldots,E_n</m> нь хос хосоороо үл огтлолцох <m>\mu^{\star}</m>-хэмжигдэх олонлогууд, <m>A\subset X</m> дурын олонлог бол
+      <md>\mu^{\star}\Bigl(A\cap\bigcup_{k=1}^{n}E_k\Bigr)=\sum_{k=1}^{n}\mu^{\star}(A\cap E_k)</md>
+    гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-caratheodory-5">
+    <statement><p><m>E\subset\R</m> нь <m>\ls</m>-хэмжигдэх, <m>x\in\R</m> бол <m>E+x</m> олонлог мөн <m>\ls</m>-хэмжигдэх гэж батал.</p></statement>
+    <hint><p><m>\ls</m> шилжилтээр хувирдаггүйг (4-р бүлгийн семинарын бодлого) ашигла.</p></hint>
+  </exercise>
+</exercises>

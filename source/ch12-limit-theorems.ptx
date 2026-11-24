@@ -64,8 +64,8 @@ f(x)&amp; x\in A^c\\
 <md number="yes" xml:id="limit-theorems-th15-1-2">f(x) = \lim\limits_{n\to\infty} f_n(x)</md> нөхцөлүүд <m>X</m> олонлог дээр бараг биелдэг бол 
 <md>\int\limits f d\mu=\lim\limits_{n\to\infty}\int f_n d\mu</md>
  байна.</p></statement></theorem>
-<remark><p>Энэ теоремд <m>f, f_1, f_2, \ldots</m> функцүүд зөвхөн сөрөг бус, хэмжигдэх байгаа. Интегралчлагдах гэсэн нөхцөл шаардахгүй байна. Энэ теоремын хялбар тохиолдол нь Теорем <m>\ref{simpint3}</m> ба <m>\ref{nonnegint1}</m> юм.</p></remark>
-<proof><p>Эхлээд теоремын <m>(\ref{th15.1-1}) , (\ref{th15.1-2})</m> нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг үед баталъя.</p>
+<remark><p>Энэ теоремд <m>f, f_1, f_2, \ldots</m> функцүүд зөвхөн сөрөг бус, хэмжигдэх байгаа. Интегралчлагдах гэсэн нөхцөл шаардахгүй байна. Энэ теоремын хялбар тохиолдол нь Теорем <xref ref="integral-simpint3"/> ба <xref ref="integral-nonnegint1"/> юм.</p></remark>
+<proof><p>Эхлээд теоремын (<xref ref="limit-theorems-th15-1-1"/>) , (<xref ref="limit-theorems-th15-1-2"/>) нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг үед баталъя.</p>
 <p>Интегралын монотон чанараар 
 <md>\intt f_1(x) d\mu \leq \intt f_2(x)d\mu\leq \ldots \ldots \intt f d\mu</md> байна. <m>\{\int f_n d\mu \}</m> дараалал монотон дараалал тул хязгаартай. 
 <m>\lim\limits_{n\to\infty}\intt f_n d\mu \leq \intt f d\mu</m> байна. Одоо 
@@ -78,9 +78,9 @@ f(x)&amp; x\in A^c\\
 <ol marker="a)"><li><p><m>h_n=g_{m,n}</m> гэвэл <m>h_{n+1} \geq g_{m,n+1} \geq g_{m,n}=h_n</m>,</p></li><li><p><m>h_n=g_{m,n}</m> гэвэл <m>m\leq n</m> тул <m>h_n\leq f_m \leq f_n</m>,</p></li><li><p><m>h_n\leq f_n\leq f</m> тул <m>\lim_n h_n\leq f</m>. Нөгөө талаас <m>m\leq n</m> бол <m>h_n\geq g_{m,n}</m> тул <m>n\to\infty</m> хязгаарт шилжвэл <m>\lim_n h_n\geq f_m</m>, улмаар <m>m\to\infty</m> үед <m>\lim_n h_n\geq f</m> болж <m>h_n\to f</m> байна. <m>h_n</m> энгийн үл буурах дараалал тул 
 <md>\intt f d\mu=\lim\limits_{n\to\infty}\intt h_n d\mu \leq \lim\limits_{n\to\infty}\intt f_n d\mu</md>
 болж <md>\intt f d\mu=\lim\limits_{n\to\infty}\intt f_n d\mu</md> батлагдав.</p></li></ol>
-Одоо <m>(\ref{th15.1-1}) , (\ref{th15.1-2})</m> нөхцөлүүд бараг бүх <m>x\in X</m> хувьд биелдэг гэж үзье.  
+Одоо (<xref ref="limit-theorems-th15-1-1"/>) , (<xref ref="limit-theorems-th15-1-2"/>) нөхцөлүүд бараг бүх <m>x\in X</m> хувьд биелдэг гэж үзье.  
 <md>N=\{ x\in X \mid (\ref{th15.1-1}) , (\ref{th15.1-2}) \text{ нөхцөлүүдийн ядаж 1 нь биелдэггүй}\}</md>
- гэе. Тэгвэл <m>N\subset M , \mu(M)=0</m> байх <m>M\in\A</m> олонлог олдоно. <m>f\chi_{M^c} , f_n\chi_{M^c}</m> функцүүдийн хувьд <m>(\ref{th15.1-1} ), (\ref{th15.1-2})</m> нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг тул 
+ гэе. Тэгвэл <m>N\subset M , \mu(M)=0</m> байх <m>M\in\A</m> олонлог олдоно. <m>f\chi_{M^c} , f_n\chi_{M^c}</m> функцүүдийн хувьд (<xref ref="limit-theorems-th15-1-1"/> ), (<xref ref="limit-theorems-th15-1-2"/>) нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг тул 
  <md>\intt f\chi_{M^c} d\mu=\lim\limits_{n\to\infty}\intt f_n\chi_{M^c} d\mu</md>  байна. <m>f=f\chi_{M^c} , f_n=f_n\chi_{M^c}</m> тэнцэтгэлүүд бараг бүх цэгт биелэх тул 
  <md>\intt f d\mu=\lim\limits_{n\to\infty}\intt f_n d\mu</md> байна.</p></proof>
 <corollary xml:id="limit-theorems-x15-2"><title>Беппо-Леви</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f_n:X\to[0;\infty]</m> хэмжигдэх  функцүүд бол <m>\sum\limits_{n=1}^{\infty} f_n</m> цуваа нийлэх ба 

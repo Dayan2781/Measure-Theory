@@ -8,7 +8,7 @@
 <md number="yes" xml:id="caratheodory-outsemad1">\mu^{\star}(A)=\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</md>
  тэнцэтгэл  биелдэг бол <m>B</m>-г  <term><m>\mu^{\star}</m>-хэмжигдэх олонлог</term><idx><m>\mu^{\star}</m>-хэмжигдэх олонлог</idx> гэнэ.</p></statement></definition>
 <p><m>A=(A\cap B)\cup (A\cap B^c)</m> тэнцэтгэл ба гадаад хэмжээний хагас аддитив чанараар дурын <m>B</m> олонлогийн хувьд (<xref ref="caratheodory-outsemad1"/>) тэнцэтгэл нь 
-<md number="yes" xml:id="caratheodory-semadd2">\mu^{\star}(A)\geq\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</md> тэнцэтгэл биштэй ижил юм.  Хэрэв <m>\mu^{\star}(A)=\infty</m> бол <m>(\ref{semadd2})</m> тэнцэтгэл биш автоматаар биелнэ. Иймд <m>\mu^{\star}(A)\lt \infty</m> байх <m>A</m> олонлогуудын хувьд <m>(\ref{semadd2})</m> шалгахад хангалттай юм.</p>
+<md number="yes" xml:id="caratheodory-semadd2">\mu^{\star}(A)\geq\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</md> тэнцэтгэл биштэй ижил юм.  Хэрэв <m>\mu^{\star}(A)=\infty</m> бол (<xref ref="caratheodory-semadd2"/>) тэнцэтгэл биш автоматаар биелнэ. Иймд <m>\mu^{\star}(A)\lt \infty</m> байх <m>A</m> олонлогуудын хувьд (<xref ref="caratheodory-semadd2"/>) шалгахад хангалттай юм.</p>
 <proposition><statement><p><m>X</m> олонлог, <m>\mu^{\star}</m> түүн дээрх гадаад хэмжээ,  
  <m>B\subset X</m> байг. Хэрэв <m>\mu^{\star}(B)=0\text{ эсвэл } \mu^{\star}(B^c)=0</m> бол <m>B</m> олонлог <m>\mu^{\star}</m>-хэмжигдэх олонлог байна.</p></statement><proof><p><m>\mu^{\star}(A)\geq\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</m> чанарыг 
 хангах эсэхийг шалгахад хангалттай. Хэрэв <m>\mu^{\star}(B)=0</m> бол монотон чанараар 
@@ -69,4 +69,5 @@
 <md>\ls(A\cup B)=\ls(A)+\ls(B)</md>
 гэж батал.</p></statement></exercise>
 </exercises>
+<xi:include href="./exercises/hw-caratheodory.ptx"/>
 </chapter>

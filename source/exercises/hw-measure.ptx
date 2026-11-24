@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 3 (хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-measure">
+  <title>Гэрийн даалгавар</title>
+
+  <exercise xml:id="hw-measure-1">
+    <statement><p><m>X=\N</m>, <m>\alg</m> нь <m>\N</m>-ийн бүх дэд олонлогийн бүл байг. <m>A</m> төгсгөлөг бол <m>\mu(A)=0</m>, төгсгөлгүй бол <m>\mu(A)=+\infty</m> гэж тодорхойлъё. <m>\mu</m> нь төгсгөлөг аддитив боловч хэмжээ биш гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measure-2">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A,B\in\alg</m>, <m>A\subset B</m> байг. <m>\mu(A)\lt +\infty</m> бол <m>\mu(B\setminus A)=\mu(B)-\mu(A)</m> гэж батал. <m>\mu(A)=+\infty</m> үед энэ томьёо ямар учраас утгагүй болохыг жишээгээр тайлбарла.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measure-3">
+    <statement><p><m>\mu_1,\mu_2,\ldots</m> нь <m>(X,\alg)</m> дээрх хэмжээнүүд, <m>a_1,a_2,\ldots\geqslant 0</m> байг. <m>\nu(A)=\sum\limits_{k=1}^{\infty}a_k\mu_k(A)</m> <m>(A\in\alg)</m> функц хэмжээ гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measure-4">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>B\in\alg</m> байг. <m>\mu_B(A)=\mu(A\cap B)</m> <m>(A\in\alg)</m> функц <m>\alg</m> дээрх хэмжээ гэж батал. <m>\mu</m> нь <m>\sigma</m>-төгсгөлөг бол <m>\mu_B</m> мөн <m>\sigma</m>-төгсгөлөг гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measure-5">
+    <statement><p><m>\N</m>-ийн бүх дэд олонлогийн бүл дээр <m>\mu(A)=\sum\limits_{n\in A}2^{-n}</m> гэж тодорхойлъё.
+      <ol marker="a)">
+        <li><p><m>\mu</m> нь <m>\mu(\N)=1</m> байх хэмжээ гэж батал.</p></li>
+        <li><p>Тэгш тоонуудын олонлог болон <m>3</m>-д хуваагддаг тоонуудын олонлогийн хэмжээг ол.</p></li>
+        <li><p><m>\mu(A)=0</m> байх <m>A</m> олонлог зөвхөн <m>\emptyset</m> гэж харуул.</p></li>
+      </ol></p></statement>
+  </exercise>
+</exercises>

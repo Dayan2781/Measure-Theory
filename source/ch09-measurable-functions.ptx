@@ -46,7 +46,7 @@ A:f(x)\geq t+\frac{1}{n}\right\}</md>
 <md>A_i=\{x\in X:f(x)=a_i\},\quad i=1, 2, \ldots, k</md>
 гэж тэмдэглэвэл <m>f</m> энгийн функцийг
 <md>f(x)=\sum\limits_{i=1}^{k}a_i\chi_{A_i}(x)</md>
-хэлбэрт бичиж болно. Өгүүлбэр <m>\ref{charfun1}</m>-тай төстэйгээр <m>f</m>  энгийн функц хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A_i</m> олонлогууд бүгд хэмжигдэх олонлогууд байх явдал байна.</p>
+хэлбэрт бичиж болно. Өгүүлбэр <xref ref="measurable-functions-charfun1"/>-тай төстэйгээр <m>f</m>  энгийн функц хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A_i</m> олонлогууд бүгд хэмжигдэх олонлогууд байх явдал байна.</p>
 <proposition xml:id="measurable-functions-mesfun0"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг. 
 <md>f, \ g: A \to [-\infty;\infty]</md>  хэмжигдэх функцүүд бол 
 <md>\max\{f,g\},\qquad \min\{f,g\}</md>

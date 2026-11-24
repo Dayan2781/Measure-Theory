@@ -74,4 +74,5 @@
 <exercise><statement><p><m>\rn</m> огторгуйн дурын хязгаарлагдмал бөгөөд битүү олонлогийг (компакт олонлог) Борелийн <m>\sigma</m>-алгебрт харьяалагдана гэж хэлж болох уу? Үүнийг хэмжээний онолтой хэрхэн холбох вэ?</p></statement></exercise>
 </subexercises>
 </exercises>
+<xi:include href="./exercises/hw-borel.ptx"/>
 </chapter>

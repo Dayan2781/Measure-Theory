@@ -285,9 +285,9 @@ x\leqslant b}|f_{n}(x)-f(x)|\lt \varepsilon</md> бол   <m>\forall
 <md number="yes" xml:id="metric-spaces-q1">\dfrac{m^2}{n^2}\lt \dfrac{(mk+1)^2}{(nk)^2}\lt 2\lt \dfrac{(pk-1)^2}{(qk)^2}\lt \dfrac{p^2}{q^2}</md> байх нь илэрхий. 
 Одоо <m>\sup S</m> оршин байх ба рационал тоо биш болохыг харуулъя. 2 гэсэн рационал тоо <m>S</m> 
 олонлогийн дээд хил тул торгон хилийн зарчмаар <m>\sup S</m> оршин байх нь илт. <m>\sup S =\dfrac{a}{b}</m> байг.  
-Хэрэв <m>\dfrac{a^2}{b^2}\lt 2</m> бол <m>(\ref{q1})</m> тэнцэтгэл бишээс 
+Хэрэв <m>\dfrac{a^2}{b^2}\lt 2</m> бол (<xref ref="metric-spaces-q1"/>) тэнцэтгэл бишээс 
 <md>\dfrac{a^2}{b^2}\lt \dfrac{(ak+1)^2}{(bk)^2}\lt 2</md> байх тул <m>\dfrac{a}{b}</m> дээд хил биш болно. 
-Хэрэв <m>\dfrac{a^2}{b^2}\gt 2</m> бол <m>(\ref{q1})</m> тэнцэтгэл бишээс <md>\dfrac{a^2}{b^2}\gt \dfrac{(ak-1)^2}{(bk)^2}\gt 2</md> байх тул <m>\dfrac{a}{b}</m></p>
+Хэрэв <m>\dfrac{a^2}{b^2}\gt 2</m> бол (<xref ref="metric-spaces-q1"/>) тэнцэтгэл бишээс <md>\dfrac{a^2}{b^2}\gt \dfrac{(ak-1)^2}{(bk)^2}\gt 2</md> байх тул <m>\dfrac{a}{b}</m></p>
 <p>торгон хил байх боломжгүй. Мөн  <md>\dfrac{a^2}{b^2}=2</md> байх <m>a, b</m> натурал тоонууд олдохгүй. Иймд <m>\sup S\notin \Q</m> байна. <m>S</m> олонлог нь рационал тоонуудын олонлог боловч түүний <m>\sup</m> нь рационал тоо биш байна. Бид <m>\sup S=\sqrt{2}</m> байхыг амархан шалгаж болно.</p></example>
 <lemma><title>Архимедын лемм</title><statement><p><ol marker="a)."><li><p><m>\forall x\in\mathbb{R}</m> бол <m>\exists n\in\mathbb{N} , n\gt x.</m></p></li><li><p><m>\forall y\gt 0</m> бол <m>\exists n\in\mathbb{N} , \dfrac{1}{n}\lt y.</m></p></li></ol></p></statement><proof><p><ol marker="a)."><li><p>Хэрэв нөхцөл биелэхгүй бол <m>\exists x\in\mathbb{R}</m> , <m>\forall n\in\mathbb{N} , 
 n\leqslant x</m>  болно. Иймд <m>x</m> тоо <m>\mathbb{N}</m> олонлогийн дээд хил болно.</p>

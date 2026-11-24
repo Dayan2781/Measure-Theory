@@ -46,9 +46,9 @@
 болох нь <m>\inf</m>-н тодорхойлолтоос илт. 
  <md>\cup_{n=1}^{\infty}(\{(a_{n,i};b_{n,i})\}_{i=1}^{\infty})</md> дараалал нь <m>\cup_{n=1}^{\infty} A_n</m> олонлогийн тоологдом задгай хучилт болно. Учир нь тоологдом ширхэг тоологдом чадалтай олонлогийн нэгдэл тоологдом чадалтай байдаг. Иймд 
 <md><mrow number="yes" xml:id="outer-measure-outmes1">
-\ls(\cup_{n=1}^{\infty}A_n)\leq &amp;\sum_{n=1}^{\infty} \sum_{i=1}^{\infty}(b_{n,i}-a_{n,i})</mrow><mrow>\lt  &amp;\sum_{n=1}^{\infty}(\ls(A_n)+\dfrac{\veps}{2^n})=\sum_{n=1}^{\infty}\ls(A_n)+\veps</mrow></md> биелнэ. <m>(\ref{outmes1})</m> тэнцэтгэл бишид  <m>\veps</m> дурын тоо тул 
+\ls(\cup_{n=1}^{\infty}A_n)\leq &amp;\sum_{n=1}^{\infty} \sum_{i=1}^{\infty}(b_{n,i}-a_{n,i})</mrow><mrow>\lt  &amp;\sum_{n=1}^{\infty}(\ls(A_n)+\dfrac{\veps}{2^n})=\sum_{n=1}^{\infty}\ls(A_n)+\veps</mrow></md> биелнэ. (<xref ref="outer-measure-outmes1"/>) тэнцэтгэл бишид  <m>\veps</m> дурын тоо тул 
 <md>\ls(\cup_{n=1}^{\infty}A_n)\leq \sum_{n=1}^{\infty}\ls(A_n)</md> болж тоологдом хагас аддитив чанар батлагдав.</p></proof></theorem>
-<definition><statement><p><m>(\ref{loutmes1})</m> томьёогоор тодорхойлогдох <m>\ls</m> гадаад хэмжээг <term>Лебегийн гадаад хэмжээ</term><idx>Лебегийн гадаад хэмжээ</idx> гэнэ.</p></statement></definition>
+<definition><statement><p>(<xref ref="outer-measure-loutmes1"/>) томьёогоор тодорхойлогдох <m>\ls</m> гадаад хэмжээг <term>Лебегийн гадаад хэмжээ</term><idx>Лебегийн гадаад хэмжээ</idx> гэнэ.</p></statement></definition>
 <proposition xml:id="outer-measure-inoutmes1"><statement><p><m>\R</m> дэх интервалын Лебегийн гадаад хэмжээ нь түүний урттай тэнцүү.</p></statement><proof><p>Эхлээд битүү зааглагдсан интервал <m>[a;b]</m>-г авч үзье. <m>[a;b]</m> интервалын урт нь <m>b-a</m> билээ. Дурын <m>\veps\gt 0</m> тооны хувьд нэгдэл нь <m>a</m> , <m>b</m> цэгүүдийг агуулах, уртуудын нийлбэр нь <m>\veps</m> байх <m>\{(a_i;b_i)\}_{i=1}^{\infty}</m> дараалал олдоно. Тэгвэл 
 <md>[a;b]\subset (a;b)\cup(\cup_{i}(a_i;b_i))</md> тул <m>\ls([a;b])\leq (b-a)+\veps</m> байна. 
 <m>\veps</m> дурын тул  <m>\ls([a;b])\leq (b-a)</m> байна.   
@@ -76,4 +76,5 @@
 Лебегийн гадаад хэмжээ нь түүний эзлэхүүнтэй тэнцүү байна.</p></statement><proof><p>Теорем <xref ref="outer-measure-lebmes1"/> ба өгүүлбэр <xref ref="outer-measure-inoutmes1"/> баталгаатай төстэй.</p></proof></theorem>
 </section>
 <xi:include href="./exercises/sem-outer-measure.ptx"/>
+<xi:include href="./exercises/hw-outer-measure.ptx"/>
 </chapter>
