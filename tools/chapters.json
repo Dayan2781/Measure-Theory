@@ -707,6 +707,9 @@
      "\\eqno(6)\n\t$$\n\\end{lem}",
      "@add:ch8-regular-lemma"
     ]
+   ],
+   "append": [
+    "midterm"
    ]
   },
   {

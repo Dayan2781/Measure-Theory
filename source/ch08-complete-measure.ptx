@@ -97,4 +97,5 @@
 </section>
 <xi:include href="./exercises/sem-complete-measure.ptx"/>
 <xi:include href="./exercises/hw-complete-measure.ptx"/>
+<xi:include href="./exercises/midterm.ptx"/>
 </chapter>
