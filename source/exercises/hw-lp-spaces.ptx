@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 13 (<m>L^p</m> огторгуй). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-lp-spaces">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-lp-spaces-1">
+    <statement><p>(Юнг) <m>a,b\geqslant 0</m>, <m>\frac1p+\frac1q=1</m> бол <m>ab\leqslant\frac{a^p}p+\frac{b^q}q</m> гэж <m>\ln</m> функцийн хотгор чанараар батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lp-spaces-2">
+    <statement><p><m>([0;1],\lambda)</m> дээр <m>f(x)=x^{-1/3}</m>-ийн <m>\|f\|_1</m>, <m>\|f\|_2</m>-г ол. <m>f\in L^3</m> юу?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lp-spaces-3">
+    <statement><p><m>f\in L^p(\mu)</m>, <m>1\leqslant p\lt\infty</m> бол <m>\mu(\{|f|\geqslant t\})\leqslant t^{-p}\|f\|_p^p</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lp-spaces-4">
+    <statement><p><m>L^p</m> огторгуйд <m>f_n\to f</m> бол <m>\|f_n\|_p\to\|f\|_p</m> гэж батал. Эсрэг нь үнэн үү?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lp-spaces-5">
+    <statement><p><m>\ell^2</m>-д <m>e_n=(0,\ldots,0,1,0,\ldots)</m> дараалал хязгаарлагдмал боловч ямар ч нийлэх дэд дараалалгүй гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lp-spaces-6">
+    <statement><p><m>\mu(X)\lt\infty</m>, <m>f\in L^\infty</m> бол <m>\|f\|_p\to\|f\|_\infty</m> <m>(p\to\infty)</m> гэж батал.</p></statement>
+  </exercise>
+
+</exercises>

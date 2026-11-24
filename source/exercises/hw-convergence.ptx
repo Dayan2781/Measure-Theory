@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 10 (нийлэлт). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-convergence">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-convergence-1">
+    <statement><p><m>([0;1],\lambda)</m> дээр <m>f_n(x)=n\chi_{(0;1/n)}(x)</m> дараалал бараг бүх цэгт, хэмжээгээр, <m>L^1</m>-ээр нийлэх эсэхийг тогтоо.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-convergence-2">
+    <statement><p><m>\mu(X)\lt\infty</m>, <m>f_n\to f</m> хэмжээгээр, <m>g</m> хэмжигдэх бараг төгсгөлөг бол <m>f_ng\to fg</m> хэмжээгээр нийлнэ гэж батал.</p></statement>
+    <hint><p><m>\{|g|\gt M\}</m>-ийн хэмжээг бага болго.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-convergence-3">
+    <statement><p><m>f_n\to f</m> жигд нийлдэг бол хэмжээгээр нийлнэ гэж батал. <m>\mu(X)=\infty</m> үед ч үнэн үү?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-convergence-4">
+    <statement><p><m>f_n\to f</m> бараг бүх цэгт ба <m>f_n\to g</m> хэмжээгээр нийлдэг, <m>\mu(X)\lt\infty</m> бол <m>f=g</m> бараг бүх цэгт гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-convergence-5">
+    <statement><p><m>([0;1],\lambda)</m> дээр <m>f_n(x)=\sin^n(\pi x)</m> дараалал ямар функц руу бараг бүх цэгт ба хэмжээгээр нийлэх вэ? Жигд нийлэх үү?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-convergence-6">
+    <statement><p>(Хэмжээгээр Коши) <m>\mu(\{|f_n-f_m|\geqslant\veps\})\to 0</m> <m>(n,m\to\infty)</m> бол <m>f_n</m> ямар нэг хэмжигдэх <m>f</m> руу хэмжээгээр нийлнэ гэж батал.</p></statement>
+    <hint><p><m>\mu(\{|f_{n_{k+1}}-f_{n_k}|\geqslant 2^{-k}\})\lt 2^{-k}</m> байх дэд дараалал.</p></hint>
+  </exercise>
+
+</exercises>

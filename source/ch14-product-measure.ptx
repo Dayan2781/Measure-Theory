@@ -117,4 +117,5 @@
 	</p></example>
 </section>
 <xi:include href="./exercises/sem-product-measure.ptx"/>
+<xi:include href="./exercises/hw-product-measure.ptx"/>
 </chapter>

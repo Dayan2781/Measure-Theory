@@ -121,4 +121,5 @@ f(x)&amp; x\in A^c\\
 <md>\lim\limits_n \dfrac{h(t_n)-h(t_0)}{t_n-t_0}=\intt_X f_t(x,t_0)d\mu</md> байна. Өөрөөр хэлбэл <md>\dfrac{d\big(\intt_X f(x,t) d\mu\big)}{dt}=\intt_X \dfrac{df(x,t)}{dt} d\mu</md> адилтгал биелнэ.</p></example>
 </section>
 <xi:include href="./exercises/sem-limit-theorems.ptx"/>
+<xi:include href="./exercises/hw-limit-theorems.ptx"/>
 </chapter>

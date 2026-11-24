@@ -60,4 +60,5 @@
 Бидний авч үзсэн <m>\mu-</m>хэмжээгээр нийлэх <m>\{f_{n}\}_{n=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>\mu-</m>бараг нийлэх <m>\{f_{n_k}\}_{k=1}^{\infty}</m> дэд дараалалтай байна.</p></proof></theorem>
 </section>
 <xi:include href="./exercises/sem-convergence.ptx"/>
+<xi:include href="./exercises/hw-convergence.ptx"/>
 </chapter>

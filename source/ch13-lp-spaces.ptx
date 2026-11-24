@@ -71,4 +71,5 @@
 олонлогууд тэг хэмжээтэй тул <m>N = \left(\bigcup_{k=1}^\infty E_k\right) \cup \left(\bigcup_{m,n=1}^\infty F_{m,n}\right)</m> олонлогийн хувьд <m>\mu(N) = 0</m> байна. <m>X \setminus N</m> олонлог дээр <m>\{f_n\}</m> дараалал жигд Кошийн дараалал болох тул ямар нэг <m>f</m> функц рүү жигд нийлэх ба <m>\|f_n - f\|_\infty \to 0</m> болно.</p></proof></theorem>
 </section>
 <xi:include href="./exercises/sem-lp-spaces.ptx"/>
+<xi:include href="./exercises/hw-lp-spaces.ptx"/>
 </chapter>

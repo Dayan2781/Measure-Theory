@@ -97,4 +97,5 @@ a_i\mu(A_i\cap B_k)=\sum\limits_{k=1}^n \sum\limits_{i=1}^m b_k\mu(A_i\cap B_k)=
 <md>|\intt f d\mu|\leq \intt |f| d\mu</md> байна.</p></statement></corollary>
 </section>
 <xi:include href="./exercises/sem-integral.ptx"/>
+<xi:include href="./exercises/hw-integral.ptx"/>
 </chapter>

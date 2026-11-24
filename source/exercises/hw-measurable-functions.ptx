@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 9 (хэмжигдэх функц). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-measurable-functions">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+
+  <exercise xml:id="hw-measurable-functions-1">
+    <statement><p><m>f\colon X\to\R</m> байг. <m>f</m> хэмжигдэх байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>B\in\br</m> бүрийн хувьд <m>f^{-1}(B)\in\alg</m> байх явдал гэж батал.</p></statement>
+    <hint><p><m>\{B: f^{-1}(B)\in\alg\}</m> нь <m>\sigma</m>-алгебр.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-measurable-functions-2">
+    <statement><p><m>f_n</m> хэмжигдэх бол <m>\sup_nf_n</m>, <m>\inf_nf_n</m>, <m>\limsup f_n</m>, <m>\liminf f_n</m> хэмжигдэх гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measurable-functions-3">
+    <statement><p><m>f\colon\R\to\R</m> зөвхөн тоологдом тооны цэгт тасралтгүй биш бол Борелээр хэмжигдэх гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measurable-functions-4">
+    <statement><p><m>f</m> хэмжигдэх бол <m>f^+=\max\{f,0\}</m>, <m>f^-=\max\{-f,0\}</m> хэмжигдэх бөгөөд <m>f=f^+-f^-</m>, <m>|f|=f^++f^-</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-measurable-functions-5">
+    <statement><p><m>([0;1],\PZM,\lambda)</m> дээр хэмжигдэх <m>f</m> ба Борелээр хэмжигдэх <m>g</m> байх, <m>f=g</m> бараг бүх цэгт гэж батал.</p></statement>
+    <hint><p>Эхлээд энгийн функцийн хувьд, дараа нь хязгаараар.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-measurable-functions-6">
+    <statement><p>Хэмжигдэх функцүүдийн нийлбэр хэмжигдэх гэж ашиглан <m>\{x: f(x)+g(x)\gt c\}</m> олонлогийг <m>\{f\gt q\}</m>, <m>\{g\gt c-q\}</m> <m>(q\in\Q)</m> олонлогуудаар илэрхийл. <m>f\colon\R\to\R</m> хэмжигдэх, <m>h\colon\R\to\R</m> Борелээр хэмжигдэх бол <m>h\circ f</m> хэмжигдэх гэж батал.</p></statement>
+  </exercise>
+
+</exercises>
