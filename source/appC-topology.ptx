@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 14nemelt.tex -->
+<appendix xml:id="app-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Олонлогийн чадал ба топологи</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+</appendix>

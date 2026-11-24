@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
+  <title>Хавсралт</title>
+
+  <xi:include href="./appA-inequalities.ptx" />
+  <xi:include href="./appB-metric-spaces.ptx" />
+  <xi:include href="./appC-topology.ptx" />
+
+  <index>
+    <title>Нэрийн хэлхээс</title>
+    <index-list />
+  </index>
+
+  <colophon>
+    <p>Энэ ном <pretext /> системээр бичигдсэн.</p>
+  </colophon>
+</backmatter>

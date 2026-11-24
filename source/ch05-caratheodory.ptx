@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 6lebesgue measureD.tex; lecture 5 -->
+<chapter xml:id="ch-caratheodory" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Каратеодорийн теорем</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+
+  <exercises xml:id="sem-caratheodory">
+    <title>Семинарын бодлогууд</title>
+    <!-- TODO: семинарын бодлого -->
+    <exercise>
+      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
+    </exercise>
+  </exercises>
+</chapter>

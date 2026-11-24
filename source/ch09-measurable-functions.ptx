@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 9measureable functionJ.tex -->
+<chapter xml:id="ch-measurable-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Хэмжигдэх функц</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+
+  <exercises xml:id="sem-measurable-functions">
+    <title>Семинарын бодлогууд</title>
+    <!-- TODO: семинарын бодлого -->
+    <exercise>
+      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
+    </exercise>
+  </exercises>
+</chapter>

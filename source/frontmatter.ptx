@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <bibinfo>
+    <author>
+      <!-- TODO: зохиогчийн бүтэн нэр, тэнхим -->
+      <personname>Даян</personname>
+      <institution>Монгол Улсын Их Сургууль</institution>
+    </author>
+    <date><today /></date>
+    <!-- TODO: лиценз (ном нийтэд нээлттэй эсэхээс хамаарна) -->
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items />
+  </titlepage>
+
+  <preface xml:id="preface">
+    <title>Өмнөх үг</title>
+    <p>Энэ ном МУИС-д заадаг <q>Хэмжээний онол</q> хичээлийн 16 лекц, 16 семинарт зориулагдсан. Бүлэг бүр нэг долоо хоногийн лекц, түүний төгсгөлд семинарын бодлогууд байна.</p>
+  </preface>
+</frontmatter>

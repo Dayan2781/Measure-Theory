@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 1inequality.tex -->
+<appendix xml:id="app-inequalities" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Тэнцэтгэл бишүүд</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+</appendix>
