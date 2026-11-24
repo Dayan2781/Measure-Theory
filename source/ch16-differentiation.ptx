@@ -216,9 +216,9 @@ G_{\alpha}=\{x\in\mathbb{R}^n:|f(x)-g(x)|\gt \alpha\}</md>
 <example><p><m>F</m> нь Канторын сингуляр функц байг. Канторын сингуляр функц нь <m>[0,1]</m> хэрчим дээр тасралтгүй үл буурах функц учир зааглагдсан өөрчдөлттэй функц юм. Тэгэхээр <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр уламжлалтай байх ёстой. <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр <m>F'(x)=0</m> байна гэдгийг хялбархан харж болно. Түүнчлэн <m>F(0)=0</m>, <m>F(1)=1</m> болохыг бид мэдэх билээ. Тэгэхээр <md>\int\limits_{[0,1]}F'(x)d\lambda=0\lt 1=F(1)-F(0)</md> юм.</p></example>
 </section>
 <exercises xml:id="sem-differentiation"><title>Семинарын бодлогууд</title>
-<exercise><statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in L([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<exercise><statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
 <md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
-<exercise><statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in L([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<exercise><statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
 <md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
 </exercises>
 </chapter>
