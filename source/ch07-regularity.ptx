@@ -6,13 +6,13 @@
 <title>Лебегийн хэмжээний регуляр чанар</title>
 <p>Бид энэ хэсэгт Лебегийн хэмжээний зарим чухал чанаруудтай танилцан батлах болно. Үүнд Лебегийн хэмжээ нь эзлэхүүний цорын ганц өргөтгөл болох тухай, зөөлт болон хөдөлгөөнөөр Лебегийн хэмжээ өөрчлөгдөхгүй тухай эцэст нь зөөлтөөр өөрчлөгддөггүй хэмжээ нь Лебегийн хэмжээтэй пропорционал байх тухай ярилцах болно.</p>
 <p>Мэдээж эзлэхүүнийг нь олоход хамгийн амар энгийн биет нь тэгш өнцөгт параллелепипед билээ. Иймд олонлогийг хэмжихдээ олон 
-жижиг давхцалгүй параллелепипедүүдэд хувааж тус бүрийн хэмжээг бодон нийлүүлэх арга хамгийн сайн арга юм. Бид дээрх чанаруудыг батлахдаа энэ аргийг байнга хэрэглэх болно.</p>
+жижиг давхцалгүй параллелепипедүүдэд хувааж тус бүрийн хэмжээг бодон нийлүүлэх арга хамгийн сайн арга юм. Бид дээрх чанаруудыг батлахдаа энэ аргыг байнга хэрэглэх болно.</p>
 <theorem xml:id="regularity-lhrch"><title>Лебегийн хэмжээний регуляр чанар</title><statement><p><m>\R^n\supset A</m>  Лебегээр хэмжигдэх олонлог байг.
 <ol><li><p><m>\lambda(A)=\inf\{\lambda(U) \big | A\subseteq U , U-\text{ задгай }\}</m> гадаад регуляр чанар</p></li><li><p><m>\lambda(A)=\sup\{\lambda(K) \big | A\supseteq K , K-\text{ компакт }\}</m>  дотоод регуляр чанар</p></li></ol></p></statement><proof><p><ol><li><p>Эхлээд гадаад регуляр чанарыг баталъя.   
 <m>U</m> задгай олонлог тул Лебегээр хэмжигдэнэ. Хэмжээний монотон чанараар <m>\lambda(A)\leq \lambda(U)</m> байна. Өөрөөр хэлбэл <m>\lambda(A)</m> доод хил болж байна. Одоо доод торгон хил , өөрөөр хэлбэл <m>\lambda(A)</m>-аас их тоо доод хил болохгүйг харуулъя.</p>
 <p>Хэрэв <m>\lambda(A)=\infty</m> бол илт учир <m>\lambda(A)\lt \infty</m> гэж үзье. Тодорхойлолт ёсоор
 <md>\lambda(A)=\inf\{\sum_{i=1}^{\infty}\lambda(A_i) \big| \cup_{i=1}^{\infty}A_i\supseteq A\, ,  A_i\text{ нь } \, n\text{-интервал }\}</md> тул дурын <m>\veps\gt 0</m> тооны хувьд <m>\cup_{i=1}^{\infty} A_i\supseteq A\, ,\, \sum_{i=1}^{\infty}\lambda(A_i) \lt \lambda(A)+
-\veps</m> байх задгай олонлогуудын  дараалал <m>\{A_i\}_{i=1}^{\infty}</m> олдоно. <m>U=\cup_{i=1}^{\infty} A_i</m> гэвэл <m>U</m> нь <m>A</m>-г агуулсан задгай олонлог ба <md>\lambda(U)=\lambda(\cup_{i=1}^{\infty} A_i)\leq \sum_{i=1}^{\infty}\lambda(A_i)\lt 
+\veps</m> байх задгай <m>n</m>-интервалуудын дараалал <m>\{A_i\}_{i=1}^{\infty}</m> олдоно. <m>U=\cup_{i=1}^{\infty} A_i</m> гэвэл <m>U</m> нь <m>A</m>-г агуулсан задгай олонлог ба <md>\lambda(U)=\lambda(\cup_{i=1}^{\infty} A_i)\leq \sum_{i=1}^{\infty}\lambda(A_i)\lt 
 \lambda(A)+\veps</md> байх тул <m>\lambda(A)+\veps</m> доод хил биш байна.</p>
 <p>Иймд <md>\lambda(A)=\inf\{\lambda(U) \big | A\subseteq U-\text{ задгай }\}</md> батлагдав.</p></li><li><p>Одоо дотоод регуляр чанарыг баталъя.   
 <m>K</m> компакт тул Лебегээр хэмжигдэнэ. Хэмжээний монотон чанараар <m>\lambda(K)\leq \lambda(A)</m> байна. Өөрөөр хэлбэл <m>\lambda(A)</m> дээд хил болж байна. Одоо дээд торгон хил , өөрөөр хэлбэл <m>\lambda(A)</m>-аас бага тоо дээд хил болохгүйг харуулъя.</p>
@@ -22,34 +22,30 @@
 Мөн <m>C\subset C\cup U=K\cup U</m> тул 
 <md number="yes" xml:id="regularity-x21">\lambda(C)\leq \lambda(K\cup U)\leq \lambda(K)+\lambda(U)</md> болно. <m>\lambda(C\setminus A)=\lambda(C)-\lambda(A)</m> байдаг тул  (<xref ref="regularity-x1"/>) ба (<xref ref="regularity-x21"/>)-оос 
 <md number="yes" xml:id="regularity-x31">\lambda(U)+\lambda(A)\lt \lambda(C)+\veps\leq \lambda(K)+\lambda(U)+\veps</md> гарна. (<xref ref="regularity-x31"/>)-аас <md>\lambda(A)-\veps\lt \lambda(K)</md> болж <m>\lambda(A)</m> дээд торгон хил болох нь батлагдав.</p>
-<p>Одоо <m>A</m> зааглагдаагүй олонлог байг. Дурын <m>\veps\gt 0</m> тооны хувьд <m>\lambda(A)-\veps\lt \lambda(K)\lt \lambda(A)</m> байх <m>K</m> компакт олонлог байгуулъя.</p>
-<p>Тэгвэл дээд хил нь <m>\lambda(A)</m>  болох нь батлагдана.   
-<m>B_i</m> нь <m>i</m> радиустай, координатын эхэд төвтэй битүү бөмбөрцөг ба <m>A\cap B_i=A_i</m> гэе. Тэгвэл <m>\cup_{i=1}^n A_i=A_n\, , \, \cup_{i=1}^{\infty} A_i=A\, ,\, A_i\subseteq A_{i+1}</m> тул <m>\{A_i\}_{i=1}^{\infty}</m> нь олонлогийн өсдөг дараалал байна. <m>\lambda(A_n)</m> дараалал өсдөг мөн хэмжээний чанараар 
-<md number="yes" xml:id="regularity-x41">\lim\limits_{n\to\infty}\lambda(A_n)=\lim\limits_{n\to\infty}\lambda(\cup_{i=1}^{n} A_i)=
-\lambda(\cup_{i=1}^{\infty} A_i)=\lambda(A)</md>  
- тул
- <md>\lambda(A)-\veps\lt \lambda(\cup_{i=1}^{m} A_i)=\lambda(A_m)\lt \lambda(A)</md> байх <m>m</m> тоо олдоно. 
-<m>A_m</m> зааглагдсан олонлог учир дээр баталсан зааглагдсан олонлогийн дотоод регуляр чанараар  <md>\lambda(A)-\veps\lt \lambda(K)=\lambda(A_m)\lt \lambda(A)</md>
- байх <m>K\subset A_m\subset A</m>  компакт олонлог олдох болж <m>\lambda(A)</m> дээд торгон хил болох нь батлагдав.</p></li></ol></p></proof></theorem>
+<p>Одоо <m>A</m> зааглагдаагүй олонлог байг. Дурын <m>t\lt \lambda(A)</m> тооны хувьд <m>\lambda(K)\gt t</m> байх <m>K\subset A</m> компакт олонлог олдохыг харуулбал хангалттай. (<m>\lambda(A)=\infty</m> байж болохыг анхаар.)</p>
+<p><m>B_i</m> нь <m>i</m> радиустай, координатын эхэд төвтэй битүү бөмбөрцөг ба <m>A\cap B_i=A_i</m> гэе. Тэгвэл <m>A_i\subseteq A_{i+1}</m>, <m>\cup_{i=1}^{\infty} A_i=A</m> тул <m>\{A_i\}_{i=1}^{\infty}</m> нь олонлогийн өсөх дараалал бөгөөд хэмжээний доороосоо тасралтгүй чанараар 
+<md number="yes" xml:id="regularity-x41">\lim\limits_{n\to\infty}\lambda(A_n)=\lambda(\cup_{i=1}^{\infty} A_i)=\lambda(A)</md>  
+ байна. Иймд <m>\lambda(A_m)\gt t</m> байх <m>m</m> тоо олдоно. 
+<m>A_m</m> зааглагдсан олонлог учир дээр баталсан зааглагдсан олонлогийн дотоод регуляр чанараар <m>\lambda(K)\gt t</m> байх <m>K\subset A_m\subset A</m> компакт олонлог олдох тул <m>\lambda(A)</m> дээд торгон хил болох нь батлагдав.</p></li></ol></p></proof></theorem>
 <remark><p>Дээрх теоремоос аливаа олонлогийн Лебегийн хэмжээ нь түүнийг агуулсан задгай олонлогуудын хэмжээний доод торгон хил эсвэл түүнд агуулагдсан компакт олонлогуудын хэмжээний дээд торгон хил болж байна. Бид зөвхөн задгай эсвэл компакт олонлогуудыг ашиглан Лебегээр хэмжигдэх олонлогийн хэмжээг бодож болох байна.</p></remark>
 </section>
 <section xml:id="sec-regularity-2">
 <title>Лебегийн хэмжээ ба эзлэхүүн</title>
-<definition><statement><p><md>D_{(J,k)}:=\{(x_1, x_2, \ldots, x_n)\in\R^n\big| \dfrac{j_i}{2^{k}}\leq x_i\leq \dfrac{j_i+1}{ 2^{k}} , i=1, 2, \ldots , n\}</md> хэлбэрийн олонлогийг <term><m>n</m>-хагас задгай куб</term><idx><m>n</m>-хагас задгай куб</idx> гэнэ.  
+<definition><statement><p><md>D_{(J,k)}:=\{(x_1, x_2, \ldots, x_n)\in\R^n\big| \dfrac{j_i}{2^{k}}\leq x_i\lt  \dfrac{j_i+1}{ 2^{k}} , i=1, 2, \ldots , n\}</md> хэлбэрийн олонлогийг <term><m>n</m>-хагас задгай куб</term><idx><m>n</m>-хагас задгай куб</idx> гэнэ.  
 Энд <m>J=(j_1, j_2, \dots , j_n)</m> ба <m>j_i</m> өгөгдсөн бүхэл тоо, <m>k</m> натурал тоо.</p></statement></definition>
 <example><p><m>\R</m> дээр <m>1</m>-хагас задгай куб нь <m>[\dfrac{j_1}{2^k};\dfrac{j_1+1}{2^k})</m> хагас задгай <m>2^{-k}</m> урттай интервал байна.   
 <m>\R^2</m> дээр <m>2</m>-хагас задгай куб нь <m>D_{((j_1,j_2),k)}=\{(x,y)\big| \dfrac{j_1}{2^k}\leq x\lt \dfrac{j_1+1}{2^k}, \dfrac{j_2}{2^k}\leq y\lt \dfrac{j_2+1}{2^k}\}</m> болно. Энэ нь 
  <m>2^{-k}</m> талтай <m>(\dfrac{j_1}{2^k};\dfrac{j_2}{2^k})</m> цэгт зүүн доод оройтой хагас задгай квадрат байна.</p></example>
-<theorem><title>Задгай олонлогийг кубүүдэд хуваах</title><statement><p><m>\R^n\supset A</m> задгай олонлог бүр хоорондоо үл огтлолцох тоологдом тооны <m>n</m>-хагас задгай кубүүдийн нэгдэлд тавигдана.</p></statement><proof><p><md>\mathscr{L}_k:=\{D_{(J,k)}\big| \forall J\in\Z^n\}</md> гэе. Өөрөөр хэлвэл  <m>2^{-k}</m> урттай ирмэгтэй бүх <m>n</m>-хагас задгай кубүүдийн олонлог байг. Мэдээж <m>\mathscr{L}_k</m> нь <m>\R^n</m>-н тоологдом, үл огтлолцох хуваалт (давхцалгүй бүрхэлт), <m>k_1\lt k_2</m> бол <m>\mathscr{L}_{k_2}</m>-н элемент бүр <m>\mathscr{L}_{k_1}</m>-н аль нэг элементэд бүхлээрээ агуулагдана. <m>A</m> задгай олонлогийн хувьд дараах  <m>n</m>-хагас задгай кубүүдийн бүлүүдийн дараалал байгуулъя.</p>
-<p><m>B_0=\emptyset</m>, <m>B_1</m> нь <m>A</m>-д бүтнээрээ агуулагдах <m>\mathscr{L}_1</m>-н элементүүдийн бүл,  <m>B_k</m>-г байгуулсан бол <m>A\setminus B_k</m> олонлогт бүтнээрээ агуулагдах <m>\mathscr{L}_{k+1}</m>-ийн элементүүдийг <m>B_k</m>-д нэгдүүлэн <m>B_{k+1}</m> үүснэ. 
+<theorem><title>Задгай олонлогийг кубүүдэд хуваах</title><statement><p><m>\R^n\supset A</m> задгай олонлог бүр хоорондоо үл огтлолцох тоологдом тооны <m>n</m>-хагас задгай кубүүдийн нэгдэлд тавигдана.</p></statement><proof><p><md>\mathscr{L}_k:=\{D_{(J,k)}\big| \forall J\in\Z^n\}</md> гэе. Өөрөөр хэлбэл  <m>2^{-k}</m> урттай ирмэгтэй бүх <m>n</m>-хагас задгай кубүүдийн олонлог байг. Мэдээж <m>\mathscr{L}_k</m> нь <m>\R^n</m>-н тоологдом, үл огтлолцох хуваалт (давхцалгүй бүрхэлт), <m>k_1\lt k_2</m> бол <m>\mathscr{L}_{k_2}</m>-н элемент бүр <m>\mathscr{L}_{k_1}</m>-н аль нэг элементэд бүхлээрээ агуулагдана. <m>A</m> задгай олонлогийн хувьд дараах  <m>n</m>-хагас задгай кубүүдийн бүлүүдийн дараалал байгуулъя.</p>
+<p><m>B_0=\emptyset</m>, <m>B_1</m> нь <m>A</m>-д бүтнээрээ агуулагдах <m>\mathscr{L}_1</m>-н элементүүдийн бүл,  <m>B_k</m>-г байгуулсан бол <m>A\setminus\bigcup_{D\in B_k}D</m> олонлогт бүтнээрээ агуулагдах <m>\mathscr{L}_{k+1}</m>-ийн элементүүдийг <m>B_k</m>-д нэгдүүлэн <m>B_{k+1}</m> үүснэ. 
 Мэдээж <m>B_k</m> нь тоологдмоос хэтрэхгүй янз бүрийн хэмжээтэй <m>n</m>-хагас задгай кубүүдийн бүл байна. Одоо <m>B_0, B_1, \ldots , B_n, \ldots</m> дараалал байгуулсан гэж бодъё.</p>
 <p>Тэгвэл <md>\cup_{n=1}^{\infty} B_n=A</md> байхыг харуулъя.
 Мэдээж <m>\cup_{n=1}^{\infty} B_n\subset A</m> байх нь илт. <m>x\in A</m> бол  <m>x</m> нь ямар нэг орчны хамт <m>A</m>-д орох ёстой.</p>
-<p><m>\exists U\subset A</m> , <m>x\in U</m> , <m>U=\{y\in \R^n\big| |x-y|\lt  r\}</m> байх <m>x</m>-н <m>r</m> задгай орчин олдно. Хэрэв <m>2^{-(k-1)}\lt r</m> бол <m>x\in D_{(J,k)}</m> байх  <m>D_{(J,k)}\subset U\subset A</m> тул <m>x</m> нь ямар нэг <m>n</m>-хагас задгай кубэд агуулагдана.</p>
+<p><m>\exists U\subset A</m> , <m>x\in U</m> , <m>U=\{y\in \R^n\big| |x-y|\lt  r\}</m> байх <m>x</m>-н <m>r</m> задгай орчин олдно. Хэрэв <m>\sqrt{n}\,2^{-k}\lt r</m> бол <m>x\in D_{(J,k)}</m> байх  <m>D_{(J,k)}\in\mathscr{L}_k</m> куб <m>U\subset A</m>-д агуулагдана. Иймд энэ куб, эсвэл түүнийг агуулах өмнөх алхмын аль нэг куб <m>B_k</m>-д орсон тул <m>x\in\cup_{n} B_n</m> байна.</p>
 <p>Иймд <m>A=\cup_{i=1}^{\infty} B_i=\cup_{k=1}^{\infty} D_k</m> байна. Энд <m>D_k</m> нь ямар нэг <m>n</m>-хагас задгай куб.</p></proof></theorem>
-<theorem xml:id="regularity-volmea0"><title>Эзлэхүүн ба хэмжээ</title><statement><p><m>\left(\R^n, \mathcal{B}(\R^n),\mu \right)</m> хэмжээт огторгуй байг. Хэрэв <m>n</m>-хагас задгай куб бүрийн хувьд 
-<md number="yes" xml:id="regularity-volmea1">\mu(D)=vol(D)\quad (vol(D)-\text{ эзлэхүүн})</md> бол <m>\mu</m> нь Борелийн <m>\sigma</m>-алгебр  дээр Лебегийн хэмжээтэй тэнцүү байна.</p></statement></theorem>
-<remark><p>Хэрэв <m>\mu</m> хэмжээ ба <m>\lambda</m> Лебегийн хэмжээнүүд Борелийн <m>\sigma</m>-алгебр  дээр тэнцүү бол хэмжээний регуляр чанараар <m>\mu</m>-хэмжигдэх <m>\mathcal{M}_{\lambda}</m>  <m>\sigma</m>-алгебр  олонлогийн хувьд <m>\mu(A)=\lambda(A)</m> байна. Мөн <m>n</m>-интервалын хэмжээ бүр эзлэхүүнтэй нь тэнцүү байдаг хэмжээ бол ганц Лебегийн хэмжээ байна.</p></remark>
+<theorem xml:id="regularity-volmea0"><title>Эзлэхүүн ба хэмжээ</title><statement><p><m>\left(\R^n, \brn,\mu \right)</m> хэмжээт огторгуй байг. Хэрэв <m>n</m>-хагас задгай куб бүрийн хувьд 
+<md number="yes" xml:id="regularity-volmea1">\mu(D)=\vol(D)\quad (\vol(D)-\text{ эзлэхүүн})</md> бол <m>\mu</m> нь Борелийн <m>\sigma</m>-алгебр  дээр Лебегийн хэмжээтэй тэнцүү байна.</p></statement></theorem>
+<remark><p>Өөрөөр хэлбэл <m>n</m>-хагас задгай куб бүрийн хэмжээ нь эзлэхүүнтэйгээ тэнцүү байх <m>\brn</m> дээрх хэмжээ цорын ганц бөгөөд энэ нь Лебегийн хэмжээ юм.</p></remark>
 <proof><p><m>\mu</m> нь (<xref ref="regularity-volmea1"/>) чанартай хэмжээ , <m>\lambda</m> Лебегийн хэмжээ байг. Теоремын 
 нөхцөлөөс дурын  <m>n</m>-хагас задгай куб <m>S</m>-ийн хувьд <md>\mu(S)=\lambda(S)</md> байна.</p>
 <p>Одоо <m>\R^n\supset U</m> задгай олонлогийн хувьд <m>U=\cup_{i=1}^{\infty} S_i</m> байх <m>S_i</m> үл 
@@ -58,34 +54,34 @@
 \sum\limits_{i=1}^{\infty}\lambda(S_i)=\lambda(\cup_{i=1}^{\infty} S_i)=\lambda(U)</md> 
 болж задгай олонлог дээр давхцаж байна.</p>
 <p>Одоо Борелийн олонлог <m>A</m> хувьд <m>A\subset U</m> байх <m>U</m> задгай олонлог авахад <md>\mu(A)\leq \mu(U)=\lambda(U)</md> байна. Гадаад регуляр чанараар 
- <md number="yes" xml:id="regularity-mubaga1">\mu(A)\leq\inf\{\lambda(U)\big| U-\text{ задгай }, A\subset U\}=\lambda(A)</md> байна. Эхлээд зөвхөн <m>A</m> зааглагдсан Борел олонлог байх тохиолдлыг авч үзье. <m>A\subset V</m> задгай олонлог <m>V</m> хувьд <m>A, V , V\setminus A</m> Борел олонлогууд тул 
+ <md number="yes" xml:id="regularity-mubaga1">\mu(A)\leq\inf\{\lambda(U)\big| U-\text{ задгай }, A\subset U\}=\lambda(A)</md> байна. Эхлээд зөвхөн <m>A</m> зааглагдсан Борелийн олонлог байх тохиолдлыг авч үзье. <m>A\subset V</m> байх зааглагдсан задгай олонлог <m>V</m> авъя. Тэгвэл бүх хэмжээ төгсгөлөг бөгөөд <m>A, V , V\setminus A</m> Борелийн олонлогууд тул 
  <md number="yes" xml:id="regularity-mubaga2">\mu(V)=\mu(A)+\mu(V\setminus A)\leq \lambda(A)+\lambda(V\setminus A)=\lambda(V)</md> болно. Гэтэл <m>V</m> задгай тул <m>\mu(V)=\lambda(V)</m> байна. Иймд (<xref ref="regularity-mubaga2"/>) тэнцэтгэл биш 
   <md number="yes" xml:id="regularity-muequa1">\mu(A)+\mu(V\setminus A)= \lambda(A)+\lambda(V\setminus A)</md> болно. Нөгөө талаас (<xref ref="regularity-mubaga1"/>) тэнцэтгэл бишээр  <m>\mu(A)\leq \lambda(A) , \mu(V\setminus A)\leq \lambda(V\setminus A)</m> байх тул
- <md>\mu(A)=\lambda(A)</md> болж зааглагдсан Борел олонлогийн хувьд дүгнэлт үнэн байна.
- Эцэст нь <m>A</m> зааглагдаагүй бол тоологдом ширхэг үл огтлолцох зааглагдсан олонлогуудын нэгдэлд тавьж болно. Иймээс аддитив чанараар <md>\mu(A)=\lambda(A)</md> тэнцэтгэл бүх Борел 
+ <md>\mu(A)=\lambda(A)</md> болж зааглагдсан Борелийн олонлогийн хувьд дүгнэлт үнэн байна.
+ Эцэст нь <m>A</m> зааглагдаагүй бол тоологдом ширхэг үл огтлолцох зааглагдсан олонлогуудын нэгдэлд тавьж болно. Иймээс аддитив чанараар <md>\mu(A)=\lambda(A)</md> тэнцэтгэл бүх Борелийн 
 олонлогийн хувьд батлагдав.</p></proof>
 <p>Лебегийн хэмжээ ба <m>\R^n</m> дахь зөөлт </p>
 <definition><title>Зөөлт</title><statement><p><m>A\subset \R^n</m> байг. 
 <md>A+x=\{y \in \R^n\big| y=a+x ,a\in A \}</md> олонлогийг <m>A</m> олонлогийн <term><m>x</m> векторын дагуу зөөлт</term> гэнэ.</p></statement></definition>
 <p>Энэ тодорхойлолт нь бидний мэдэх параллель зөөлт юм.</p>
-<definition><title>Зөөлтөөр инвариант хэмжээ</title><statement><p><m>\forall A\subset \R^n</m>, <m>\forall x\in\R^n</m> хувьд
+<definition><title>Зөөлтөөр инвариант хэмжээ</title><statement><p><m>\mu</m> хэмжээний тодорхойлогдох <m>\sigma</m>-алгебрын дурын <m>A</m> олонлог ба <m>\forall x\in\R^n</m> хувьд <m>A+x</m> мөн хэмжигдэх бөгөөд
 <md>\mu(A)=\mu(A+x)</md> байдаг <m>\mu</m> хэмжээг <term>зөөлтөөр инвариант хэмжээ </term> <idx>зөөлтөөр инвариант хэмжээ </idx> гэнэ.</p></statement></definition>
 <proposition><title>Лебегийн хэмжээ зөөлтөөр инвариант байх</title><statement><p>Лебегийн хэмжээ <m>\R^n</m>  дээр зөөлтөөр инвариант байна.</p></statement><proof><p><m>A \subset \R^n</m>, <m>x\in\R^n</m> бол Лебегийн гадаад хэмжээний хувьд <m>\ls(A)=\ls(A+x)</m> баталъя.   
-<m>I</m> нь <m>n</m>-интервал бол <m>vol(I)=vol(I+x)</m> байх нь илт. Иймд Лебегийн гадаад хэмжээний тодорхойлолтоор 
+<m>I</m> нь <m>n</m>-интервал бол <m>\vol(I)=\vol(I+x)</m> байх нь илт бөгөөд <m>\{I_i\}</m> нь <m>A</m>-г хучих нь <m>\{I_i+x\}</m> нь <m>A+x</m>-ийг хучихтай эквивалент. Иймд Лебегийн гадаад хэмжээний тодорхойлолтоор 
 <md number="yes" xml:id="regularity-omimp1">\ls(A)=\ls(A+x)</md>
- байна. Иймд Лебегийн хэмжээ <m>\R^n</m>  дээр зөөлтөөр инвариант байна.</p></proof></proposition>
-<corollary><title>Зөөлтөөр <m>\mathcal{M}_{\lambda}</m> инвариант байх</title><statement><p><m>B</m> олонлог Лебегээр хэмжигдэх олонлог байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь ямар нэг <m>x\in\R^n</m> хувьд <m>B+x</m> Лебегээр хэмжигдэх олонлог байх юм.</p></statement><proof><p><m>B</m> олонлог Лебегээр хэмжигдэх олонлог байг. <m>A\subset \R^n</m> бол 
+ байна. Дараах мөрдлөгөөгөөр <m>A</m> хэмжигдэх бол <m>A+x</m> мөн хэмжигдэх тул Лебегийн хэмжээ <m>\R^n</m>  дээр зөөлтөөр инвариант байна.</p></proof></proposition>
+<corollary><title>Лебегийн <m>\sigma</m>-алгебр зөөлтөөр инвариант байх</title><statement><p><m>B</m> олонлог Лебегээр хэмжигдэх олонлог байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь өгөгдсөн <m>x\in\R^n</m> хувьд <m>B+x</m> Лебегээр хэмжигдэх олонлог байх юм.</p></statement><proof><p><m>B</m> олонлог Лебегээр хэмжигдэх олонлог байг. <m>A\subset \R^n</m> бол 
 <md number="yes" xml:id="regularity-omimp2">\ls(A-x)=\ls((A-x)\cap B)+\ls((A-x)\cap B^c)</md> байна. <m>((A-x)\cap B)+x=A\cap (B+x) , B^c+x=(B+x)^c</m> байх нь илт.</p>
 <p>Иймд (<xref ref="regularity-omimp1"/>) чанарыг хэрэглэн (<xref ref="regularity-omimp2"/>)-г бичвэл 
-<md><mrow>\ls((A-x)+x)= &amp;\ls(((A-x)\cap B)+x)+\ls(((A-x)\cap B^c)+x)</mrow><mrow number="yes" xml:id="regularity-omimp3">\ls(A)= &amp;\ls(A\cap (B+x))+\ls(A\cap (B+x)^c)</mrow></md> болох ба (<xref ref="regularity-omimp3"/>) нь <m>B+x</m>  олонлог хэмжигдэхийг харуулж байна.</p></proof></corollary>
-<theorem><title>Зөөлтөөр инвариант хэмжээ</title><statement><p><m>\mu</m> нь  <m>\mathcal{B}(\R^n)</m> дээр зааглагдсан Борел олонлогийн хэмжээ төгсгөлөг байдаг,
+<md><mrow>\ls((A-x)+x)= &amp;\ls(((A-x)\cap B)+x)+\ls(((A-x)\cap B^c)+x)</mrow><mrow number="yes" xml:id="regularity-omimp3">\ls(A)= &amp;\ls(A\cap (B+x))+\ls(A\cap (B+x)^c)</mrow></md> болох ба (<xref ref="regularity-omimp3"/>) нь <m>B+x</m>  олонлог хэмжигдэхийг харуулж байна. Эсрэгээр, <m>B+x</m> хэмжигдэх бол дээрхийг <m>B+x</m> ба <m>-x</m>-д хэрэглэвэл <m>B=(B+x)-x</m> хэмжигдэнэ.</p></proof></corollary>
+<theorem><title>Зөөлтөөр инвариант хэмжээ</title><statement><p><m>\mu</m> нь  <m>\brn</m> дээр зааглагдсан Борелийн олонлогийн хэмжээ төгсгөлөг байдаг,
  зөөлтөөр инвариант хэмжээ байг. <m>\lambda</m> Лебегийн хэмжээ бол
  <md>\mu=c\lambda</md> байх <m>c\geq 0</m> тоо олдоно.</p></statement><proof><p><m>C:=\{(x_1, x_2, \dots, x_n)\big| 0\leq x_i\lt 1\}</m> нэгж кубийн хэмжээг <m>c=\mu(C)</m> гэе.
- <m>C</m> зааглагдсан тул <m>c\lt \infty</m> байна. Хэрэв <m>c=0</m> бол  <m>\mu(\R^n)=0</m> болох тул <m>\mu=0\cdot\lambda</m> болно. <m>0\lt c\lt \infty</m> гэе. <m>C</m>-г <m>2^{-k}</m> ирмэгтэй хагас задгай кубүүдэд хуваая. Нийт <m>(2^k)^n</m> ширхэг хагас задгай куб болох ба энэ бүх хагас задгай 
+ <m>C</m> зааглагдсан тул <m>c\lt \infty</m> байна. Хэрэв <m>c=0</m> бол <m>\R^n</m> нь <m>C</m>-ийн тоологдом тооны зөөлтүүдийн нэгдэл учир <m>\mu(\R^n)=0</m> болох тул <m>\mu=0\cdot\lambda</m> болно. <m>0\lt c\lt \infty</m> гэе. <m>C</m>-г <m>2^{-k}</m> ирмэгтэй хагас задгай кубүүдэд хуваая. Нийт <m>(2^k)^n</m> ширхэг хагас задгай куб болох ба энэ бүх хагас задгай 
 кубүүд <m>D_{(O,k)}</m> (координатын эхэд зүүн доод оройтой <m>2^{-k}</m> ирмэгтэй) кубийн зөөлтөөр үүснэ.
 Иймд 
 <md>c=\mu(C)=2^{kn}\mu(D_{(O,k)})\text{ тул } \mu(D_{(O,k)})=\mu(D_{(J,k)})=
-\dfrac{c}{2^{kn}}</md> болно. Эндээс  <md>vol(D_{(J,k)})=\dfrac{1}{2^{kn}}=
+\dfrac{c}{2^{kn}}</md> болно. Эндээс  <md>\vol(D_{(J,k)})=\dfrac{1}{2^{kn}}=
 \dfrac{1}{c}\mu(D_{(J,k)})</md> болох ба  <m>\dfrac{1}{c}\mu</m> хэмжээ болохыг тооцвол Теорем  <xref ref="regularity-volmea0"/>-г хэрэглэвэл <m>\dfrac{1}{c}\mu</m> хэмжээ Лебегийн хэмжээ болж
 <md>\mu=c\lambda</md> байна.</p></proof></theorem>
 </section>

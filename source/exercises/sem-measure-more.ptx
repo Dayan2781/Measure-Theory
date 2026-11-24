@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<subexercises xml:id="sem-measure-more">
+  <title>Нэмэлт бодлогууд</title>
+  <introduction><p>Энэ хэсгийн бодлогуудад <m>(X,\mathscr{A},\mu)</m> нь хэмжээт огторгуй, <m>E,F,E_1,E_2,\ldots\in\mathscr{A}</m> байна. <m>E\,\triangle\,F=(E\setminus F)\cup(F\setminus E)</m> гэж тэмдэглэнэ.</p></introduction>
+
+  <exercise>
+    <statement><p><m>\mu(E\,\triangle\,F)=0</m> бол <m>\mu(E)=\mu(F)</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><ol marker="a)">
+      <li><p><m>\mu\Bigl(\bigcup\limits_{n=1}^{\infty}\bigcap\limits_{k=n}^{\infty}E_k\Bigr)\leq\liminf\limits_{n\to\infty}\mu(E_n)</m> гэж батал.</p></li>
+      <li><p><m>\mu\Bigl(\bigcup\limits_{n=1}^{\infty}E_n\Bigr)\lt\infty</m> бол <m>\limsup\limits_{n\to\infty}\mu(E_n)\leq\mu\Bigl(\bigcap\limits_{n=1}^{\infty}\bigcup\limits_{k=n}^{\infty}E_k\Bigr)</m> гэж батал.</p></li>
+    </ol></p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\mu</m> нь <m>\sigma</m>-төгсгөлөг хэмжээ бол <m>X</m>-ийг хос хосоороо үл огтлолцох, төгсгөлөг хэмжээтэй <m>\mathscr{A}</m>-ийн олонлогуудын тоологдом нэгдэл хэлбэрээр бичиж болно гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Дурын <m>x\in X</m> хувьд <m>\{x\}\in\mathscr{A}</m> ба <m>\mu</m> нь <m>\sigma</m>-төгсгөлөг хэмжээ байг. <m>\mu(\{x\})\gt 0</m> байх <m>x</m> цэгүүдийн олонлог хамгийн ихдээ тоологдом гэж батал.</p></statement>
+  </exercise>
+</subexercises>

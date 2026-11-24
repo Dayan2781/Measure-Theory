@@ -5,7 +5,7 @@
 <section xml:id="sec-differentiation-1">
 <title>Интегралыг дифференциалчлах</title>
 <p><m>f</m> нь <m>[a,b]</m> хэрчим дээр Лебегээр интегралчлагдах функц ба <md>F(x)=\int\limits_{[a,x]}fd\lambda,\qquad a\leq x\leq b</md> байг. Тэгвэл 
- <ol><li><p><m>[a,b]</m> хэрчмийн цэгүүд дээр <m>F</m> функц дифференциалчлагдах уу</p></li><li><p>Хэрэв дифференциалчлагддаг бол <m>F'=f</m> байх уу</p></li><li><p>Ер нь <m>[a,b]</m> хэрчим дээр өгөгдсөн <m>F</m> функц <m>[a,b]</m> хэрчмийн ядаж бараг бүх цэг дээр дифференциалчлагдаж байхын тулд ямар нөхцөл хангаж байх ёстой вэ</p></li><li><p>Хэрэв <m>F</m> функц <m>[a,b]</m> хэрчмийн бараг бүх цэг дээр дифференциалчлагддаг бол уламжлал нь болох <m>F'</m> функц интегралчлагдах функц байх уу</p></li><li><p>Хэрэв <m>[a,b]</m> хэрчмийн бараг бүх цэг дээр оршин байгаа <m>F'</m> функц интегралчлагдах бол <md>F(b)-F(a)=\int\limits_{[a,b]}fd\lambda</md> томъёо хүчинтэй юу</p></li></ol> гэсэн асуултууд зүй ёсоор тавигдана. Энэхүү бүлэг нь эдгээр асуултуудад дэс дараалан хариулт өгөх зорилготой юм. 
+ <ol><li><p><m>[a,b]</m> хэрчмийн цэгүүд дээр <m>F</m> функц дифференциалчлагдах уу</p></li><li><p>Хэрэв дифференциалчлагддаг бол <m>F'=f</m> байх уу</p></li><li><p>Ер нь <m>[a,b]</m> хэрчим дээр өгөгдсөн <m>F</m> функц <m>[a,b]</m> хэрчмийн ядаж бараг бүх цэг дээр дифференциалчлагдаж байхын тулд ямар нөхцөл хангаж байх ёстой вэ</p></li><li><p>Хэрэв <m>F</m> функц <m>[a,b]</m> хэрчмийн бараг бүх цэг дээр дифференциалчлагддаг бол уламжлал нь болох <m>F'</m> функц интегралчлагдах функц байх уу</p></li><li><p>Хэрэв <m>[a,b]</m> хэрчмийн бараг бүх цэг дээр оршин байгаа <m>F'</m> функц интегралчлагдах бол <md>F(b)-F(a)=\int\limits_{[a,b]}F'd\lambda</md> томьёо хүчинтэй юу</p></li></ol> гэсэн асуултууд зүй ёсоор тавигдана. Энэхүү бүлэг нь эдгээр асуултуудад дэс дараалан хариулт өгөх зорилготой юм. 
 <m>f</m> нь <m>[a,b]</m> хэрчим дээр Лебегээр интегралчлагдах функц ба
 <md>F(x)=\int\limits_{[a,x]}fd\lambda,\qquad a\leq x\leq b</md>
 байг.
@@ -27,12 +27,11 @@
 <p><m>B\subset \mathbb{R}^n</m> нь <m>r</m> радиустай бөмбөрцөг бол
 <md>\lambda(B)=v_nr^n,</md>
 энд <m>v_n</m> нь нэгж радиустай бөмбөрцгийн хэмжээ, байдгийг сануулъя.</p>
-<definition><statement><p>Харди-Литтлвудийн максимал функц.</p>
-<p><m>f</m> нь <m>\mathbb{R}^n</m> огторгуйд интегралчлагдах функц бол
+<definition><title>Харди-Литтлвудийн максимал функц</title><statement><p><m>f</m> нь <m>\mathbb{R}^n</m> огторгуйд интегралчлагдах функц бол
 <md>f^{**}(x)=\sup\limits_{x\in
-	B}\frac{1}{\lambda(B)}\int_{B}fd\lambda,\qquad x\in\mathbb{R}^n</md>
+	B}\frac{1}{\lambda(B)}\int_{B}|f|d\lambda,\qquad x\in\mathbb{R}^n</md>
 функцийг <m>f</m> функцийн максимал функц гэдэг. Энд дээд торгон хил нь
-<m>x</m> цэгийг агуулсан бүх бөмбөгцгүүдийн олонлогоор авагдах юм.</p></statement></definition>
+<m>x</m> цэгийг агуулсан бүх бөмбөрцгүүдийн олонлогоор авагдах юм.</p></statement></definition>
 <p><m>f^{**}</m> функцийн үндсэн чанаруудыг дараах теоремаар авч үзье.</p>
 <lemma xml:id="differentiation-vital"><title>Виталийн лемм</title><statement><p><m>\mathcal{B}=\{B_1,B_2,\ldots,B_N\}</m> нь
 	<m>\mathbb{R}^n</m> дэх задгай бөмбөрцгүүдийн төгсгөлөг бүл байг. Тэгвэл
@@ -49,11 +48,11 @@
 бөмбөрцгийг сонгож авъя. Тэр нь <m>B_{i_1}</m> байг. Одоо <m>\mathcal{B}</m>
 бүлээсээ <m>B_{i_1}</m> бөмбөрцөгтэй огтлолцдог бүх бөмбөрцгүүдийг хасъя.
 Үлдсэн бөмбөрцгүүдийн бүлийг <m>\mathcal{B'}</m> гэе. <m>\mathcal{B'}</m>
-бүлийн бөмбөрцгүүдээс хамгийн их раиустай нь <m>B_{i_2}</m> байг. Тэгвэл
-одоо <m>\mathcal{B'}</m> бүлээс <m>B_{i_1}</m> бөмбөрцөгтэй огтлолцдог бүх
+бүлийн бөмбөрцгүүдээс хамгийн их радиустай нь <m>B_{i_2}</m> байг. Тэгвэл
+одоо <m>\mathcal{B'}</m> бүлээс <m>B_{i_2}</m> бөмбөрцөгтэй огтлолцдог бүх
 бөмбөрцгүүдийг хасна. Энэ үйлдлийг хамгийн олондоо <m>N</m> удаа давтахад
 хоорондоо үл огтлолцох бөмбөрцгүүдийн
-<m>\{B_{I_1},B_{i_2},\ldots,B_{i_k}\}</m> бүл үүсэх юм. Энэ бүл нь
+<m>\{B_{i_1},B_{i_2},\ldots,B_{i_k}\}</m> бүл үүсэх юм. Энэ бүл нь
 леммийн шаардлагыг хангана гэдгийг харуулъя. <m>\tilde{B}_{i_j}</m>-ээр
 <m>B_{i_j}</m> бөмбөрцгийн төв дээр төвтэй, <m>B_{i_j}</m> бөмбөрцгийн
 радиусаас гурав дахин их радиустай бөмбөрцгийг тэмдэглэе. Тэгвэл
@@ -68,12 +67,12 @@
 	интегралчлагдах функц бол
 	<ol><li><p><m>f^{**}</m> нь хэмжигдэх функц байна.</p></li><li><p>Бараг бүх <m>x\in\mathbb{R}^n</m> хувьд <m>f^{**}\lt \infty</m> байна.</p></li><li><p><m>A=3^n</m> гэвэл <m>\alpha\gt 0</m> тоо бүрийн хувьд
 	<md number="yes" xml:id="differentiation-ineq1-1">\lambda\left(\{x\in\mathbb{R}^n:
-		f^{**}(x)\gt \alpha\}\right)\leq\frac{A}{\alpha}\|f\|_{L_1(\mathbb{R}^n)}</md>
+		f^{**}(x)\gt \alpha\}\right)\leq\frac{A}{\alpha}\|f\|_1</md>
 		тэнцэтгэл биш биелнэ.</p></li></ol></p></statement><proof><p>Эхлээд
 <md>E_{\alpha}=\{x\in\mathbb{R}^n:
 f^{**}(x)\gt \alpha\}</md> олонлогийг задгай гэдгийг харуулъя. Үнэндээ
 хэрэв ямар нэг <m>x_0\in E_{\alpha}</m> бол
-<md>\frac{1}{\lambda(B)}\int_{B}fd\lambda\gt \alpha</md> байх <m>B</m> бөмбөрцөг
+<md>\frac{1}{\lambda(B)}\int_{B}|f|d\lambda\gt \alpha</md> байх <m>x_0\in B</m> бөмбөрцөг
 олдоно. <m>\forall x\in B</m> хувьд ч гэсэн дээрх тэнцэтгэл биш биелэх
 учир <m>x\in E_{\alpha}</m> байна.</p>
 <p><m>E_{\alpha}</m> олонлог нь задгай олонлог учир <m>f^{**}</m> функц нь
@@ -102,20 +101,20 @@ f^{**}(x)\gt \alpha\}</md> олонлогийг задгай гэдгийг ха
 <md>\leq\frac{3^n}{\alpha}\sum\limits_{j=1}^k
 \int_{B_{i_j}}|f|d\lambda=\frac{3^n}{\alpha}\int_{\cup_{j=1}^kB_{i_j}}|f|d\lambda\leq
 \frac{3^n}{\alpha}\int_{\mathbb{R}^n}|f|d\lambda \tag{4}</md>
-байна. <m>E_{\alpha}</m> нь хэмжигдэх олонлог учир ямар ч <m>\varepsilon\gt 0</m>
-тооны хувьд <md>\lambda(E_{\alpha})\lt \lambda(K)-\varepsilon</md> байх
+байна. Лебегийн хэмжээний дотоод регуляр чанараар (Теорем <xref ref="regularity-lhrch"/>) ямар ч <m>\varepsilon\gt 0</m>
+тооны хувьд <md>\lambda(K)\gt \lambda(E_{\alpha})-\varepsilon</md> байх
 <m>K\subset E_{\alpha}</m> компакт олонлог олдох ёстой. Тэгэхээр (4)
 ёсоор
-<md>\lambda(E_{\alpha})\lt \frac{3^n}{\alpha}\int_{\mathbb{R}^n}|f|d\lambda-\varepsilon</md>
-байна. <m>\varepsilon</m> нь дурын бага эерэг тоо гэдгийг тооцвол (1)
+<md>\lambda(E_{\alpha})\lt \frac{3^n}{\alpha}\int_{\mathbb{R}^n}|f|d\lambda+\varepsilon</md>
+байна. <m>\varepsilon</m> нь дурын бага эерэг тоо гэдгийг тооцвол (<xref ref="differentiation-ineq1-1"/>)
 тэнцэтгэл биш батлагдаж байна.</p>
 <p>Одоо бараг бүх <m>x\in \mathbb{R}^n</m> хувьд <m>f^{**}(x)\lt \infty</m> болохыг
 харуулъя. Ямар ч <m>\alpha\gt 0</m> тооны хувьд
 <md>\{x\in \mathbb{R}^n: f^{**}(x)=\infty\}\subset \{x\in \mathbb{R}^n:
 f^{**}(x)\gt \alpha\}=E_{\alpha}</md>
-тул (4) ёсоор
+тул (<xref ref="differentiation-ineq1-1"/>) ёсоор
 <md>0\leq\lambda\left(\{x\in \mathbb{R}^n:
-f^{**}(x)=\infty\}\right)\leq\lim\limits{\alpha\to\infty}\frac{A}{\alpha}\|f\|_{L_1(\mathbb{R}^n)}=0.</md>
+f^{**}(x)=\infty\}\right)\leq\lim\limits_{\alpha\to\infty}\frac{A}{\alpha}\|f\|_1=0.</md>
 Үүгээр манай теорем бүрэн батлагдаж байна.</p></proof></theorem>
 </section>
 <section xml:id="sec-differentiation-2">
@@ -139,19 +138,19 @@ f^{**}(x)=\infty\}\right)\leq\lim\limits{\alpha\to\infty}\frac{A}{\alpha}\|f\|_{
 нь (5) хязгаар биелэхгүй байх цэгүүдийн олонлог бөгөөд хэмжээгээрээ
 тэгтэй тэнцүү болж манай теорем батлагдах юм.</p>
 <p>Ямар ч <m>\varepsilon\gt 0</m> тооны хувьд
-<md>\|f-g\|_{L_1(\mathbb{R}^n)}\lt \varepsilon</md>
-байх <m>g\in L_1(\mathbb{R}^n)</m> тасралтгүй функц олдох ёстой. Энэхүү
+<md>\|f-g\|_1\lt \varepsilon</md>
+байх <m>g\in L^1(\mathbb{R}^n)</m> тасралтгүй функц олддог (тасралтгүй функцүүд <m>L^1</m>-д нягт). Энэхүү
 <m>g</m> функц нь тасралтгүй учраас бүх <m>x\in\mathbb{R}^n</m> хувьд
 <md>\lim\limits_{\begin{array}{c}
 	\lambda(B)\to0 \\ 
 	x\in B
 	\end{array}
-}\frac{1}{\lambda(B)}\int_Bgd\lambda=g(x)\tag{5}</md>
+}\frac{1}{\lambda(B)}\int_Bgd\lambda=g(x)\tag{6}</md>
 байх нь ойлгомжтой.
 <md>\frac{1}{\lambda(B)}\int_Bfd\lambda-f(x)</md>
 ялгаврыг
 <md>\frac{1}{\lambda(B)}\int_B(f-g)d\lambda+\frac{1}{\lambda(B)}\int_Bgd\lambda-g(x)+g(x)-f(x)</md>
-хэлбэртэй бичиж болох ба максимал функцийн тодорхойлолт болон (5)-ыг
+хэлбэртэй бичиж болох ба максимал функцийн тодорхойлолт болон (6)-г
 ашиглавал
 <md>\limsup\limits_{\begin{array}{c}
 	\lambda(B)\to0 \\ 
@@ -161,16 +160,16 @@ f^{**}(x)=\infty\}\right)\leq\lim\limits{\alpha\to\infty}\frac{A}{\alpha}\|f\|_{
 болно.
 <md>F_{\alpha}=\{x\in\mathbb{R}^n:(f-g)^{**}\gt \alpha\},\quad
 G_{\alpha}=\{x\in\mathbb{R}^n:|f(x)-g(x)|\gt \alpha\}</md>
-гэе. Чебышевын тэнцэтгэл биш ёсоор
-<md>\lambda(G_{\alpha})\leq\frac{1}{\alpha}\|f-g\|_{L_1(\mathbb{R}^n)},</md>
-өмнө баталсан (1) тэнцэтгэл биш ёсоор
-<md>\lambda(F_{\alpha})\leq\frac{A}{\alpha}\|f-g\|_{L_1(\mathbb{R}^n)}.</md>
+гэе. Чебышевын тэнцэтгэл биш (Теорем <xref ref="limit-theorems-th-13-2"/>) ёсоор
+<md>\lambda(G_{\alpha})\leq\frac{1}{\alpha}\|f-g\|_1,</md>
+өмнө баталсан (<xref ref="differentiation-ineq1-1"/>) тэнцэтгэл биш ёсоор
+<md>\lambda(F_{\alpha})\leq\frac{A}{\alpha}\|f-g\|_1.</md>
 Ямарваа <m>u_1</m> ба <m>u_2</m> эерэг тоонуудын хувьд <m>u_1+u_2\gt 2\alpha</m>
 тэнцэл биш биелдэг бол ядаж нэгийнх нь хувьд <m>u_i\gt \alpha</m> тэнцэл биш
 биелэх ёстой гэсэн энгийн дүгнэлтээс
 <md>E_{\alpha}\subset F_{\alpha}\cup G_{\alpha}</md>
 гэж мөрдөн гарна. Хэмжээ монотон чанартай ба <m>g</m> функцийг
-<m>\|f-g\|_{L_1(\mathbb{R}^n)}\lt \varepsilon</m> байхаар сонгон авсан
+<m>\|f-g\|_1\lt \varepsilon</m> байхаар сонгон авсан
 гэдгийг санавал
 <md>\lambda(E_{\alpha})\leq\frac{1}{\alpha}\varepsilon+\frac{A}{\alpha}\varepsilon</md>
 болно. <m>\varepsilon</m> нь дурын эерэг тоо тул
@@ -178,7 +177,7 @@ G_{\alpha}=\{x\in\mathbb{R}^n:|f(x)-g(x)|\gt \alpha\}</md>
 болж манай теорем батлагдлаа.</p></proof></theorem>
 <corollary><statement><p><m>f</m> нь <m>[a,b]</m> хэрчим дээр интегралчлагдах
 	ба
-	<md>F(x)=\int\limits_{[a,x]}fa\lambda,\quad a\leq x\leq b</md>
+	<md>F(x)=\int\limits_{[a,x]}fd\lambda,\quad a\leq x\leq b</md>
 	байг. Тэгвэл бараг бүх <m>x\in[a,b]</m> хувьд
 	<md>F'(x)=\lim\limits_{h\to0}\frac{F(x+h)-F(x)}{h}</md>
 	уламжлал оршин байх бөгөөд
@@ -194,31 +193,31 @@ G_{\alpha}=\{x\in\mathbb{R}^n:|f(x)-g(x)|\gt \alpha\}</md>
 	дээр <m>f\chi_{B}</m> функц интегралчлагдах бол <m>f</m> функцийг
 	<m>\mathbb{R}^n</m> дээр локаль интегралчлагдах функц гэдэг.</p></statement></definition>
 <p><m>\mathbb{R}^n</m> дээрх бүх локаль интегралчлагдах функцүүдийн
-огторгуйг <m>L_1^{loc}(\mathbb{R}^n)</m> гэж тэмдэглэдэг.
-<md>L_1(\mathbb{R}^n)\subset L_1^{loc}(\mathbb{R}^n)</md>
+огторгуйг <m>L^1_{loc}(\mathbb{R}^n)</m> гэж тэмдэглэдэг.
+<md>L^1(\mathbb{R}^n)\subset L^1_{loc}(\mathbb{R}^n)</md>
 байх нь илэрхий. Харин урвуу агуулагдал нь хүчингүй билээ.
-Жишээлбэл, <m>e^|x|</m> ба <m>|x|^{-\frac{1}{2}}</m> функцүүд нь
+Жишээлбэл, <m>e^{|x|}</m> ба <m>|x|^{-\frac{1}{2}}</m> функцүүд нь
 <m>\mathbb{R}^n</m> дээр локаль интегралчлагдах боловч
 интегралчлагдахгүй функцүүд юм. Одоо дифференциалчлагдах тухай
-Лебегийн теоремыг илүү ерөнхий тохиолдолд томъёолъё.</p>
-<theorem><statement><p>Хэрэв <m>f\in L_1^{loc}(\mathbb{R}^n)</m> бол
+Лебегийн теоремыг илүү ерөнхий тохиолдолд томьёолъё.</p>
+<theorem><statement><p>Хэрэв <m>f\in L^1_{loc}(\mathbb{R}^n)</m> бол
 	бараг бүх <m>x\in\mathbb{R}^n</m> хувьд
 	<md>\lim\limits_{\begin{array}{c}
 		\lambda(B)\to0 \\ 
 		x\in B
 		\end{array}
-	}\frac{1}{\lambda(B)}\int_Bfd\lambda=f(x)\tag{5}</md>
+	}\frac{1}{\lambda(B)}\int_Bfd\lambda=f(x)</md>
 	байна.</p></statement></theorem>
 </section>
 <section xml:id="sec-differentiation-3">
 <title>Функцийг дифференциалчлах</title>
-<corollary><statement><p><m>F</m> нь <m>[a,b]</m> хэрчим дээр тасралтгүй үл буурах функц бол бараг хаа ч дифференциалчлагдах бөгөөд <m>F'</m> нь сөрөг биш хэмжигдэх функц байна. Түүнчлэн <md>\int_{[a,b]}F'd\lambda\leq F(B)-F(a)</md> тэнцэтгэл биш биелнэ.</p></statement><proof><p><md>G_m(x)=\frac{F(x+1/m)-F(x)}{1/m},\qquad m\geq1</md> функцүүдийг авч үзье. <m>F</m> нь нөхцөл ёсоор тасралтгүй үл буурах функц учраас <m>G_m</m> функцүүд нь тасралтгүй, сөрөг биш функцүүд юм. Түүнчлэн Теорем 3 ёсоор <m>\{G_m\}</m> функцэн дараалал нь <m>[a,b]</m> хэрчим дээр <m>F'</m> функц рүү бараг нийлнэ. Тэгэхээр <m>F'</m> функц нь хэмжигдэх сөрөг биш функц юм. Фатугийн лемм ёсоор <md>\int_{[a,b]}F'd\lambda\leq\liminf\limits{m\to\infty}\int_{[a,b]}G_md\lambda</md> байна. <md>\int_{[a,b]}G_md\lambda=\frac{1}{m}\int\limits_a^bF(x+1/m)dx-\frac{1}{m}\int\limits_a^bF(x)dx=</md> <md>=\frac{1}{m}\int\limits_{a+1/m}^{b+1/m}F(y)dy-\frac{1}{m}\int\limits_a^bF(x)dx=</md> <md>=\frac{1}{m}\int\limits_{b}^{b+1/m}F(x)dx-\frac{1}{m}\int\limits_a^{a+1/m}F(x)dx.</md> Энд <m>F</m> нь тасралтгүй функц болохыг санавал мөрдөлгөө батлагдана.</p></proof></corollary>
-<example><p><m>F</m> нь Канторын сингуляр функц байг. Канторын сингуляр функц нь <m>[0,1]</m> хэрчим дээр тасралтгүй үл буурах функц учир зааглагдсан өөрчдөлттэй функц юм. Тэгэхээр <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр уламжлалтай байх ёстой. <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр <m>F'(x)=0</m> байна гэдгийг хялбархан харж болно. Түүнчлэн <m>F(0)=0</m>, <m>F(1)=1</m> болохыг бид мэдэх билээ. Тэгэхээр <md>\int\limits_{[0,1]}F'(x)d\lambda=0\lt 1=F(1)-F(0)</md> юм.</p></example>
+<corollary><statement><p><m>F</m> нь <m>[a,b]</m> хэрчим дээр тасралтгүй үл буурах функц бол бараг бүх цэгт дифференциалчлагдах бөгөөд <m>F'</m> нь сөрөг биш хэмжигдэх функц байна. Түүнчлэн <md>\int_{[a,b]}F'd\lambda\leq F(b)-F(a)</md> тэнцэтгэл биш биелнэ.</p></statement><proof><p><md>G_m(x)=\frac{F(x+1/m)-F(x)}{1/m},\qquad m\geq1</md> функцүүдийг авч үзье (<m>x\gt b</m> үед <m>F(x)=F(b)</m> гэж өргөтгөнө). <m>F</m> нь нөхцөл ёсоор тасралтгүй үл буурах функц учраас <m>G_m</m> функцүүд нь тасралтгүй, сөрөг биш функцүүд юм. Түүнчлэн монотон функцийн тухай Лебегийн теорем ёсоор <m>\{G_m\}</m> функцэн дараалал нь <m>[a,b]</m> хэрчим дээр <m>F'</m> функц рүү бараг нийлнэ. Тэгэхээр <m>F'</m> функц нь хэмжигдэх сөрөг биш функц юм. Фатугийн лемм ёсоор <md>\int_{[a,b]}F'd\lambda\leq\liminf\limits_{m\to\infty}\int_{[a,b]}G_md\lambda</md> байна. <md>\int_{[a,b]}G_md\lambda=m\int\limits_a^bF(x+1/m)dx-m\int\limits_a^bF(x)dx=</md> <md>=m\int\limits_{a+1/m}^{b+1/m}F(y)dy-m\int\limits_a^bF(x)dx=</md> <md>=m\int\limits_{b}^{b+1/m}F(x)dx-m\int\limits_a^{a+1/m}F(x)dx.</md> Энд <m>F</m> нь тасралтгүй функц болохыг санавал мөрдлөгөө батлагдана.</p></proof></corollary>
+<example><p><m>F</m> нь Канторын сингуляр функц байг. Канторын сингуляр функц нь <m>[0,1]</m> хэрчим дээр тасралтгүй үл буурах функц учир зааглагдсан өөрчлөлттэй функц юм. Тэгэхээр <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр уламжлалтай байх ёстой. <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр <m>F'(x)=0</m> байна гэдгийг хялбархан харж болно. Түүнчлэн <m>F(0)=0</m>, <m>F(1)=1</m> болохыг бид мэдэх билээ. Тэгэхээр <md>\int\limits_{[0,1]}F'(x)d\lambda=0\lt 1=F(1)-F(0)</md> юм.</p></example>
 </section>
 <exercises xml:id="sem-differentiation"><title>Семинарын бодлогууд</title>
-<exercise><statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in L([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<exercise><statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
 <md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
-<exercise><statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in L([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<exercise><statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
 <md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
 </exercises>
 </chapter>

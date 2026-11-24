@@ -4,10 +4,10 @@
 <title>Нийлэлтүүд</title>
 <section xml:id="sec-convergence-1">
 <title>Нийлэлтүүд</title>
-<p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A\in\alg</m>, <m>f</m> нь <m>A</m> дээр тодорхойлогдсон хэмжигдэх функц, <m>\{f_k\}_{k=1}^{\infty}</m> нь <m>A</m> дээр тодорхойлогдсон хэмжигдэх функцүүдийн дараалал байг.</p>
+<p><m>(X,\alg,\mu)</m> хэмжээт огторгуй, <m>A\in\alg</m>, <m>f</m> нь <m>A</m> дээр тодорхойлогдсон бодит утгатай хэмжигдэх функц, <m>\{f_k\}_{k=1}^{\infty}</m> нь <m>A</m> дээр тодорхойлогдсон бодит утгатай хэмжигдэх функцүүдийн дараалал байг.</p>
 <definition><statement><p><m>A_0=\{x\in A: f(x)=\lim\limits_{k\to\infty}f_k(x)\}</m>
 байг. 
-<md>\exists N\in\alg , N\supset A_0^c , \mu(N)=0</md>
+<md>\exists N\in\alg , N\supset A\setminus A_0 , \mu(N)=0</md>
 байвал <m>\{f_k\}_{k=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>f</m> функц рүү <m>\mu-</m> бараг нийлж байна<idx>бараг нийлэлт</idx> гэдэг.</p></statement></definition>
 <definition><statement><p><m>\forall \varepsilon\gt 0</m> хувьд
 <md>\lim\limits_{k\to\infty}\mu\{x\in A: |f_k(x)-f(x)|\gt \varepsilon\}=0</md>
@@ -23,7 +23,7 @@
 <md>B=\{x\in A: f(x)\neq \lim\limits_{k\to\infty}f_k(x)\}</md>
 олонлогт агуулагдана. Нөхцөл ёсоор <m>\mu(B)=0</m>. Иймд
 <md>\mu\Bigl(\bigcap\limits_{n=1}^{\infty}B_n\Bigr)=0.</md>
-<m>\{B_n\}_{n=1}^{\infty}</m> нь буурах дараалал тул өгүүлбэр 1.3.4 b) ёсоор
+<m>\{B_n\}_{n=1}^{\infty}</m> нь буурах дараалал бөгөөд <m>\mu(B_1)\leq\mu(A)\lt \infty</m> тул хэмжээний дээрээсээ тасралтгүй чанараар (Теорем <xref ref="measure-huch1"/> d))
 <md>\lim\limits_{n\to\infty}\mu(B_n)=0.</md>
 <m>A_n\subset B_n</m> тул <m>\lim\limits_{n\to\infty}\mu(A_n)=0</m>. Өгүүлбэр батлагдлаа.</p></proof></proposition>
 <remark><p><em>Дээрх өгүүлбэрт байгаа олонлог төгсгөлөг хэмжээтэй байх нөхцөл нь чухал. Төгсгөлгүй хэмжээтэй олонлог дээр бараг нийлдэг функцэн дараалал уг олонлог дээрээ хэмжээгээр 
@@ -39,7 +39,7 @@
 \end{cases}</md>
 <m>A_i^{(k)}=\{x\in (0,1]: f_i^{(k)}=1 \}</m> гэвэл</p>
 <p><md>\lambda(A_i^{(k)})=\cfrac{i}{k}-\cfrac{i-1}{k}=\cfrac{1}{k}\underset{k\to\infty}{\longrightarrow}0.</md>
-<m>\{f^{(k)}_i\}</m> дараалал Лебегийн хэмжээгээр нийлж байна.  
+Эдгээр функцүүдийг <m>f^{(1)}_1, f^{(2)}_1, f^{(2)}_2, f^{(3)}_1, f^{(3)}_2, f^{(3)}_3,\ldots</m> гэж дугаарлаж нэг дараалал болгоё. <m>\lambda\{x: |f^{(k)}_i(x)|\gt \varepsilon\}\leq\frac1k</m> тул энэ дараалал <m>0</m> функц рүү Лебегийн хэмжээгээр нийлж байна.  
 <m>x\in (0,1]</m> бүр дээр <m>\{f^{(k)}_i\}</m> дараалал төгсгөлгүй олон нэг ба төгсгөлгүй олон
  тэгээс тогтоно. Иймд бидний авч үзэж буй дараалал <m>(0,1]</m> завсрын нэг ч цэг дээр нийлэхгүй.</p></example>
 <theorem><title>Риссийн теорем</title><statement><p><m>\{f_n\}_{n=1}^{\infty}</m> дараалал <m>f</m> функц рүү <m>\mu-</m>хэмжээгээр нийлж байвал уг дараалал <m>f</m> функц рүү <m>\mu-</m> бараг нийлдэг дэд дараалалтай байна.</p></statement><proof><p><md>\lim\limits_{n\to\infty}\mu\{x\in A: |f_n(x)-f(x)|\gt \varepsilon\}=0</md> тэнцэтгэл бүх <m>\varepsilon\gt 0</m> тоонуудын хувьд биелнэ. Иймд 
@@ -55,7 +55,7 @@
 тэнцэтгэл биш биелнэ. Энэ нь  <m>\bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k</m> олонлогийн гадна талд <m>\{f_{n_k}\}_{k=1}^{\infty}</m> дараалал нийлнэ гэсэн үг юм. Байгуулалт ёсоор
 <md>\mu\Bigl(\bigcup\limits_{k=j}^{\infty}A_k\Bigr)\leqslant\sum\limits_{k=j}^{\infty}\mu(A_k)\leqslant \sum\limits_{k=j}^{\infty}\frac{1}{2^k}=\frac{1}{2^{j-1}}.</md>
 <m>B_j=\bigcup\limits_{k=j}^{\infty}A_k</m> олонлогууд буурах дараалал үүсгэх тул
-<md>\mu\Bigl(\bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k\Bigr)\mu\Bigl(\bigcap\limits_{j=1}^{\infty}B_j\Bigr)=
+<md>\mu\Bigl(\bigcap\limits_{j=1}^{\infty}\bigcup\limits_{k=j}^{\infty}A_k\Bigr)=\mu\Bigl(\bigcap\limits_{j=1}^{\infty}B_j\Bigr)=
 \lim\limits_{j\to\infty}\mu(B_j)=\lim\limits_{j\to\infty}\frac{1}{2^{j-1}}=0.</md>
 Бидний авч үзсэн <m>\mu-</m>хэмжээгээр нийлэх <m>\{f_{n}\}_{n=1}^{\infty}</m> дараалал <m>A</m> олонлог дээр <m>\mu-</m>бараг нийлэх <m>\{f_{n_k}\}_{k=1}^{\infty}</m> дэд дараалалтай байна.</p></proof></theorem>
 </section>

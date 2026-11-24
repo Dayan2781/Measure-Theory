@@ -23,22 +23,22 @@ A:f(x)\geq t+\frac{1}{n}\right\}</md>
 <p>Тухайн тохиолдолд <m>\mathscr{A}=\mkln</m> бол <term>Лебегээр хэмжигдэх функц</term><idx>Лебегээр хэмжигдэх функц</idx>, <m>\mathscr{A}=\brn</m> бол <term>Борелээр хэмжигдэх функц</term><idx>Борелээр хэмжигдэх функц</idx> гэнэ.</p>
 <p>Лебегээр хэмжигдэх функцийг <term>Лебегийн функц</term>, Борелээр хэмжигдэх функцийг <term>Борелийн функц</term> гэж тус тус товчлон хэлдэг.   
 <m>\brn\subset\mkln</m> тул Борелийн функц бүр Лебегээр хэмжигдэнэ.</p>
-<lemma><statement><p><m>f\colon\rn\to\R</m> тасралтгүй функц бүр Борелийн функц байна.</p></statement><proof><p><m>f</m> тасралтгүй функц тул <m>\forall t\in\R</m> хувьд <m>(-\infty,t)</m> задгай интервалын эх дүр болох <m>\{x\in\rn: f(x)\lt t\}</m> олонлог задгай. Задгай олонлог бүр борелийн олонлог тул <m>f</m> нь борелийн функц байна.</p></proof></lemma>
+<lemma><statement><p><m>f\colon\rn\to\R</m> тасралтгүй функц бүр Борелийн функц байна.</p></statement><proof><p><m>f</m> тасралтгүй функц тул <m>\forall t\in\R</m> хувьд <m>(-\infty,t)</m> задгай интервалын эх дүр болох <m>\{x\in\rn: f(x)\lt t\}</m> олонлог задгай. Задгай олонлог бүр Борелийн олонлог тул <m>f</m> нь Борелийн функц байна.</p></proof></lemma>
 <definition><title>Характеристик функц</title><statement><p><m>A\subset X</m> байг.
 <md>\chi_A(x)=\begin{cases}
 1,&amp;\mbox{хэрэв} \ x\in A;\\ 
 0,&amp;\mbox{хэрэв} \ x\notin A
 \end{cases}</md>
 функцийг  <m>A</m> олонлогийн <term>характеристик функц</term> <idx>характеристик функц</idx> гэнэ.</p></statement></definition>
-<proposition xml:id="measurable-functions-charfun1"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй <m>A\subset X</m> байг. <m>A</m> олонлог хэмжигдэх (<m>A\in\mathscr{A}</m>) гарцаагүй бөгөөд хүрэлцээтэй нөхцөл бол уг олонлогийн характеристик функц  <m>\chi_A</m> нь <m>\mathscr{A}-</m>хэмжигдэх функц байх явдал юм.</p></statement><proof><p><m>t\gt 1</m> бол <m>\{x\in X: \chi_A(x)\lt t\}=X\in\mathscr{A}</m>,   <m>t\leqslant0</m> бол 
-<m>\{x\in X: \chi_A(x)\lt t\}=\emptyset  \in\mathscr{A}</m>. Хэрэв <m>0\lt t\leqslant 1</m> бол  <m>\{x\in X: \chi_A(x)\lt t\}=A^c</m>. Иймд <m>\chi_A</m> хэмжигдэх функц байх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A\in\mathscr{A}</m> байна.</p></proof></proposition>
+<proposition xml:id="measurable-functions-charfun1"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй <m>A\subset X</m> байг. <m>A</m> олонлог хэмжигдэх (<m>A\in\mathscr{A}</m>) зайлшгүй бөгөөд хүрэлцээтэй нөхцөл бол уг олонлогийн характеристик функц  <m>\chi_A</m> нь <m>\mathscr{A}-</m>хэмжигдэх функц байх явдал юм.</p></statement><proof><p><m>t\gt 1</m> бол <m>\{x\in X: \chi_A(x)\lt t\}=X\in\mathscr{A}</m>,   <m>t\leqslant0</m> бол 
+<m>\{x\in X: \chi_A(x)\lt t\}=\emptyset  \in\mathscr{A}</m>. Хэрэв <m>0\lt t\leqslant 1</m> бол  <m>\{x\in X: \chi_A(x)\lt t\}=A^c</m>. Иймд <m>\chi_A</m> хэмжигдэх функц байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A\in\mathscr{A}</m> байна.</p></proof></proposition>
 <example><p>Рационал тоон олонлогийн характеристик функц <term>Дирихлейн функц</term> 
 <idx>Дирихлейн функц</idx> байна.
 <md>\mathcal{D}(x)=\begin{cases}
 1,&amp;\mbox{хэрэв} \ x\in \Q;\\ 
 0,&amp;\mbox{хэрэв} \ x\in \R\setminus \Q.
 \end{cases}</md>
-<m>\Q</m> нь лебегээр (Борелээр ч) хэмжигдэх олонлог тул Дирихлейн функц лебегээр (Борелээр ч) хэмжигдэх функц байна. 
+<m>\Q</m> нь Лебегээр (Борелээр ч) хэмжигдэх олонлог тул Дирихлейн функц Лебегээр (Борелээр ч) хэмжигдэх функц байна. 
 </p></example>
 <definition xml:id="measurable-functions-simfun1"><statement><p>Утгын муж нь төгсгөлөг олонлог байх функцийг <term>энгийн функц</term><idx>энгийн функц</idx> гэнэ.</p></statement></definition>
 <p>Аливаа олонлогийн характеристик функцийн утгын муж нь <m>\{0; 1\}</m> хоёр элементтэй олонлог тул характеристик функц нь энгийн функц юм.    
@@ -46,7 +46,7 @@ A:f(x)\geq t+\frac{1}{n}\right\}</md>
 <md>A_i=\{x\in X:f(x)=a_i\},\quad i=1, 2, \ldots, k</md>
 гэж тэмдэглэвэл <m>f</m> энгийн функцийг
 <md>f(x)=\sum\limits_{i=1}^{k}a_i\chi_{A_i}(x)</md>
-хэлбэрт бичиж болно. Өгүүлбэр <m>\ref{charfun1}</m>-тай төстэйгээр <m>f</m>  энгийн функц хэмжигдэх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A_i</m> олонлогууд бүгд хэмжигдэх олонлогууд байх явдал байна.</p>
+хэлбэрт бичиж болно. Өгүүлбэр <m>\ref{charfun1}</m>-тай төстэйгээр <m>f</m>  энгийн функц хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A_i</m> олонлогууд бүгд хэмжигдэх олонлогууд байх явдал байна.</p>
 <proposition xml:id="measurable-functions-mesfun0"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг. 
 <md>f, \ g: A \to [-\infty;\infty]</md>  хэмжигдэх функцүүд бол 
 <md>\max\{f,g\},\qquad \min\{f,g\}</md>
@@ -55,7 +55,7 @@ A:f(x)\geq t+\frac{1}{n}\right\}</md>
 t\right\}\cap\left\{x\in A:g(x)\leq t\right\}</mrow><mrow>\left\{x\in A:\min(f(x),g(x))\leq t\right\}=\left\{x\in A:f(x)\leq
 t\right\}\cup\left\{x\in A:g(x)\leq t\right\}</mrow></md> тэнцэтгэлүүдээс <m>\max\{f,g\}, \min\{f,g\}</m> функцүүдийн хэмжигдэх нь батлагдана.</p></proof></proposition>
 <proposition xml:id="measurable-functions-mesfun2"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг.   
-<md>f, \ g: A \to [-\infty;\infty]</md> хэмжигдэх функцүүд, <m>\alpha\in\R</m> бол
+<md>f, \ g: A \to \R</md> хэмжигдэх функцүүд, <m>\alpha\in\R</m> бол
 <md>\alpha f,\quad f+g,\quad f-g,\quad fg,\quad \cfrac{f}{g} \ (g\neq0)</md> 
 хэмжигдэх функцүүд байна.</p></statement><proof><p>Эхлээд <m>\alpha f</m> хэмжигдэх функц гэдгийг харуулъя.   Хэрэв <m>\alpha=0</m> бол <m>\alpha f\equiv0</m> хэмжигдэх функц байх нь тодорхой.  
 <m>\forall t\in\R</m> байг. <m>f</m> хэмжигдэх функц тул 
@@ -82,32 +82,33 @@ A:f(x)\lt r\}\cap\{x\in A:g(x)\lt t-r\}</md>
 хэмжигдэх функц байна.</p>
 <p><m>A_0=\{x\in A:g(x)\ne 0\}=\{x\in A:g(x) \lt  0\}\cup \{x\in A:g(x)\gt  0\}</m> тул <m>A_0\in\mathscr{A}</m> байна.  <m>\forall t\in\R</m> хувьд <m>f(x)-tg(x)</m> функц хэмжигдэх тул 
 <md><mrow>A_1=\left\{x\in A:g(x)\gt 0\right\}\cap\left\{x\in A:f(x)-tg(x)\lt 0\right\},</mrow><mrow>A_2=\left\{x\in A:g(x)\lt 0\right\}\cap\left\{x\in A:f(x)-tg(x)\gt 0\right\}</mrow></md> хэмжигдэх олонлогууд байна. 
-<md>\Bigl\{x\in A_0:\frac{f(x)}{g(x)}\lt t\Bigr\}=A_1\cup A_2</md> болох тул  <m>\cfrac{f}{g}</m> хэмжигдэх функц байна.</p></proof></proposition>
+<md>\Bigl\{x\in A_0:\frac{f(x)}{g(x)}\lt t\Bigr\}=A_1\cup A_2</md> болох тул  <m>\cfrac{f}{g}</m> хэмжигдэх функц байна.</p>
+<p><m>f+g</m>-ийн хэмжигдэх чанарын баталгаа нь <m>\infty-\infty</m> хэлбэр гарахгүй үед <m>[-\infty,\infty]</m> утгатай функцүүдийн хувьд ч хүчинтэй гэдгийг тэмдэглэе.</p></proof></proposition>
 <corollary xml:id="measurable-functions-mesfun1"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг.   
 <md>f, \ g: A \to [-\infty;\infty]</md>  хэмжигдэх функцүүд бол дараах олонлогууд хэмжигдэнэ: 
-<md><mrow>A_1=\{x\in A:f(x)\lt g(x)\}</mrow><mrow>A_2=\{x\in A:f(x)\leq g(x)\}</mrow><mrow>A_3=\{x\in A:f(x)=g(x)\}</mrow></md></p></statement><proof><p><m>h(x)=f(x)-g(x)</m> гэе. Өгүүлбэр <m>\ref{mesfun2}</m> ёсоор <m>h(x)</m> хэмжигдэнэ. Иймд 
-<md><mrow>A_1=\{x\in A:f(x)\lt g(x)\}=\{x\in A:h(x)\lt 0\}</mrow><mrow>A_2=\{x\in A:f(x)\leq g(x)\}=\{x\in A:h(x)\leq 0\}</mrow><mrow>A_3=\{x\in A:f(x)=g(x)\}=\{x\in A:h(x)=0\}</mrow></md>
-тул батлагдав.</p></proof></corollary>
+<md><mrow>A_1=\{x\in A:f(x)\lt g(x)\}</mrow><mrow>A_2=\{x\in A:f(x)\leq g(x)\}</mrow><mrow>A_3=\{x\in A:f(x)=g(x)\}</mrow></md></p></statement><proof><p><m>f(x)\lt g(x)</m> байх нь <m>f(x)\lt r\lt g(x)</m> байх рационал <m>r</m> олдохтой эквивалент тул
+<md>A_1=\bigcup_{r\in\Q}\{x\in A:f(x)\lt r\}\cap\{x\in A:r\lt g(x)\}\in\mathscr{A}.</md>
+Үүнтэй ижлээр <m>\{x\in A:g(x)\lt f(x)\}\in\mathscr{A}</m> тул <m>A_2=A\setminus\{x\in A:g(x)\lt f(x)\}\in\mathscr{A}</m>, <m>A_3=A_2\setminus A_1\in\mathscr{A}</m> болж батлагдав.</p></proof></corollary>
 <definition><statement><p><md>f_n:A\to[-\infty;\infty]</md> <m>\{f_n(x)\}_n</m> функцэн дарааллын хувьд дараах функцүүдийг тодорхойлъё. <m>\forall x\in A</m> бол
 <md><mrow>(\sup_n f_n)(x)= &amp;\sup_n\{f_n(x)\}</mrow><mrow>(\inf_n f_n)(x)= &amp;\inf_n\{f_n(x)\}</mrow><mrow>(\lim\sup_n f_n)(x)= &amp;\lim_{n}\sup_{n\leq r}\{f_r(x)\}</mrow><mrow>(\lim\inf_n f_n)(x)= &amp;\lim_{n}\inf_{n\leq r}\{f_r(x)\}</mrow></md>
 Хэрэв <m>B=\{x\in A\big| (\lim\sup_n f_n)(x)=(\lim\inf_n f_n)(x)\}</m>  бол <m>x\in B</m> үед
 <md>(\lim_n f_n)(x)=(\lim\sup_n f_n)(x)</md></p></statement></definition>
 <p>Дээр тодорхойлогдсон функцүүдээс зөвхөн <m>(\lim_n f_n)(x)</m> функцээс бусад нь  <m>A</m> олонлог дээр тодорхойлогдоно.</p>
 <theorem><statement><p><m>(X, \mathcal{A})</m> хэмжигдэх огторгуй, <m>A\in\mathcal{A}</m> , 
-<md>f_n:A\to[-\infty;\infty]</md> хэмжигдэх функцүүдийн дараалал өгөгдсөн бол <md>\sup_nf_n , \inf_nf_n , \lim\sup_nf_n , \lim\inf_nf_n , \lim_nf_n</md> функцүүд хэмжигдэнэ.</p></statement><proof><p><md>\{x\in A\big| \sup_nf(x)\leq t\}=\cap_n\{x\in A\big| f_n(x)\leq t\}</md> адилтгалаас <m>\sup_n f</m> функц хэмжигдэх нь батлагдана. Үүнтэй ижлээр <md>\{x\in A\big| \inf_nf(x)\lt  t\}=\cup_n\{x\in A\big| f_n(x)\lt  t\}</md> адилтгалаас <m>\inf_n f</m>  функц хэмжигдэх нь батлагдана.</p>
-<p><m>k\in N</m> бол <m>g_k=\sup_{n\geq k} f_k</m> ба  <m>h_k=\inf_{n\geq k} f_k</m> функцүүдийг байгуулбал эдгээр функцүүд өмнө баталснаар хэмжигдэнэ. Энд <m>\{g_k\}_k</m> үл өсөх, <m>\{h_k\}_k</m> үл буурах функцүүдийн дараалал тул хязгаар оршин байх ба 
+<md>f_n:A\to[-\infty;\infty]</md> хэмжигдэх функцүүдийн дараалал өгөгдсөн бол <md>\sup_nf_n , \inf_nf_n , \lim\sup_nf_n , \lim\inf_nf_n , \lim_nf_n</md> функцүүд хэмжигдэнэ.</p></statement><proof><p><md>\{x\in A\big| \sup_nf_n(x)\leq t\}=\cap_n\{x\in A\big| f_n(x)\leq t\}</md> адилтгалаас <m>\sup_n f_n</m> функц хэмжигдэх нь батлагдана. Үүнтэй ижлээр <md>\{x\in A\big| \inf_nf_n(x)\lt  t\}=\cup_n\{x\in A\big| f_n(x)\lt  t\}</md> адилтгалаас <m>\inf_n f_n</m>  функц хэмжигдэх нь батлагдана.</p>
+<p><m>k\in \N</m> бол <m>g_k=\sup_{n\geq k} f_n</m> ба  <m>h_k=\inf_{n\geq k} f_n</m> функцүүдийг байгуулбал эдгээр функцүүд өмнө баталснаар хэмжигдэнэ. Энд <m>\{g_k\}_k</m> үл өсөх, <m>\{h_k\}_k</m> үл буурах функцүүдийн дараалал тул хязгаар оршин байх ба 
 <md>\lim_{k\to\infty} g_k(x)=\inf_k\{g_k(x)\} , \lim_{k\to\infty} h_k(x)=\sup_k\{h_k(x)\}</md> 
 байна. Иймд өмнө баталснаар <m>\inf_k g_k , \sup_k h_k(x)</m> функцүүд хэмжигдэнэ. Гэтэл <m>\inf_k g_k=\lim\sup_n f_n , \sup_k h_k(x)=\lim\inf_n f_n</m> тул батлагдав. 
 Эцэст нь <m>\lim_nf_n</m> функцийн тодорхойлогдох муж 
-<md>B=\{x\in A\big| (\lim\sup_n f_n)(x)=(\lim\inf_n f_n)(x)\}</md> нь теорем <xref ref="measurable-functions-mesfun1"/>-р хэмжигдэх олонлог болно. Иймд 
+<md>B=\{x\in A\big| (\lim\sup_n f_n)(x)=(\lim\inf_n f_n)(x)\}</md> нь Мөрдлөгөө <xref ref="measurable-functions-mesfun1"/>-ээр хэмжигдэх олонлог болно. Иймд 
 <md>\{x\in B\big| \lim_n f_n(x)\leq t\}=B\cap \{x\in A\big| \lim\sup_n f_n(x)\leq t\}</md> тул <m>\lim_nf_n</m> функц хэмжигдэнэ.</p></proof></theorem>
 <definition><statement><p><m>A\subset X</m>, <m>f\colon A\to [-\infty;\infty]</m> байг. 
 <md>f^+(x)=\max\{f(x),0\},\qquad f^-(x)=-\min\{f(x),0\}</md>
 функцүүдийг харгалзан  <m>f</m> функцийн эерэг хэсэг, <m>f</m> функцийн сөрөг хэсэг<idx>функцийн эерэг хэсэг</idx><idx>функцийн сөрөг хэсэг</idx> гэнэ.</p></statement></definition>
 <p>Функцийн эерэг хэсэг ч, сөрөг хэсэг ч сөрөг биш функц байх нь тодорхойлолтоос шууд мөрдөн гарах ба 
 <md>f=f^+-f^-.</md> байна.</p>
-<proposition xml:id="measurable-functions-mesfun3"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг.   <m>f\colon A\to [-\infty;\infty]</m> хэмжигдэх функц байх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>f^+, \ f^-</m> хэмжигдэх функцүүд байх явдал юм.</p></statement><proof><p><em>Гарцаагүй нөхцөл.</em> <m>f, \ 0</m> хэмжигдэх функцүүд тул Өгүүлбэр <xref ref="measurable-functions-mesfun0"/> ёсоор <m>f^+, \ f^-</m> хэмжигдэх функцүүд байна.  
-<em>Хүрэлцээтэй нөхцөл.</em> <m>f^+, \ f^-</m> хэмжигдэх функцүүдийн ялгавар болох <m>f</m> хэмжигдэх функц байна (Өгүүлбэр <xref ref="measurable-functions-mesfun2"/>).</p></proof></proposition>
+<proposition xml:id="measurable-functions-mesfun3"><statement><p><m>(X,\mathscr{A})</m> хэмжигдэх огторгуй, <m>A\in\mathscr{A}</m> байг.   <m>f\colon A\to [-\infty;\infty]</m> хэмжигдэх функц байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>f^+, \ f^-</m> хэмжигдэх функцүүд байх явдал юм.</p></statement><proof><p><em>Зайлшгүй нөхцөл.</em> <m>f, \ 0</m> хэмжигдэх функцүүд тул Өгүүлбэр <xref ref="measurable-functions-mesfun0"/> ёсоор <m>f^+, \ f^-</m> хэмжигдэх функцүүд байна.  
+<em>Хүрэлцээтэй нөхцөл.</em> <m>t\geq 0</m> бол <m>\{x\in A:f(x)\gt t\}=\{x\in A:f^+(x)\gt t\}</m>, <m>t\lt 0</m> бол <m>\{x\in A:f(x)\gt t\}=\{x\in A:f^-(x)\lt -t\}</m> тул <m>f</m> хэмжигдэх функц байна.</p></proof></proposition>
 <corollary><statement><p><m>f</m> хэмжигдэх функц бол <m>|f|</m> хэмжигдэх функц байна.</p></statement><proof><p><m>f</m> хэмжигдэх функц бол өгүүлбэр <xref ref="measurable-functions-mesfun3"/> ёсоор <m>f^+, f^-</m> хэмжигдэх функцүүд байна. 
 <md>|f|=f^++f^-</md>
 тул өгүүлбэр <xref ref="measurable-functions-mesfun2"/> ёсоор <m>|f|</m> хэмжигдэх функц байна.</p></proof></corollary>
@@ -137,13 +138,13 @@ A:f(x)\lt r\}\cap\{x\in A:g(x)\lt t-r\}</md>
 <p>гэхчлэн <m>f</m> функц нь <m>C_n</m> олонлогийг байгуулахад хасах интервал бүр дээр <m>\cfrac{1}{2^n}, \ \cfrac{3}{2^n}, \ \cfrac{5}{2^n},\ldots</m> утгуудыг авах бөгөөд Канторын олонлогийн цэгүүд дээр
 <md>f(x)=\sup\{f(t): t\in [0;1]\setminus C \ \wedge \ t\lt x\}</md>
 гэж гүйцэн тодорхойлогдоно. Ийнхүү тодорхойлсон <m>f(x)</m> функцийг <term>Канторын (сингуляр) функц</term><idx>Канторын функц</idx> гэнэ.</p>
-<p>Канторын функц нь үл буурах, тасралтгүй функц байх ба   <m>f(1)=1</m> байна. Бараг бүх цэг дээр уламжлал нь тэг байдаг тасралтгүй функцийг сингуляр функц гэдэг. Канторын функц нь сингуляр функц мөн.</p>
-<p>\includegraphics[width=0.6\textwidth]picture/cantorfunction.png</p>
-<p>Одоо Борелийн биш Лебегээр хэмжигдэх олонлогийн жишээ байгуулаж үзве.   
-<m>f(x)</m> нь Канторын функц байг. Дундаж утгын тухай теорем ёсоор <m>y\in[0;1]</m> бүрийн хувьд <m>f(x)=y</m> байх дор хаяж нэг <m>x\in[0;1]</m> олдоно.
+<p>Канторын функц нь үл буурах, тасралтгүй функц байх ба   <m>f(1)=1</m> байна. Бараг бүх цэгт уламжлал нь тэг байдаг, тогтмол биш, тасралтгүй монотон функцийг сингуляр функц гэдэг. Канторын функц нь сингуляр функц мөн.</p>
+<image source="images/cantorfunction.png" width="60%"/>
+<p>Одоо Борелийн биш Лебегээр хэмжигдэх олонлогийн жишээ байгуулж үзье.   
+<m>f(x)</m> нь Канторын функц байг. Завсрын утгын тухай теорем ёсоор <m>y\in[0;1]</m> бүрийн хувьд <m>f(x)=y</m> байх дор хаяж нэг <m>x\in[0;1]</m> олдоно.
 <md>g(y)=\inf\{x\in[0;1]: f(x)=y \}</md>
 функцийг байгуулъя. <m>f</m> тасралтгүй тул <m>y\in[0;1]</m> бүрийн хувьд <m>f(g(y))=y</m>. Иймд <m>g</m> нь инъектив функц юм. Түүнчлэн, <m>g[0;1]\subset C</m> болохыг хялбар шалгаж болно. <m>f</m> үл буурах тул <m>g</m> мөн үл буурах функц. Иймээс <m>g</m> Борелийн функц байна.</p>
-<proposition><statement><p><m>\R</m> огторгуйн Борелийн биш Лебегээр хэмжигдэх дэд олонлог оршин байна.</p></statement><proof><p><m>g</m> нь сая тодорхойлсон функц, <m>A</m> нь Лебегээр үл хэмжигдэх олонлог, <m>B=g(A)</m> байг. <m>B\subset C</m> ба Канторын олонлог тэг хэмжээтэй, Лебегээр хэмжигдэх олонлогуудын <m>\sigma-</m>алгебр дээрх Лебегийн хэмжээ гүйцэд болохыг тооцвол <m>B</m> нь Лебегээр хэмжигдэх ба <m>\lambda(B)=0</m> байна.</p>
+<proposition><statement><p><m>\R</m> огторгуйн Борелийн биш Лебегээр хэмжигдэх дэд олонлог оршин байна.</p></statement><proof><p><m>g</m> нь сая тодорхойлсон функц, <m>A\subset[0;1]</m> нь Лебегээр үл хэмжигдэх олонлог, <m>B=g(A)</m> байг. <m>B\subset C</m> ба Канторын олонлог тэг хэмжээтэй, Лебегээр хэмжигдэх олонлогуудын <m>\sigma-</m>алгебр дээрх Лебегийн хэмжээ гүйцэд болохыг тооцвол <m>B</m> нь Лебегээр хэмжигдэх ба <m>\lambda(B)=0</m> байна.</p>
 <p>Гэвч хэрэв <m>B</m> Борелийн олонлог байсан бол <m>g</m> Борелийн функц тул <m>g^{-1}(B)</m> мөн Борелийн олонлог байх ёстой. <m>g</m> инъектив тул <m>g^{-1}(B)=A</m> бөгөөд <m>A</m> Лебегээр хэмжигдэх олонлог биш, улмаар Борелийн олонлог биш юм. Иймээс <m>B</m> олонлог Борелийн олонлог байх боломжгүй.</p></proof></proposition>
 <remark><p>Дээрх өгүүлбэрийн баталгаан дахь <m>B</m> олонлог нь тэг хэмжээтэй Борелийн олонлог болох Канторын олонлогийн дэд олонлог боловч өөрөө Борелийн олонлог биш байна. Энэ нь Борелийн <m>\sigma-</m>алгебр дээр Лебегийн хэмжээ гүйцэд биш хэмжээ болохыг харуулж байна.</p></remark>
 </section>

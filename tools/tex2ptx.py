@@ -459,7 +459,7 @@ def images(x, ctx):
         name = Path(path).stem.lower() + ".png"
         ctx.figs.append((path, name))
         return '</p><image source="images/%s" width="%s"/><p>' % (name, width)
-    x = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{([^}]*)\}", rep, x)
+    x = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{?([^\s{}<]+)\}?", rep, x)
     x = re.sub(r"<p>\s*</p>", "", x)
     return x
 
@@ -643,8 +643,9 @@ def build_chapter(ch, src_dir, ctx):
         tt = re.sub(r"^\\bf\s*", "", tt)
         parts.append('<section xml:id="sec-%s-%d">\n<title>%s</title>\n%s\n</section>' %
                      (ch["slug"], n, tt, conv_blocks(body, ctx)))
+    more = Path(__file__).resolve().parent.parent / "source" / "exercises" / ("sem-%s-more.ptx" % ch["slug"])
     if exgroups:
-        if len(exgroups) == 1:
+        if len(exgroups) == 1 and not more.exists():
             parts.append(conv_exercises(exgroups[0][1], ctx, "sem-" + ch["slug"], skip=exgroups[0][2]))
         else:
             subs = []
@@ -654,6 +655,8 @@ def build_chapter(ch, src_dir, ctx):
                 tt = (t if "<m>" in t else fix_inline_groups(conv_inline(t, ctx))) if t else ""
                 x = x.replace("<title></title>", "<title>%s</title>" % tt if tt else "")
                 subs.append(x)
+            if more.exists():
+                subs.append('<xi:include href="./exercises/sem-%s-more.ptx"/>' % ch["slug"])
             parts.append('<exercises xml:id="sem-%s"><title>Семинарын бодлогууд</title>\n%s\n</exercises>' %
                          (ch["slug"], "\n".join(subs)))
     extra = Path(__file__).resolve().parent.parent / "source" / "exercises" / ("sem-%s.ptx" % ch["slug"])

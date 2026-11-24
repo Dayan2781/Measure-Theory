@@ -4,7 +4,7 @@
 <title><m>L^p</m> огторгуй</title>
 <section xml:id="sec-lp-spaces-1">
 <title><m>L^p</m> огторгуй</title>
-<p>Энэ бүлэгт бид хэмжигдэх функцүүдийн <m>L^p</m> огторгуй, түүний дээрх үндсэн тэнцэтгэл бишүүд болон Банахын огторгуй болох гүйцэд чанарыг судална. Цаашид <m>(X, \PZM, \mu)</m> нь бэхлэгдсэн хэмжээтэй огторгуй байг.</p>
+<p>Энэ бүлэгт бид хэмжигдэх функцүүдийн <m>L^p</m> огторгуй, түүний дээрх үндсэн тэнцэтгэл бишүүд болон Банахын огторгуй болох гүйцэд чанарыг судална. Цаашид <m>(X, \PZM, \mu)</m> нь бэхлэгдсэн хэмжээт огторгуй байг.</p>
 </section>
 <section xml:id="sec-lp-spaces-2">
 <title><m>L^p</m> огторгуйн тодорхойлолт ба норм</title>
@@ -14,14 +14,14 @@
 <remark><p><m>\La^p(\mu)</m> олонлог нь шугаман огторгуй үүсгэнэ. Учир нь дурын <m>\alpha \in \R</m> хувьд <m>\|\alpha f\|_p = |\alpha|\|f\|_p \lt  \infty</m> ба <m>a, b \ge 0</m> үед <m>|a+b|^p \le 2^{p-1}(a^p + b^p)</m> тэнцэтгэл биш биелдэг тул <m>f, g \in \La^p(\mu)</m> бол
 <md>\intt_X |f+g|^p \, d\mu \le 2^{p-1} \left( \intt_X |f|^p \, d\mu + \intt_X |g|^p \, d\mu \right) \lt  \infty</md>
 болж <m>f+g \in \La^p(\mu)</m> байна. Гэвч <m>\|f\|_p = 0 \iff f = 0</m> (<m>\mu</m>-бараг бүх цэгт) тул <m>\|\cdot\|_p</m> нь <m>\La^p(\mu)</m> дээр жинхэнэ норм биш, зөвхөн <term>хагас норм</term> (seminorm) болно.</p></remark>
-<definition><statement><p><m>\La^p(\mu)</m> огторгуй дээр <m>f \sim g \iff \mu(\{x \in X : f(x) \neq g(x)\}) = 0</m> эквивалент харьцаа тодорхойлъё. Энэ харьцаагаар үүсэх эквивалент ангиудын фактор огторгуйг
+<definition><statement><p><m>\La^p(\mu)</m> огторгуй дээр <m>f \sim g \iff \mu(\{x \in X : f(x) \neq g(x)\}) = 0</m> эквивалентын харьцаа тодорхойлъё. Энэ харьцаагаар үүсэх эквивалентын ангиудын фактор огторгуйг
 <md>L^p(X, \PZM, \mu) := \La^p(X, \PZM, \mu) / \sim</md>
-гэж тэмдэглэнэ. Цаашид тэмдэглэгээг хялбарчлах үүднээс <m>f \in L^p(\mu)</m> гэж бичихдээ эквивалент ангийг төлөөлөх нэг функцээр ойлгоно.</p></statement></definition>
+гэж тэмдэглэнэ. Цаашид тэмдэглэгээг хялбарчлах үүднээс <m>f \in L^p(\mu)</m> гэж бичихдээ эквивалентын ангийг төлөөлөх нэг функцээр ойлгоно.</p></statement></definition>
 <p>Одоо <m>p = \infty</m> тохиолдлыг авч үзье.</p>
 <definition><statement><p><m>\PZM</m>-хэмжигдэх <m>f: X \to \R</m> функцийн <term>гол супремум</term> (essential supremum)-ыг
 <md>\|f\|_\infty := \operatorname*{ess\,sup}_{x \in X} |f(x)| = \inf \left\{ M \ge 0 : \mu\big(\{x \in X : |f(x)| \gt  M\}\big) = 0 \right\}</md>
-гэж тодорхойлно (хэрэв баруун талын олонлог хоосон бол <m>\|f\|_\infty = \infty</m>). <m>\|f\|_\infty \lt  \infty</m> байх хэмжигдэх функцүүдийн эквивалент ангиудын олонлогийг <m>L^\infty(X, \PZM, \mu)</m> гэж тэмдэглэнэ.</p></statement></definition>
-<proposition><statement><p>Дурын <m>f \in L^\infty(\mu)</m> функцийн хувьд <m>|f(x)| \le \|f\|_\infty</m> нөхцөл <m>\mu</m>-бараг бүх цэгт биелнэ.</p></statement><proof><p>Гол супремумын тодорхойлолт ёсоор <m>n \in \N</m> бүрийн хувьд <m>\mu(E_n) = 0</m> байх <m>E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty + \frac{1}{n}\}</m> олонлог олдоно. Тэгвэл <m>E = \bigcup_{n=1}^\infty E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty\}</m> олонлогийн хувьд <m>\mu(E) \le \sum_{n=1}^\infty \mu(E_n) = 0</m> болно.</p></proof></proposition>
+гэж тодорхойлно (хэрэв баруун талын олонлог хоосон бол <m>\|f\|_\infty = \infty</m>). <m>\|f\|_\infty \lt  \infty</m> байх хэмжигдэх функцүүдийн эквивалентын ангиудын олонлогийг <m>L^\infty(X, \PZM, \mu)</m> гэж тэмдэглэнэ.</p></statement></definition>
+<proposition><statement><p>Дурын <m>f \in L^\infty(\mu)</m> функцийн хувьд <m>|f(x)| \le \|f\|_\infty</m> нөхцөл <m>\mu</m>-бараг бүх цэгт биелнэ.</p></statement><proof><p>Гол супремумын тодорхойлолт ёсоор <m>n \in \N</m> бүрийн хувьд <m>E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty + \frac{1}{n}\}</m> олонлог тэг хэмжээтэй байна. Тэгвэл <m>E = \bigcup_{n=1}^\infty E_n = \{x \in X : |f(x)| \gt  \|f\|_\infty\}</m> олонлогийн хувьд <m>\mu(E) \le \sum_{n=1}^\infty \mu(E_n) = 0</m> болно.</p></proof></proposition>
 </section>
 <section xml:id="sec-lp-spaces-3">
 <title>Үндсэн тэнцэтгэл бишүүд</title>
@@ -33,7 +33,7 @@
 болно. Логарифм функц эрс өсөх тул <xref ref="lp-spaces-eq-young"/> тэнцэтгэл биш гарна.</p></proof></lemma>
 <theorem><title>Гёльдерийн тэнцэтгэл биш</title><statement><p><m>1 \le p, q \le \infty</m> нь <m>\frac{1}{p} + \frac{1}{q} = 1</m> байх хосмог илтгэгчид ба <m>f \in L^p(\mu)</m>, <m>g \in L^q(\mu)</m> бол <m>fg \in L^1(\mu)</m> байх ба
 <md number="yes" xml:id="lp-spaces-eq-holder">\|fg\|_1 = \intt_X |fg| \, d\mu \le \|f\|_p \|g\|_q</md>
-тэнцэтгэл биш биелнэ. Тухайлбал, <m>p = q = 2</m> үед үүнийг <term>Коши-Буняковский-Шварцын тэнцэтгэл биш</term> гэнэ.</p></statement><proof><p><ol><li><p><m>p = 1, q = \infty</m> тохиолдолд <m>|f(x)g(x)| \le |f(x)|\|g\|_\infty</m> (<m>\mu</m>-б.х.с.) тул хоёр талыг <m>X</m> мужид интегралчилбал <m>\|fg\|_1 \le \|f\|_1 \|g\|_\infty</m> гарна.</p></li><li><p><m>1 \lt  p \lt  \infty</m> тохиолдолд хэрэв <m>\|f\|_p = 0</m> эсвэл <m>\|g\|_q = 0</m> бол <m>fg = 0</m> (<m>\mu</m>-б.х.с.) тул тэнцэтгэл бишийн хоёр тал тэгтэй тэнцүү. Иймд <m>\|f\|_p \gt  0</m> ба <m>\|g\|_q \gt  0</m> гэе. <m>x \in X</m> бүрийн хувьд
+тэнцэтгэл биш биелнэ. Тухайлбал, <m>p = q = 2</m> үед үүнийг <term>Коши-Буняковский-Шварцын тэнцэтгэл биш</term> гэнэ.</p></statement><proof><p><ol><li><p><m>p = 1, q = \infty</m> тохиолдолд <m>|f(x)g(x)| \le |f(x)|\|g\|_\infty</m> (<m>\mu</m>-бараг бүх цэгт) тул хоёр талыг <m>X</m> мужид интегралчилбал <m>\|fg\|_1 \le \|f\|_1 \|g\|_\infty</m> гарна. <m>p=\infty</m>, <m>q=1</m> тохиолдол үүнтэй ижил.</p></li><li><p><m>1 \lt  p \lt  \infty</m> тохиолдолд хэрэв <m>\|f\|_p = 0</m> эсвэл <m>\|g\|_q = 0</m> бол <m>fg = 0</m> (<m>\mu</m>-бараг бүх цэгт) тул тэнцэтгэл бишийн хоёр тал тэгтэй тэнцүү. Иймд <m>\|f\|_p \gt  0</m> ба <m>\|g\|_q \gt  0</m> гэе. <m>x \in X</m> бүрийн хувьд
 <md>a = \frac{|f(x)|}{\|f\|_p}, \qquad b = \frac{|g(x)|}{\|g\|_q}</md>
 гэж аваад Юнгийн <xref ref="lp-spaces-eq-young"/> тэнцэтгэл бишийг хэрэглэвэл:
 <md>\frac{|f(x)g(x)|}{\|f\|_p \|g\|_q} \le \frac{1}{p} \frac{|f(x)|^p}{\|f\|_p^p} + \frac{1}{q} \frac{|g(x)|^q}{\|g\|_q^q}.</md>
@@ -57,13 +57,13 @@
 <md>G_n(x) = \sum_{k=1}^n |g_k(x)|, \qquad G(x) = \sum_{k=1}^\infty |g_k(x)|</md>
 функцүүдийг тодорхойлъё. Минковскийн тэнцэтгэл биш ёсоор
 <md>\|G_n\|_p \le \sum_{k=1}^n \|g_k\|_p \le M.</md>
-<m>0 \le G_1^p \le G_2^p \le \dots</m> ба <m>\lim_{n\to\infty} G_n^p = G^p</m> тул Левигийн монотон нийлэлтийн теорем ёсоор
+<m>0 \le G_1^p \le G_2^p \le \dots</m> ба <m>\lim_{n\to\infty} G_n^p = G^p</m> тул монотон нийлэлтийн тухай теорем (Теорем <xref ref="limit-theorems-th-15-1"/>) ёсоор
 <md>\intt_X G^p \, d\mu = \lim_{n\to\infty} \intt_X G_n^p \, d\mu \le M^p \lt  \infty.</md>
-Эндээс <m>G \in L^p(\mu)</m> бөгөөд <m>G(x) \lt  \infty</m> (<m>\mu</m>-б.х.с.) болно. Иймд <m>E = \{x \in X : G(x) = \infty\}</m> олонлогийн хувьд <m>\mu(E) = 0</m> ба <m>x \in X \setminus E</m> цэг бүр дээр <m>\sum_{k=1}^\infty g_k(x)</m> тоон цуваа абсолют нийлнэ. Иймд
+Эндээс <m>G \in L^p(\mu)</m> бөгөөд <m>G(x) \lt  \infty</m> (<m>\mu</m>-бараг бүх цэгт) болно. Иймд <m>E = \{x \in X : G(x) = \infty\}</m> олонлогийн хувьд <m>\mu(E) = 0</m> ба <m>x \in X \setminus E</m> цэг бүр дээр <m>\sum_{k=1}^\infty g_k(x)</m> тоон цуваа абсолют нийлнэ. Иймд
 <md>f(x) = \begin{cases} \sum_{k=1}^\infty g_k(x), &amp; x \in X \setminus E, \\  0, &amp; x \in E \end{cases}</md>
 гэж тодорхойлбол <m>f</m> нь хэмжигдэх функц болох ба <m>|f(x)| \le G(x)</m> тул <m>f \in L^p(\mu)</m> байна. Одоо <m>S_n = \sum_{k=1}^n g_k</m> гэвэл <m>|f(x) - S_n(x)| \le 2G(x)</m> тул
 <md>|f(x) - S_n(x)|^p \le 2^p G(x)^p \in L^1(\mu).</md>
-Түүнчлэн <m>x \in X \setminus E</m> үед <m>\lim_{n\to\infty} |f(x) - S_n(x)|^p = 0</m> тул Лебегийн мажорант нийлэлтийн теорем ёсоор
+Түүнчлэн <m>x \in X \setminus E</m> үед <m>\lim_{n\to\infty} |f(x) - S_n(x)|^p = 0</m> тул зааглагдсан нийлэлтийн тухай Лебегийн теорем (Теорем <xref ref="limit-theorems-th-15-5"/>) ёсоор
 <md>\lim_{n\to\infty} \|f - S_n\|_p^p = \lim_{n\to\infty} \intt_X |f - S_n|^p \, d\mu = 0.</md>
 Тиймээс <m>\sum_{k=1}^\infty g_k</m> цуваа <m>L^p(\mu)</m> нормоор <m>f</m> функц рүү нийлнэ.</p>
 <p><m>p = \infty</m> тохиолдолд <m>\{f_n\}_{n=1}^\infty \subset L^\infty(\mu)</m> нь Кошийн дараалал байг. <m>k, m, n \in \N</m> бүрийн хувьд
