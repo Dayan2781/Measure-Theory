@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 4sigma algD.tex:143-263; 4sigma algD.tex:265-276; 4sigma algD.tex:278-335; 4sigma algD.tex:337-367 -->
+<!-- Эх файл: 4sigma algD.tex:143-263 -->
 <chapter xml:id="ch-borel" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Борелийн <m>\sigma</m>-алгебр</title>
 <section xml:id="sec-borel-1">
@@ -50,29 +50,6 @@
 <image source="images/pic1jd.png" width="50%"/>
 <p>Эдгээр бүлүүд нь хоорондоо давхцахгүй бөгөөд эдгээр бүлүүдийн алинд ч харьяалагдахгүй Борелийн олонлог оршин байна.</p>
 </section>
-<exercises xml:id="sem-borel"><title>Семинарын бодлогууд</title>
-<subexercises xml:id="sem-borel-1"><title>Ерөнхий бодлого</title>
-<exercise><statement><p>Борелийн <m>\sigma-</m>алгебр <m>\mathscr{B}_{\R}</m> нь  <m>b</m> төгсгөл нь рационал тоо байх <m>(-\infty;b]</m> хэлбэрийн интервалуудын бүлээр төрөгдөнө гэж батал.</p></statement></exercise>
-<exercise><statement><p><m>\mathscr{B}_{\R}</m> нь тоон шулууны бүх компакт дэд олонлогуудын бүлээр төрөгдөнө гэж харуул.</p></statement></exercise>
-<exercise><statement><p><m>\Q</m> рационал тоон олонлог нь <m>F_{\sigma}</m> боловч <m>G_{\delta}</m> биш гэж харуул.</p></statement></exercise>
-<exercise><statement><p><m>F_{\sigma}</m> ч биш, <m>G_{\delta}</m> ч  биш байх <m>\R</m> огторгуйн дэд олонлог олдоно гэж харуул.</p></statement></exercise>
-</subexercises>
-<subexercises xml:id="sem-borel-2"><title><m>\R</m> дээрх Борелийн <m>\sigma</m>-алгебр, задгай ба битүү олонлог</title>
-<exercise><statement><p><m>\R</m> дээрх задгай олонлогуудын тоологдом огтлолцол заавал задгай олонлог байх албагүйг жишээгээр харуул. Мөн үүн дээр үндэслэн задгай олонлогуудын тоологдом огтлолцол (<m>G_\delta</m> олонлог) Борелийн <m>\sigma</m>-алгебрт харьяалагдах уу?</p></statement></exercise>
-<exercise><statement><p>Дурын <m>c \in \R</m> цэгийн хувьд <m>\{c\}</m> олонлог нь Борелийн олонлог мөн үү? Батал.</p></statement></exercise>
-<exercise><statement><p>Рационал тооны олонлог <m>\Q</m> нь Борелийн олонлог мөн үү? Түүний гүйцээлт болох иррационал тооны олонлог <m>\mathbb{I} = \R \setminus \Q</m> ямар олонлог вэ?</p></statement></exercise>
-<exercise><statement><p>Канторын олонлог (<m>C</m>) нь задгай юу, битүү юу? Энэ олонлог Борелийн <m>\sigma</m>-алгебрт харьяалагдах уу?</p></statement></exercise>
-<exercise><statement><p>Борелийн <m>\sigma</m>-алгебр <m>\br</m> нь бүх задгай интервалуудын бүл <m>\mathscr{E} = \{(a, b) : a\lt  b\}</m>-ээр төрөгддөг. Тэгвэл хагас задгай интервалуудын бүл <m>\mathcal{S} = \{(a, b] : a\lt  b\}</m>-ээр төрөгдөх <m>\sigma</m>-алгебр нь <m>\br</m>-тэй тэнцүү байх уу?</p></statement></exercise>
-<exercise><statement><p><m>A</m> нь <m>\R</m> дээрх задгай олонлог, <m>B</m> нь битүү олонлог байг. <m>A \setminus B</m> болон <m>B \setminus A</m> олонлогууд ямар шинж чанартай байх вэ?</p></statement></exercise>
-<exercise><statement><p><m>\R</m> огторгуйд нэгэн зэрэг задгай бөгөөд битүү байж чадах олонлогуудыг ол.</p></statement></exercise>
-<exercise><statement><p>Хэрэв <m>A \subset \R</m> олонлогийн бүх цэгүүд тусгаарлагдсан цэг (өөрөөр хэлбэл цэг бүрийн хувьд <m>A</m>-гийн өөр ямар ч элементийг агуулаагүй орчин олддог) бол <m>A</m> нь Борелийн олонлог байж чадах уу?</p></statement></exercise>
-</subexercises>
-<subexercises xml:id="sem-borel-3"><title><m>\R^n</m> дээрх задгай ба битүү олонлог</title>
-<exercise><statement><p><m>\rn</m> огторгуйд <m>B(x, r) = \{y \in \rn : \|x - y\| \lt  r\}</m> харьцаагаар тодорхойлогдох задгай бөмбөрцөг задгай олонлог мөн үү? <m>\rn</m> дээрх Борелийн <m>\sigma</m>-алгебр <m>\brn</m>-ийг бүх задгай бөмбөрцгүүдийн бүлээр төрүүлж болох уу?</p></statement></exercise>
-<exercise><statement><p><m>A \subset \R</m> болон <m>B \subset \R</m> нь харгалзан задгай олонлогууд бол тэдгээрийн декарт үржвэр <m>A \times B</m> нь <m>\R^2</m> дээр задгай олонлог мөн үү? Хэрэв <m>A, B</m> битүү бол яах вэ?</p></statement></exercise>
-<exercise><statement><p><m>f: \rn \to \R</m> нь тасралтгүй функц байг. Тэгвэл <m>U = \{x \in \rn : f(x) \gt  0\}</m> олонлог задгай юу, битүү юу? Мөн <m>V = \{x \in \rn : f(x) = 0\}</m> олонлог ямар байх вэ?</p></statement></exercise>
-<exercise><statement><p><m>\rn</m> огторгуйн дурын хязгаарлагдмал бөгөөд битүү олонлогийг (компакт олонлог) Борелийн <m>\sigma</m>-алгебрт харьяалагдана гэж хэлж болох уу? Үүнийг хэмжээний онолтой хэрхэн холбох вэ?</p></statement></exercise>
-</subexercises>
-</exercises>
+<xi:include href="./exercises/sem-borel.ptx"/>
 <xi:include href="./exercises/hw-borel.ptx"/>
 </chapter>

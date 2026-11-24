@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 6lebesgue measureD.tex:128-230; lecture 5-Cartoideriin theorem.tex:105- -->
+<!-- Эх файл: 6lebesgue measureD.tex:128-230 -->
 <chapter xml:id="ch-caratheodory" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Каратеодорийн теорем</title>
 <section xml:id="sec-caratheodory-1">
@@ -49,25 +49,6 @@
  <m>A</m> хувьд (<xref ref="caratheodory-x5"/>), (<xref ref="caratheodory-x7"/>) хэрэглэвэл  тоологдом аддитив чанар батлагдана.
 <md><mrow>\ms(A)= &amp;\ms(\cup_{i=1}^{\infty} B_i)</mrow><mrow>= &amp;\sum_{i=1}^{\infty}\ms(A\cap B_i)+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</mrow><mrow>= &amp;\sum_{i=1}^{\infty}\ms(B_i)+\ms(\emptyset)=\sum_{i=1}^{\infty}\ms(B_i).</mrow></md></p></li></ol></p></proof>
 </section>
-<exercises xml:id="sem-caratheodory"><title>Семинарын бодлогууд</title>
-<exercise><statement><p>Гадаад хэмжээний чанаруудыг ашиглан <m>[0;1]</m> хэрчим тоологдом биш болохыг батал.</p></statement></exercise>
-<exercise><statement><p><m>A</m> нь <m>[0;1]</m> хэрчим дэх иррационал тоонуудын олонлог байг.
-<m>\ls(A)=1</m> гэж батал.</p></statement></exercise>
-<exercise><statement><p>Тоон шулууны дэд олонлог тоологдом ширхэг задгай олонлогуудын
-огтлолцлоор илэрхийлэгддэг бол түүнийг <m>G_{\delta}</m> олонлог гэнэ.
-Дурын зааглагдсан <m>E</m> олонлогийн хувьд
-<md>E\subseteq G \quad\text{ба}\quad \ls(G)=\ls(E)</md>
-байх <m>G_{\delta}</m> олонлог <m>G</m> олдохыг харуул.</p></statement></exercise>
-<exercise><statement><p><m>B</m> нь <m>[0;1]</m> хэрчим дэх рационал тоонуудын олонлог,
-<m>\{I_k\}_{k=1}^{n}</m> нь <m>B</m> олонлогийг хучих задгай интервалуудын
-төгсгөлөг бүл байг. Тэгвэл
-<md>\sum_{k=1}^{n}\ls(I_k)\geq 1</md>
-гэж батал.</p></statement></exercise>
-<exercise><statement><p><m>\ls(A)=0</m> бол <m>\ls(A\cup B)=\ls(B)</m> гэж батал.</p></statement></exercise>
-<exercise><statement><p><m>A</m>, <m>B</m> нь зааглагдсан олонлогууд бөгөөд бүх <m>a\in A</m>, <m>b\in B</m>-ийн
-хувьд <m>|a-b|\geq\alpha</m> байх <m>\alpha\gt 0</m> тоо олдоно гэе. Тэгвэл
-<md>\ls(A\cup B)=\ls(A)+\ls(B)</md>
-гэж батал.</p></statement></exercise>
-</exercises>
+<xi:include href="./exercises/sem-caratheodory.ptx"/>
 <xi:include href="./exercises/hw-caratheodory.ptx"/>
 </chapter>

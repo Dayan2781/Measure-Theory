@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 5-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-caratheodory">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-caratheodory-1">
+    <statement><p>Гадаад хэмжээний чанаруудыг ашиглан <m>[0;1]</m> хэрчим тоологдом биш болохыг батал.</p></statement>
+    <hint><p>Тоологдом бол <m>\ls([0;1])=0</m> болох байсан (4-р семинарын 3, 4-р бодлого).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-2">
+    <statement><p><m>A</m> нь <m>[0;1]</m> хэрчмийн иррационал тоонуудын олонлог бол <m>\ls(A)=1</m> гэж батал.</p></statement>
+    <hint><p><m>1=\ls([0;1])\leqslant\ls(A)+\ls(\Q\cap[0;1])=\ls(A)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-3">
+    <statement><p>Дурын зааглагдсан <m>E\subset\R</m> олонлогийн хувьд <m>E\subset G</m>, <m>\ls(G)=\ls(E)</m> байх <m>G_{\delta}</m> олонлог <m>G</m> олдохыг харуул.</p></statement>
+    <hint><p><m>E\subset G_n</m>, <m>\ls(G_n)\lt\ls(E)+\frac1n</m> байх задгай <m>G_n</m> аваад <m>G=\bigcap G_n</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-4">
+    <statement><p><m>B=\Q\cap[0;1]</m>, <m>\{I_k\}_{k=1}^{n}</m> нь <m>B</m>-г хучих задгай интервалуудын төгсгөлөг бүл бол <m>\sum_{k=1}^{n}\ls(I_k)\geqslant 1</m> гэж батал.</p></statement>
+    <hint><p>Битүүрлүүдийн нэгдэл <m>\bigcup\overline{I_k}</m> битүү бөгөөд <m>B</m>-г агуулах тул <m>[0;1]</m>-г агуулна.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-5">
+    <statement><p><m>\ls(A)=0</m> бол дурын <m>B</m> хувьд <m>\ls(A\cup B)=\ls(B)</m> гэж батал.</p></statement>
+    <hint><p>Монотон ба хагас аддитив чанар.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-6">
+    <statement><p><m>A,B\subset\R</m> зааглагдсан бөгөөд бүх <m>a\in A</m>, <m>b\in B</m> хувьд <m>|a-b|\geqslant\alpha</m> байх <m>\alpha\gt 0</m> олдвол <m>\ls(A\cup B)=\ls(A)+\ls(B)</m> гэж батал.</p></statement>
+    <hint><p><m>A\cup B</m>-г хучих интервалуудыг <m>\alpha</m>-аас богино интервалуудад хувааж, <m>A</m>-тай ба <m>B</m>-тэй огтлолцдог хоёр бүлэгт ангил: нэг интервал хоёуланг нь огтолж чадахгүй.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-7">
+    <statement><p>[Ульянов, 7.18, 7.23-тай харьцуул] <m>\mu^{\star}</m>-хэмжигдэх олонлогуудын бүл гүйцээлт ба хоёр олонлогийн огтлолын хувьд битүү гэдгийг тодорхойлолтоос шууд батал.</p></statement>
+    <hint><p>Тодорхойлолт <m>A</m> ба <m>A^c</m>-ийн хувьд тэгш хэмтэй. Огтлолын хувьд <m>T\cap(A\cap B)^c=(T\cap A\cap B^c)\cup(T\cap A^c)</m> гэж задлаад хагас аддитив чанар ашигла.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-8">
+    <statement><p>[Ульянов, 7.35] <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>\mu</m> нь <m>\mu^{\star}</m>-хэмжигдэх олонлогууд дээрх зааглалт байг. <m>A</m> хэмжигдэх, <m>\mu(A)=0</m>, <m>B\subset A</m> бол <m>B</m> хэмжигдэх бөгөөд <m>\mu(B)=0</m> гэж батал.</p></statement>
+    <hint><p><m>\mu^{\star}(B)=0</m>. Дурын <m>T</m> хувьд <m>\mu^{\star}(T\cap B)+\mu^{\star}(T\setminus B)\leqslant 0+\mu^{\star}(T)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-9">
+    <statement><p><m>X=\{1,2,3\}</m>, <m>\mu^{\star}(\emptyset)=0</m>, <m>\mu^{\star}(X)=2</m>, бусад <m>A\subset X</m> дээр <m>\mu^{\star}(A)=1</m> байг. <m>\mu^{\star}</m> гадаад хэмжээ болохыг шалгаад, бүх <m>\mu^{\star}</m>-хэмжигдэх олонлогийг ол.</p></statement>
+    <hint><p><m>A=\{1\}</m> ба <m>T=\{1,2\}</m>-ийг шалга. Хэмжигдэх олонлог нь зөвхөн <m>\emptyset</m> ба <m>X</m> гэдгийг харуул.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-caratheodory-10">
+    <statement><p><m>E_1\subset E_2\subset\ldots</m> нь <m>\mu^{\star}</m>-хэмжигдэх олонлогууд бол <m>\mu^{\star}\Bigl(\bigcup\limits_kE_k\Bigr)=\lim\limits_k\mu^{\star}(E_k)</m> гэж батал.</p></statement>
+    <hint><p>Каратеодорийн теоремоор <m>\mu^{\star}</m> нь хэмжигдэх олонлогуудын <m>\sigma</m>-алгебр дээр хэмжээ. Хэмжээний доороос тасралтгүй чанарыг хэрэглэ.</p></hint>
+  </exercise>
+</exercises>

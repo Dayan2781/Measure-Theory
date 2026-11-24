@@ -228,33 +228,6 @@
     </proposition>
   </section>
 
-  <exercises xml:id="sem-sigma-algebra">
-    <title>Семинарын бодлогууд</title>
-
-    <exercise xml:id="exr-singletons">
-      <statement><p><m>\R</m> огторгуйн бүх ганц цэгээс тогтох олонлогуудын бүлээр төрөгдөх <m>\sigma</m>-алгебрыг ол.</p></statement>
-    </exercise>
-
-    <exercise xml:id="exr-disjoint-union">
-      <statement><p>Алгебр нь хос хосоороо үл огтлолцох олонлогуудынхаа тоологдом дараалал бүрийн нэгдлийг өөртөө харьяалдаг бол <m>\sigma</m>-алгебр болно гэж харуул.</p></statement>
-    </exercise>
-
-    <exercise xml:id="exr-union-not-sigma">
-      <!-- Эх бичвэрт "огтлолцол" гэж байсан нь Өгүүлбэр (prop-intersection-sigma)-тэй зөрчилдөх тул "нэгдэл" болгосон. Багш шалгах. -->
-      <statement><p><m>X</m> олонлог дээрх <m>\sigma</m>-алгебруудын нэгдэл <m>\sigma</m>-алгебр байх албагүй болохыг жишээгээр харуул.</p></statement>
-    </exercise>
-
-    <exercise xml:id="exr-closed-not-sigma">
-      <statement><p><m>\R</m> огторгуйг өөртөө харьяалдаг, тоологдом нэгдэл болон тоологдом огтлолцлын хувьд битүү боловч <m>\sigma</m>-алгебр болдоггүй <m>\R</m> огторгуйн дэд олонлогуудын төгсгөлгүй бүлийн жишээ гарга.</p></statement>
-    </exercise>
-
-    <exercise xml:id="exr-countable-subfamily">
-      <statement><p><m>\mathscr{L}</m> нь <m>X</m> олонлогийн дэд олонлогуудын бүл байг. <m>A\in\mathscr{L}_{\sigma}</m> бүрийн хувьд <m>A\in \mathscr{M}_{\sigma}</m> байх <m>\mathscr{M}\subset\mathscr{L}</m> тоологдом дэд бүл олдоно гэж батал.</p></statement>
-    </exercise>
-
-    <exercise xml:id="exr-sigma-on-N">
-      <statement><p><m>\N</m> натурал тоон олонлог дээрх бүх <m>\sigma</m>-алгебрыг ол.</p></statement>
-    </exercise>
-  </exercises>
+  <xi:include href="./exercises/sem-sigma-algebra.ptx"/>
   <xi:include href="./exercises/hw-sigma-algebra.ptx"/>
 </chapter>

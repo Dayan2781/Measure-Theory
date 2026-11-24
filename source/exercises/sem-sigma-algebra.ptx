@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1-р семинар: 10 бодлого, бодлого бүр заавартай. [Ульянов] = П.Л. Ульянов нар, «Действительный анализ в задачах». -->
+<exercises xml:id="sem-sigma-algebra">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="exr-singletons">
+    <statement><p><m>\R</m> огторгуйн бүх ганц цэгээс тогтох олонлогуудын бүлээр төрөгдөх <m>\sigma</m>-алгебрыг ол.</p></statement>
+    <hint><p>Хариу нь тоологдом эсвэл гүйцээлт нь тоологдом олонлогуудын бүл. Энэ бүл <m>\sigma</m>-алгебр (Жишээ <xref ref="ex-countable-cocountable"/>) бөгөөд ганц цэгүүдийг агуулах дурын <m>\sigma</m>-алгебрт агуулагдахыг харуул.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-disjoint-union">
+    <statement><p>Алгебр нь хос хосоороо үл огтлолцох олонлогуудынхаа тоологдом дараалал бүрийн нэгдлийг өөртөө харьяалдаг бол <m>\sigma</m>-алгебр болно гэж харуул.</p></statement>
+    <hint><p>Дурын <m>\{A_n\}</m> дарааллын хувьд <m>B_1=A_1</m>, <m>B_n=A_n\setminus(A_1\cup\ldots\cup A_{n-1})</m> гэвэл <m>B_n</m> нь алгебрт харьяалагдах, хос хосоороо үл огтлолцох бөгөөд <m>\bigcup B_n=\bigcup A_n</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-union-not-sigma">
+    <!-- Эх бичвэрт "огтлолцол" гэж байсан нь Өгүүлбэр (prop-intersection-sigma)-тэй зөрчилдөх тул "нэгдэл" болгосон. Багш шалгах. -->
+    <statement><p><m>X</m> олонлог дээрх <m>\sigma</m>-алгебруудын нэгдэл <m>\sigma</m>-алгебр байх албагүй болохыг жишээгээр харуул.</p></statement>
+    <hint><p><m>X=\{1,2,3\}</m>, <m>\mathscr{A}_1=\{\emptyset,\{1\},\{2,3\},X\}</m>, <m>\mathscr{A}_2=\{\emptyset,\{2\},\{1,3\},X\}</m> гэж аваад <m>\{1\}\cup\{2\}</m>-ийг шалга.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-closed-not-sigma">
+    <statement><p><m>\R</m> огторгуйг өөртөө харьяалдаг, тоологдом нэгдэл болон тоологдом огтлолцлын хувьд битүү боловч <m>\sigma</m>-алгебр болдоггүй <m>\R</m> огторгуйн дэд олонлогуудын төгсгөлгүй бүлийн жишээ гарга.</p></statement>
+    <hint><p><m>\{\emptyset,\R\}\cup\{(-\infty;a]: a\in\R\}\cup\{(-\infty;a): a\in\R\}</m> бүлийг авч үз: гүйцээлтээр битүү биш.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-countable-subfamily">
+    <statement><p><m>\mathscr{L}</m> нь <m>X</m> олонлогийн дэд олонлогуудын бүл байг. <m>A\in\mathscr{L}_{\sigma}</m> бүрийн хувьд <m>A\in \mathscr{M}_{\sigma}</m> байх <m>\mathscr{M}\subset\mathscr{L}</m> тоологдом дэд бүл олдоно гэж батал.</p></statement>
+    <hint><p>Ийм чанартай <m>A</m> олонлогуудын бүл <m>\sigma</m>-алгебр бөгөөд <m>\mathscr{L}</m>-ийг агуулахыг харуул. Тоологдом дэд бүлүүдийн тоологдом нэгдэл тоологдом байна.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-sigma-on-N">
+    <statement><p><m>\N</m> натурал тоон олонлог дээрх бүх <m>\sigma</m>-алгебрыг ол.</p></statement>
+    <hint><p><m>\N</m>-ийн дурын хуваалт <m>\N=\bigsqcup_iP_i</m> нь <m>\{\bigcup_{i\in I}P_i\}</m> <m>\sigma</m>-алгебр үүсгэнэ. Эсрэгээр, <m>\sigma</m>-алгебр бүрийн хувьд <m>n</m>-ийг агуулах бүх элементийн огтлол (тоологдом огтлол) нь хуваалтын хэсэг болохыг харуул.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-symmetric-sets">
+    <statement><p><m>\R</m>-ийн <m>-A=A</m> байх (тэгш хэмтэй) бүх дэд олонлогуудын бүл <m>\sigma</m>-алгебр гэж батал. Энэ <m>\sigma</m>-алгебр бүх <m>[a;b]</m> хэрчмийг агуулах уу?</p></statement>
+    <hint><p><m>A\mapsto -A</m> буулгалт гүйцээлт, нэгдлийг хадгална. <m>[0;1]</m> тэгш хэмтэй биш.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-countable-subsets">
+    <statement><p>[Ульянов, 5.4, 5.5-тай харьцуул] <m>X</m> төгсгөлгүй олонлог, <m>\mathscr{C}</m> нь <m>X</m>-ийн бүх тоологдом (төгсгөлөг байж болно) дэд олонлогуудын бүл байг. <m>\mathscr{C}</m> нь тоологдом нэгдэл ба ялгаврын хувьд битүү гэж батал. <m>\mathscr{C}</m> нь <m>\sigma</m>-алгебр байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>X</m> тоологдом байх явдал гэж батал.</p></statement>
+    <hint><p><m>\sigma</m>-алгебр бол <m>X\in\mathscr{C}</m> байх ёстой.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-generated-count">
+    <statement><p>[Ульянов, 5.41-тэй харьцуул] <m>\mathscr{E}=\{E_1,\ldots,E_n\}</m> нь <m>X</m>-ийн дэд олонлогуудын төгсгөлөг бүл байг. <m>\mathscr{E}_{\sigma}</m> нь хамгийн ихдээ <m>2^{2^n}</m> элементтэй гэж батал. Энэ үнэлгээ хүрэгдэх жишээ гарга.</p></statement>
+    <hint><p><m>F_1\cap\ldots\cap F_n</m> <m>(F_i=E_i</m> эсвэл <m>E_i^c)</m> хэлбэрийн <m>2^n</m> олонлог <m>X</m>-ийг хуваана. <m>\mathscr{E}_{\sigma}</m>-ийн элемент бүр эдгээрийн нэгдэл.</p></hint>
+  </exercise>
+
+  <exercise xml:id="exr-trace">
+    <statement><p><m>\mathscr{A}</m> нь <m>X</m> дээрх <m>\sigma</m>-алгебр, <m>Y\subset X</m> байг. <m>\mathscr{A}_Y=\{A\cap Y: A\in\mathscr{A}\}</m> нь <m>Y</m> дээрх <m>\sigma</m>-алгебр гэж батал. <m>Y\in\mathscr{A}</m> бол <m>\mathscr{A}_Y=\{A\in\mathscr{A}: A\subset Y\}</m> гэж харуул.</p></statement>
+    <hint><p><m>Y\setminus(A\cap Y)=(X\setminus A)\cap Y</m> ба <m>\bigcup(A_n\cap Y)=\bigl(\bigcup A_n\bigr)\cap Y</m>.</p></hint>
+  </exercise>
+</exercises>

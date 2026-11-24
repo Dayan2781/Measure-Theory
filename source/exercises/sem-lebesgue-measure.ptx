@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 6-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-lebesgue-measure">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-lebesgue-measure-1">
+    <statement><p><m>(a;\infty)</m>, <m>[a;b]</m>, <m>\{a\}</m> олонлогууд Лебегээр хэмжигдэхийг Теорем <xref ref="lebesgue-measure-blht"/>-ээс гарга.</p></statement>
+    <hint><p>Хэмжигдэх олонлогууд <m>\sigma</m>-алгебр үүсгэнэ: <m>[a;b]=(-\infty;b]\cap[a;\infty)</m>, <m>\{a\}=[a;a]</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-2">
+    <statement><p>Теорем <xref ref="lebesgue-measure-blht"/>-ийн баталгааг <m>B=(0;1)</m> олонлогийн хувьд давтан бич.</p></statement>
+    <hint><p>Дурын <m>T</m> хувьд <m>\ls(T)\geqslant\ls(T\cap B)+\ls(T\setminus B)</m>-г <m>T</m>-г хучих интервал бүрийг <m>B</m>-ийн дотор ба гадна хэсэгт хуваах замаар шалга.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-3">
+    <statement><p><m>\ls(N)=0</m> бол <m>N\in\PZM_{\ls}</m> гэдгийг Каратеодорийн нөхцлөөр шууд батал.</p></statement>
+    <hint><p><m>\ls(T\cap N)=0</m> ба <m>\ls(T\setminus N)\leqslant\ls(T)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-4">
+    <statement><p><m>\brn\subseteq\PZM_{\ls_n}</m> болохыг хагас задгай кубуудаар төрөгдөх <m>\sigma</m>-алгебрыг ашиглаж батал.</p></statement>
+    <hint><p>Задгай олонлог бүр хагас задгай хоёртын кубуудын тоологдом нэгдэл. Хагас задгай куб хэмжигдэхийг нэг хэмжээст тохиолдолтой адил шалга.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-5">
+    <statement><p><m>\ls(A)\lt\infty</m> үед: <m>A\in\PZM_{\ls}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь дурын <m>\veps\gt 0</m> хувьд <m>A\subseteq U</m>, <m>\ls(U\setminus A)\lt\veps</m> байх задгай <m>U</m> олдох явдал гэж батал.</p></statement>
+    <hint><p>Зайлшгүй: 4-р семинарын 6-р бодлого ба <m>\lambda(U\setminus A)=\lambda(U)-\lambda(A)</m>. Хүрэлцээтэй: <m>G=\bigcap U_n</m> гээд <m>\ls(G\setminus A)=0</m>, <m>A=G\setminus(G\setminus A)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-6">
+    <statement><p><m>\operatorname{card}\PZM_{\ls}=2^{\cont}</m> болохыг харуул.</p></statement>
+    <hint><p>Канторын олонлог тэг хэмжээтэй, чадал нь <m>\cont</m>; түүний бүх дэд олонлог хэмжигдэх.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-7">
+    <statement><p>Канторын олонлогийн Борелийн биш дэд олонлог оршин байдгийг Теорем <xref ref="lebesgue-measure-strict"/>-аас гарга. Яагаад энэ баталгаа тодорхой жишээ өгөхгүй вэ?</p></statement>
+    <hint><p><m>\operatorname{card}\br=\cont\lt 2^{\cont}</m>. Баталгаа нь чадлын харьцуулалт дээр тулгуурлана.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-8">
+    <statement><p>[Ульянов, 7.34, 7.37] Задгай ба битүү олонлог бүр Лебегээр хэмжигдэх гэж батал. Задгай <m>G\subset\R</m> олонлогийн хувьд <m>\lambda(G)</m> нь түүний бүрэлдэхүүн интервалуудын уртын нийлбэртэй тэнцүү гэж харуул.</p></statement>
+    <hint><p><m>G</m> нь тоологдом тооны хос хосоороо үл огтлолцох задгай интервалын нэгдэл. Тоологдом аддитив чанар.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-9">
+    <statement><p><m>E\subset\R</m> хэмжигдэх, <m>\lambda(E)\lt\infty</m> байг. <m>f(x)=\lambda(E\cap(-\infty;x])</m> функц тасралтгүй гэж батал. Үүнийг ашиглан <m>0\lt c\lt\lambda(E)</m> бүрийн хувьд <m>\lambda(F)=c</m> байх хэмжигдэх <m>F\subset E</m> олдоно гэж харуул.</p></statement>
+    <hint><p><m>|f(x)-f(y)|\leqslant|x-y|</m>. Завсрын утгын теорем.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-measure-10">
+    <statement><p>Аравтын бутархай задаргаандаа <m>7</m> цифр огт агуулдаггүй <m>[0;1]</m> хэрчмийн тоонуудын олонлогийн Лебегийн хэмжээ <m>0</m> гэж батал.</p></statement>
+    <hint><p>Эхний <m>n</m> цифрт <m>7</m> агуулаагүй тоонууд урт нь <m>10^{-n}</m> бүхий <m>9^n</m> хэрчимд оршино.</p></hint>
+  </exercise>
+</exercises>

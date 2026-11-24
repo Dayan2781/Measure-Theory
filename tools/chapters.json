@@ -13,35 +13,6 @@
      "file": "4sigma algD.tex",
      "from": 143,
      "to": 263
-    },
-    {
-     "file": "4sigma algD.tex",
-     "from": 265,
-     "to": 276,
-     "kind": "exercises",
-     "title": "Ерөнхий бодлого",
-     "skip": [
-      1,
-      4,
-      5,
-      6,
-      7,
-      8
-     ]
-    },
-    {
-     "file": "4sigma algD.tex",
-     "from": 278,
-     "to": 335,
-     "kind": "exercises",
-     "title": "<m>\\R</m> дээрх Борелийн <m>\\sigma</m>-алгебр, задгай ба битүү олонлог"
-    },
-    {
-     "file": "4sigma algD.tex",
-     "from": 337,
-     "to": 367,
-     "kind": "exercises",
-     "title": "<m>\\R^n</m> дээрх задгай ба битүү олонлог"
     }
    ],
    "fix": [
@@ -132,20 +103,6 @@
     {
      "file": "5measure1D.tex",
      "title": "Хэмжээ ба түүний чанарууд"
-    },
-    {
-     "file": "lecture 2-borel sigma algebra.tex",
-     "from": 193,
-     "to": 223,
-     "kind": "exercises",
-     "title": "Магадлалын сонгодог тодорхойлолт"
-    },
-    {
-     "file": "6lebesgue measureD.tex",
-     "from": 341,
-     "to": 411,
-     "kind": "exercises",
-     "title": "Хэмжээтэй холбоотой бодлогууд"
     }
    ],
    "fix": [
@@ -333,11 +290,6 @@
      "from": 128,
      "to": 230,
      "title": "<m>\\mu^{\\star}</m>-хэмжигдэх олонлог ба Каратеодорийн теорем"
-    },
-    {
-     "file": "lecture 5-Cartoideriin theorem.tex",
-     "from": 105,
-     "kind": "exercises"
     }
    ],
    "fix": [
@@ -393,17 +345,6 @@
        149,
        159
       ]
-     ]
-    },
-    {
-     "file": "7lebesgue measure regular.tex",
-     "from": 161,
-     "to": 181,
-     "kind": "exercises",
-     "skip": [
-      8,
-      9,
-      10
      ]
     }
    ],
@@ -607,28 +548,6 @@
      "file": "8complete measure.tex",
      "from": 1,
      "to": 184
-    },
-    {
-     "file": "8complete measure.tex",
-     "from": 186,
-     "to": 233,
-     "kind": "exercises",
-     "title": "Гүйцэд ба регуляр хэмжээ"
-    },
-    {
-     "file": "8complete measure.tex",
-     "ranges": [
-      [
-       235,
-       235
-      ],
-      [
-       275,
-       383
-      ]
-     ],
-     "kind": "exercises",
-     "title": "Гадаад хэмжээ ба хэмжээ"
     }
    ],
    "fix": [
