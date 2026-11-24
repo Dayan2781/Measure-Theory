@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 15.tex:1-; seminar 9.tex:42- -->
+<!-- Эх файл: 15.tex:1- -->
 <chapter xml:id="ch-differentiation" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Уламжлал ба интегралын холбоо</title>
 <section xml:id="sec-differentiation-1">
@@ -214,10 +214,5 @@ G_{\alpha}=\{x\in\mathbb{R}^n:|f(x)-g(x)|\gt \alpha\}</md>
 <corollary><statement><p><m>F</m> нь <m>[a,b]</m> хэрчим дээр тасралтгүй үл буурах функц бол бараг бүх цэгт дифференциалчлагдах бөгөөд <m>F'</m> нь сөрөг биш хэмжигдэх функц байна. Түүнчлэн <md>\int_{[a,b]}F'd\lambda\leq F(b)-F(a)</md> тэнцэтгэл биш биелнэ.</p></statement><proof><p><md>G_m(x)=\frac{F(x+1/m)-F(x)}{1/m},\qquad m\geq1</md> функцүүдийг авч үзье (<m>x\gt b</m> үед <m>F(x)=F(b)</m> гэж өргөтгөнө). <m>F</m> нь нөхцөл ёсоор тасралтгүй үл буурах функц учраас <m>G_m</m> функцүүд нь тасралтгүй, сөрөг биш функцүүд юм. Түүнчлэн монотон функцийн тухай Лебегийн теорем ёсоор <m>\{G_m\}</m> функцэн дараалал нь <m>[a,b]</m> хэрчим дээр <m>F'</m> функц рүү бараг нийлнэ. Тэгэхээр <m>F'</m> функц нь хэмжигдэх сөрөг биш функц юм. Фатугийн лемм ёсоор <md>\int_{[a,b]}F'd\lambda\leq\liminf\limits_{m\to\infty}\int_{[a,b]}G_md\lambda</md> байна. <md>\int_{[a,b]}G_md\lambda=m\int\limits_a^bF(x+1/m)dx-m\int\limits_a^bF(x)dx=</md> <md>=m\int\limits_{a+1/m}^{b+1/m}F(y)dy-m\int\limits_a^bF(x)dx=</md> <md>=m\int\limits_{b}^{b+1/m}F(x)dx-m\int\limits_a^{a+1/m}F(x)dx.</md> Энд <m>F</m> нь тасралтгүй функц болохыг санавал мөрдлөгөө батлагдана.</p></proof></corollary>
 <example><p><m>F</m> нь Канторын сингуляр функц байг. Канторын сингуляр функц нь <m>[0,1]</m> хэрчим дээр тасралтгүй үл буурах функц учир зааглагдсан өөрчлөлттэй функц юм. Тэгэхээр <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр уламжлалтай байх ёстой. <m>[0,1]</m> хэрчмийн бараг бүх цэг дээр <m>F'(x)=0</m> байна гэдгийг хялбархан харж болно. Түүнчлэн <m>F(0)=0</m>, <m>F(1)=1</m> болохыг бид мэдэх билээ. Тэгэхээр <md>\int\limits_{[0,1]}F'(x)d\lambda=0\lt 1=F(1)-F(0)</md> юм.</p></example>
 </section>
-<exercises xml:id="sem-differentiation"><title>Семинарын бодлогууд</title>
-<exercise><statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
-<md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
-<exercise><statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
-<md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement></exercise>
-</exercises>
+<xi:include href="./exercises/sem-differentiation.ptx"/>
 </chapter>

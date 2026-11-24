@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 12-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-limit-theorems">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-limit-theorems-1">
+    <statement><p><m>A_1, A_2, \dots</m> нь <m>A</m> олонлогийн хэмжигдэх дэд олонлогууд ба <m>B_n = \{x \in A : x \text{ элемент нь } A_i \text{-уудаас хамгийн багадаа } n \text{ ширхэгт нь харьяалагдана}\}</m> гэе. Дараах тэнцэтгэл бишийг батал:
+<md>\mu(B_n) \le \frac{1}{n} \sum_{i=1}^{\infty} \mu(A_i).</md></p></statement>
+    <hint><p><m>\sum_i\chi_{A_i}\geqslant n\chi_{B_n}</m>; интегралчилж монотон нийлэлтийн теоремыг хэрэглэ.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-2">
+    <statement><p><m>\{f_n(x)\}_{n=1}^{\infty}</m> ба <m>f(x)</m> нь <m>\La^1(A)</m> ангийн сөрөг бус функцүүд байг. <m>A</m> олонлог дээр <m>n \to \infty</m> үед <m>f_n(x) \Rightarrow f(x)</m> (хэмжээээр нийлэх) бөгөөд 
+<md>\lim_{n \to \infty} \int_A f_n(x) \, d\mu = \int_A f(x) \, d\mu</md>
+байг. Тэгвэл дурын хэмжигдэх дэд олонлог <m>B \subset A</m> (<m>B \in \mathscr{A}</m>)-ийн хувьд дараах хязгаар биелнэ гэж батал:
+<md>\lim_{n \to \infty} \int_B f_n(x) \, d\mu = \int_B f(x) \, d\mu.</md></p></statement>
+    <hint><p><m>\int_A|f_n-f|\to 0</m> гэдгийг <m>(f-f_n)^+\leqslant f</m> ба зааглагдсан нийлэлтийн теоремоор (дэд дараалал ба Риссийн теорем) харуул.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-3">
+    <statement><p><m>\mu(A) = \infty</m> ба <m>f(x) \in \La^1(A)</m> байг. Дурын <m>\varepsilon \gt  0</m> хувьд <m>\mu(B) \lt  \infty</m> байх, дараах нөхцөлийг хангах <m>B \subset A</m> (<m>B \in \mathscr{A}</m>) олонлог оршин байна гэж батал:
+<md>\int_{A \setminus B} |f(x)| \, d\mu \lt  \varepsilon.</md></p></statement>
+    <hint><p><m>B_n=\{|f|\geqslant\frac1n\}</m>: <m>\mu(B_n)\leqslant n\int|f|</m> ба <m>\int_{A\setminus B_n}|f|\to 0</m> (монотон нийлэлт).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-4">
+    <statement><p><m>\lim\limits_{n\to\infty}\int_0^1\frac{n x}{1+n^2x^2}\,dx</m> ба <m>\lim\limits_{n\to\infty}\int_0^{n}\Bigl(1-\frac xn\Bigr)^ne^{x/2}\,dx</m>-г ол. Ашигласан теоремын нөхцлийг шалга.</p></statement>
+    <hint><p>Эхнийх: <m>\frac{nx}{1+n^2x^2}\leqslant\frac12</m>, цэгэн хязгаар <m>0</m>. Хоёр дахь: <m>(1-\frac xn)^n\chi_{[0;n]}\uparrow e^{-x}</m>, монотон нийлэлт; хариу <m>2</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-5">
+    <statement><p>Фатугийн леммд хатуу тэнцэл биш биелэх жишээ гарга: <m>([0;1],\lambda)</m> дээр <m>f_n=n\chi_{(0;\frac1n)}</m>.</p></statement>
+    <hint><p><m>\liminf f_n=0</m>, <m>\int f_n=1</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-6">
+    <statement><p><m>f_n=\frac1n\chi_{[0;n]}</m> дараалал <m>\R</m> дээр жигд <m>0</m> руу нийлэх боловч <m>\int f_n\not\to 0</m> гэж харуул. Зааглагдсан нийлэлтийн теоремын аль нөхцөл зөрчигдөв?</p></statement>
+    <hint><p><m>\int f_n=1</m>. <m>\sup_nf_n</m> интегралчлагдахгүй (<m>\sup_nf_n\geqslant\frac1{2x}</m> гэх мэт).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-7">
+    <statement><p><m>f\in\La^1(\R)</m> бол <m>\lim\limits_{n\to\infty}\int_{\R}f(x)\cos^n(\pi x)\,dx=0</m> гэж батал.</p></statement>
+    <hint><p><m>|\cos\pi x|\lt 1</m> бараг бүх цэгт; мажорант <m>|f|</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-8">
+    <statement><p>(Беппо Леви) <m>f_n\geqslant 0</m> хэмжигдэх бол <m>\int\sum_nf_n\,d\mu=\sum_n\int f_n\,d\mu</m> гэж батал. Үүнийг ашиглан <m>\int_0^1\frac{\ln x}{1-x}\,dx</m>-ийг цуваагаар илэрхийл.</p></statement>
+    <hint><p>Хэсгийн нийлбэрт монотон нийлэлтийн теорем. <m>\frac{-\ln x}{1-x}=\sum_n(-\ln x)x^n</m>, <m>\int_0^1(-\ln x)x^ndx=\frac1{(n+1)^2}</m>; хариу <m>-\frac{\pi^2}6</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-9">
+    <statement><p><m>\mu(X)\lt\infty</m>, <m>|f_n|\leqslant M</m> ба <m>f_n\to f</m> хэмжээгээр нийлдэг бол <m>\int f_n\,d\mu\to\int f\,d\mu</m> гэж батал.</p></statement>
+    <hint><p><m>\int|f_n-f|\leqslant\veps\mu(X)+2M\mu(\{|f_n-f|\geqslant\veps\})</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-limit-theorems-10">
+    <statement><p><m>\int_A f\,d\mu</m> нь <m>A</m>-ийн хувьд тоологдом аддитив гэж батал: <m>f\geqslant 0</m> хэмжигдэх ба <m>A=\bigsqcup A_k</m> бол <m>\int_Af=\sum_k\int_{A_k}f</m>.</p></statement>
+    <hint><p><m>f\chi_A=\sum_kf\chi_{A_k}</m> ба Беппо Левийн теорем.</p></hint>
+  </exercise>
+
+</exercises>

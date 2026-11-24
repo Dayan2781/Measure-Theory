@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 16-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-differentiation">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise xml:id="sem-differentiation-1">
+    <statement><p><m>[a,b] \subset \mathbb{R}</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> (Риманы утгаар интегралчлагдах) байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> (Лебегийн утгаар интегралчлагдах) бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement>
+    <hint><p>Дарбугийн доод, дээд нийлбэрт харгалзах шатлалт функцүүд <m>\varphi_n\leqslant f\leqslant\psi_n</m> ба монотон нийлэлтийн теорем; <m>\int(\psi-\varphi)=0</m> тул <m>f=\varphi=\psi</m> бараг бүх цэгт.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-2">
+    <statement><p><m>n \gt  1</m>, <m>[a,b] \subset \mathbb{R}^n</m> ба <m>f(x) \in \mathcal{R}([a,b])</m> байг. Тэгвэл <m>f(x) \in \La^1([a,b])</m> бөгөөд дараах тэнцэтгэл биелнэ гэж батал:
+<md>(L)\int_{[a,b]} f(x) \, d\mu = (\mathcal{R})\int_a^b f(x) \, dx.</md></p></statement>
+    <hint><p>Нэг хэмжээстэй адил: тэгш өнцөгт хуваалтуудын дараалал ба шатлалт функцүүд.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-3">
+    <statement><p><m>f\in L^1(\R)</m> бол бараг бүх <m>x</m>-ийн хувьд <m>\lim\limits_{h\to 0}\frac1{2h}\int_{x-h}^{x+h}f\,d\lambda=f(x)</m> гэж Лебегийн дифференциалчлах теоремоос гарга. Энэ нь <m>f</m>-ийн тасралтгүй цэгт яагаад шууд гарах вэ?</p></statement>
+    <hint><p>Тасралтгүй цэгт <m>|\frac1{2h}\int(f-f(x))|\leqslant\sup_{|t-x|\leqslant h}|f(t)-f(x)|</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-4">
+    <statement><p><m>E\subset\R</m> хэмжигдэх бол бараг бүх <m>x\in E</m>-ийн хувьд <m>\lim\limits_{h\to 0}\frac{\lambda(E\cap(x-h;x+h))}{2h}=1</m> гэж батал (нягтын цэг).</p></statement>
+    <hint><p><m>f=\chi_E</m>-д Лебегийн теорем.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-5">
+    <statement><p><m>E\subset\R</m> хэмжигдэх ба зааглагдсан интервал бүр <m>I</m>-ийн хувьд <m>\lambda(E\cap I)\leqslant\frac12\lambda(I)</m> бол <m>\lambda(E)=0</m> гэж нягтын цэгийн тухай өгүүлбэрээр батал.</p></statement>
+    <hint><p>Нягтын цэг дээр харьцаа <m>1</m> рүү тэмүүлэх ёстой.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-6">
+    <statement><p><m>f=\chi_{[0;1]}</m> функцийн Харди–Литтлвудийн максимал функц <m>Mf</m>-ийг <m>x\geqslant 1</m> үед ол. <m>Mf\notin L^1(\R)</m> гэж харуул.</p></statement>
+    <hint><p><m>x\geqslant 1</m> үед <m>Mf(x)=\frac{1}{2x}</m> (<m>h=x</m> үед дээд утгад хүрнэ).</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-7">
+    <statement><p><m>F(x)=\int_0^xf\,d\lambda</m>, <m>f\in L^1([0;1])</m> бол бараг бүх цэгт <m>F^{\prime}=f</m>. <m>f=\chi_{[0;\frac12]}</m> үед <m>F</m>-г бичиж, <m>F^{\prime}</m> аль цэгт оршин байхгүй вэ?</p></statement>
+    <hint><p><m>F(x)=\min\{x,\frac12\}</m>; <m>x=\frac12</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-8">
+    <statement><p>Риманы утгаар интегралчлагдахгүй боловч Лебегийн утгаар интегралчлагдах <m>[0;1]</m> дээрх зааглагдсан функцийн жишээ гарга. Мөн <m>[0;1]</m> дээр зааглагдаагүй, Лебегийн утгаар интегралчлагдах функцийн жишээ гарга.</p></statement>
+    <hint><p><m>\chi_{\Q}</m>; <m>x^{-1/2}</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-9">
+    <statement><p><m>f\colon[a;b]\to\R</m> зааглагдсан функц Риманы утгаар интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь тасралтгүй биш цэгүүдийн олонлог Лебегийн тэг хэмжээтэй байх явдал гэж батал (Лебегийн шалгуур).</p></statement>
+    <hint><p><m>\omega_f(x)=0\iff</m> тасралтгүй. Дарбугийн нийлбэрүүдийн хязгаар <m>\overline{f}</m>, <m>\underline{f}</m> (дээд, доод бүрхүүл) ба 1-р бодлогын аргаар <m>\int(\overline f-\underline f)=0</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-differentiation-10">
+    <statement><p><m>f</m> нь <m>[a;b]</m> дээр үл буурах бол <m>\int_a^bf^{\prime}\,d\lambda\leqslant f(b)-f(a)</m> гэж батал. Канторын функцийн хувьд хатуу тэнцэл биш биелнэ.</p></statement>
+    <hint><p><m>g_n(x)=n(f(x+\frac1n)-f(x))</m> ба Фатугийн лемм. Канторын функцэд <m>f^{\prime}=0</m> бараг бүх цэгт.</p></hint>
+  </exercise>
+
+</exercises>
