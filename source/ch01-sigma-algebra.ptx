@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 4sigma algD.tex (эхний хэсэг); lecture 1-sigma algebra 1.tex -->
+<chapter xml:id="ch-sigma-algebra" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Алгебр ба σ-алгебр</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+
+  <exercises xml:id="sem-sigma-algebra">
+    <title>Семинарын бодлогууд</title>
+    <!-- TODO: семинарын бодлого -->
+    <exercise>
+      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
+    </exercise>
+  </exercises>
+</chapter>

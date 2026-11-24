@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+  <common>
+    <chunking level="1" />
+    <tableofcontents level="2" />
+    <!-- Семинарын бодлогын бодолт оюутанд харагдахгүй -->
+    <exercise-inline statement="yes" hint="yes" answer="no" solution="no" />
+    <exercise-divisional statement="yes" hint="yes" answer="no" solution="no" />
+  </common>
+  <latex>
+    <!-- Кирилл үсэгтэй, Computer Modern төст фонт -->
+    <fonts>
+      <main regular="CMU Serif" />
+    </fonts>
+  </latex>
+</publication>

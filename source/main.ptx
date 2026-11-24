@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="measure-theory">
+    <title>Хэмжээний онол</title>
+
+    <xi:include href="./frontmatter.ptx" />
+
+    <xi:include href="./ch01-sigma-algebra.ptx" />
+    <xi:include href="./ch02-borel.ptx" />
+    <xi:include href="./ch03-measure.ptx" />
+    <xi:include href="./ch04-outer-measure.ptx" />
+    <xi:include href="./ch05-caratheodory.ptx" />
+    <xi:include href="./ch06-lebesgue-measure.ptx" />
+    <xi:include href="./ch07-regularity.ptx" />
+    <xi:include href="./ch08-complete-measure.ptx" />
+    <xi:include href="./ch09-measurable-functions.ptx" />
+    <xi:include href="./ch10-convergence.ptx" />
+    <xi:include href="./ch11-integral.ptx" />
+    <xi:include href="./ch12-limit-theorems.ptx" />
+    <xi:include href="./ch13-lp-spaces.ptx" />
+    <xi:include href="./ch14-product-measure.ptx" />
+    <xi:include href="./ch15-indefinite-integral.ptx" />
+    <xi:include href="./ch16-differentiation.ptx" />
+
+    <xi:include href="./backmatter.ptx" />
+  </book>
+</pretext>

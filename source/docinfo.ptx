@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+  <directories external="../assets" />
+
+  <!-- Номын нэр томъёо: PreTeXt-д монгол хэлний орчуулга байхгүй тул -->
+  <!-- гарчгийн үгсийг энд монгол болгоно.                            -->
+  <rename element="chapter" xml:lang="en-US">Бүлэг</rename>
+  <rename element="section" xml:lang="en-US">Хэсэг</rename>
+  <rename element="subsection" xml:lang="en-US">Дэд хэсэг</rename>
+  <rename element="appendix" xml:lang="en-US">Хавсралт</rename>
+  <rename element="preface" xml:lang="en-US">Өмнөх үг</rename>
+  <rename element="introduction" xml:lang="en-US">Оршил</rename>
+  <rename element="definition" xml:lang="en-US">Тодорхойлолт</rename>
+  <rename element="theorem" xml:lang="en-US">Теорем</rename>
+  <rename element="lemma" xml:lang="en-US">Лемм</rename>
+  <rename element="corollary" xml:lang="en-US">Мөрдлөгөө</rename>
+  <rename element="proposition" xml:lang="en-US">Өгүүлбэр</rename>
+  <rename element="axiom" xml:lang="en-US">Аксиом</rename>
+  <rename element="remark" xml:lang="en-US">Санамж</rename>
+  <rename element="example" xml:lang="en-US">Жишээ</rename>
+  <rename element="exercise" xml:lang="en-US">Дасгал</rename>
+  <rename element="exercises" xml:lang="en-US">Бодлогууд</rename>
+  <rename element="proof" xml:lang="en-US">Баталгаа</rename>
+  <rename element="hint" xml:lang="en-US">Заавар</rename>
+  <rename element="answer" xml:lang="en-US">Хариу</rename>
+  <rename element="solution" xml:lang="en-US">Бодолт</rename>
+  <rename element="figure" xml:lang="en-US">Зураг</rename>
+  <rename element="index" xml:lang="en-US">Нэрийн хэлхээс</rename>
+
+  <!-- Багшийн LaTeX эхийн (realanalysis.tex) математик макросууд -->
+  <macros>
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\ER}{\overline{\mathbb{R}}}
+    \newcommand{\rn}{\mathbb{R}^n}
+    \newcommand{\A}{\mathscr{A}}
+    \newcommand{\alg}{\mathscr{A}}
+    \newcommand{\salg}{\mathscr{A}_{\sigma}}
+    \newcommand{\galg}{\mathscr{G}}
+    \newcommand{\Balg}{\mathscr{B}}
+    \newcommand{\B}{\mathcal{B}}
+    \newcommand{\br}{\mathscr{B}_{\mathbb{R}}}
+    \newcommand{\brn}{\mathscr{B}_{\mathbb{R}^n}}
+    \newcommand{\PZM}{\mathscr{M}}
+    \newcommand{\Pa}{\mathscr{P}(A)}
+    \newcommand{\La}{\mathscr{L}}
+    \newcommand{\mk}{\mathfrak{M}_{\mu^*}}
+    \newcommand{\mkl}{\mathfrak{M}_{\lambda^*}(\mathbb{R})}
+    \newcommand{\mkln}{\mathscr{M}_{\lambda^*}(\mathbb{R}^n)}
+    \newcommand{\ls}{\lambda^{\star}}
+    \newcommand{\ms}{\mu^{\star}}
+    \newcommand{\vn}{\varnothing}
+    \newcommand{\veps}{\varepsilon}
+    \newcommand{\cont}{\mathfrak{c}}
+    \newcommand{\ra}{\Rightarrow}
+    \newcommand{\Lra}{\Longrightarrow}
+    \newcommand{\BC}[2]{\bigcap\limits_{#1}^{#2}}
+    \newcommand{\BCD}[2]{\bigcup\limits_{#1}^{#2}}
+    \newcommand{\sgn}{\operatorname{sgn}}
+    \newcommand{\vol}{\operatorname{vol}}
+  </macros>
+</docinfo>

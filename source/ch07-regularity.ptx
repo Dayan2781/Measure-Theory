@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 7lebesgue measure regular.tex (5–6-р хэсэг) -->
+<chapter xml:id="ch-regularity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Хэмжээний регуляр чанар</title>
+
+  <introduction>
+    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
+  </introduction>
+
+  <exercises xml:id="sem-regularity">
+    <title>Семинарын бодлогууд</title>
+    <!-- TODO: семинарын бодлого -->
+    <exercise>
+      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
+    </exercise>
+  </exercises>
+</chapter>

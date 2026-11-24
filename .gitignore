@@ -1,0 +1,6 @@
+output/
+logs/
+.cache/
+generated-assets/
+.DS_Store
+__pycache__/
