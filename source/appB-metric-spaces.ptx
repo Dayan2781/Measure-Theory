@@ -1,9 +1,337 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 2metric space.tex -->
+<!-- Эх файл: 2metric space.tex:1- -->
 <appendix xml:id="app-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Метрик огторгуй</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
+<title>Метрик огторгуй</title>
+<section xml:id="sec-metric-spaces-1">
+<title>Метрик огторгуй</title>
+<p>Анализад хязгаарын тухай ухагдахуун чухал үүрэгтэйг (үүн дээр тулгуурлан уламжлал, тасралтгүй чанар, интеграл гэх мэт ойлголтууд тодорхойлогддог) бид мэднэ. Хязгаар нь ихэнхи тохиолдолд 2 цэгийн хоорондох зайн тусламжтайгаар тодорхойлогддог. Иймд метрик огторгуй нь математикийн маш чухал обьектуудын нэг юм.</p>
+<definition><statement><p><m>X</m> хоосон биш олонлог байг. Хэрэв <md>\rho : X \times  X \rightarrow  \mathbb{R}</md> функц дараах 2 аксиомыг хангадаг бол түүнийг <term>зай</term>, <idx>зай</idx></p>
+<p><m>\rho (x,y)</m> -ийг <m>x</m> ба <m>y</m>  элементүүдийн  хоорондох зай,  <m>(X,\rho )</m> хосыг <term>метрик огторгуй</term> <idx>Метрик огторгуй</idx> гэж тус тус нэрлэнэ. Үүнд:
+<ul marker=""><li><p>(d1) <m>\rho (x,y)=0\Longleftrightarrow x=y</m></p></li><li><p>(d2) <m>\rho (x,y)\leqslant \rho (x,z)+\rho (y,z)</m>  ( Гурвалжны тэнцэтгэл биш )<idx>Гурвалжны тэнцэтгэл биш </idx></p></li></ul></p></statement></definition>
+<proposition><statement><p><m>(X,\rho )</m> метрик огторгуй, <m>x, y\in X</m> бол дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\rho (x,y)=\rho (y,x)</m></p></li><li><p><m>\rho (x,y)\geqslant 0.</m></p></li></ol></p></statement><proof><p><ol marker="a)"><li><p>Гурвалжны тэнцэтгэл бишид  <m>z=x</m>  гэж авбал
+<m>\rho (x,y)\leqslant \rho (y,x)</m> болно. Энд  <m>x, y</m> -ийн байрыг соливол
+<m>\rho (y,x)\leqslant \rho (x,y)</m> болж <md>\rho (y,x) = \rho (x,y)</md> батлагдав.</p></li><li><p><m>0=\rho (x,x)\leqslant \rho (x,y)+\rho(x,y)=2\rho (x,y)</m> тул <md>\rho (x,y)\geqslant 0.</md></p></li></ol></p></proof></proposition>
+<example><p><m>X</m>  дурын хоосон
+биш олонлог болог.  <md>\rho (x,y)=\left\{
+\begin{array}{cc}
+0, &amp; x=y \\ 
+1, &amp; x\neq y \\ 
+\end{array}
+\right .</md> функц дээрх хоёр аксиомыг хангах нь ойлгомжтой. Өөрөөр
+хэлбэл  <m>(X,\rho )</m>  метрик огторгуй болно.</p></example>
+<example><p>Тоон шулуун дээр  <md>\rho (x,y)=|x-y|</md> функц зай болох ба <m>(\R, \rho)</m> метрик огторгуй болно.</p></example>
+<example><p><m>\mathbb{C}^n</m>  огторгуйд хоёр элементийн хоорондох зайг дараах томьёонуудаар
+тодорхойлж болно. <m>x=(x_1,x_2, \cdots ,x_n),
+ y=(y_1,y_2, \cdots ,y_n)</m>  бол
+<ol marker="a)"><li><p><m>\rho _{1}(x,y)=\sum\limits_{k=1}^n|x_k-y_k|</m></p></li><li><p><m>\rho_2(x,y)=\sqrt{\sum \limits_{k=1}^n|x_k-y_k|^2}</m></p></li><li><p><m>\rho_p(x,y)=\Big(\sum\limits_{k=1}^n|x_k-y_k|^p\Big)^{\frac1p}\quad (p\geqslant 1)</m></p></li><li><p><m>\rho_{\infty}(x,y)=\max \limits_{1\leqslant k \leqslant n}|x_k-y_k|</m></p></li></ol>
+<m>(\mathbb{C}^n,\rho_p)</m> метрик
+огторгуйнуудыг  <m>\mathbb{C}_p^n</m>  гэж товчоор тэмдэглэдэг.  <m>\mathbb{C}_2^n</m> -ийг бид  <m>\mathbb{C}^n</m>  гэж бичиж дассан билээ.</p></example>
+<proof><p><m>\rho_p(x,y)</m> зай болохыг батлавал <m>a)., b)., c).</m> батлагдана. Эдгээрийн хувьд зайн эхний аксиом биелэх нь илт. Иймд зайн <m>(d2)</m> аксиомыг хангахыг батлахад хангалттай. Минковскийн тэнцэтгэл бишид ((<xref ref="inequalities-mink1"/>)-д)  
+<md>a_k=x_k-z_k , b_k=z_k-y_k \quad   (k=\overline{1,n})</md> гэж авбал
+<md>\rho_p(x,y)\leqslant \rho_p(x,z)+\rho_p(y,z)</md> болно.</p>
+<p>Эцэст нь
+<md>\rho_{\infty }(x,y)=\max \limits_{1\leqslant k \leqslant
+n}|x_k-y_k|\leqslant \max \limits_{1\leqslant k \leqslant
+n}(|x_k-z_k|+|y_k-z_k|)\leqslant</md>
+<md>\max \limits_{1\leqslant k \leqslant
+n}|x_k-z_k|+\max \limits_{1\leqslant k \leqslant
+n}|y_k-z_k|=\rho _{\infty }(x,z)+\rho _{\infty }(y,z)</md> болж  <m>\rho_p(x,y)</m> зай болох нь батлагдав.</p></proof>
+<remark><p><m>\rho_1,  \rho_2, \rho_{\infty }</m>  нь  <m>\rho_p</m>  зайн харгалзан  <m>p\rightarrow 1+0,  p=2,  p\rightarrow +\infty</m> үеийн тухайн тохиолдлууд юм.</p></remark>
+<example><p><m>\ell_ p</m>  олонлог дээр
+<md>\rho (x,y)=\Big(\sum\limits_{k=1}^{+\infty }|x_k-y_k|^p\Big)^{\frac1p}</md> дүрмээр зай тодорхойлж болно. Учир нь  <m>x,y\in \ell_ p</m> бол <m>x-y\in \ell_ p</m>,  өөрөөр хэлбэл:  <m>\sum
+\limits_{k=1}^{+\infty }|x_k-y_k|^p</m>  цуваа нийлэхийг бид
+баталсан. Мөн зайн эхний аксиом биелэх нь ч илт. Эцэст нь
+Минковскийн тэнцэтгэл бишид  ((<xref ref="inequalities-mink2"/>)-д)  
+<md>a_k=x_k-z_k, b_k=z_k-y_k</md> гэж авбал  
+<md>\rho_p(x,y)\leqslant \rho_p(x,z)+\rho_p(y,z)</md>  гэж гарах юм.  Энд  <m>p=2</m> үеийн тухайн тохиолдол болох  <m>(\ell_2,\rho_2)</m>  метрик огторгуй практикт чухал үүрэгтэй байдаг.</p></example>
+<example><p><m>[a,b]</m> хэрчим дээр тасралтгүй функцүүдийн олонлогийг  <m>C[a,b]</m><idx><m>C[a,b]</m></idx> гэж тэмдэглэе. Энэ огторгуйд дараах томьёонуудаар зай тодорхойлож болно. Үүнд:
+<ol marker="a)"><li><p><md>\rho_1(f,\varphi )=\int \limits_a^b|f(x)-\varphi (x)|dx</md></p></li><li><p><md>\rho_2(f,\varphi )=\sqrt{\int \limits_a^b|f(x)-\varphi(x)|^2dx}</md></p></li><li><p><md>\rho_p(f,\varphi )=\Big(\int\limits_a^b|f(x)-\varphi (x)|^pdx\Big)^{\frac1p}\quad (p\geqslant 1)</md></p></li><li><p><md>\rho_{\infty }(f,\varphi )=\max\limits_{a\leqslant x\leqslant b}|f(x)-\varphi (x)|</md></p></li></ol></p>
+<p><m>p\geqslant1</m>  үед  <m>(C[a,b],\rho_p)=C_p[a,b],  (C[a,b],\rho_{\infty
+})=C_{\infty }[a,b]=C[a,b]</m>  гэж цаашид тэмдэглэх болно.
+ <m>C{[a,b]}</m>-г Чебышевийн огторгуй гэдэг.</p></example>
+<proof><p><ol marker="a)"><li><p><m>\rho_1(f,\varphi )=0</m>  байг.
+ <m>f=\varphi,</m>  өөрөөр хэлбэл:
+<md>\forall  x \in  [a,b] :  f(x)=\varphi (x)</md>
+гэж батлах ёстой.  Эсрэгээс нь
+<md>\exists  x_0 \in  [a,b] :  \psi (x_0)=f(x_0)-\varphi (x_0)\neq 0</md>
+ гэж үзье.  Тэгвэл  <m>\psi</m>  тасралтгүй учир
+<md>\exists  O_{\varepsilon }(x_0),  \forall  x\in O_{\varepsilon
+}(x_0)\cap [a,b]  :  |\psi (x)| \geqslant  \dfrac{|\psi(x_0)|}2  \Longrightarrow</md>
+ <md>\int \limits_{O_{\varepsilon }(x_0)\cap[a,b]}|\psi (x)|dx\gt 0\quad \Longrightarrow \quad \int \limits_a^b|\psi
+(x)|dx\gt 0\quad \Longrightarrow \quad\rho_1(f,\varphi ) \neq  0</md> гэж зөрчил гарна. Иймд
+ <m>f=\varphi</m>.  Хэрэв  <m>f=\varphi</m>  бол  <m>\rho_1(f,\varphi )=0</m> 
+болох нь илт. Гурвалжны тэнцэтгэл биш биелэх нь ойлгомжтой.</p></li><li><p><m>\rho_2</m>  нь  <m>\rho_p</m>-гийн тухайн тохиолдол юм.</p></li><li><p><m>\rho_p(f,\varphi )=0  \Longleftrightarrow  f=\varphi</m> 
+гэдгийг <term>a)</term>-тай ижлээр батална.  Минковскийн интеграл тэнцэтгэл бишид 
+<m>X=[a,b]</m>,  <m>x(t)=f(t)-\varphi (t),  y(t)=\varphi (t)-\psi (t)</m>  гэж авбал  <m>\rho
+_p(f,\psi )\leqslant \rho_p(f,\varphi )+\rho_p(\psi ,\varphi )</m>  гэж гарна.</p></li><li><p>Одоо <m>\rho_{\infty} (x,y )</m> зай болохыг харуулъя. <md>\rho_{\infty} (f,\varphi )=\max \limits_{a\leqslant x\leqslant
+b}|f(x)-\varphi (x)|=0  \Longleftrightarrow  \forall
+x\in [a,b]) \mbox{  хувьд } f(x)=\varphi (x)</md> тул <m>f=\varphi</m> байна.
+<md>\rho_{\infty} (f,\psi )=\max\limits _{a\leqslant x\leqslant
+b}|f(x)-\psi (x)|\leqslant</md> 
+<md>\max\limits _{a\leqslant x\leqslant b}(|f(x)-\varphi
+(x)|+|\psi (x)-\varphi (x)|)\leqslant</md> 
+<md>\leqslant \max _{a\leqslant x\leqslant
+b}|f(x)-\varphi (x)|+\max _{a\leqslant x\leqslant b}|\psi (x)-\varphi
+(x)|=\rho_{\infty} (f,\varphi )+\rho_{\infty} (\psi ,\varphi ).</md></p></li></ol></p></proof>
+<remark><p>Дээрх жишээнүүдээс  нэг олонлог дээр
+зайг өөр өөрөөр тодорхойлж болох бөгөөд ингэхэд өөр өөр
+метрик огторгуйнууд гарах нь харагдаж байна.</p>
+<p>Харин  <m>X</m>  олонлог дээр  <m>\rho</m>  зай бэхлэгдсэн тохиолдолд
+ <m>(X,\rho )</m>-г товчоор  <m>X</m>  гэж тэмдэглэх үе гарах болно.</p></remark>
+<p>Бид метрик огторгуй дахь функц, түүний тасралтгүй чанар болон бусад чанарууд, цаашид <m>\sigma</m> алгебр, хэмжээ, интеграл зэрэг ойлголтуудтай танилцахад чухал шаардлагатай олонлогийн хэлбэрүүдтэй танилцах шинж чанаруудыг томъёолох болно.</p>
+<definition><title>Орчин</title><statement><p><m>(X,\rho )</m> метрик огторгуй <m>r \gt  0</m> байг. 
+<m>O_r(x_0)=\{x\in X | \rho(x_0,x)\lt r\}</m> олонлогийг <m>x_0</m>
+цэг дээр төвтэй <m>r</m> радиустай <term> задгай дугуй</term> ( эсвэл  <m>x_0</m> цэгийн <m>r</m>-орчин)<idx> цэгийн <m>r</m>-орчин</idx>,<idx>задгай дугуй</idx>  
+<m>C_r(x_0)=\{x\in X  |  \rho (x_0,x)=r \}</m> олонлогийг  <m>x_0</m>
+цэг дээр төвтэй <m>r</m> радиустай <term> тойрог</term>,   
+<m>\overline{O}_r(x_0)=O_r(x_0)\cup C_r(x_0)</m> олонлогийг <m>x_0</m> цэг дээр төвтэй <m>r</m> радиустай <term> битүү  дугуй </term> гэнэ.<idx> битүү  дугуй</idx></p></statement></definition>
+<p><m>(X,\rho )</m> метрик огторгуйн  дэд олонлог <m>X\supset E</m> өгөгдсөн бол <m>X</m> олонлог болон <m>E</m> олонлогын цэгүүдийг дараах байдлаар ангиладаг.</p>
+<definition><statement><p><m>(X,\rho )</m> метрик огторгуй  байг. 
+<ol><li><p><m>E\subset X</m>  олонлог,  <m>x_0\in X</m>  цэг өгсөн гэе. Хэрэв  <m>x_0</m>  цэгийн дурын орчинд  <m>x_0</m>-оос ялгаатай   <m>E</m>  олонлогийн ядаж нэг цэг олддог бол  <m>x_0</m>-ийг  <m>E</m>  олонлогийн<term> хязгаарын цэг</term> гэнэ. <idx> хязгаарын цэг</idx></p></li><li><p>Хэрэв
+ <m>x_0\in E</m>   нь  <m>E</m>-гийн хязгаарын цэг биш бол <m>x_0</m>-ийг  <m>E</m>  олонлогийн <term>тусгаарлагдсан цэг</term> гэнэ. <idx>тусгаарлагдсан цэг</idx></p></li><li><p>Хэрэв <m>x_0\in E</m> цэг өөрийн ямар нэг орчныхоо хамт  <m>E</m>  олонлогт орж байвал <m>x_0</m>-ийг  <m>E</m>  олонлогийн <term>дотоод цэг</term> гэнэ. <idx>дотоод цэг</idx></p></li></ol></p></statement></definition>
+<p><m>(X,\rho )</m> метрик огторгуйн  дэд олонлог <m>X\supset E</m> -г дараах байдлаар ангилдаг.</p>
+<definition><statement><p><m>(X,\rho )</m> метрик огторгуй  байг. 
+<ol><li><p>Цэг бүр нь түүний дотоод цэг болдог олонлогийг  <term>задгай олонлог</term> гэнэ.<idx>задгай олонлог</idx></p></li><li><p>Хэрэв  олонлог өөрийн бүх хязгаарын цэгээ агуулдаг бол түүнийг <term>битүү олонлог</term><idx>битүү олонлог</idx> гэнэ.</p></li><li><p>Ямар нэг төгсгөлөг радиустай битүү дугуйд агуулагдах олонлогийг <term>зааглагдсан олонлог</term><idx>зааглагдсан олонлог</idx> гэнэ.</p></li><li><p><m>E</m>  олонлог дээр түүний бүх хязгаарын цэгүүдийн олонлогийг нэгтгэхэд гарах олонлогийг  <m>E</m>  олонлогийн <term>битүүрэл</term><idx>битүүрэл</idx> гээд  <m>\overline{E}</m>  гэж тэмдэглэнэ.</p></li><li><p>Нэгдэл нь <m>E</m>  олонлогийг агуулах задгай олонлогуудаас нэгдэл нь <m>E</m>  олонлогийг агуулах төгсгөлөг ширхэг задгай олонлог ямагт сонгож болдог бол <m>E</m>  олонлогийг <term>компакт олонлог</term><idx>компакт олонлог</idx> гэнэ.</p></li><li><p>Хэрэв  <m>X</m>  огторгуйн цэг бүр эсвэл  <m>E</m>  олонлогт ордог, эсвэл  <m>E</m>  олонлогийн хязгаарын цэг болдог бол  <m>E</m>-г  <m>X</m>-д  <term>нягт олонлог</term><idx>нягт олонлог</idx> гэнэ.  Өөрөөр хэлбэл: <m>\overline{E} = X</m>.</p></li></ol></p></statement></definition>
+<remark><p>Олонлогийн хязгаарын цэг бүр энэ олонлогтоо орох нь алба биш.</p></remark>
+<example><p>Тоон шулуун дээр  <m>O_r(x_0)</m>  нь  <m>(x_0-r,x_0+r)</m>  гэсэн задгай интервал юм.</p></example>
+<example><p><m>\mathbb{R}^2</m>  хавтгайд  <m>O_r(x_0)</m>  нь  <m>x_0</m>  цэг дээр төвтэй  <m>r</m>  радиустай задгай дугуй байна. Учир нь  <m>x_0=(x_0',x_0''), x=(x',x'')</m>  бол
+<md>\rho(x_0,x)=\sqrt{(x'-x_0')^2+(x''-x_0'')^2}\lt r
+\quad\Leftrightarrow\quad (x'-x_0')^2+(x''-x_0'')^2\lt r^2.</md></p></example>
+<example><p><m>\mathbb{R}_{\infty }^2</m>-д  <m>O_r(x_0)</m>  нь <m>(x_0',x_0'')</m> цэг дээр төвтэй задгай квадрат байна. Учир нь
+<md>\rho _{\infty} (x_0,x)=\max
+\{|x'-x_0'|, |x''-x_0''|\} \lt  r</md> тул 
+<m>|x'-x_0'| \lt  r</m> ба <m>|x''-x_0''| \lt  r</m>  байна. Үүнийг бодвол
+<md>x_0'-r \lt  x' \lt  x_0'+r \mbox{ ба } x_0''-r \lt  x'' \lt  x_0''+r )</md> болж задгай квадрат байна.</p></example>
+<example><p><m>C[a,b]</m>  огторгуйд <m>f_0(x)</m>  функцийн <m>r</m> орчин ямар олонлог байхыг авч үзье.
+<md>O_{r}(f_0)=\{f\in C[a,b] \mid \rho (f_0,f)=\max \limits_{a\leqslant x\leqslant
+b}|f(x)-f_0(x)| \lt  r\}</md> тул <md>f\in O_{r}(f_0) \Longleftrightarrow  \forall 
+x \in  [a,b] \text{ хувьд } |f(x)-f_0(x)| \lt  r</md> байна. Иймд 
+<md>f_0(x)-r \lt  f(x) \lt  f_0(x)+r</md>
+ буюу <m>f_0(x)</m>  функцийн <m>r</m> орчин нь график нь <m>y=f_0(x)-r</m>  ба <m>y=f_0(x)+r</m> функцүүдийн графикийн хооронд орших бүх функцүүдээс тогтоно.</p></example>
+<example><p><m>\mathbb{R}^{+}</m>  олонлог дээр  <m>\rho (x,y)=|x-y|</m>  зай
+тодорхойлогдсон гэе. <m>(\mathbb{R}^{+} , rho(x,y))</m> метрик огторгуйд <m>\overline{O}_3(3)=[0,6]</m>, <m>\overline{O}_5(\frac12)=[0;5,5]</m>  байна. Эндээс хэдийгээр  <m>5\gt 3</m>  боловч <m>\overline{O}_3(3)\supset\overline{ O}_5(\frac12)</m>  байна.</p></example>
+<p>Одоо задгай ба битүү олонлогуудын үндсэн чанаруудыг авч үзье.</p>
+<proposition><statement><p>Бүх орчин, өөрөөр хэлбэл задгай дугуй бүхэн задгай олонлог байна.</p></statement><proof><p><m>\forall  O_r(x_0)</m>  орчин ба  <m>\forall  x_1 \in O_r(x_0)</m>  цэг авъя. <md>\rho (x_0,x_1)\lt r</md> учир  <m>0\lt h\lt r-\rho (x_0,x_1)</m> байх  <m>h</m> олдоно. <m>x\in O_h(x_1)</m> бол 
+<md>\rho (x_0,x)\leqslant \rho (x_0,x_1)+\rho
+(x_1,x)\lt \rho (x_0,x_1)+h\lt r</md> болно. Энэ нь 
+<m>x \in O_r(x_0)</m> болохыг харуулж байна. Иймд <md>O_h(x_1)\subset O_r(x_0)</md> болж <m>O_r(x_0</m> олонлог задгай олонлог болох нь батлагдав.</p></proof></proposition>
+<example><p><m>\mathbb{R}</m>  олонлог дээр  <m>\rho (x,y)=|x-y|</m>  зай
+тодорхойлогдсон гэе. <m>(\mathbb{R} , \rho)</m> метрик огторгуйд <m>(a;b)</m> задгай интервал  нь <m>O_{\frac{b-a}{2}}(\frac{b+a}{2})</m>  <m>(\frac{b+a}{2}</m> цэгийн <m>\frac{b-a}{2}</m> орчин<m>)</m> тул <m>(a;b)</m> задгай олонлог байна.</p></example>
+<proposition><statement><p>Олонлогийн хязгаарын цэгийн дурын орчинд тэр
+олонлогийн төгсгөлгүй олон цэг байна.</p></statement><proof><p>Эсрэгээс нь  <m>E</m>  олонлогийн ямар нэг хязгаарын цэг  <m>x_0</m>-ийн
+ <m>O_r(x_0)</m>  гэсэн ямар нэг орчинд  <m>E</m>  олонлогийн  <m>x_1, x_2, 
+\cdots ,x_n</m>  гэсэн  <m>x_0</m>-той үл давхцах төгсгөлөг ширхэг цэг
+байдаг гэе.  <m>h=\min \{\rho (x_0,x_i) | 1 \leqslant  i \lt  n \}</m>  гэвэл
+ <m>h\gt 0</m>  ба  <m>O_h(x_0)</m>  орчинд  <m>E</m>   олонлогийн  <m>x_0</m>-оос
+ялгаатай ганц ч цэг байхгүй болж,  <m>x_0</m>  нь  <m>E</m>  олонлогийн
+хязгаарын цэг гэсэнд харшилна.</p></proof></proposition>
+<corollary><statement><p>Төгсгөлөг ширхэг цэгээс тогтсон олонлог хязгаарын
+цэггүй байна.</p></statement></corollary>
+<proposition xml:id="metric-spaces-open1"><statement><p>Олонлог задгай байх зайлшгүй бөгөөд хүрэлцээтэй  нөхцөл нь түүний гүйцээлт битүү байх явдал мөн.</p></statement><proof><p><m>E</m>  задгай олонлог байг.  <m>x_0</m>  нь  <m>E^c</m>-ийн дурын хязгаарын цэг болог.  <m>\forall O_r(x_0)</m>  орчинд  <m>E^c</m>  олонлогийн <m>x_0</m>-оос ялгаатай ядаж нэг цэг оршин байх учир  <m>x_0</m>  нь  <m>E</m>  олонлогийн дотоод цэг биш. Иймд  <m>x_0</m> 
+нь  <m>E</m>-д орохгүй. Эндээс <m>x_0\in E^c</m> болж <m>E^c</m>  битүү байна.
+Одоо <m>E^c</m>  битүү байг.  <m>\forall  x_0 \in  E</m>  цэг
+авъя.  <m>x_0</m>  нь  <m>E^c</m>-д орохгүй ба  <m>E^c</m>  битүү учир  <m>x_0</m> 
+нь  <m>E^c</m>-ийн хязгаарын цэг биш. Иймд  <m>\exists O_r(x_0) :</m> <m>E^c \cap 
+O_r(x_0) = \emptyset</m>  <m>\Longrightarrow</m>
+ <m>O_r(x_0)\subset E</m>  <m>\Longrightarrow</m>  <m>x_0</m>  нь  <m>E</m>-ийн дотоод цэг байна.</p></proof></proposition>
+<corollary xml:id="metric-spaces-closet1"><statement><p>Олонлог битүү байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүний гүйцээлт нь задгай байх явдал юм.</p></statement></corollary>
+<proposition xml:id="metric-spaces-mtoplogy1"><statement><p><m>(X, \rho)</m> метрик огторгуй байг. 
+<ol marker="a)."><li><p>Дурын тооны задгай олонлогийн нэгдэл задгай олонлог</p></li><li><p>Дурын тооны битүү олонлогийн огтлол битүү олонлог</p></li><li><p>Төгсгөлөг тооны задгай олонлогийн огтлол задгай олонлог</p></li><li><p>Төгсгөлөг тооны битүү олонлогийн нэгдэл битүү олонлог</p></li></ol> байна.</p></statement><proof><p><ol marker="a)."><li><p><m>G_{i }</m> задгай олонлогууд  <m>i  \in I,</m> <m>G=\bigcup
+\limits_{i \in I}G_{i }</m>  болог.    <m>\forall  x \in  G
+ \Longrightarrow   \exists  G_{i _{0}} \ni  x</m>.  Гэтэл  <m>G_{i _{0}}</m>  задгай учир <md>\exists  O_{r}(x) \subset  G_{i_{0}} \Longrightarrow  O_{r}(x) \subset  G,</md> өөрөөр хэлбэл:  <m>x</m>  нь  <m>G</m>-ийн дотоод цэг буюу  <m>G</m>  задгай олонлог болов.</p></li><li><p><m>F_{\alpha }</m>  битүү олонлогууд <m>i \in I</m> ба  <m>F=\bigcap \limits_{i \in I}F_{i }</m>  болог. Тэгвэл <md>F^{c}=\bigcup \limits_{i \in I}F_{i}^{c}</md>  болох ба Мөрдлөгөө (<xref ref="metric-spaces-closet1"/>) ёсоор  <m>F_{\alpha }^{c}</m> задгай олонлог байна.
+Иймд <m>a)</m> ёсоор  <m>F^{c}</m>  задгай. Эндээс  <m>F</m>  битүү гэж гарна.</p></li><li><p><m>G_{1}, G_{2}, \cdots , G_{n}</m>  задгай олонлогууд ба  <m>G=\bigcap \limits_{k=1}^{n}G_{k}</m>  болог.
+ <m>\forall  x_{0} \in  G</m>  элемент авъя.  <m>x_{0} \in  G_{k}</m>  <m>( k=\overline{1,n} )</m>
+ <m>\Longrightarrow</m>  <m>\exists  O_{r_{i}}(x_{0}) \subset  G_{i}</m>
+ ( <m>i=\overline{1,n}</m> )  болно. <m>r=\min \{r_{1},r_{2},\cdots,r_{n}\}</m> 
+гэвэл  <m>O_{r}(x_{0}) \subset  G_{i}</m>  <m>( i=\overline{1,n} )</m>
+ <m>\Longrightarrow</m>  <m>O_{r}(x_{0}) \subset  G</m>  <m>\Longrightarrow</m> 
+<m>G</m>  задгай.</p></li><li><p><m>F_{1}, F_{2},  \cdots  , F_{n}</m>  битүү олонлогууд ба  <m>F=\bigcup
+\limits_{i=1}^{n}F_{i}</m>  болог.  
+<md>F^{c}=\bigcap\limits_{i=1}^{n}F_{i}^{c}</md>  задгай учир  <m>F</m>  битүү байна.</p></li></ol></p></proof></proposition>
+<remark><p><m>c)</m>  ба   <m>d)</m>-д төгсгөлөг гэдэг нь орхиж үл болох нөхцөл юм.</p></remark>
+<example><p><m>\displaystyle\bigcup\limits_{n=1}^{+\infty }\left(-n; a\right)=(-\infty; a)</m> тул  Өгүүлбэр <xref ref="metric-spaces-mtoplogy1"/>  дүгнэлтээс <m>(-\infty; a)</m> задгай олонлог болно.  Адилаар <m>(a;\infty)</m> задгай олонлог болно. Иймд 
+<md>[a;b]^c=(-\infty; a)\cup (b;-\infty)</md> задгай олонлог болох тул <m>[a;b]</m> битүү интервал битүү олонлог болно.</p></example>
+<example><p><m>\left(-\dfrac{1}{n}; \dfrac{n+1}{n}\right)</m>  интервал бүр  <m>\mathbb{R}</m>-д задгай  ба эдгээрийн тоологдом огтлол 
+<md>\bigcap\limits_{n=1}^{+\infty }\left(-\dfrac{1}{n}; \dfrac{n+1}{n}\right)=[0;1]</md>  задгай олонлог биш <m>(</m>битүү олонлог<m>)</m> байна. Иймд төгсгөлгүй олон задгай олонлогийн огтлол задгай байх нь албагүй.</p></example>
+<proposition><statement><p><m>(X, \rho)</m> метрик огторгуй <m>E\subset X</m> байг. 
+<ol marker="a)"><li><p><m>E \subset  \overline{E}.</m></p></li><li><p><m>\overline{\overline{E}}=\overline{E}.</m></p></li><li><p><m>E_{1} \subset 
+E_{2}  \Longrightarrow  \overline{E_{1}} \subset  \overline{E_{2}}.</m></p></li><li><p><m>E</m>  битүү  <m>\Longleftrightarrow</m>  <m>E=\overline{E}.</m></p></li><li><p><m>\overline{E}</m>  ямагт битүү.</p></li><li><p><m>\overline{E_{1} \cup  E_{2}}=\overline{E_{1}}\cup \overline{E_{2}}</m></p></li></ol></p></statement><proof><p><ol marker="a)"><li><p>илт.</p></li><li><p><m>a)</m> ёсоор  <m>\overline{E}\subset \overline{\overline{E}}</m>  болно. Одоо
+ <m>\overline{\overline{E}}\subset \overline{E}</m>  гэж баталъя.
+ <m>\forall  x \in  \overline{\overline{E}}</m>  элемент  авъя.  <m>\forall  O_{r}(x) \cap
+\overline{E} \neq  \emptyset</m>  өөрөөр хэлбэл,  <m>\exists x_{1} \in 
+O_{r}(x) \cap  \overline{E},  x\neq x_{1}</m>  ( хэрэв  <m>x=x_{1}</m>  бол  <m>x \in 
+\overline{E}</m>  болж батлах зүйл гарна ).  <m>r_{1}=r-\rho (x,x_{1})\gt 0</m> 
+байна. Одоо  <m>O_{r_{1}}(x_{1}) \subset  O_{r}(x)</m>  гэж харуулъя. 
+<m>\forall  z \in  O_{r_{1}}(x_{1})</m>  <m>\Longrightarrow</m>  <m>\rho
+(x_{1},z)\lt r_{1}</m>  <m>\Longrightarrow</m>  <m>\rho (x,z)\leqslant \rho
+(x,x_{1})+\rho (x_{1},z)\lt \rho (x,x_{1})+r_{1}=r</m>  <m>\Longrightarrow</m> 
+<m>z\subset O_{r}(x)</m>. Нэгэнт <m>x_{1}\in \overline{E}</m> учир <m>\exists
+x_{2}\in O_{r_{1}}(x_{1})\cap E</m>  <m>\Longrightarrow</m>  <m>x_{2}\in
+O_{r}(x)\cap E</m>.  Энд  <m>O_{r}(x)</m>  дурын орчин учир  <m>x\in
+\overline{E}</m>  болно.</p></li><li><p>Илт.</p></li><li><p>Тодорхойлолтоос шууд харагдаж байна.</p></li><li><p><m>b)</m> ба  <m>d)</m>-ээс гарч байна.</p></li><li><p><m>E_1 \cup  E_2 \subset  \overline{E_1} \cup  \overline{E_2}</m>. 
+Гэтэл  <m>\overline{E_1},   \overline{E_2}</m>  битүү учир
+ <m>\overline{E_1} \cup  \overline{E_2}</m>  битүү. Иймд
+ <m>\overline{\overline{E_1} \cup 
+\overline{E_2}}=\overline{E_1} \cup  \overline{E_2}</m>  байна.
+Иймд  <m>\overline{E_1 \cup  E_2} \subset 
+\overline{\overline{E_1} \cup 
+\overline{E_2}}=\overline{E_1} \cup  \overline{E_2}</m>.   Нөгөө
+талаас  <m>E_1 \subset  E_1 \cup  E_2</m>  ба  <m>E_2 \subset  E_1 \cup
+ E_2</m>  учир   <m>\overline{E_1} \subset  \overline{E_1 \cup  E_2}, 
+\overline{E_2} \subset  \overline{E_1 \cup  E_2}  \Longrightarrow
+  \overline{E_1} \cup  \overline{E_2}  \subset 
+\overline{E_1 \cup  E_2}</m></p></li></ol></p></proof></proposition>
+<theorem><statement><p><m>(X, \rho)</m> метрик огторгуй <m>E\subset X</m> компакт олонлог бол <m>E</m> битүү, <m>E</m> зааглагдсан олонлог байна.</p></statement><proof><p><m>E</m> битүү олонлог байхыг батлахад <m>E^c</m> задгай байхыг харуулахад хангалттай. <m>y\in E^c</m> байг. 
+<m>\forall x\in E</m> хувьд <m>U_x:=O_{\frac{\rho(x,y)}{3}}(x) , V_x:=O_{\frac{\rho(x,y)}{3}}(y)</m>  гэвэл <m>U_x\cap V_x=\emptyset</m> ба  
+<md>E\subset \cup_{x\in E} U_x</md> байна.  <m>\{U_x\}</m> задгай олонлогуудын нэгдэл <m>E</m>  олонлогийг агуулах тул тодорхойлолтоор
+ <md>E\subset \cup_{i=1}^n U_{x_i}</md> байх <m>x_1, x_2, \ldots , x_n\in E</m> цэгүүд олдоно. <md>V=\cap_{i=1}^n V_{x_i}</md> олонлог <m>y</m> цэгийн задгай орчин болох ба <m>V\cap E=\emptyset</m> тул <m>V \subset E^c</m> байна. Иймд <m>E^c</m> олонлог цэг бүрээ ямар нэг орчны хамтаар агуулж байгаа тул задгай олонлог болно.</p>
+<p>Одоо зааглагдсан болохыг харуулъя. <m>x_0\in E</m> байг. <m>U_x:=O_{1}(x)</m>  гэвэл 
+<md>E\subset \cup_{x\in E} U_x</md> тул  <md>E\subset \cup_{i=1}^n U_{x_i}</md> байх <m>x_1, x_2, \ldots , x_n\in E</m> цэгүүд олдоно.   <m>\rho(x_1,x_2)+\rho(x_2,x_3)+\ldots +\rho(x_{n-1},x_{n})=A</m> гэе. <m>x_0\in U_{x_1}</m>  гэж үзэж болно. <m>\forall y\in E</m> хувьд  <m>\exists x_k , y\in U_{x_k}</m> тул 
+<md>\rho(x_0,y)\leq \rho(x_0,x_1)+\rho(x_1,x_2)+\ldots +\rho(x_{k-1},x_{k})+\rho(x_k,y)\leq 2+A</md> байна. Иймд <m>y\in O_{A+2}(x_0)</m> байх тул <m>E\subset O_{A+2}(x_0)</m> болж <m>E</m> зааглагдсан олонлог  байна.</p></proof></theorem>
+<corollary><statement><p><m>[a;b]\subset \R</m> компакт олонлог байна.</p></statement></corollary>
+<p><m>(X,\rho )</m>  Метрик огторгуй,   <m>\{x_{n}\}\subset X</m>   дараалал ба <m>x_{0}\in X</m>   цэг өгсөн гэе.</p>
+<definition><statement><p>Хэрэв   <md>\forall \varepsilon \gt 0,   
+\exists N=N(\varepsilon )\lt \forall n  :   \rho
+(x_{n},x_{0})\lt \varepsilon</md> өөрөөр хэлбэл <md>\lim \limits_{n\rightarrow +\infty}\rho (x_{n},x_{0})=0</md> бол   <m>\{x_{n}\}</m>   дарааллыг <term>нийлэх дараалал</term><idx>нийлэх дараалал</idx>,   <m>x_{0}</m>-ийг   <m>\{x_{n}\}</m>  <term> дарааллын хязгаар </term><idx> дарааллын хязгаар </idx> гээд <md>\lim_n
+x_{n}=x_{0},\quad x_{n}\rightarrow x_{0}</md> гэх мэт тэмдэглэнэ.</p></statement></definition>
+<proposition><statement><p>Метрик огторгуй дахь нийлэх дараалал бүр
+зөвхөн ганц хязгаартай байна.</p></statement><proof><p><m>x_{n}\rightarrow x_{0} , x_{n}\rightarrow x_{0}'</m> гэж үзье.  Гурвалжны тэнцэтгэл бишээс <m>\rho (x_{0},x_{0}')\leqslant
+\rho (x_{0},x_{n})+\rho (x_{n},x_{0}')</m> гарах ба тэнцэтгэл бишид <m>n\to \infty</m> хязгаарт шилжвэл   <m>\rho (x_{0},x_{0}')=0</m>   буюу   <m>x_{0}=x_{0}'</m>   болно.</p></proof></proposition>
+<definition><statement><p><m>(X,\rho )</m>  метрик огторгуй,   <m>\{x_{n}\}\subset X</m>   дараалал ба <m>n_1\lt n_2\lt \ldots\lt n_k\lt \ldots</m> натурал тооны өсөх дараалал өгсөн байг. <md>x_{n_1} , x_{n_2} , \ldots , x_{n_k} , \ldots</md> дарааллыг <m>\{x_{n}\}</m> дараалалын <term>дэд дараалал</term><idx>дэд дараалал</idx> гэх бөгөөд <m>\{x_{n_k}\}</m> гэж тэмдэглэнэ.</p></statement></definition>
+<definition><statement><p><m>(X,\rho )</m> метрик огторгуй, <m>\{x_{n}\}\subset X</m>  дараалал ба <m>E=\{x_1, x_2, \ldots x_n, \ldots \}</m> олонлог зааглагдсан бол <m>\{x_{n}\}</m>
+дарааллыг <term>зааглагдсан дараалал</term><idx>зааглагдсан дараалал</idx> гэнэ.</p></statement></definition>
+<proposition><statement><p><ol marker="a)."><li><p>Нийлэх дарааллын дэд дараалал бүр нийлэх ба
+хязгаар нь анхны дарааллын хязгаар болно.</p></li><li><p>Нийлэх дараалал бүр зааглагдсан байна.</p></li></ol></p></statement><proof><p><ol marker="a)."><li><p>Илт.</p></li><li><p><m>\lim_n x_{n}=x_{0}</m>   байг.   <m>\varepsilon =1</m>  
+гэвэл <md>\exists  N=N(1) \lt  \forall  n :  \rho (x_{n},x_{0})\lt 1</md> байна. <m>r=\max \{ 1,  \rho (x_{1},x_{0}),  \cdots  ,  \rho (x_{0},x_{N-1}) \}</m> гэвэл <md>\forall  n  \in  \mathbb{N} :  \rho (x_{n},x_{0}) \leqslant r</md> өөрөөр хэлбэл   <m>\{x_{n}\} \subset  \overline{O}_{r}(x_{0})</m>.</p></li></ol></p></proof></proposition>
+<proposition><statement><p>Олонлогийн хязгаарын цэг рүү нийлэх дарааллыг тэр олонлогоос олж болно.</p></statement><proof><p><m>x_{0}</m> нь <m>E</m>-гийн хязгаарын цэг бол тодорхойлолтоор 
+<md>\forall  n \in \mathbb{ N},  \exists  x_{n} \in  E :  \rho
+(x_{n},x_{0}) \lt  \dfrac{1}{n}</md> байна. Иймд <m>\{x_{n}\}\subset E</m> ба
+<md>x_{n}\rightarrow x_{0}</md> байна.</p></proof></proposition>
+<proposition><statement><p>Олонлог битүү байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь энэ олонлог өөрийн бүх нийлэх дарааллын хязгаарыг агуулах явдал юм. Өөрөөр хэлбэл:  
+<m>E</m>  битүү <m>\Longleftrightarrow \forall \{x_{n}\}\subset E, x_{n} \rightarrow  x_{0} \Longrightarrow  x_{0} \in  E.</m></p></statement><proof><p>Битүү олонлогийн тодорхойлолт болон өмнөх
+чанараас шууд гарч байна.</p></proof></proposition>
+<p>Одоо янз бүрийн огторгуйнууд дахь нийлэлтийн тодорхой жишээнүүдийг
+авч үзье.</p>
+<example><p>Тоон шулуун дээр <m>x_{n}\rightarrow x_{0}</m>
+гэдэг нь <m>\rho (x_{n},x_{0})=|x_{n}-x_{0}|\rightarrow 0</m> байхтай
+ижил. Өөрөөр хэлбэл бидний мэдэх ердийн нийлэлт болно.</p></example>
+<example><p><m>\mathbb{R}^{k}</m> огторгуйд <m>x_n=(x_1^{(n)},
+x_2^{(n)}, \cdots , x_k^{(n)})</m> дараалал ба <m>x_0=(x_1^{(0)}, x_2^{(0)}, \cdots , x_k^{(0)})</m> цэг өгөгдсөн ба <m>x_n\to x_0</m> байг. Өөрөөр хэлбэл 
+<md>\forall \varepsilon \gt 0, \exists  N=N(\varepsilon) \lt  \forall n : \displaystyle\rho
+_{2}(x_{n},x_{0})=\sqrt{\sum\limits_{i=1}^{k}(x_{i}^{(n)}-x_{i}^{(0)})^{2}}\lt \varepsilon</md> байна.  Эндээс <m>1\leqslant i\leqslant k</m> бол <md>\displaystyle |x_i^{(n)}-x_i^{(0)}|\leqslant \sqrt{\sum\limits_{i=1}^k(x_{i}^{(n)}-x_i^{(0)})^2}\lt \varepsilon</md>  байх учир <m>\{x_i^{(n)}\}</m>  тоон дараалал бүр <m>x_i^{(0)}</m>руу нийлнэ гэсэн үг. Буцаагаад <m>\{x_i^{(n)}\}</m> <m>( i=\overline{1,k} )</m> тоон дараалал бүр харгалзан <m>x_{i}^{(0)}</m> тоонууд руу нийлдэг бол <m>x_{n}</m> дараалал <m>x_{0}</m> руу нийлэх  нь
+илт . Иймд <m>\mathbb{R}^{k}</m> огторгуй дахь <m>\rho _2</m> зайн утгаарх нийлэлт гэдэг нь координат тус бүрээр нийлэх нийлэлт юм .
+Үүнтэй яг ижлээр   <m>\mathbb{R}^{k}</m>  ба  <m>\mathbb{C}^{k}</m> огторгуйд
+  <m>\rho_1,  \rho_p,  \rho_{\infty }</m>   зайн утгаарх нийлэлтүүд нь бүгд нэгэн ижил координатаар нийлэх нийлэлт байхыг хялбар ойлгож болно.</p></example>
+<example><p><m>\ell_ p</m>  огторгуйд  <m>x_{n}\rightarrow x_{0}</m> 
+бол  <m>x_{n}</m>-ийн координат бүр  <m>x_{0}</m>-ийн харгалзах координат руу нийлнэ гэж өмнөхтэй ижлээр гарна. Харин буцааж болохгүй. Жишээлбэл:
+  <m>\ell _1</m>-д  <m>x_n=\left(\dfrac1n,  \cdots  , \dfrac1n, 0 ,\cdots \right)</m>  дараалал авахад  <m>x_n</m>-ийн координат бүр  <m>0</m>  рүү нийлэх боловч   <md>\rho(x_n,0)=1 \nrightarrow 0</md>   юм.</p></example>
+<example><p><m>C[a,b]</m>   огторгуйд
+  <m>f_{n}\rightarrow f,</m>    өөрөөр хэлбэл: <md>\forall  \varepsilon  \gt  0,   \exists
+ N(\varepsilon ) \lt  \forall  n :  \rho (f_{n},f)=\max \limits_{a\leqslant
+x\leqslant b}|f_{n}(x)-f(x)|\lt \varepsilon</md> бол   <m>\forall
+ x \in  [a,b] :  |f_{n}(x)-f(x)|\lt \varepsilon</m>   болно. Ийм нийлэлтийг
+функцэн дарааллын жигд  нийлэлт гэдэг билээ. Иймд
+  <m>C[a,b]</m>   огторгуйд   <m>\rho (f,\varphi )=\max
+\limits_{a\leqslant x\leqslant b}|f(x)-\varphi (x)|</m> зайн утгаарх нийлэлт
+гэдэг нь функцэн дарааллын жигд нийлэлт байна.</p></example>
+</section>
+<section xml:id="sec-metric-spaces-2">
+<title>Гүйцэд метрик огторгуй ба <m>\R</m>-н гүйцэд чанар</title>
+<definition><statement><p><m>(X,\rho )</m>   метрик огторгуй,   <m>\{x_{n}\} \subset  X</m>   дараалал өгсөн гэе. Хэрэв
+<md>\forall \varepsilon  \gt   0,   \exists N=N(\varepsilon )  \lt   \forall  n, m  :  \rho(x_n,x_m)  \lt   \varepsilon</md> бол <m>\{x_{n}\}</m> дарааллыг <term>фундаментал  <m>(</m> Кошийн <m>)</m>  дараалал</term><idx>фундаментал  <m>(</m> Кошийн <m>)</m>  дараалал</idx> гэнэ.</p></statement></definition>
+<theorem xml:id="metric-spaces-concauchy"><statement><p>Нийлэх дараалал бүр фундаментал байна.</p></statement><proof><p><m>x_{n} \rightarrow  x_{0},  
+\{x_{n}\} \subset  X,  x_{0} \in  X</m> байг.   Тэгвэл   <m>\forall  \varepsilon 
+\gt  0</m> тоо авахад 
+<md>\exists  N \lt  \forall  n, m :\rho (x_{n},x_{0})\lt \frac{\varepsilon }{2},
+\quad \rho (x_{m},x_{0})\lt \frac{\varepsilon }{2}</md> тул 
+<md>\rho (x_{n},x_{m})\leqslant \rho (x_{n},x_{0})+\rho(x_{0},x_{m})\lt \varepsilon</md> болж фундаментал дараалал байна.</p></proof></theorem>
+<remark><p>Буцаагаад фундаментал дараалал бүр нийлэх албагүй.</p></remark>
+<example xml:id="metric-spaces-e-too"><p><m>X=\mathbb{Q},   x_{n}=\left(1+\dfrac{1}{n}\right)^{n}</m>  
+  дараалал фундаментал , <m>\lim_n x_n=e</m> болохыг математик анализад баталдаг. Гэвч <m>e\notin \mathbb{Q}</m> тул энэ дараалал   <m>\mathbb{Q}</m>-д нийлэхгүй.</p></example>
+<proposition xml:id="metric-spaces-boundcauchy"><statement><p>Фундаментал дараалал бүр зааглагдсан байна.</p></statement><proof><p><m>\{x_{n}\} \subset  X</m>  фундаментал бол
+ <m>\varepsilon =1</m>  гэж авбал   <md>\exists  N=N(1) \lt  \forall 
+n : \rho(x_{N},x_{n}) \lt  1</md> байна.   <m>r=\max\{\rho(x_{1},x_{N}),
+\rho(x_{2},x_{N}), \cdots ,\rho(x_{N-1},x_{N}),1\}</m>   гэвэл  
+<md>\{x_{n}\}\subset O_{r}(x_{N}).</md></p></proof></proposition>
+<proposition xml:id="metric-spaces-subseqcauchy"><statement><p>Нийлэх  дэд дараалал агуулах фундаментал дараалал бүр  нийлнэ.</p></statement><proof><p><m>\{x_{n_k}\} \subset \{x_n\},   {x_{n_k}} \rightarrow  x_0,  \{x_n\}</m>   фундаментал дараалал байг. Тэгвэл
+<md>\forall \varepsilon \gt  0,   \exists  N=N(\varepsilon) \lt  n, n_k : \rho(x_n,x_{n_k}) \lt  \frac{\varepsilon}{2},  
+\rho(x_{n_k},x_0) \lt  \frac{\varepsilon}{2}\quad\Longrightarrow</md>
+<md>\rho(x_n,x_0)  \leqslant  \rho(x_n,x_{n_k})  +  \rho(x_{n_k},x_0)  \lt  
+\varepsilon.</md></p></proof></proposition>
+<definition><statement><p>Фундаментал дараалал бүр нь энэ огторгуйдаа нийлэх огторгуйг<term> гүйцэд метрик огторгуй</term><idx> гүйцэд метрик огторгуй</idx> гэнэ.</p></statement></definition>
+<example><p><m>\mathbb{Q}</m>   нь   <m>\rho(x,y)=|x-y|</m>   зайтайгаар
+ гүйцэд метрик огторгуй болохгүй. Жишээ (<xref ref="metric-spaces-e-too"/>) хар.</p></example>
+<p>Цаашид анализыг хөгжүүлэхэд бодит тоон олонлогийн хамгийн чухал чанар нь түүний гүйцэд чанар юм. Энэ чанар<term> Торгон хилийн зарчим</term>аас мөрдөн гардаг.</p>
+<definition><title>Дээд хил</title><statement><p><m>A\subset \R</m> ба  <m>x\in\R</m> байг. Хэрэв</p>
+<p><m>\forall a\in A</m> хувьд <m>x\geqslant a</m> байдаг бол <m>x</m>-г <m>A</m> олонлогийн <term>дээд хил</term><idx>дээд хил</idx></p>
+<p>гэнэ.</p></statement></definition>
+<definition><title>Дээд торгон хил</title><statement><p><m>A\subset \R</m> ба  <m>s\in\R</m> байг. Хэрэв 
+<ul marker=""><li><p><m>s1).</m> <m>s</m> нь <m>A</m> олонлогийн дээд хил</p></li><li><p><m>s2).</m> <m>x</m> нь <m>A</m> олонлогийн дээд хил бол <m>x\geqslant s</m></p></li></ul>
+байдаг бол <m>s</m>-г <m>A</m> олонлогийн <term>дээд торгон хил</term><idx>дээд торгон хил</idx> гээд <m>s=\sup A</m> гэж тэмдэглэнэ.</p></statement></definition>
+<proposition><statement><p>Хэрэв  дээд торгон хил оршин байдаг бол ганц байна.</p></statement><proof><p><m>s_1 , s_2</m> дээд торгон хилүүдтэй байг. <m>s_1</m> торгон хил, <m>s_2</m> дээд хил учир тодорхойлолт ёсоор 
+<md>s_1\leq s_2</md> байна. Мөн <m>s_2</m> торгон хил, <m>s_1</m> дээд хил учир тодорхойлолт ёсоор 
+<md>s_2\leq s_1</md> байна. Иймд <md>s_1=s_2</md> болж торгон хил ганц байна.</p></proof></proposition>
+<remark><p><m>A\subset \R</m> ба  <m>s=\sup A</m> байг. Хэрэв <m>\varepsilon\gt 0</m> бол  тодорхойлолт ёсоор <m>s-\varepsilon</m> тоо дээд хил болохгүй. Тиймээс 
+<md>a\gt s-\varepsilon</md> байх <m>a\in A</m> элемент олдоно. Энэ чанар олонтаа ашиглагддаг.</p></remark>
+<p>Дээд торгон хилтэй адилаар доод торгон хил гэж тодорхойлж болно.</p>
+<definition><title>Доод торгон хил</title><statement><p><m>A\subset \R</m> ба  <m>s\in\R</m> байг. Хэрэв 
+<m>\forall a\in A</m> хувьд <m>x\leqslant a</m> байдаг бол <m>x</m>-г <m>A</m> олонлогийн <term>доод хил</term><idx>доод хил</idx> гэнэ. 
+<ol><li><p><m>s</m> нь <m>A</m> олонлогийн доод хил</p></li><li><p><m>x</m> нь <m>A</m> олонлогийн доод хил бол <m>x\leqslant s</m></p></li></ol>
+байдаг бол <m>s</m>-г <m>A</m> олонлогийн <term>доод торгон хил</term><idx>доод торгон хил</idx> гээд <m>s=\inf A</m> гэж тэмдэглэнэ.</p></statement></definition>
+<proposition><statement><p><m>A\subset \R</m> ба  <m>-A=\{-a\mid a\in A\}</m> гэе. Хэрэв <m>\sup -A</m> оршин байдаг бол <m>\inf A</m> 
+оршин байх ба 
+<md>\inf A=\sup -A</md> байна.</p></statement></proposition>
+<axiom xml:id="metric-spaces-sup"><title>Торгон хилийн зарчим</title><statement><p><m>A\subset\mathbb{R}</m> олонлог ядаж нэг дээд хилтэй бол дээд торгон хилтэй байна.</p></statement></axiom>
+<example><p><md>S=\{r\in\mathbb{Q}\mid r^2\lt 2\}\subset \Q</md> олонлог  авч үзье.  Хэрэв 
+<md>\dfrac{m^2}{n^2}\lt 2\lt \dfrac{p^2}{q^2}</md> бол хангалттай том натурал тоо <m>k</m> хувьд 
+<md number="yes" xml:id="metric-spaces-q1">\dfrac{m^2}{n^2}\lt \dfrac{(mk-1)^2}{(nk-1)^2}\lt 2\lt \dfrac{(pk+1)^2}{(qk+1)^2}\lt \dfrac{p^2}{q^2}</md> байх нь илэрхий. 
+Одоо <m>\sup S</m> оршин байх ба рационал тоо биш болохыг харуулъя. 2 гэсэн рационал тоо <m>S</m> 
+олонлогийн дээд хил тул торгон хилийн зарчмаар <m>\sup S</m> оршин байх нь илт. <m>\sup S =\dfrac{a}{b}</m> байг.  
+Хэрэв <m>\dfrac{a^2}{b^2}\lt 2</m> бол <m>(\ref{q1})</m> тэнцэтгэл бишээс 
+<md>\dfrac{a^2}{b^2}\lt \dfrac{(ak-1)^2}{(bk-1)^2}\lt 2</md> байх тул <m>\dfrac{a}{b}</m> дээд хил биш болно. 
+Хэрэв <m>\dfrac{a^2}{b^2}\gt 2</m> бол <m>(\ref{q1})</m> тэнцэтгэл бишээс <md>\dfrac{a^2}{b^2}\gt \dfrac{(ak+1)^2}{(bk+1)^2}\gt 2</md> байх тул <m>\dfrac{a}{b}</m></p>
+<p>торгон хил байх боломжгүй. Мөн  <md>\dfrac{a^2}{b^2}=2</md> байх <m>a, b</m> натурал тоонууд олдохгүй. Иймд <m>\sup S\notin \Q</m> байна. <m>S</m> олонлог нь рационал тоонуудын олонлог боловч түүний <m>\sup</m> нь рационал тоо биш байна. Бид <m>\sup S=\sqrt{2}</m> байхыг амархан шалгаж болно.</p></example>
+<lemma><title>Архимедын лемм</title><statement><p><ol marker="a)."><li><p><m>\forall x\in\mathbb{R}</m> бол <m>\exists n\in\mathbb{N} , n\gt x.</m></p></li><li><p><m>\forall y\gt 0</m> бол <m>\exists n\in\mathbb{N} , \dfrac{1}{n}\lt y.</m></p></li></ol></p></statement><proof><p><ol marker="a)."><li><p>Хэрэв нөхцөл биелэхгүй бол <m>\exists x\in\mathbb{R}</m> , <m>\forall n\in\mathbb{N} , 
+n\leqslant x</m>  болно. Иймд <m>x</m> тоо <m>\mathbb{N}</m> олонлогийн дээд хил болно.</p>
+<p>Иймд торгон хилийн зарчмаар <m>\alpha=\sup\mathbb{N}</m> оршин байн.</p>
+<p><m>\alpha -1</m> тоо <m>\mathbb{N}</m> олонлогийн дээд хил биш учир <m>\exists n\in\mathbb{N} , 
+ \alpha-1\lt n</m> байна. <md>\alpha-1\lt n\Leftrightarrow \alpha\lt n+1\in\mathbb{N}</md> болох тул</p>
+<p><m>\alpha=\sup\mathbb{N}</m> гэсэнд зөрчинө.</p></li><li><p>Өмнөх хэсэгт <m>x=\dfrac{1}{y}</m> гэж ав.</p></li></ol></p></proof></lemma>
+<proposition><statement><p>Дурын ялгаатай бодит тооны хооронд рационал тоо олдоно.  Өөрөөр хэлбэл
+ <m>a , b \in\mathbb{R} , a\lt b</m> бол <md>\exists r\in\mathbb{Q} , a\lt r\lt b.</md></p></statement><proof><p><m>0\leqslant a\lt b</m> үед батлая. Бусад үед ижил. <md>a\lt \dfrac{m}{n}\lt b</md>  байх <m>m, n</m> олох ёстой.  Архимедын лемм ёсоор  <m>\dfrac{1}{n}\lt b-a</m>  байх  <m>n\in \mathbb{N}</m> олдоно. 
+<md>n\in [0;\dfrac{1}{a})\cup [\dfrac{1}{a};\dfrac{2}{a})\cup [\dfrac{2}{a}; 
+\dfrac{3}{a})\cup\ldots =\R^+</md> байна. Иймд <m>\dfrac{m-1}{a}\leq n\lt \dfrac{m}{a}</m> байх натурал тоо <m>m\in\mathbb{N}</m> болно. Мөн <m>a\gt \dfrac{m}{n}</m> тул  <m>a\geqslant \dfrac{m}{n}-\dfrac{1}{n}</m> болно. Эндээс <m>b\gt a+\dfrac{1}{n}\geqslant\dfrac{m}{n}-\dfrac{1}{n}+\dfrac{1}{n}=\dfrac{m}{n}.</m></p></proof></proposition>
+<corollary><statement><p><m>a , b \in\mathbb{R} , a\lt b</m> бол <m>a\lt r\lt b</m> байх иррационал тоо <m>r</m> олдоно.</p></statement></corollary>
+<corollary><statement><p><m>\overline{\mathbb{Q}}=\mathbb{R}</m> байна.</p></statement></corollary>
+<theorem xml:id="metric-spaces-nestedint"><title>Багталцсан хэрчмүүдийн тухай теорем</title><statement><p><md>I_1\supseteq I_2\supseteq \ldots \supseteq I_n\supseteq \ldots</md> байх битүү хэрчмүүдийн дараалал бол <md>\bigcap_{i=1}^{\infty} I_n\neq \emptyset</md> байна.</p></statement><proof><p><m>I_n=[a_n; b_n]</m> гэвэл <m>I_1\supseteq I_2\supseteq \ldots \supseteq I_n\supseteq \ldots</m> чанараас 
+<md>a_1\leqslant a_2\leqslant \ldots \leqslant a_n\ldots \leqslant b_n\leqslant\ldots b_2
+\leqslant b_1</md> байна. <m>A=\{a_1, a_2, \ldots a_n, \ldots \}</m> гэвэл <m>A</m> олонлог  <m>b_1</m> гэсэн дээд хилтэй тул торгон хилийн зарчмаар <m>s=\sup A</m> оршин байна.</p>
+<p>Мэдээж <m>b_n\geqslant s\geqslant a_n</m> байна. Иймд <m>s\in \bigcap_{i=1}^{\infty} I_n</m> болж батлагдав.</p></proof></theorem>
+<corollary><statement><p>Хэрэв <m>d_n= b_n-a_n\to 0</m> бол <m>s=\bigcap_{i=1}^{\infty} I_n</m>.</p></statement></corollary>
+<theorem xml:id="metric-spaces-monseq"><title>Монотон дарааллын хязгаар</title><statement><p><md>a_1 , a_2 , \ldots , a_n , \ldots</md> монотон өсдөг дараалал дээрээсээ зааглагдсан бол нийлнэ.</p></statement><proof><p><m>A=\{a_1 , a_2 , \ldots , a_n , \ldots\}</m> гэвэл <m>A\subset\mathbb{R}</m> дээд хилтэй тул <m>s=\sup A</m> оршин байна. <m>\forall\varepsilon\gt 0</m> авахад 
+<md>\exists n\in\mathbb{N}; s-\varepsilon\lt a_n\lt a_{n+1}\lt \ldots</md> байна. 
+Иймд <m>s=\lim_n a_n</m> болж нийлэх нь батлагдав.</p></proof></theorem>
+<corollary><statement><p><md>a_1 , a_2 , \ldots , a_n , \ldots</md> монотон буурдаг дараалал доороосоо зааглагдсан бол нийлнэ.</p></statement></corollary>
+<theorem xml:id="metric-spaces-bol-wei"><title>Больцано-Вейерштрасс</title><statement><p>Зааглагдсан бодит тоон дараалал бүр нийлдэг дэд дараалал агуулна.</p></statement><proof><p><m>a_1 , a_2 , \ldots , a_n , \ldots</m> зааглагдсан дараалал тул <m>|a_n|\lt M</m> байх <m>M</m> олдоно. 
+<m>I_0=[-M;M]</m> гэе. <m>I_0=[-M;0]\cup[0;M]</m> тул <m>[-M;0] , [0;M]</m> битүү интервалуудын ядаж нэг нь дарааллын гишүүдээс төгсгөлгүй олныг агуулна. Түүнийг <m>I_1</m> гэе. <m>a_{n_1}\in I_1</m> байх <m>n_1</m> сонгон авъя. Дээрхтэй ижлээр <m>I_1</m> хэрчмийг 2 хуваан <m>I_2</m>  хэрчим байгуулан <m>a_{n_2}\in I_2</m> байх <m>n_1\lt n_2</m> сонгон авъя.  Энэ үйлдлийг давтвал <m>a_{n_k}\in I_k\supset I_{k+1}</m> бие биенээ агуулсан битүү интервалуудын дараалал үүснэ. 
+<m>I_k</m> интервалын урт <m>\dfrac{2M}{2^n}\to 0</m> байх тул багталцсан хэрчмүүдийн тухай теоремоор <m>s=\lim_k a_{n_k}</m> болж нийлдэг дэд дараалал олдоно.</p></proof></theorem>
+<theorem xml:id="metric-spaces-complet"><title><m>\mathbb{R}</m> гүйцэд чанар</title><statement><p>Бодит тоон дээрх фундаментал дараалал бүр нийлнэ. Өөрөөр хэлбэл <m>\mathbb{R}</m> гүйцэд огторгуй байна.</p></statement><proof><p><m>a_1, a_2, \ldots, a_n, \ldots</m>  фундаментал дараалал бол Өгүүлбэр <xref ref="metric-spaces-boundcauchy"/>-р зааглагдсан байх тул  Больцано-Вейерштрасс теорем <xref ref="metric-spaces-bol-wei"/>-р нийлдэг дэд дараалал олдоно. Иймд  Өгүүлбэр <xref ref="metric-spaces-subseqcauchy"/>-р 
+<md>a_1 , a_2 , \ldots , a_n , \ldots</md> дараалал нийлнэ.</p></proof></theorem>
+<theorem xml:id="metric-spaces-completn"><statement><p><m>\mathbb{R}^{n}</m> гүйцэд байна.</p></statement><proof><p><m>\mathbb{R}^{n}~\supset~ \forall~ \{x_{k}\}</m> 
+фундаментал дараалал авъя. Энд <m>x_{k}=(x_1^{(k)},x_2^{(k)}, \cdots ,
+x_n^{(k)})</m>. Тэгвэл
+<md>\forall~ \varepsilon~ \gt 0,~\exists N(\varepsilon )~\lt ~\forall~
+k,~m~:~\rho(x_{k},x_{m})=\sqrt{\sum\limits_{i=1}^{n}|x_{i}^{(k)}-x_{i}^{(m)}|^{2}}\lt \varepsilon</md>  
+байх тул <m>\forall~ i~\in~ \{1,2, \cdots, n\}</m> хувьд 
+<md>|x_{i}^{(k)}-x_{i}^{(m)}|~\lt ~\varepsilon</md> буюу <m>\{x_{i}^{(k)}\}</m> нь фундаментал тоон дараалал болов. Иймд <m>\mathbb{R}</m>- ийн гүйцэд чанар ёсоор <m>x_{i}^{(k)}~\rightarrow~ x_{i}^{(0)}</m> байх <m>x_{i}^{(0)}~\in~ \mathbb{R}</m> олдоно. Одоо <m>x_{0}=(x_{1}^{(0)},~x_{2}^{(0)},~ \cdots , x_{n}^{(0)})</m> гэвэл <m>\mathbb{R}^{n}</m> дэх нийлэлт координатаар нийлэх нийлэлт байдаг учир <m>x_{k}~\rightarrow~ x_{0}</m>  болно.</p></proof></theorem>
+<p>Үүнтэй яг ижлээр <m>\mathbb{R}_{1}^{k}, \mathbb{R}_{p}^{k}, \mathbb{R}_{\infty }^{k}</m>, <m>\mathbb{C}_{1}^{k}, \mathbb{C}_{p}^{k}, \mathbb{C}_{\infty }^{k}</m>  огторгуйнууд гүйцэд
+байна.</p>
+<p>Бид   багталцсан  хэрчмүүдийн тухай теоремыг баталсан. Гүйцэд метрик огторгуйд  үүнийг  өргөтгөн томьёолж болдог.</p>
+<theorem><title>Багталцсан дугуйнуудын тухай зарчим</title><statement><p>Гүйцэд метрик огторгуйд бие биедээ агуулагдсан, радиусуудынх  нь дараалал  <m>0</m>  рүү тэмүүлэх, дурын битүү  дугуйнуудын дараалал  ерөнхий цэгтэй байна.</p></statement></theorem>
+<remark><p>Энэ теоремын урвуу  теорем хүчинтэй. Өөрөөр хэлбэл: хэрэв метрик огторгуйд бие биенээ агуулсан, радиусуудынх нь дараалал <m>0</m> рүү тэмүүлэх, битүү дугуйнуудын дараалал  бүр ерөнхий цэгтэй бол уг метрик огторгуй  гүйцэд байна.</p></remark>
+<p>Бид <m>\mathbb{R}</m> олонлогийн гүйцэд чанарыг батлахад Торгон хилийн зарчмыг (<xref ref="metric-spaces-sup"/>) баталгаагүй хэрэглэсэн билээ.</p>
+<p>Торгон хилийн зарчмыг ашиглан Монотон дарааллын хязгаарын теорем (<xref ref="metric-spaces-monseq"/>), Багталцсан  хэрчмүүдийн тухай теоремийг (<xref ref="metric-spaces-nestedint"/>) баталсан.  Мөн эдгээр 2 теорем бие биенээсээ мөрдөн гардаг. Бас Багталцсан  хэрчмүүдийн тухай 
+теоремыг эсвэл <m>\mathbb{R}</m> гүйцэд чанарыг үнэн гэж үзвэл Торгон хилийн зарчмыг баталж болдог. Мөн дээрх 4 теорем болон Больцано-Вейерштрасс теоремүүд эквивалент юм.</p>
+</section>
 </appendix>

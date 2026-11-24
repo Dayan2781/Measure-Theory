@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<exercises xml:id="sem-convergence">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise>
+    <statement><p><m>([0,1],\PZM_{\ls},\lambda)</m> огторгуйд <m>f_n=\chi_{[k2^{-m},(k+1)2^{-m}]}</m>, <m>n=2^m+k</m>, <m>0\leq k\lt 2^m</m> гэж тодорхойлсон <q>гүйдэг тэгш өнцөгт</q> дараалал хэмжээгээр 0 рүү нийлэх боловч ямар ч цэгт нийлэхгүй гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>(\R,\PZM_{\ls},\lambda)</m> огторгуйд <m>f_n=\chi_{[n,n+1]}</m> дараалал бүх цэгт 0 рүү нийлэх боловч хэмжээгээр нийлэхгүй гэж харуул. Энэ нь <m>\mu(X)\lt\infty</m> нөхцөлийн ач холбогдлыг юу гэж харуулж байна вэ?</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\mu(X)\lt\infty</m> ба <m>f_n\to f</m> бараг бүх цэгт нийлдэг бол <m>f_n</m> дараалал <m>f</m> рүү хэмжээгээр нийлнэ гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f_n\to f</m> ба <m>g_n\to g</m> хэмжээгээр нийлдэг бол <m>f_n+g_n\to f+g</m> хэмжээгээр нийлнэ гэж батал. <m>\mu(X)\lt\infty</m> үед <m>f_ng_n\to fg</m> хэмжээгээр нийлэхийг харуул.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Хэмжээгээр нийлэлтийн хязгаар бараг бүх цэгт нэг утгатай гэж батал: хэрэв <m>f_n\to f</m> ба <m>f_n\to g</m> хэмжээгээр нийлдэг бол <m>f=g</m> бараг бүх цэгт.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>(Егоровын теорем) <m>\mu(X)\lt\infty</m>, <m>f_n</m> ба <m>f</m> хэмжигдэх, бараг төгсгөлөг функцүүд бөгөөд <m>f_n\to f</m> бараг бүх цэгт нийлдэг байг. Дурын <m>\veps\gt 0</m> тооны хувьд <m>\mu(X\setminus E)\lt\veps</m> ба <m>E</m> дээр <m>f_n\to f</m> жигд нийлэх <m>E\in\A</m> олонлог олдоно гэж батал.</p></statement>
+  </exercise>
+</exercises>

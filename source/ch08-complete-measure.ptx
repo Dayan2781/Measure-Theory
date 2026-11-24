@@ -1,17 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 8complete measure.tex -->
+<!-- Эх файл: 8complete measure.tex:1-184; 8complete measure.tex:186-233; 8complete measure.tex:235- -->
 <chapter xml:id="ch-complete-measure" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Гүйцэд хэмжээ</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-complete-measure">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Гүйцэд хэмжээ</title>
+<section xml:id="sec-complete-measure-1">
+<title>Лебегийн хэмжээний гүйцэд чанар</title>
+<definition><statement><p><m>(X, \PZM, \mu)</m> хэмжээт огторгуй байг. Хэрэв тэг хэмжээтэй олонлог бүрийн дэд олонлог хэмжигддэг бол, өөрөөр хэлбэл 
+<md>A\in\PZM , \mu(A)=0 , B\subseteq A\text{ бол } B\in\PZM</md> байдаг бол <m>(X, \PZM, \mu)</m> хэмжээт огторгуйг <m>\mu</m>-гүйцэд хэмжээт 
+огторгуй, <m>\mu</m>-г <m>\PZM</m> дээр <term>гүйцэд хэмжээ </term><idx>гүйцэд хэмжээ </idx> гэнэ.</p></statement></definition>
+<definition><statement><p><m>(X, \PZM, \mu)</m> хэмжээт огторгуй байг. Хэрэв <m>X\supset B</m> олонлогийн хувьд <m>B</m>-г 
+агуулсан тэг хэмжээтэй олонлог байдаг бол <m>B</m> олонлогийг <term><m>\mu</m>-тэг олонлог </term><idx><m>\mu</m>-тэг олонлог </idx> гэнэ.</p></statement></definition>
+<remark><p><m>\mu</m>-гүйцэд хэмжээ байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu</m>-тэг олонлог бүр хэмжигдэх олонлог байх нь дээрх 2 тодорхойлолтоос гарч байна.</p></remark>
+<p>Бидний өмнө үзсэн хэмжээнүүдээс аль нь гүйцэд вэ? гэдэг нь сонирхолтой байна. Дараах теоремоор Лебегийн хэмжээ гүйцэд болох нь харагдана.</p>
+<theorem xml:id="complete-measure-outmescom1"><title>Гадаад хэмжээгээр төрөгдсөн хэмжээ гүйцэд</title><statement><p><m>\ms</m> нь  <m>X</m> дээрх гадаад хэмжээ байг. <m>\mathscr{M}_{\ms}</m> нь <m>\ms</m>-хэмжигдэх олонлогуудын <m>\sigma</m>-алгебр бол <md>(X, \mathscr{M}_{\ms}, \ms)</md> <m>\ms</m>-гүйцэд хэмжээт огторгуй байна.</p></statement></theorem>
+<p>Дээрх теоремоос дараах мөрдлөгөө гарна.</p>
+<corollary xml:id="complete-measure-lebmescom1"><statement><p>Лебегийн хэмжээ гүйцэд байна.</p></statement></corollary>
+<p>Лебегийн хэмжээ нь Лебегийн гадаад хэмжээгээр төрөгддөг тул Теорем <xref ref="complete-measure-outmescom1"/>-ээр Мөрдлөгөө <xref ref="complete-measure-lebmescom1"/> үнэн байх нь батлагдана. Одоо Теорем <xref ref="complete-measure-outmescom1"/>-г баталъя.</p>
+<proof><p><m>A\in \mathscr{M}_{\ms}, \ms(A)=0</m> байг. Хэрэв <m>B\subset A</m> бол <m>B\in\mathscr{M}_{\ms}</m> болохыг батлах ёстой. <m>B\subset A</m> байг. Гадаад хэмжээний монотон чанараар 
+<m>\ms(B)=0</m> байна. <m>C\subset X</m> байг. Монотон чанарыг хэрэглэвэл
+<md><mrow>\ms(C)&amp;\geq \ms(C\cap B^c)+0=\ms(C\cap B^c)+\ms(C\cap B)</mrow><mrow>&amp;\geq \ms((C\cap B^c)\cup(C\cap B))=\ms(C)</mrow></md> байх тул 
+<md>\ms(C)=\ms(C\cap B^c)+\ms(C\cap B)</md> болно. Тодорхойлолт ёсоор <m>B\in\mathscr{M}_{\ms}</m> болж <m>\ms</m> гүйцэд хэмжээ болно.</p></proof>
+<p>Тэг хэмжээтэй олонлогийн дэд олонлог нь хэмжигддэг байх чанар нь олон тохиолдолд асуудал шийдэхэд хялбар болгодог. Энэ чанар нь гүйцэд хэмжээний чанар билээ.  Эндээс гүйцэд биш хэмжээг өргөтгөн гүйцэд болгож болох уу гэсэн асуулт гарна. Энэ асуултад хариулт өгөхийн тулд дараах тодорхойлолтыг өгье.</p>
+<definition xml:id="complete-measure-commes1"><title>Хэмжээт огторгуйн гүйцээлт</title><statement><p><m>(X, \mathscr{A}, \mu)</m> хэмжээт огторгуй байг. 
+<md>\mathscr{A}_{\mu}:=\{B\subset X \big|  \exists E, F\in \mathscr{A},  E\subseteq B\subseteq F, \mu(F\setminus E)=0\}</md>
+гэе. <m>\mathscr{A}_{\mu}</m>-г <m>\mathscr{A}</m>-<m>\sigma</m> алгебрын <term><m>\mu</m>-гүйцээлт</term> <idx><m>\mu</m>-гүйцээлт</idx>, <m>B\in\mathscr{A}_{\mu}</m> олонлогийг <m>\mu</m>-хэмжигдэх олонлог гэнэ.</p></statement></definition>
+<p><m>(X, \mathscr{A}, \mu)</m> хэмжээт огторгуйн хувьд <m>\mathscr{A}_{\mu}</m> бүлийг байгуулсан гэе. 
+<md>\mu(F\setminus E)=0\Leftrightarrow \mu(E)=\mu(F)</md> байх нь ойлгомжтой.</p>
+<p>Хэрэв <m>A\in\mathscr{A}</m> бол <md>\mu(E)=\mu(A)=\mu(F)</md> байна.</p>
+<p>Хэрэв <m>A\notin\mathscr{A},  A\in\mathscr{A}_{\mu}</m> бол <m>\mu(E)=\mu(F)</m> байна. Иймд 
+<md>\overline{\mu}:\mathscr{A}_{\mu}\to[0;\infty] , \quad \overline{\mu}(A)=\mu(E)</md> гэж <m>\overline{\mu}</m> функц тодорхойлъё.   
+Эхлээд энэ функц нэг утгатай зөв тодорхойлогдсон болохыг харуулъя. Өөрөөр хэлбэл <m>i=1, 2</m> үед <m>E_i\subseteq A\subseteq F_i\quad \mu(F_i\setminus E_i)=0</m> боловч <m>\mu(E_1)\neq \mu(E_2)</m> байвал <m>\mu(A)</m> нэг утгатай тодорхойлогдохгүй болно. Тиймээс
+<m>\mu(E_1)= \mu(E_2)</m> байхыг баталъя.</p>
+<p>Хэрэв <m>\mu(E_1)\lt  \mu(E_2)</m> бол <m>\mu(E_1)=\mu(F_1)\lt \mu(E_2)</m> болно. Гэтэл <m>E_2\subseteq A\subseteq F_1</m> тул <m>\mu(F_1)\geq\mu(E_2)</m> байх ёстой тул зөрчил үүснэ. Иймд
+<md>\mu(E_1)= \mu(E_2)</md> байна. <m>\overline{\mu}</m>-г <m>\mu</m> хэмжээний гүйцээлт гэнэ.</p>
+<theorem xml:id="complete-measure-commes2"><title>Хэмжээт огторгуйн гүйцээлт</title><statement><p><m>(X, \mathscr{A})</m> хэмжигдэх огторгуй, <m>\mu</m> түүн дээрх хэмжээ, 
+<m>\mathscr{A}_{\mu}</m> нь <m>\mathscr{A}</m>-<m>\sigma</m> алгебрын <m>\mu</m>-гүйцээлт байг. Дараах чанарууд биелнэ.
+<ol marker="a)."><li><p><m>\mathscr{A}_{\mu}\supset \mathscr{A}</m> байна.</p></li><li><p><m>\mathscr{A}_{\mu}</m> нь <m>\sigma</m>-алгебр байна.</p></li><li><p><m>\overline{\mu}</m> нь <m>\mathscr{A}_{\mu}</m> дээр гүйцэд хэмжээ байна.</p></li><li><p><m>\overline{\mu}</m> хэмжээний <m>\mathscr{A}</m> дээрх зааглалт нь <m>\mu</m> байна.</p></li></ol></p></statement><proof><p><ol marker="a)."><li><p>Хэрэв <m>A\in\mathscr{A}</m> бол <m>E=F=A</m> гэж авч болох тул <m>A\in\mathscr{A}_{\mu}</m> болно. Иймд <m>\mathscr{A}\subset\mathscr{A}_{\mu}</m> байна.</p></li><li><p><m>\emptyset , X\in\mathscr{A}_{\mu}</m> байх нь илт. 
+Хэрэв <m>A\in\mathscr{A}_{\mu}</m> бол <m>E^c , F^c\in\mathscr{A}, F^c\subseteq A^c\subseteq E^c</m>, <m>F\setminus E=F\cap E^c=E^c\cap F=E^c\setminus F^c</m> тул <m>\mu(F\setminus E)=\mu(E^c\setminus F^c)=0</m> байна. Иймд тодорхойлолтоор <m>A^c\in\mathscr{A}_{\mu}</m> байна.</p>
+<p>Хэрэв <m>\{A_i\}_i\subset\mathscr{A}_{\mu}</m> бол <m>\cup_iA_i\in\mathscr{A}_{\mu}</m> байхыг харуулъя. <m>A_i\in\mathscr{A}_{\mu}</m> тул <m>\{E_i\}_i , \{F_i\}_i\subset \mathscr{A} , E_i\subseteq A\subseteq F_i , \mu(F_i\setminus E_i)=0</m> байх олонлогууд олдоно. Мэдээж <m>\cup_i E_i\in\mathscr{A} , \cup_i F_i\in\mathscr{A} , \cup_i E_i\subseteq \cup_i A_i\subseteq \cup_i F_i</m> байх бөгөөд <md>0\leq \mu(\cup_i F_i\setminus \cup_i E_i)\leq \mu(\cup_i (F_i\setminus E_i))\leq 
+\sum_i\mu(F_i\setminus E_i)=0</md> тул <m>\cup_i A_i\in\mathscr{A}_{\mu}</m> байна. Иймд <m>\mathscr{A}_{\mu}</m> <m>\sigma</m>-алгебр болно.</p></li><li><p><m>A\in\mathscr{A}_{\mu}</m> бол <m>\overline{\mu}(A)\geq 0, \overline{\mu}(\emptyset)=0</m> байна. Одоо тоологдом аддитив чанарыг шалгая. Хэрэв <m>\{A_i\}_i\subset\mathscr{A}_{\mu} , A_i\cap A_j=\emptyset</m> бол <m>\{E_i\}_i , \{F_i\}_i\subset \mathscr{A} , E_i\subseteq A\subseteq F_i , \mu(F_i\setminus E_i)=
+0</m> байх олонлогууд олдоно. Мэдээж өмнөх хэсэгт баталснаар 
+<m>\overline{\mu}(\cup_i F_i\setminus \cup_i E_i)=0</m> тул 
+<md>\overline{\mu}(\cup_i A_i)=\overline{\mu}(\cup_i E_i)=\mu(\cup_i E_i)=\sum_i\mu(E_i)=\sum_i\overline{\mu}(E_i)=\sum_i\overline{\mu}( A_i)</md> болж тоологдом аддитив чанар биелж байна.</p>
+<p><m>\overline{\mu}</m> гүйцэд байхыг баталъя. <m>\overline{\mu}(A)=0</m> бол 
+<md>\exists E , F \in \mathscr{A} , \mu(E)=\mu(F)=0</md> байна. Хэрэв <m>B\subset A</m> бол 
+<md>\emptyset\subseteq B \subseteq F , \mu(F\setminus \emptyset)=0</md> тул тодорхойлолт ёсоор <m>B\in\mathscr{A}_{\mu}</m> болж <m>\overline{\mu}</m> гүйцэд байна.</p></li><li><p>Илт.</p></li></ol></p></proof></theorem>
+<p>Дээрх теоремоос харахад ямар ч хэмжээг гүйцэд хэмжээ болгон өргөтгөж болж байна. Хэдийгээр ингэж өргөтгөхөд хэмжигдэх олонлогийн тоо олон болох ба ямар олонлогууд шинээр нэмэгдэж <m>\mathscr{A}_{\mu}</m> хэмжигдэхийг тогтоох төвөгтэй байдаг.
+ Одоо Борелийн <m>|sigma</m>-алгебр дээр Лебегийн хэмжээ гүйцэд байх эсэхийг судалж үзье. Үүний тулд дараах лемм баталъя.</p>
+<lemma xml:id="complete-measure-rpl1"><statement><p><m>A\subset \R^n , A</m> Лебегээр хэмжигдэх олонлог бүрийн хувьд 
+<m>E\subseteq A\subseteq F , \lambda(F\setminus E)=0</m> байх <m>E , F\subset \R^d</m> Борел 
+олонлогууд олдоно.</p></statement><proof><p>Эхлээд <m>\lambda(A)\lt \infty</m> байх үед баталъя.  Лебегийн хэмжээний дотоод болон гадаад регуляр чанараар <m>m\in\N</m> бол <m>K_m\subseteq A\subseteq E_m , \lambda(K_m)\gt \lambda(A)-\dfrac1m , \lambda(E_m)\lt \lambda(A)+\dfrac1m</m> байх <m>K_m</m> компакт, <m>E_m</m> задгай олонлог олдоно.  <m>K=\cup_mK_m, E=\cap_m E_m</m> гэвэл <m>K, E</m> Борелийн олонлогууд байх ба <m>K\subseteq A\subseteq E</m> байна. 
+<md>\lambda(E\setminus K)\leq \lambda(E_m\setminus K_m)=\lambda(E_m\setminus A)+\lambda(A\setminus K_m)\lt \dfrac2m</md> 
+болох ба <m>m</m> дурын натурал тоо тул <m>\lambda(E\setminus K)=0</m> байна. 
+Хэрэв  <m>\lambda(A)=\infty</m> бол түүнийг тоологдом зааглагдсан төгсгөлөг хэмжээтэй үл
+огтлолцох олонлогуудын нэгдэлд тавьж болно. <m>A=\cup_i A_i</m> гэе. <m>\mu(A_i)\lt \infty</m>  тул <m>A_i</m> бүрийн хувьд <m>K_i\subseteq A_m\subseteq E_m  , \mu(E_m\setminus K_m)=0</m> олонлогууд өмнө баталснаар олдох бөгөөд  <m>E=\cup_iE_i , K=\cup_i K_i</m> гэвэл <m>E, K</m> олонлогууд лемм нөхцөл хангахыг амархан шалгаж болно.</p></proof></lemma>
+<p>Дээрх леммээс Лебегээр хэмжигдэх олонлог уруу Борелийн олонлогоор дөхөж болохыг харлаа. Одоо Лебегийн хэмжээний гүйцэд чанарыг баталъя.</p>
+<theorem><title>Лебегийн хэмжээний гүйцэд чанар</title><statement><p><m>(\R^n , \mathscr{M}_{\ms})</m> хэмжигдэх огторгуй дээрх Лебегийн хэмжээ нь <m>(\R^n , \mathscr{B}(\R^d))</m> огторгуй дээрх Лебегийн хэмжээний гүйцээлт болно.</p></statement><proof><p><m>\lambda</m>  Борелийн <m>|sigma</m>-алгебр <m>\mathscr{B}(\R^n)</m> дээрх Лебегийн хэмжээ , <m>\lambda</m>-н гүйцээлт нь <m>\overline{\lambda}</m> , <m>(\R^n , \mathscr{M}_{\ls})</m> дээрх Лебегийн хэмжээ <m>\lambda_m</m> байг.  Өмнөх лемм ёсоор  <m>\mathscr{M}_{\ls}</m> нь Борелийн <m>|sigma</m>-алгебр <m>\mathscr{B}(\R^d)</m>-н <m>\lambda</m>-өргөтгөлд агуулагдаж байна. Иймд <m>\lambda_m</m> нь <m>\overline{\lambda}</m>-н зааглалт байна. Одоо <m>\mathscr{B}(\R^d)</m>-н <m>\lambda</m>-өргөтгөлийн элемент бүр Лебегээр хэмжигдэхийг харуулах хэрэгтэй. <m>A</m> <m>\mathscr{B}(\R^n)</m>-н <m>\lambda</m>-өргөтгөлд ордог байг.</p>
+<p>Өмнөх леммээр <m>E\subseteq A\subseteq F , \lambda(F\setminus E)=0</m> байх Борелийн олонлогууд олдоно. <m>A\setminus E\subseteq F\setminus E</m> байхыг тооцвол 
+<md>0=\lambda(E\setminus K)=\lambda_m(E\setminus K)</md> тул <m>\overline{\mu}</m> гүйцэд чанараар <m>A\in\mathscr{M}_{\ls}</m> болж батлагдав.</p></proof></theorem>
+<p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>\mu</m> нь <m>\alg</m> дээрх хэмжээ, <m>A\subset X</m> дурын олонлог байг. <m>A</m> олонлогийн <term>гадаад хэмжээ</term> болон <term>дотоод хэмжээг</term><idx>гадаад хэмжээ</idx><idx>дотоод хэмжээ</idx> гэх функцүүдийг дараах байдлаар тодорхойлъё:
+ <md>\mu^*(A)=\inf\left\{\mu(B): A\subset B , B\in\alg \right\};\tag{3}</md>
+ <md>\mu_*(A)=\sup\left\{\mu(B): B\subset A , B\in\alg\right\}.\tag{4}</md>
+ Мэдээж <m>\mu_*(A)\leq\mu^*(A)</m>.</p>
+<proposition><statement><p><m>(X,\alg)</m> хэмжээт огторгуй, <m>\mu</m> нь <m>\alg</m> дээрх хэмжээ байг. Тэгвэл (3) тэнцлээр тодорхойлсон <m>\mu^*</m> функц гадаад хэмжээ байна.</p></statement><proof><p><m>\mu^*(\emptyset)=0</m> болон <m>\mu^*</m> монотон шинжтэй нь илэрхий. Хагас аддитив шинжийг баталъя. <m>\{A_m\}</m> нь <m>X-</m>ийн дэд олонлогуудын дараалал байг. Хэрэв <m>\sum\limits_m\mu^*(A_m)=+\infty</m> бол <md>\mu^*\Big(\bigcup\limits_mA_m\Big)\llq \sum\limits_m\mu^*(A_m)</md> 
+ тэнцэтгэл биш илэрхий. <m>\sum\limits_m\mu^*(A_m)\lt +\infty</m> байг. Дурын эерэг <m>\veps</m> тоог авъя. Дурын <m>m</m> дугаарын хувьд <m>A_m\subset B_m</m> ба <m>\mu(B_m)\llq \mu^*(A_m)+\nicefrac{\veps}{2^m}</m> байхаар <m>B_m\in\alg</m> сонгож авч болно. <m>B=\bigcup\limits_mB_m</m> гэвэл <m>B\in\alg</m>, <m>\bigcup\limits_mA_m\subset B</m> ба <m>\mu(B)\llq\sum\limits_m\mu(B_m)\llq\sum\limits_m\mu^*(A_m)+\veps</m>. Иймд
+ <md>\mu^*\Big(\bigcup\limits_mA_m\Big)\llq \sum\limits_m\mu^*(A_m)+\veps.</md>
+ <m>\veps</m> дурын эерэг тоо гэдгийг тооцвол <m>\mu^*</m> хагас аддитив шинжтэй, улмаар гадаад хэмжээ болох нь батлагдаж байна.</p></proof></proposition>
+<proposition><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>\mu</m> нь <m>\alg</m> дээрх хэмжээ, <m>A\subset X</m> нь <m>\mu^*(A)\lt +\infty</m> байх олонлог байг. Тэгвэл <m>A</m> олонлог <m>\alg</m> <m>\sigma-</m>алгебрын <m>\mu</m> хэмжээгээрх гүйцээлт болох <m>\alg_{\mu}</m> <m>\sigma-</m>алгебрт харьяалагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь
+	<md>\mu^*(A)=\mu_*(A)</md>
+	байх явдал юм.</p></statement><proof><p>Хэрэв <m>A\in\alg_{\mu}</m> бол <m>E\subset A\subset F</m> ба <m>\mu(F\setminus E)=0</m> байх <m>E\in\alg</m>, <m>F\in\alg</m> олонлогууд олдоно. Эндээс
+	<md>\mu(E)\llq \mu_*(A)\llq \mu^*(A)\llq\mu(F)</md>
+	тэнцэл бишүүд мөрдөн гарах ба <m>\mu(E)=\mu(F)</m> тул <m>\mu_*(A)=\mu^*(A)</m>.</p>
+<p>Хүрэлцээтэй нөхцлийн баталгаа лемм <xref ref="complete-measure-rpl1"/>-ийн баталгаатай төстэй хийгдэнэ.</p></proof></proposition>
+<definition><statement><p><m>\alg</m> нь <m>\rn</m> дээрх Борелийн <m>\sigma-</m>алгебр <m>\brn-</m>г агуулсан <m>\sigma-</m>алгебр байг. <m>(\rn,\alg)</m> дээрх <m>\mu</m> хэмжээ дараах шинжүүдтэй бол <term>регуляр хэмжээ</term><idx>регуляр хэмжээ</idx> гэж нэрлэгдэнэ: 
+	<ul marker=""><li><p>a. <m>K\subset\rn</m> компакт олонлог бүрийн хувьд <m>\mu(K)\lt +\infty</m>;</p></li><li><p>b. <m>A\in\alg</m> олонлог бүрийн хувьд
+		<md>\mu(A)=\inf\{\mu(U): U \ \mbox{задгай ба} \ A\subset U\}</md>
+		нөхцөл биелэх ба</p></li><li><p>c. <m>U\subset\rn</m> задгай олонлог бүрийн хувьд дараах нөхцөл биелнэ:
+		<md>\mu(U)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset U\}.</md></p></li></ul></p></statement></definition>
+<p>Теорем <xref ref="regularity-lhrch"/> ёсоор <m>(\rn,\brn)</m> дээрх ч, <m>(\rn,\mkln)</m> дээрх ч Лебегийн хэмжээ регуляр хэмжээ байна.</p>
+<proposition><statement><p><m>(\rn,\brn)</m> дээрх төгсгөлөг <m>\mu</m> хэмжээ бүр   регуляр байна. Түүнчлэн, <m>A\subset\rn</m> Борелийн олонлог бүрийн хувьд дараах тэнцэл биелнэ:
+	<md>\mu(A)=\sup\{\mu(K): K \ \mbox{компакт ба} \ K\subset A\}.</md></p></statement></proposition>
+<p>Эхлээд дараах леммийг баталъя.</p>
+<lemma><statement><p><m>(\rn,\brn)</m> дээрх төгсгөлөг <m>\mu</m> хэмжээ байг. <m>A\subset\rn</m>  Борелийн олонлог бүрийн хувьд дараах хоёр тэнцэл биелнэ:
+	<md>\mu(A)=\inf\{\mu(U): U \ \mbox{задгай ба} \ A\subset U\};\tag{5}</md>
+	<md>\mu(A)=\sup\{\mu(C): C \ \mbox{битүү ба} \ C\subset A\}.\tag{6}</md></p></statement></lemma>
+</section>
+<exercises xml:id="sem-complete-measure"><title>Семинарын бодлогууд</title>
+<subexercises xml:id="sem-complete-measure-1"><title>Гүйцэд ба регуляр хэмжээ</title>
+<exercise><statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>(\alg_{\mu})_{\overline{\mu}}=\alg_{\mu}</m> ба <m>\overline{\overline{\mu}}=\overline{\mu}</m> байна гэж харуул.</p></statement></exercise>
+<exercise><statement><p><ol><li><p><m>\br</m> <m>\sigma-</m>алгебрын 0 цэг дээр төвлөрсөн цэгэн массын хувь дахь гүйцээлтийг ол.</p></li><li><p><m>\alg</m> нь <m>\rn</m> дээрх бүх босоо шулуунуудын бүлийг агуулсан <m>\sigma-</m>алгебр байг. <m>\alg</m> <m>\sigma-</m>алгебрын <m>(0;0)</m> цэг дээр төвлөрсөн цэгэн массын хувь дахь гүйцээлтийг ол.</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>\mu</m> ба <m>\nu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх төгсгөлөг хэмжээнүүд байг.
+<ol><li><p><m>\alg_{\mu}</m>, <m>\alg_{\nu}</m> хоёр тэнцүү байх албагүйг жишээгээр харуул.</p></li><li><p><m>\alg_{\mu}=\alg_{\nu}</m> байх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu-</m>тэг, <m>\nu-</m>тэг олонлогууд давхцах явдал гэж батал.</p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>\R^2</m> огторгуйн Лебегээр хэмжигдэх дэд олонлогийн <m>(x,y)\to x</m> буулгалтаарх проекц Лебегээр үл хэмжигдэх олонлог байж болохыг жишээгээр харуул.</p></statement></exercise>
+<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд 
+<md>A_0\subset A\subset A_1 \ \wedge \ \mu(A_0)=\mu_*(A) \ \wedge \ \mu(A_1)=\mu^*(A)</md>
+нөхцлийг хангах <m>A_0\in\alg</m>, <m>A_1\in\alg</m> олонлогууд олдоно.</p></statement></exercise>
+<exercise><statement><p>Өгүүлбэр 1.7.2 дахь <m>\mu^*(A)\lt +\infty</m> нөхцлийг хасч болохгүйг жишээгээр харуул.</p></statement></exercise>
+<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^*(A)+\mu_*(A^c)=\mu(X)</m> тэнцэтгэл биелнэ гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\lambda^*(A)=1</m>, <m>\lambda_*(A)=0</m> байх <m>A\subset[0;1]</m> олонлог оршин байна гэж харуул.</p></statement></exercise>
+<exercise><statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх <m>\sigma-</m>төгсгөлөг хэмжээ, <m>\mu^*</m> нь (3) томьёогоор тодорхойлогдсон гадаад хэмжээ байг. <m>\alg_{\mu}</m> нь <m>\mu^*-</m>хэмжигдэх олонлогуудын <m>\sigma-</m>алгебртай тэнцүү ба <m>\mu^*</m> гадаад хэмжээний <m>\alg_{\mu}</m> дээрх зааглал нь <m>\overline{\mu}</m> хэмжээтэй тэнцүү гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>A\subset\R</m> Лебегээр хэмжигдэх олонлог бол <m>\{(x,y)\in\R^2\colon x\in a \}</m> олонлог <m>\R^2</m> огторгуйд Лебегээр хэмжигдэх олонлог байна гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>C\subset X</m> байг. (Энд <m>C</m> хэмжигдэх олонлог байх албагүй)
+<ol><li><p><m>\{C\cap A\colon A\in\alg\}</m> бүл <m>C</m> олонлог дээр <m>\sigma-</m>алгебр болно гэж харуул.</p></li><li><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх төгсгөлөг хэмжээ, <m>C_1\in\alg</m>, <m>C\subset C_1</m>, <m>\mu(C_1)=\mu^*(C)</m> байг. Хэрэв <m>A_\in\alg</m>, <m>A_2\in\alg</m> ба <m>A_1\cap C=A_2\cap C</m> бол <m>\mu(A_1\cap C_1)=\mu(A_2\cap C_1)</m> гэж харуул. Ингэснээр бид <m>\mu_C\colon \alg_C\to [0;+\infty]</m> функцийг <m>\mu_c(A\cap C)=\mu(A\cap C_1)</m> томьёогоор тодорхойлох боломжтой болно.</p></li><li><p><m>B\in\alg_C</m> бүрийн хувьд <m>\mu_c(B)=\mu^*(B)</m> байна гэж харуул. Ингэснээр <m>\mu_C</m> функцийн утга <m>C_1</m> олонлогийн сонголтоос хамаарахгүй болох нь батлагдана.</p></li><li><p><m>\mu_C</m> функц <m>(X,\alg_C)</m>  хэмжигдэх огторгуйд хэмжээ болно гэж батал. Энэ хэмжээг <m>\mu</m> хэмжээний <m>C</m> олонлог дээрх <term>мөр</term> гэх нь бий. <idx>хэмжээний мөр</idx></p></li></ol></p></statement></exercise>
+<exercise><statement><p><m>(X,\alg)</m> хэмжигдэх огторгуй, <m>C\subset X</m> байг.
+<ol><li><p><m>\sigma(\alg\cup\{C\})</m> бүлийн олонлог бүр яг  <m>(A_1\cap C)\cup(A_2\cap C^c)</m> хэлбэртэй гэж харуул. Энд <m>A_1\in\alg</m>, <m>A_2\in\alg</m>.</p></li><li><p><m>\mu</m> нь <m>(X,\alg)</m> дээрх төгсгөлөг хэмжээ, <m>C_0\subset C</m>, <m>C_1\subset C^c</m> нь <m>\mu(C_0)=\mu_*(C)</m>, <m>\mu(C_1)=\mu_*(C^c)</m> байх <m>\alg-</m>хэмжигдэх олонлогууд, <m>\mu_C</m>, <m>\mu_{C^c}</m> нь <m>\mu</m> хэмжээний харгалзан <m>C</m>, <m>C^c</m> олонлогууд дээрх мөрүүд байг. Тэгвэл дараах томьёонуудыг баталж <m>\sigma(\alg\cup C)</m> дээр <m>\mu_0</m>, <m>\mu_1</m> хэмжээнүүдийг томьёол:
+	<md>\mu_0(A)=\mu(A\cap C_0)+\mu_{C^c}(A\cap C^c);</md>
+	<md>\mu_1(A)=\mu_C(A\cap C)+\mu(A\cap C_1).</md> 
+	Эдгээр хэмжээнүүд нь <m>\alg</m> дээрх <m>\mu</m> хэмжээтэй зохицно гэж харуул:  <m>\mu_0(C)=\mu_*(C)</m>, <m>\mu_1(C)=\mu^*(C)</m>.</p></li><li><p><m>\mu_0(C)\llq \alpha\llq\mu_1(C)</m> байх <m>\alpha</m> бүрийн хувьд <m>\nu(C)=\alpha</m> байх, <m>\alg</m> дээрх <m>\mu</m> хэмжээтэй зохицсон <m>\nu</m> хэмжээ <m>\sigma(\alg\cup\{C\})</m> дээр оршин байна гэж харуул.</p></li></ol></p></statement></exercise>
+</subexercises>
+<subexercises xml:id="sem-complete-measure-2"><title>Гадаад хэмжээ ба хэмжээ</title>
+<exercise><statement><p><m>\mathscr{P}(\R)</m> дээр <m>\mu^*_1, \mu^*_2,\ldots,\mu^*_6</m> функцүүдийг дараах байдлаар   тодорхойлъё:
+	<md>\mu^*_1(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	1,&amp; A\neq\vn
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_2(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	+\infty,&amp; A\neq\vn
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_3(A)=\begin{cases}
+	0,&amp; A \ \mbox{зааглагдсан}\\ 
+	1,&amp; A \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_4(A)=\begin{cases}
+	0,&amp; A \ \mbox{хоосон олонлог}\\ 
+	1,&amp; A \ \mbox{хоосон биш, зааглагдсан}\\ 
+	+\infty,&amp; A  \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_5(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	1,&amp; A \ \mbox{тоологдом биш}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_6(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	+\infty,&amp; A \ \mbox{тоологдом биш}
+	\end{cases}\quad A\subset X.</md>
+ <ol><li><p><m>\mathscr{P}(\R)</m> дээр <m>\mu^*_1, \mu^*_2,\ldots,\mu^*_6</m> функцүүдийг дараах байдлаар   тодорхойлъё:
+	<md>\mu^*_1(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	1,&amp; A\neq\vn
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_2(A)=\begin{cases}
+	0,&amp; A=\vn\\ 
+	+\infty,&amp; A\neq\vn
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_3(A)=\begin{cases}
+	0,&amp; A \ \mbox{зааглагдсан}\\ 
+	1,&amp; A \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_4(A)=\begin{cases}
+	0,&amp; A \ \mbox{хоосон олонлог}\\ 
+	1,&amp; A \ \mbox{хоосон биш, зааглагдсан}\\ 
+	+\infty,&amp; A  \ \mbox{зааглагдаагүй}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_5(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	1,&amp; A \ \mbox{тоологдом биш}
+	\end{cases},\quad A\subset X;</md>
+	<md>\mu^*_6(A)=\begin{cases}
+	0,&amp; A \ \mbox{тоологдом}\\ 
+	+\infty,&amp; A \ \mbox{тоологдом биш}
+	\end{cases}\quad A\subset X.</md>
+	<ol><li><p>Эдгээр функцүүдээс аль нь гадаад хэмжээ болох вэ?</p></li><li><p>Гадаад хэмжээ болж байгаа <m>\mu^*_i</m> бүрийн хувьд <m>\R</m> огторгуйн <m>\mu^*-</m>хэмжигдэх дэд олонлогуудыг тодорхойл.</p></li></ol></p></li><li><p><m>C</m> нь <m>\R</m> огторгуйн тоологдом дэд олонлог байг. <m>\lambda^*</m> Лебегийн гадаад хэмжээний тодорхойлолтыг ашиглан <m>\lambda^*(C)=0</m> болохыг харуул.</p></li><li><p><m>A\subset\R</m> олонлог бүрийн хувьд <m>\lambda(B)=\lambda^*(A)</m> ба <m>B\subset A</m> байх <m>B</m> Борелийн олонлог олдоно гэж батал.</p></li><li><p><m>F\colon \R\to \R</m> нь зааглагдсан, үл буурах, <m>\lim\limits_{x\to-\infty}F(x)=0</m> нөхцлийг хангах баруун тасралтгүй функц, <m>\mu</m> нь <m>(\R,\br)</m> дээрх <m>F</m> функцтэй 
+	<md>F(x)=\mu((-\infty;x])\quad (\forall x\in\R)</md>
+	нөхцлөөр холбогдсон хэмжээ байг. Тэгвэл <m>a\in\R</m>, <m>b\in\R</m> ба <m>a\lt b</m> үед дараах тэнцэтгэлүүд биелнэ гэж харуул:
+	<md><mrow>\mu((-\infty;b))&amp;=F(b-),</mrow><mrow>\mu((a,b))&amp;=F(b-)-F(a),</mrow><mrow>\mu([a,b])&amp;=F(b)-F(a-),</mrow><mrow>\mu([a,b))&amp;=F(b-)-F(a-).</mrow></md></p></li><li><p><m>X</m> олонлог, <m>\alg</m> нь <m>X</m> дээрх алгебр, <m>\mu</m> нь <m>\alg</m> дээр тодорхойлогдсон төгсгөлөг аддитив хэмжээ байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^*(A)</m> функцийг дараах байдлаар тодорхойлъё:
+	<md>\mu^*(A)=\inf\left\{\sum\limits_{k=1}^{\infty}\mu(A_k): A_k\in\alg \ (\forall k) \ \wedge \ A\subset\bigcup\limits_{k=1}^{\infty}A_k\right\}.\tag{*}</md> 
+	<ol><li><p><m>\mu^*</m> нь <m>X</m> дээр гадаад хэмжээ болно гэж батал.</p></li><li><p><m>\alg</m> алгебрын олонлог болгон <m>\mu^*-</m>хэмжигдэх гэж батал.</p></li><li><p><m>\mu</m> тоологдом аддитив шинжтэй (<m>\alg</m> алгебрын хос хосоороо үл огтлолцох олонлогуудын <m>\{A_k\}</m> дараалал бүрийн хувьд <m>\mu(\cup_kA_k)=\sum_k\mu(A_k)</m> тэнцэл биелдэг) бол <m>A\in\alg</m> бүрийн хувьд <m>\mu(A)=\mu^*(A)</m> байна гэж батал.</p></li><li><p><m>\mu</m> нь <m>\alg</m> алгебр дээрх тоологдом аддитив хэмжээ бол <m>\sigma(\alg)</m> дээр <m>\mu</m> хэмжээтэй зохицсон тоологдом аддитив хэмжээ оршин байна гэж харуул.</p></li></ol></p></li><li><p><m>X</m> олонлог, <m>\alg</m> нь <m>X</m> дээрх алгебр, <m>\mu</m> нь <m>\alg</m> алгебр дээр тодорхойлогдсон тоологдом аддитив хэмжээ, <m>\mu^*</m> нь өмнөх бодлогод  томьёолсон (*) гадаад хэмжээ байг. 
+	<ol><li><p><m>\nu</m> нь <m>\sigma(\alg)</m> дээрх <m>\mu</m> хэмжээтэй зохицсон тоологдом аддитив хэмжээ бол <m>\forall A\in\sigma(\alg)</m> бүрийн хувьд
+		<m>\nu(A)\llq \mu^*(A)</m>
+		байна гэж харуул.</p></li><li><p><m>\mu</m> нь <m>\alg</m> алгебр дээрх төгсгөлөг эсхүл <m>\sigma-</m>төгсгөлөг хэмжээ бол түүнийг <m>\sigma(\alg)</m> дээрх тоологдом аддитив хэмжээ хүртэл цор ганц аргаар үргэлжлүүлж болно гэж харуул.</p></li></ol></p></li><li><p><m>B\subset\R</m> олонлог Лебегээр хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>I\subset\R</m> задгай интервал бүрийн хувьд 
+	<md>\lambda^*(I)=\lambda^*(I\cap B)+\lambda^*(I\cap B^c)</md>тэнцэл биелж байх явдал гэж батал.</p></li><li><p><m>I\subset\R</m> зааглагдсан интервал байг. <m>B\subset I</m> олонлог Лебегээр хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <md>\lambda^*(I)=\lambda^*(B)+\lambda^*(I\cap B^c)</md>тэнцэл биелж байх явдал гэж батал.</p></li><li><p><m>\lambda^*</m> нь <m>\R</m> дээрх Лебегийн гадаад хэмжээ, <m>\pi\colon \R^2\to\R</m> нь   <m>\pi(x,y)=x \ (\forall (x,y)\in\R^2)</m> проекцлох буулгалт  байг.   <m>\mu^*\colon\mathscr{P}(\R^2)\to[0,+\infty]</m> функцийг дараах байдлаар тодорхойлъё:
+	<md>\mu^*(A)=\lambda^*\left(\pi(A)\right)\quad (A\subset\R^2).</md> 
+	<ol><li><p><m>\mu^*</m> нь <m>\R^2</m> дээр гадаад хэмжээ болно гэж харуул.</p></li><li><p><m>B\subset\R^2</m> олонлог <m>\mu^*-</m>хэмжигдэх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>B_0\subset B_1</m>, <m>\lambda^*(B_1\setminus B_0)=0</m> ба <m>B_0\times\R\subset B\subset B_1\times \R</m> нөхцлүүдийг хангах <m>B_0\subset\R</m>, <m>B_1\subset\R</m> Лебегээр хэмжигдэх олонлогууд олдох явдал гэж харуул.</p></li></ol></p></li><li><p><m>\R^2</m> дээрх Лебегийн хэмжээний хувьд
+	<ol><li><p>шулуун шугам тэг хэмжээтэй;</p></li><li><p>тойрог тэг хэмжээтэй гэж тус тус харуул.</p></li></ol></p></li><li><p><m>A\subset\R^n</m> байг. Дараах нөхцлүүдийг эквивалент гэж харуул:
+	<ul marker=""><li><p><m>(i)</m> <m>A</m> нь Лебегээр хэмжигдэх олонлог;</p></li><li><p><m>(ii)</m> <m>A</m> олонлог нь <m>F_{\sigma}</m>олонлог болон Лебегийн тэг хэмжээтэй олонлог хоёрын нэгдэлд тавигдана;</p></li><li><p><m>(iii)</m> <m>\lambda^*(A\Delta B)=0</m> байх <m>B</m> гэсэн <m>F_{\sigma}</m> олонлог олдоно.</p></li></ul></p></li><li><p><m>T\colon\R^n\to\R^n</m> зай хадгалдаг шугаман буулгалт (<m>n=2</m> үед эргүүлэлт) байг. 
+	<ol><li><p><m>A\subset\R^n</m> Борелийн олонлог байх гарцаагүй бөгөөд хүрэлцээтэй нөхцөл нь <m>T(A)</m> Борелийн олонлог байх явдал гэж батал.</p></li><li><p><m>A\subset\R^n</m> Борелийн олонлог бүрийн хувьд <m>\lambda(A)=\lambda(T(A))</m>  тэнцэтгэл биелнэ гэж харуул.</p></li></ol></p></li><li><p><m>0\lt \alpha\lt 1</m> байх <m>\alpha</m> тоо бүрийн хувьд <m>\lambda(C)=\alpha</m> байх хоосон дотортой, битүү <m>C\subset[0,1]</m> олонлог олдоно гэж харуул.</p></li><li><p><m>I\subset \R</m> зааглагдсан задгай интервал бүрийн хувьд <md>0\lt \lambda(I\cap A)\lt \lambda(I)</md> байх <m>A\subset\R</m> Борелийн олонлог олдоно гэж харуул.</p></li><li><p><m>\lambda^*(B)\gt 0</m> байх <m>B\subset\R</m> олонлог бүр Лебегээр үл хэмжигдэх дэд олонлогтой байна гэж харуул.</p></li><li><p>Бүгдийнх нь Лебегийн гадаад хэмжээ нэгтэй тэнцүү (<m>k</m> дугаар болгоны хувьд <m>\lambda^*(A_k)=1</m>) боловч огтлолцол нь хоосон (<m>\cap_kA_k=\vn</m>) байх <m>[0,1]</m> хэрчмийн дэд олонлогуудын <m>\{A_k\}</m> буурах дараалал олдоно гэж харуул.</p></li></ol></p></statement></exercise>
+</subexercises>
+</exercises>
 </chapter>

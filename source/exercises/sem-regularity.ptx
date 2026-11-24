@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<exercises xml:id="sem-regularity">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise>
+    <statement><p><m>E\subset\R</m> Лебегээр хэмжигдэх олонлог байг. <m>F\subset E\subset G</m> ба <m>\lambda(G\setminus F)=0</m> байх <m>F_{\sigma}</m> олонлог <m>F</m> ба <m>G_{\delta}</m> олонлог <m>G</m> олдоно гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>E\subset\R</m> Лебегээр хэмжигдэх ба <m>\lambda(E)\lt\infty</m> байг. Дурын <m>\veps\gt 0</m> тооны хувьд <m>\lambda(E\,\triangle\, U)\lt\veps</m> байх төгсгөлөг тооны задгай интервалуудын нэгдэл <m>U</m> олдоно гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>E\subset[0,1]</m> Лебегээр хэмжигдэх олонлог ба дурын <m>0\leq a\lt b\leq 1</m> тоонуудын хувьд <m>\lambda(E\cap(a,b))\leq\frac{1}{2}(b-a)</m> байг. <m>\lambda(E)=0</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\lambda(E)\gt 0</m> байх дурын Лебегээр хэмжигдэх <m>E\subset\R</m> олонлог тэг биш хэмжээтэй компакт дэд олонлог агуулна гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\R</m> дээрх тоолох хэмжээ (<m>\mu(A)=|A|</m>, <m>A</m> төгсгөлөг үед; бусад үед <m>\infty</m>) Борелийн <m>\sigma</m>-алгебр дээр регуляр хэмжээ болох уу? Хариугаа батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\mu</m> нь <m>\br</m> дээрх хэмжээ, дурын <m>x\in\R</m> ба <m>B\in\br</m> хувьд <m>\mu(B+x)=\mu(B)</m>, мөн <m>\mu([0,1))=1</m> байг. <m>\mu=\lambda</m> гэж батал.</p></statement>
+  </exercise>
+</exercises>

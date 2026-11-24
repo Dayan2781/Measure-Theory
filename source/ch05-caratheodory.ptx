@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 6lebesgue measureD.tex; lecture 5 -->
+<!-- Эх файл: 6lebesgue measureD.tex:128-230; lecture 5-Cartoideriin theorem.tex:105- -->
 <chapter xml:id="ch-caratheodory" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Каратеодорийн теорем</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-caratheodory">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Каратеодорийн теорем</title>
+<section xml:id="sec-caratheodory-1">
+<title><m>\mu^{\star}</m>-хэмжигдэх олонлог ба Каратеодорийн теорем</title>
+<definition><statement><p><m>X</m> хоосон биш олонлог, <m>\mu^{\star}</m> түүн дээрх гадаад хэмжээ ,  <m>B\subset X</m> байг. Хэрэв <m>X</m>-н дэд олонлог <m>A</m> бүрийн хувьд 
+<md number="yes" xml:id="caratheodory-outsemad1">\mu^{\star}(A)=\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</md>
+ тэнцэтгэл  биелдэг бол <m>B</m>-г  <term><m>\mu^{\star}</m>-хэмжигдэх олонлог</term><idx><m>\mu^{\star}</m>-хэмжигдэх олонлог</idx> гэнэ.</p></statement></definition>
+<p><m>A=(A\cap B)\cup (A\cap B^c)</m> тэнцэтгэл ба гадаад хэмжээний хагас аддитив чанараар дурын <m>B</m> олонлогийн хувьд (<xref ref="caratheodory-outsemad1"/>) тэнцэтгэл нь 
+<md number="yes" xml:id="caratheodory-semadd2">\mu^{\star}(A)\geq\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</md> тэнцэтгэл биштэй ижил юм.  Хэрэв <m>\mu^{\star}(A)=\infty</m> бол <m>(\ref{semadd2})</m> биелэх тул <m>\mu^{\star}(A)=\infty</m> олонлог бүр гадаад хэмжээгээр хэмжигдэх байна. Иймд <m>\mu^{\star}(A)\lt \infty</m> байх <m>A</m> олонлогуудын хувьд <m>(\ref{semadd2})</m> шалгахад хангалттай юм.</p>
+<proposition><statement><p><m>X</m> олонлог, <m>\mu^{\star}</m> түүн дээрх гадаад хэмжээ,  
+ <m>B\subset X</m> байг. Хэрэв <m>\mu^{\star}(B)=0\text{ эсвэл } \mu^{\star}(B^c)=0</m> бол <m>B</m> олонлог <m>\mu^{\star}</m>-хэмжигдэх олонлог байна.</p></statement><proof><p><m>\mu^{\star}(A)\geq\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)</m> чанарыг 
+хангах эсэхийг шалнахад хангалттай. Хэрэв <m>\mu^{\star}(B)=0</m> бол монотон чанараар 
+<m>\mu^{\star}(A\cap B)\leq \mu^{\star}(B)=0</m> биелэх тул <md>\mu^{\star}(A\cap B)+\mu^{\star}(A\cap B^c)=\mu^{\star}(A\cap B^c)\leq \mu^{\star}(A)</md> болж батлагдана.  
+<m>\mu^{\star}(B^c)=0</m> бол адилаар батлагдана.</p></proof></proposition>
+<theorem xml:id="caratheodory-ghthb"><title>Каратеодорийн теорем</title><statement><p><m>X</m> хоосон биш олонлог,  <m>\ms</m> нь <m>X</m> дээрх гадаад хэмжээ ба
+<md>\PZM_{\ms}:=\{M\subset X \mid M\text{ нь }\ms\text{ хэмжигдэх олонлог}\}</md>
+бол дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\PZM_{\ms}</m>  нь <m>X</m> дээрх  <m>\sigma</m>-алгебр болно.</p></li><li><p><m>{\ms}</m> гадаад хэмжээний <m>\PZM_{\ms}</m> дээрх зааглалт 
+<md>\mu:=\ms\big|_{\PZM_{\ms}}</md> хэмжээ болно.
+<m>A\in\PZM_{\ms}</m>  хэмжигдэх олонлог бол түүний <m>\mu</m>  хэмжээ   
+<md>\mu(A)=\ms(A)</md> байна.</p></li></ol></p></statement></theorem>
+<remark><p>Бид цаашид <m>\mu</m> хэмжээг <m>\ms</m> гадаад хэмжээтэй уялдсан хэмжээ,  <m>A\in\PZM_{\ms}</m> байх олонлогийг <m>\mu</m> хэмжигдэх ( зарим тохиолдолд зүгээр хэмжигдэх ) олонлог, <m>\mu(A)</m>-г <m>A</m> олонлогийн хэмжээ гэнэ.</p></remark>
+<proof><p><ol marker="a)"><li><p><m>\PZM_{\ms}</m>-г <m>\sigma</m>-алгебр болохыг баталъя.</p>
+<p>Эхлээд <m>\emptyset\in\PZM_{\ms}</m> байхыг харуулъя. <m>\emptyset^c=X</m>, <m>\forall A\subset X</m> хувьд <m>A\cap X=A , A\cap\emptyset =\emptyset</m> тул 
+<md>\ms(A\cap \emptyset)+\ms(A\cap \emptyset^c)=\ms(\emptyset)+\ms(A)=\ms(A)</md> болж <m>\emptyset\in\PZM_{\ms}</m> байна.</p>
+<p>Одоо <m>B\in\PZM_{\ms}</m> бол <m>B^c\in\PZM_{\ms}</m> байхыг харуулъя. <m>B-\ms</m> хэмжигдэх олонлог, <m>B=(B^c)^c</m> байдгийг санавал <m>\forall A\subset X</m> хувьд 
+<md>\ms(A)=\ms(A\cap B)+\ms(A\cap B^c)=\ms(A\cap (B^c)^c)+\ms(A\cap B^c)</md> тул <m>B^c\in\PZM_{\ms}</m> байна.</p>
+<p>Одоо <m>\PZM_{\ms}</m> алгебр болохыг харуулъя. <m>B_1, B_2\in\PZM_{\ms}</m> , <m>\forall A\subset X</m> бол <md>A\cap(B_1\cup B_2)\cap B_1=A\cap B_1,</md> 
+<md>A\cap(B_1\cup B_2)\cap B_1^c=A\cap B_2\cap B_1^c</md> байна. <m>B_1</m> нь  <m>\ms</m>- хэмжигдэх олонлог тул 
+<md><mrow>\ms(A\cap(B_1\cup B_2))&amp;</mrow><mrow>=\ms(A\cap(B_1\cup B_2)\cap B_1)&amp;+\ms(A\cap(B_1\cup B_2)\cap B_1^c)</mrow><mrow>=\ms(A\cap B_1)&amp;+\ms(A\cap B_2\cap B_1^c)</mrow></md> байна. <m>B_2</m> нь <m>\ms</m>-хэмжигдэх болохыг санавал
+<md><mrow> &amp;\ms(A\cap(B_1\cup B_2))+\ms(A\cap(B_1\cup B_2)^c)</mrow><mrow>= &amp;\ms(A\cap B_1)+\ms(A\cap B_2\cap B_1^c)+\ms(A\cap B_1^c\cap B_2^c)</mrow><mrow>= &amp;\ms(A\cap B_1)+(\ms((A\cap B_1^c)\cap B_2)+\ms((A\cap B_1^c)\cap B_2^c))</mrow><mrow>= &amp;\ms(A\cap B_1)+\ms(A\cap B_1^c)=\ms(A)</mrow></md> 
+ Иймд <m>B_1\cup B_2\in \PZM_{\ms}</m> байна. Өөрөөр хэлбэл<m>\PZM_{\ms}</m> алгебр байна.</p>
+<p>Одоо <m>\sigma</m>-алгебр болохыг харуулъя. <m>B_1\cap B_2=\emptyset , B_1 , B_2\in\PZM_{\ms}</m> бол  
+ <md><mrow>\ms(B_1\cup B_2)= &amp;\ms((B_1\cup B_2)\cap B_1)+\ms((B_1\cup B_2)\cap B_1^c)</mrow><mrow>= &amp;\ms((B_1\cap B_1)\cup (B_2\cap B_1))+\ms((B_1\cap B_1^c)\cup (B_2\cap B_1^c))</mrow><mrow>= &amp;\ms(B_1)+\ms(B_2)</mrow></md> байна. Иймд <m>\{B_i\}_{i=1}^{\infty}\subset \PZM_{\ms}</m> байх үл 
+огтлолцох олонлогуудын хувьд <m>\ms(\cup_{i=1}^n B_i)=\sum_{i=1}^n\ms(B_i)</m> байхыг индукцээр хялбар баталж болно. 
+<md><mrow>\ms(A)= &amp;\ms(A\cap(\cup_{i=1}^n B_i))+\ms(A\cap(\cup_{i=1}^n B_i)^c)</mrow><mrow number="yes" xml:id="caratheodory-x2">= &amp;\ms(\cup_{i=1}^n(A\cap B_i))+\ms(A\cap(\cup_{i=1}^n B_i)^c)</mrow><mrow>= &amp;\sum_{i=1}^n\ms(A\cap B_i)+\ms(A\cap(\cup_{i=1}^n B_i)^c)\text{ байна.}</mrow></md> 
+<m>A\cap(\cup_{i=1}^{\infty} B_i)^c=A\cap (\cap_{i=1}^{\infty} B_i^c)\subset A\cap(\cup_{i=1}^{n} B_i)^c</m> байх тул гадаад хэмжээний монотон чанараар 
+<md number="yes" xml:id="caratheodory-x3">\ms(A\cap(\cup_{i=1}^{\infty} B_i)^c)\leq\ms(A\cap (\cup_{i=1}^{n} B_i)^c)</md> байна. (<xref ref="caratheodory-x2"/>) тэнцэтгэлийн баруун гар талд (<xref ref="caratheodory-x3"/>) тэнцэтгэл бишийг хэрэглэвэл 
+<md number="yes" xml:id="caratheodory-x4">\ms(A)\geq \sum_{i=1}^{n}\ms(A\cap B_i)+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</md> болно. (<xref ref="caratheodory-x4"/>) тэнцэтгэл бишид  <m>n\to\infty</m> хязгаарт шилжин гадаад 
+хэмжээний хагас аддитив чанарыг хэрэглэвэл дараах тэнцэтгэл биш гарна.
+<md><mrow number="yes" xml:id="caratheodory-x5">\ms(A)\geq &amp; \sum_{i=1}^{\infty}\ms(A\cap B_i)+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</mrow><mrow number="yes" xml:id="caratheodory-x6">\geq &amp;\ms(\cup_{i=1}^{\infty}(A\cap B_i))+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</mrow><mrow number="yes" xml:id="caratheodory-x7">= &amp;\ms(A\cap (\cup_{i=1}^{\infty} B_i))+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</mrow><mrow>\geq &amp;\ms((A\cap (\cup_{i=1}^{\infty} B_i))\cup (A\cap (\cup_{i=1}^{\infty} B_i)^c))</mrow><mrow number="yes" xml:id="caratheodory-x8">=\ms(A).</mrow></md>  (<xref ref="caratheodory-x5"/>)-(<xref ref="caratheodory-x8"/>) тэнцэтгэл бишүүдийг харвал дээр, доороосоо ижил 
+<m>\ms(A)</m>-р зааглагдаж байгаа тул бүх <m>\geq</m> тэмдэг <m>=</m> тэмдгээр солигдох ёстой. Иймд (<xref ref="caratheodory-x7"/>) харвал <m>\forall A\subset X</m> хувьд 
+<md number="yes" xml:id="caratheodory-x9">\ms(A)=\ms(A\cap (\cup_{i=1}^{\infty} B_i))+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</md> болж <m>\cup_{i=1}^{\infty} B_i\in\PZM_{\ms}</m> байна. Иймд <m>\PZM_{\ms}</m> <m>\sigma</m>-алгебр болох нь батлагдав.</p></li><li><p>Одоо  <m>{\ms}</m> гадаад хэмжээний <m>\PZM_{\ms}</m> дээрх зааглалт 
+<m>\mu:=\ms\big|_{\PZM_{\ms}}</m> хэмжээ болохыг харуулъя. <m>\PZM_{\ms}</m> <m>\sigma</m>-алгебр тул <m>\ms</m> нь <m>\PZM_{\ms}</m> дээр тоологдом аддитив байхыг батлахад хангалттай.</p>
+<p><m>B_i\in \PZM_{\ms}</m> байх үл огтлолцох <m>\{B_i\}_{i=1}^{\infty}</m> дарааллын хувьд 
+ <m>A=\cup_{i=1}^{\infty} B_i</m> гэвэл  <m>A\in\PZM_{\ms}</m> байх ба <m>A\cap B_i=B_i</m> байна.
+ <m>A</m> хувьд (<xref ref="caratheodory-x5"/>), (<xref ref="caratheodory-x7"/>) хэрэглэвэл  тоологдом аддитив чанар батлагдана.
+<md><mrow>\ms(A)= &amp;\ms(\cup_{i=1}^{\infty} B_i)</mrow><mrow>= &amp;\sum_{i=1}^{\infty}\ms(A\cap B_i)+\ms(A\cap (\cup_{i=1}^{\infty} B_i)^c)</mrow><mrow>= &amp;\sum_{i=1}^{\infty}\ms(B_i)+\mu(A\cap A^c)=\ms(A).</mrow></md></p></li></ol></p></proof>
+</section>
+<exercises xml:id="sem-caratheodory"><title>Семинарын бодлогууд</title>
+<exercise><statement><p>Гадаад хэмжээний чанаруудыг ашиглан <m>[0;1]</m> хэрчим тоологдом биш болохыг батал.</p></statement></exercise>
+<exercise><statement><p><m>A</m> нь <m>[0;1]</m> хэрчим дэх иррационал тоонуудын олонлог байг.
+<m>\ls(A)=1</m> гэж батал.</p></statement></exercise>
+<exercise><statement><p>Бодит тоонуудын олонлог нь тоологдом ширхэг задгай олонлогуудын
+огтлолцолоор илэрхийлэгддэг бол түүнийг <m>G_{\delta}</m> олонлог гэнэ.
+Дурын зааглагдсан <m>E</m> олонлогийн хувьд
+<md>E\subseteq G \quad\text{ба}\quad \ls(G)=\ls(E)</md>
+байх <m>G_{\delta}</m> олонлог <m>G</m> олдохыг харуул.</p></statement></exercise>
+<exercise><statement><p><m>B</m> нь <m>[0;1]</m> хэрчим дэх рационал тоонуудын олонлог,
+<m>\{I_k\}_{k=1}^{n}</m> нь <m>B</m> олонлогийг хучих задгай интервалуудын
+төгсгөлөг бүл байг. Тэгвэл
+<md>\sum_{k=1}^{n}\ls(I_k)\geq 1</md>
+гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\ls(A)=0</m> бол <m>\ls(A\cup B)=\ls(B)</m> гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>A</m>, <m>B</m> нь зааглагдсан олонлогууд бөгөөд бүх <m>a\in A</m>, <m>b\in B</m>-ийн
+хувьд <m>|a-b|\geq\alpha</m> байх <m>\alpha\gt 0</m> тоо олдоно гэе. Тэгвэл
+<md>\ls(A\cup B)=\ls(A)+\ls(B)</md>
+гэж батал.</p></statement></exercise>
+</exercises>
 </chapter>

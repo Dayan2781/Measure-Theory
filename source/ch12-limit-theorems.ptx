@@ -1,17 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 11limit theorem.tex -->
+<!-- Эх файл: 11limit theorem.tex:1-; seminar 9.tex:27-40 -->
 <chapter xml:id="ch-limit-theorems" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Хязгаарын теоремууд</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-limit-theorems">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Хязгаарын теоремууд</title>
+<section xml:id="sec-limit-theorems-1">
+<title>Бараг тэнцүү функцийн чанарууд</title>
+<definition><title>Бараг биелэх чанар</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>P(x)</m> нь <m>x\in X</m> цэгүүдээс хамаарсан хэллэг байг. 
+ <md>T=\{x\in X\mid P(x)\text{ хэллэг үнэн }\}</md> олонлогийг <m>P(x)</m> хэллэгийн үнэний муж гэнэ. Хэрэв
+ <md>\exists A\in\A , A\supset T^c , \mu(A)=0</md> бол <m>P(x)</m> хэллэгийг <m>X</m> огторгуйд бараг үнэн  хэллэг гэнэ.</p></statement></definition>
+<example><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[-\infty;\infty]</m> хэмжигдэх функцүүд байг. <m>\{x\in X\mid f(x)\neq g(x)\}</m> олонлог хэмжигдэх олонлог байна. Хэрэв 
+<md>\mu(\{x\in X\mid f(x)\neq g(x)\})=0</md> бол эдгээр функцүүдийг бараг тэнцүү функцүүд гэнэ.</p>
+<p><m>(\R, \mathcal{B}(\R), \lambda)</m> Борелийн хэмжээт огторгуй, 
+ <md>f(x)=x+2 ,\quad  g(x)=\left\{
+ \begin{array}{cc}
+ \dfrac{x^2-4}{x-2}&amp; x\neq 2\\ 
+ 0&amp; x=2
+ \end{array}
+ \right.</md> функцүүд бараг тэнцүү юм. Учир нь 
+<md>\lambda(\{x\in X\mid f(x)\neq g(x)\})=\lambda(\{2\})=0</md> байна.</p></example>
+<theorem xml:id="limit-theorems-th-13-1"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[-\infty;\infty]</m> хэмжигдэх бараг тэнцүү функцүүд байг. Хэрэв эдгээр функцүүдийн хувьд <m>\intt f d\mu</m> эсвэл <m>\intt g d\mu</m> интегралуудын ядаж нэг оршин байвал хоёул оршин байх бөгөөд тэнцүү байна.</p></statement><proof><p>Эхлээд сөрөг бус функцүүдийн хувьд баталъя. 
+<md>A=\{x\in X\mid f(x)\neq g(x)\}</md> ба 
+<md>h(x)=\left\{
+\begin{array}{cc}
+\infty&amp; x\in A\\ 
+0&amp; x\notin A
+\end{array}
+\right.</md> гэе. Мэдээж <m>A</m> хэмжигдэх олонлог, <m>f</m> ба <m>g</m> бараг тэнцүү хэмжигдэх функцүүд учир ба <m>\mu(A)=0</m> байна. Иймд 
+<m>\intt hd\mu=0</m> болно. Учир нь <m>h(x)=\lim_{n\to\infty} n\chi_A(x)</m> тул үл буурах функцийн дарааллын цэгэн хязгаар байна. <m>\forall x\in X</m> хувьд <m>f(x)\leq g(x)+h(x)</m> байна.
+ Иймд интегралын монотон чанараар <md>\intt fd\mu\leq \intt (g+h) d\mu=
+\intt gd\mu+\intt hd\mu=\intt gd\mu</md> болно. Мөн адилаар <m>\forall x\in X</m> хувьд <m>g(x)\leq f(x)+h(x)</m> байна. Иймд интегралын монотон чанараар <md>\intt gd\mu\leq \intt (f+h) d\mu=\intt fd\mu+\intt hd\mu=\intt fd\mu</md> болж  <m>\intt fd\mu=\intt gd\mu</m> батлагдав. Сөрөг утга авдаг тохиолдолд <m>f=f^+-f^- , g=g^+-g^-</m> задаргааг ашиглавал хялбар батлагдана.</p></proof></theorem>
+<theorem xml:id="limit-theorems-th-13-2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[0;\infty]</m> хэмжигдэх  функц байг. Хэрэв <m>t</m> эерэг тоо, <m>A_t=\{x\in X\mid f(x)\geq t\}</m> гэе. Тэгвэл 
+<md>\mu(A_t)\leq \dfrac1{t}\intt_{A_t} fd\mu\leq \dfrac1{t}\intt f d\mu</md> байна.</p></statement><proof><p><m>0\leq t\chi_{A_t}\leq f\chi_{A_t}\leq f</m> байх нь ойлгомжтой. Интегралын монотон чанараар 
+<md>t\mu(A_t)=\intt t\chi_{A_t}d\mu \leq \intt f\chi_{A_t}d\mu \leq \intt fd\mu</md> болж батлагдав.</p></proof></theorem>
+<corollary xml:id="limit-theorems-cor-13-1"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах  функц бол <m>\{x\in X\mid f(x)\neq 0\}</m> олонлог <m>\sigma</m>-төгсгөлөг байна.</p></statement><proof><p><m>f</m> интегралчлагдах функц тул <m>|f|</m> интегралчлагдах сөрөг бус функц байна. Иймд Теорем <xref ref="limit-theorems-th-13-2"/>-оор 
+<md>A_n:=\left\{x\in X\mid |f(x)|\geq \dfrac1{n}\right\}</md> олонлог бүр төгсгөлөг хэмжээтэй байна. Мөн 
+<md>\{x\in X\mid f(x)\neq 0\}=\cup_nA_n</md> тул  <m>\{x\in X\mid f(x)\neq 0\}</m> олонлог <m>\sigma</m>-төгсгөлөг байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> хэмжигдэх  функц бөгөөд <m>\intt |f|d\mu=0</m> бол <m>f</m> функц <m>X</m> дээр бараг тэг байна.</p></statement><proof><p>Теорем <xref ref="limit-theorems-th-13-2"/>-оор натурал тоо <m>n</m> бүрийн хувьд 
+<md>\mu(\left\{x\in X\mid |f(x)|\geq \dfrac1{n}\right\})\leq n\intt |f|d\mu=0</md> байна. Тиймээс 
+<md>\left\{x\in X\mid |f(x)|\neq 0 \right\}=\cup_n \left\{x\in X\mid |f(x)|\geq\dfrac1{n} \right\}</md> тэнцэтгэл ба 
+<m>\mu</m>-н тоологдом хагас аддитив чанараас 
+<md>\mu(\{x\in X\mid f(x)\neq 0\})\leq \sum_n\mu(\left\{x\in X\mid |f(x)|\geq\dfrac1{n} \right\})
+=0</md> болж батлагдав.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-3"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бөгөөд дурын <m>A\in\A</m> хувьд <m>\intt_A f d\mu\geq 0</m> бол <m>f</m> функц <m>X</m> дээр бараг эерэг <m>( f\geq 0 )</m> байна.</p></statement><proof><p><m>A=\{x\in X\mid f(x)\lt 0\}</m> гэе. <m>A\in\A</m> тул <m>0\leq\intt_A f d\mu=\intt f\chi_a d\mu\leq 0</m> байна. Иймд 
+<md>0=-\intt_A fd\mu=\intt -f\chi_A d\mu=\intt |f\chi_A| d\mu</md> тул Мөрдлөгөө <xref ref="limit-theorems-cor-13-2"/>-оор <m>f\chi_A</m> бараг тэг байна. Иймд <m>\mu(A)=0</m> буюу <m>f</m> бараг эерэг байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-4"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бол <m>|f|\lt \infty</m> бараг үнэн байна.</p></statement><proof><p>Теорем <xref ref="limit-theorems-th-13-2"/>-г <m>|f|</m> функцэд хэрэглэвэл дурын натурал тооны хувьд
+<md>\mu(\{x\in X\mid |f(x)|\geq n\})\leq \dfrac{1}{n}\intt |f|d\mu</md>  байна. Тиймээс 
+<md>\mu(\{x\in X\mid |f(x)|=\infty\})\leq \mu(\{x\in X\mid f(x)\geq n\})\leq 
+\dfrac{1}{n}\intt |f|d\mu</md> мөн дурын натурал тооны хувьд биелнэ. <m>\intt |f|d\mu</m> төгсгөлөг тул <m>n\to \infty</m> хязгаар авбал <m>\mu(\{x\in X\mid |f(x)|=\infty\})=0</m> байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-5"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> хэмжигдэх функц байг. <m>f</m> интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\La^1(X, \A , \mu, \R)=\{ f:X\to (-\infty;\infty)\big| f-\text{ интегралчлагдах функц } \}</m>-д <m>f</m>-тэй бараг тэнцүү функц олдох явдал юм.</p></statement></corollary>
+<remark><p>Өөрөөр хэлбэл <m>[-\infty;\infty]</m> утгатай <m>f</m> функц интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүнтэй  бараг тэнцүү <m>\R</m> утгатай функц олдоно.</p></remark>
+<proof><p>Хэрэв <m>f</m> тэй бараг тэнцүү <m>\La^1(X, \A , \mu, \R)</m> ангийн функц байдаг бол <m>f</m> функц интегралчлагдах нь Теорем <xref ref="limit-theorems-th-13-1"/>-с гарна.</p>
+<p><m>f</m> интегралчлагдах , <m>A=\{x\in X\mid |f(x)=\infty|\}</m> гэе. Мэдээж <m>A\in\A</m> байх ба <xref ref="limit-theorems-cor-13-4"/>-өөр <m>\mu(A)=0</m> байна. Хэрэв 
+<m>f_0(x)=\left\{
+\begin{array}{cc}
+f(x)&amp; x\in A^c\\ 
+0&amp; x\in A
+\end{array}\right.</m> гэвэл <m>f, f_0</m> функцүүд бараг тэнцүү бөгөөд 
+<m>f_o\in \La^1(X, \A , \mu, \R)</m> байх нь илт. Иймд теорем батлагдав.</p></proof>
+</section>
+<section xml:id="sec-limit-theorems-2">
+<title>Хязгаарын теоремууд</title>
+<theorem xml:id="limit-theorems-th-15-1"><title>Монотон нийлэлтийн тухай теорем</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, f_n :X\to[0;\infty] , n=1, 2, 3, \ldots</m> хэмжигдэх функцүүд байг. Хэрэв эдгээр функцүүдийн хувьд 
+<md number="yes" xml:id="limit-theorems-th15-1-1">f_1(x) \leq f_2(x) \leq \ldots</md> ба 
+<md number="yes" xml:id="limit-theorems-th15-1-2">f(x) = \lim\limits_{n\to\infty} f_n(x)</md> нөхцөлүүд <m>X</m> олонлог дээр бараг биелдэг бол 
+<md>\int\limits f d\mu=\lim\limits_{n\to\infty}\int f_n d\mu</md>
+ байна.</p></statement></theorem>
+<remark><p>Энэ теоремд <m>f, f_1, f_2, \ldots</m> функцүүд зөвхөн сөрөг бус, хэмжигдэх байгаа. Интегралчлагдах гэсэн нөхцөл шаардахгүй байна. Энэ теоремын хялбар тохиолдол нь Теорем <m>\ref{mesfun2}</m> ба <m>\ref{nonnegint2}</m> юм.</p></remark>
+<proof><p>Эхлээд теоремын <m>(\ref{th15.1-1}) , (\ref{th15.1-2})</m> нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг үед баталъя.</p>
+<p>Интегралын монотон чанараар 
+<md>\intt f_1(x) d\mu \leq \intt f_2(x)d\mu\leq \ldots \ldots \intt f d\mu</md> байна. <m>\{\int f_n d\mu \}</m> дараалал монотон дараалал тул хязгаартай. 
+<m>\lim\limits_{n\to\infty}\intt f_n d\mu \leq \intt f d\mu</m> байна. Одоо 
+<m>\lim\limits_{n\to\infty}\intt f_n d\mu \geq \intt f d\mu</m> байхыг баталъя.</p>
+<p>Теорем <m>(\ref{nonnegint2})</m> ээр <m>f_n</m> функц бүрийн хувьд <md>f_n=\lim\limits_{k\to\infty} g_{n,k}</md> байх <m>\{g_{n,k}\}</m> үл буурах, сөрөг бус энгийн функцүүдийн дараалал олдоно. Дурын <m>n</m> хувьд 
+<md>h_n=\max (g_{1,n}, g_{2,n}, \ldots , g_{n,n})</md> гэе. Тэгвэл <m>h_n</m> сөрөг бус, энгийн функцийн дараалал байх нь илт. 
+Мөн  
+<ol marker="a)"><li><p><m>h_n</m> үл буурах</p></li><li><p><m>h_n\leq f_n</m></p></li><li><p><m>f(x)=\lim\limits_{n\to\infty} h_n(x)</m></p></li></ol>
+байна. Учир нь 
+<ol marker="a)"><li><p><m>h_n=g_{m,n}</m> гэвэл <m>h_{n+1} \geq g_{m,n+1} \geq g_{m,n}=h_n</m>,</p></li><li><p><m>h_n=g_{m,n}</m> гэвэл <m>m\leq k</m> байх ба <m>h_n\leq f_m \leq f_k</m>,</p></li><li><p><m>h_n</m> сөрөг бус, үл буурах, зааглагдсан  энгийн функцийн дараалал байх тул төгсгөлөг хязгаартай байх нь илт. <m>\veps\gt 0</m> дурын тоо байг. <m>f_k\to f</m> тул тодорхойлолтоор 
+<md>\exists n_1\in\N , n\gt n_1\text{ үед } f-f_n\lt \dfrac{\veps}{2}</md> байна. <m>n\gt n_1</m> байх <m>n</m> бэхлээд авъя.
+<m>g_{n,s}\to f_n</m> тул тодорхойлолтоор 
+<md>\exists n_2\gt n, m\gt n_2\text{ үед } f_n-g_{n,m}\lt \dfrac{\veps}{2}</md> байна. Иймд 
+<md>0\lt f-h_m\leq f-g_{n,m}=(f-f_n)+(f_n-g_{n,m}\leq \dfrac{\veps}{2}+\dfrac{\veps}{2}=\veps</md> болж <m>h_n\to f</m> байна. <m>h_n</m> энгийн үл буурах дараалал тул 
+<md>\intt f d\mu=\lim\limits_{n\to\infty}\intt h_n d\mu \leq \lim\limits_{n\to\infty}\intt f_n d\mu</md>
+болж <md>\intt f d\mu=\lim\limits_{n\to\infty}\intt f_n d\mu</md> батлагдав.</p></li></ol>
+Одоо <m>(\ref{th15.1-1}) , (\ref{th15.1-2})</m> нөхцөлүүд бараг бүх <m>x\in X</m> хувьд биелдэг гэж үзье.  
+<md>N=\{ x\in X \mid (\ref{th15.1-1}) , (\ref{th15.1-2}) \text{ нөхцөлүүдийн ядаж 1 нь биелдэггүй}\}</md>
+ гэе. Тэгвэл <m>N\subset M , \mu(M)=0</m> байх <m>M\in\A</m> олонлог олдоно. <m>f\chi_{M} , f_n\chi_{M}</m> функцүүдийн хувьд <m>(\ref{th15.1-1} ), (\ref{th15.1-2})</m> нөхцөлүүд бүх <m>x\in X</m> хувьд биелдэг тул 
+ <md>\intt f\chi_{M} d\mu=\lim\limits_{n\to\infty}\intt f_n\chi_{M} d\mu</md>  байна. <m>f=f\chi_{M} , f_n=f_n\chi_{M}</m> тэнцэтгэлүүд бараг хаа ч биелэх тул 
+ <md>\intt f d\mu=\lim\limits_{n\to\infty}\intt f_n d\mu</md> байна.</p></proof>
+<corollary xml:id="limit-theorems-x15-2"><title>Беппо-Леви</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f_n:X\to[0;\infty]</m> хэмжигдэх  функцүүд бол <m>\sum\limits_{n=1}^{\infty} f_n</m> цуваа нийлэх ба 
+<md>\intt (\sum\limits_{k=1}^{\infty} f_k)d\mu=\sum\limits_{k=1}^{\infty} \intt f_k d\mu</md> байна.</p></statement><proof><p><m>\sum\limits_{k=1}^{\infty} f_k</m> цуваа эерэг гишүүдтэй тул нийлэх нь ойлгомжтой (зарим цэг дээр <m>\infty</m> байж болно). <m>s_n=\sum\limits_{k=1}^{n} f_k</m> гэвэл <m>\{s_n\}</m> дараалал ба <m>f</m> функц өмнөх Теорем <xref ref="limit-theorems-th-15-1"/> нөхцөлүүдийг хангах тул батлагдав.</p></proof></corollary>
+<example><p>Мөрдлөгөө <xref ref="limit-theorems-x15-2"/> -г хэрэглэн шинэ хэмжээнүүдийг үүсгэж болдог. <m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[0;\infty]</m> хэмжигдэх  функц байг.  
+<m>\nu:\A\to [0;\infty]</m> функцийг <m>\nu(A)=\intt_A fd\mu</m> томьёогоор байгуулъя.</p>
+<p><m>\nu</m> нь <m>(X, \A)</m> хэмжээт огторгуйд хэмжээ болно. Үнэн хэрэгтээ 
+<ol marker="a)"><li><p><m>\nu(\emptyset)=0</m> байх нь илт</p></li><li><p><m>A_n</m> үл огтлолцох хэмжигдэх олонлогууд бол <m>\sum\limits_n f\chi_{A_n}</m>  цуваанд Мөрдлөгөө <xref ref="limit-theorems-x15-2"/> хэрэглэвэл 
+<md>\nu(\cup_n A_n)=\sum\limits_n \nu(A_n)</md> болно.</p></li></ol>
+Тиймээс <m>\nu</m> нь  <m>(X, \A)</m> хэмжигдэх огторгуйд хэмжээ,  <m>(X, \A , \nu)</m> хэмжээт огторгуй болно.</p></example>
+<p>Дараах лемм функц интегралчлагдах эсэхийг мэдэхэд, эсвэл интегралыг дээрээс үнэлэхэд өргөн хэрэглэгддэг.</p>
+<theorem xml:id="limit-theorems-x15-4"><title>Фатугийн лемм</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <md>f_n:X\to[0;\infty]</md> хэмжигдэх  функцүүдийн дараалал бол 
+<md>\intt \lim\inf_n f_n d\mu\leq \lim\inf_{n} 
+\intt f_n d\mu</md> 
+байна.</p></statement><proof><p>Тодорхойлолтоор <m>\lim\inf_n  f_n=\lim_{n\to\infty}(\inf_{k\geq n} f_k)</m> билээ.  <m>n</m> натурал тооны хувьд <m>g_n=\inf_{k\geq n} f_k</m> гэе. Мэдээж <m>g_n</m> хэмжигдэх, үл буурах функцэн дараалал ба бүх <m>x\in X</m> хувьд 
+<md>\lim\limits_{n\to\infty} g_n(x)=\underline{\lim\limits}_{n\to\infty} f_n(x)</md> болно. Тиймээс Теорем <xref ref="limit-theorems-th-15-1"/>-р (Монотон нийлэлтийн теоремоор) 
+<md>\intt\lim\inf_n  f_n d\mu=\intt\lim\limits_{n} g_n d\mu=
+\lim\limits_{n} \intt g_n d\mu \leq \lim\inf_n\intt f_n d\mu</md> болж батлагдав.</p></proof></theorem>
+<theorem xml:id="limit-theorems-th-15-5"><title>Зааглагдсан нийлэлтийн тухай Лебегийн теорем</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>g:X\to[0;\infty]</m> интегралчлагдах функц, <m>f, f_n:X\to [-\infty;\infty]</m> хэмжигдэх функцүүдийн дараалал ба 
+<md number="yes" xml:id="limit-theorems-x15-5-1">f(x)=\lim\limits_n f_n(x)</md>
+ба 
+<md number="yes" xml:id="limit-theorems-x15-5-2">|f_n(x)|\leq g(x) , n=1, 2, 3, \ldots</md>
+нөхцөлүүд бараг бүх <m>x</m>-н хувьд биелдэг бол <m>f, f_1, f_2, \ldots</m> интегралчлагдах ба <md>\intt f d\mu = \lim\limits_n\intt f_n d\mu</md> байна.</p></statement><proof><p><m>f, f_n</m> функцүүдийн интегралчлагдах чанар илт.  Эхлээд <xref ref="limit-theorems-x15-5-1"/> , <xref ref="limit-theorems-x15-5-2"/> чанарууд ба 
+<md number="yes" xml:id="limit-theorems-x15-5-3">g(x)\lt \infty</md>  чанарууд бүх <m>x\in X</m> хувьд биелдэг үед баталъя. <m>\{g+f_n\}</m> сөрөг бус функцэн дараалал ба <m>(g+f)(x)=\lim\limits_{n}(g+f_n)(x)</m> адилтгал бүх <m>x\in X</m> хувьд биелнэ. Иймд  Фатугийн леммээр 
+<md>\intt(g+f) d\mu\leq \underline{\lim}_n\intt (g+f_n) d\mu</md> болох ба эндээс шугаман чанар хэрэглэвэл 
+<md>\intt f d\mu\leq \underline{\lim}_n\intt f_n d\mu</md>  байна.</p>
+<p>Хэрэв <m>\{g-f_n\}</m> сөрөг бус функцэн дараалал авч үзвэл дээрхтэй адилаар Фатугийн леммээр 
+<md>\intt(g-f) d\mu\leq \underline{\lim}_n\intt (g-f_n) d\mu</md> болох ба эндээс шугаман чанар хэрэглэвэл 
+<md>\overline{\lim}_n\intt f_n d\mu \leq \intt f d\mu</md>  байна. Дээрх 2 үр дүнг нэгтгэвэл 
+<md>\intt f d\mu=\lim\limits_n\intt f_n d\mu</md> батлагдав. Хэрэв <xref ref="limit-theorems-x15-5-1"/> , <xref ref="limit-theorems-x15-5-2"/> , <xref ref="limit-theorems-x15-5-3"/> чанарууд бараг бүх <m>x\in X</m> хувьд биелдэг үед баталгаа амархан.</p></proof></theorem>
+<example><p>Теорем <xref ref="limit-theorems-th-15-5"/> ашиглан интеграл дотор дифференциалчлах талаар  авч үзье.  
+<m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>g:X\to[0;\infty]</m> интегралчлагдах функц, <m>I\subset\R</m> задгай интервал 
+<md>f: X\times I\to \R</md> функц 
+<ol marker="a)"><li><p><m>t\in I</m> бүрийн хувьд <m>x\to f(x,t)</m> функц интегралчлагдах</p></li><li><p><m>x\in X</m> бүрийн хувьд <m>t\to f(x,t)</m> функц <m>I</m> завсар дээр дифференциалчлагддаг</p></li><li><p>бүх <m>t, t_0\in I, x\in X</m> хувьд 
+<md number="yes" xml:id="limit-theorems-x15-6-1">\mid \dfrac{f(x,t)-f(x,t_0)}{t-t_0}\mid\leq g(x)</md> нөхцөл хангадаг байг.</p></li></ol>
+<m>h:I\to\R</m> функцийг <m>h(t)=\intt_X f(x,t) d\mu</m> гэж тодорхойлъё. 
+<m>t_n\to t_0, t_n\neq t_0 , t_n\in I</m> байх дурын  <m>\{t_n\}</m> дараалал авч үзвэл  (<xref ref="limit-theorems-x15-6-1"/>) нөхцөл ба Зааглагдсан нийлэлтийн тухай Лебегийн теоремоос <m>x\to f_t(x,t_0)</m> функц интегралчлагдах ба 
+<md>\lim\limits_n \dfrac{g(t_n)-g(t_0)}{t_n-t_0}=\intt_X f_t(x,t_0)d\mu</md> байна. Өөрөөр хэлбэл <md>\dfrac{d\big(\intt_X f(x,t) d\mu\big)}{dt}=\intt_X \dfrac{df(x,t)}{dt} d\mu</md> адилтгал биелнэ.</p></example>
+</section>
+<exercises xml:id="sem-limit-theorems"><title>Семинарын бодлогууд</title>
+<exercise><statement><p><m>A_1, A_2, \dots</m> нь <m>A</m> олонлогийн хэмжигдэхүүн дэд олонлогууд ба <m>B_n = \{x \in A : x \text{ элемент нь } A_i \text{-уудаас хамгийн багадаа } n \text{ ширхэгт нь харьяалагдана}\}</m> гэе. Дараах тэнцэтгэл бишийг батал:
+<md>\mu(B_n) \le \frac{1}{n} \sum_{i=1}^{\infty} \mu(A_i).</md></p></statement></exercise>
+<exercise><statement><p><m>\{f_n(x)\}_{n=1}^{\infty}</m> ба <m>f(x)</m> нь <m>L(A)</m> ангийн сөрөг бус функцууд байг. <m>A</m> олонлог дээр <m>n \to \infty</m> үед <m>f_n(x) \Rightarrow f(x)</m> (хэмжээээр нийлэх) бөгөөд 
+<md>\lim_{n \to \infty} \int_A f_n(x) \, d\mu = \int_A f(x) \, d\mu</md>
+байг. Тэгвэл дурын хэмжигдэхүүн дэд олонлог <m>B \subset A</m> (<m>B \in M</m>)-ийн хувьд дараах хязгаар биелнэ гэж батал:
+<md>\lim_{n \to \infty} \int_B f_n(x) \, d\mu = \int_B f(x) \, d\mu.</md></p></statement></exercise>
+<exercise><statement><p><m>\mu(A) = \infty</m> ба <m>f(x) \in L(A)</m> байг. Дурын <m>\varepsilon \gt  0</m> хувьд <m>\mu(B) \lt  \infty</m> байх, дараах нөхцөлийг хангах <m>B \subset A</m> (<m>B \in M</m>) олонлог оршин байна гэж батал:
+<md>\int_{A \setminus B} |f(x)| \, d\mu \lt  \varepsilon.</md></p></statement></exercise>
+</exercises>
 </chapter>

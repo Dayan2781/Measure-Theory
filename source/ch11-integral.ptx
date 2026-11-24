@@ -1,17 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 10integralD.tex -->
+<!-- Эх файл: 10integralD.tex:1-; seminar 9.tex:2-26 -->
 <chapter xml:id="ch-integral" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Интеграл</title>
-
-  <introduction>
-    <p>Энэ бүлгийг LaTeX эхээс хөрвүүлж байна.</p>
-  </introduction>
-
-  <exercises xml:id="sem-integral">
-    <title>Семинарын бодлогууд</title>
-    <!-- TODO: семинарын бодлого -->
-    <exercise>
-      <statement><p>Бодлогыг удахгүй нэмнэ.</p></statement>
-    </exercise>
-  </exercises>
+<title>Интеграл</title>
+<section xml:id="sec-integral-1">
+<title>Интеграл</title>
+<p>Бид интегралын онолыг эхлээд энгийн, сөрөг бус утгатай хэмжигдэх функцүүдийн хувьд, түүний дараа сөрөг бус хэмжигдэх функцүүдийн хувьд эцэст нь дурын хэмжигдэх функцийн хувьд 
+байгуулах болно.</p>
+</section>
+<section xml:id="sec-integral-2">
+<title>Энгийн, сөрөг бус функцийн интеграл</title>
+<p><m>(X, \mathcal{A})</m>-хэмжигдэх огторгуй байг. Дараах тэмдэглэгээг хийе. 
+  <md>\La=\{f:X\to[-\infty;\infty]\big| f-\text{ энгийн }, \mathcal{A}\text{-хэмжигдэх}\}</md>
+  <md>\La^+=\{f:X\to[0;\infty]\big| f-\text{ энгийн }, \mathcal{A}\text{-хэмжигдэх}\}</md> 
+Өөрөөр хэлбэл <m>\La</m> нь <m>X</m> дээрх бүх хэмжигдэх, энгийн функцүүдийн олонлог,  <m>\La^+</m> нь <m>X</m> дээрх бүх хэмжигдэх энгийн, сөрөг бус функцүүдийн олонлог байна. <m>\mu</m> нь <m>(X,\mathcal{A})</m> дээрх хэмжээ байг. <m>f\in\La^+</m>  функцийн хувьд  
+<md>f=\sum\limits_{i=1}^m a_i\chi_{A_i}</md> байх <m>a_i, (i=1, 2, \ldots , m)</m> сөрөг биш бодит тоо, <m>A_i\subset X , (i=1, 2, \ldots , m)</m> үл огтлолцох хэмжигдэх олонлогууд (<m>A_i\in\mathcal{A}</m>) олдоно.  Энд <m>\chi_{A_i}</m> нь <m>A_i</m> олонлогийн характеристик функц. 
+<m>(</m> Тодорхойлолт <xref ref="measurable-functions-simfun1"/> хар.<m>)</m></p>
+<definition xml:id="integral-simpint1"><statement><p><m>(X,\mathcal{A}, \mu)</m> хэмжээт огторгуй <m>f\in\La^+</m> байг. 
+<md>f=\sum\limits_{i=1}^m a_i\chi_{A_i}</md>  функцийн хувьд  <md>\sum\limits_{i=1}^m a_i\mu(A_i)</md> тоог <m>f</m> <term>энгийн сөрөг бус функцийн интеграл</term> <idx>энгийн сөрөг бус функцийн интеграл</idx> гээд  <m>\intt{f} d\mu</m> гэж тэмдэглэнэ. 
+<md>\intt f d\mu=\sum\limits_{i=1}^m a_i\mu(A_i)</md></p></statement></definition>
+<remark><p>Дээрх тодорхойлолтод 2 эргэлзээтэй зүйл байна.
+<ol><li><p><m>\sum\limits_{i=1}^m a_i\mu(A_i)</m>оршин байх уу?</p></li><li><p>Хэрэв <m>f</m>  функцийг мөн <m>\sum\limits_{k=1}^n b_i\chi_{B_i}</m> хэлбэрт бичиж болдог бол интеграл нь тэнцүү байх уу?</p></li></ol>
+Мэдээж  <m>\sum\limits_{i=1}^m a_i\chi_{A_i}</m> нь сөрөг бус тоонууд эсвэл <m>+\infty</m> нэмж байгаа тул төгсгөлөг эерэг тоо эсвэл  <m>\infty</m> байна.</p>
+<p>Харин <m>2.</m> эргэлзээний хувьд:   
+Бид <m>\cup_{i=1}^m A_i=\cup_{k=1}^n B_k=X</m> гэж үзэж болно.  Учир нь <m>X\setminus \cup_{i=1}^n A_i\neq\emptyset</m> бол түүн дээр 0 утга авдаг гээд нэмчихнэ. <m>X\setminus \cup_{i=1}^n A_i</m> олонлог хэмжигдэх нь илт. Хэрэв <m>A_i\cap B_k\neq\emptyset</m> бол <m>a_i=b_k</m> байна. Иймд 
+<md>\sum\limits_{i=1}^m a_i\mu(A_i)=\sum\limits_{i=1}^m \sum\limits_{k=1}^n 
+a_i\mu(A_i\cap B_k)=\sum\limits_{k=1}^n \sum\limits_{i=1}^m b_k\mu(A_i\cap B_k)= 
+\sum\limits_{k=1}^n b_k\mu(B_k)</md> болж интегралын утга адил байна. Тодорхойлолтоос энгийн сөрөг бус функцийн интеграл сөрөг бус тоо байна.</p></remark>
+<theorem xml:id="integral-simpint2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g\in\La^+</m> , <m>\alpha</m> сөрөг бус бодит тоо байг. Дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\intt\alpha f d\mu=\alpha\intt f d\mu</m> ( тогтмол үржигдэхүүн гаргах чанар)</p></li><li><p><m>\intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</m> (аддитив чанар)</p></li><li><p>Хэрэв бүх <m>x\in X</m> хувьд <m>f(x)\leq g(x)</m> бол <md>\intt f d\mu\leq \intt g d\mu\text{\quad (монотон чанар)}</md></p></li></ol></p></statement><proof><p><m>f=\sum\limits_{i=1}^m a_i\chi_{A_i}</m> ба <m>a_i, (i=1, 2, \ldots , m)</m> сөрөг биш бодит тоо, <m>A_i\subset X , (i=1, 2, \ldots , m)</m> үл огтлолцох хэмжигдэх олонлогууд , <m>g=\sum\limits_{k=1}^n b_k\chi_{B_k}</m> ба <m>b_k, (k=1, 2, \ldots , n)</m> сөрөг биш бодит тоо,
+ <m>B_i\subset X , (i=1, 2, \ldots , n)</m> үл огтлолцох хэмжигдэх олонлогууд байг.</p>
+<p>Бид <m>\cup_{i=1}^m A_i=\cup_{k=1}^n B_k=X</m> гэж үзэж болно. 
+<ol marker="a)"><li><p><m>\intt \alpha f d\mu=\sum\limits_{i=1}^m \alpha a_i\mu(A_i)=\alpha 
+\sum\limits_{i=1}^m a_i\mu(A_i)=\alpha \intt f d\mu.</m></p></li><li><p>Аддитив чанарыг баталъя.
+<md><mrow>\intt (f+g) d\mu = &amp;\sum\limits_{i=1}^m \sum\limits_{k=1}^n (a_i+b_k)\mu(A_i\cap B_k)</mrow><mrow>= &amp;\sum\limits_{i=1}^m \sum\limits_{k=1}^n a_i\mu(A_i\cap B_k)+\sum\limits_{i=1}^m \sum\limits_{k=1}^n b_k\mu(A_i\cap B_k)</mrow><mrow>= &amp;\sum\limits_{i=1}^m a_i\mu(A_i)+\sum\limits_{k=1}^n b_k\mu(B_k)=\intt f d\mu+\intt g d\mu.</mrow></md></p></li><li><p><m>f(x)\leq g(x)</m> тул <m>g-f\in\La^+</m> байна. Тиймээс аддитив чанар болон интеграл сөрөг бус тоо байхыг тооцвол 
+<md>\intt g d\mu=\intt (f+(g-f)) d \mu=\intt f d\mu+\intt (g-f) d\mu\geq \intt f d\mu.</md></p></li></ol></p></proof></theorem>
+<theorem xml:id="integral-simpint3"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, f_n\in\La^+, ( n\in\N )</m> ба 
+ <m>\forall x\in A</m> хувьд
+<ol><li><p><m>f_1(x)\leq f_2(x)\leqslant\ldots\leqslant f_n(x)\leqslant\ldots</m>;</p></li><li><p><m>f(x)=\lim\limits_{n}f_n(x)</m></p></li></ol> байх функцэн дараалалын хувьд 
+<md>\intt f d\mu=\lim\limits_{n\to\infty} \intt f_n d\mu</md> биелнэ.</p></statement></theorem>
+<remark><p>Теорем <xref ref="integral-simpint3"/> нь хожим үзэх Лебегийн интегралын гол чанарын нэг болох монотон нийлэлтийн теоремын тухайн тохиолдол юм.</p></remark>
+<proof><p>Теорем <xref ref="integral-simpint2"/>-н <m>(c)</m>-р 
+<md>\intt f_1 d\mu\leq \intt f_2 d\mu\leq\ldots \leq \intt f d\mu</md> байна. Иймээс <m>\{\intt f_n d\mu\}_n</m> дараалал монотон өсөх учир хязгаартай бөгөөд 
+<md>\lim\limits_{n} \intt f_n d\mu\leq \intt f d\mu</md> байх нь илт.</p>
+<p>Одоо <m>\lim\limits_{n} \intt f_n d\mu\geq \intt f d\mu</m> байхыг харуулъя.  <m>0\lt \veps\lt 1</m> байг. Бид <m>g_n\in\La^+ , g_n\leq f_n , \lim\limits_{n\to\infty} \intt g_n d\mu=(1-\veps)\intt f d\mu</m> байх дараалал  <m>\{g_n\}_n</m> байгуулсан гэе. <m>\intt g_n d\mu\leq \intt f_n d\mu</m> тул 
+<md>(1-\veps)\intt f d\mu=\lim\limits_{n\to\infty} \intt g_n d\mu\leq \lim\limits_{n\to\infty} \intt f_n d\mu</md> болно. <m>\veps</m> дурын тоо тул <m>\veps\to 0</m> хязгаарт шилжвэл  
+<md>\intt f d\mu\leq \lim\limits_{n\to\infty} \intt f_n d\mu</md> болно. 
+Дээрх <m>g_n</m> дарааллыг дараах байдлаар байгуулж болно. 
+<m>f=\sum\limits_{i=1}^m a_i\chi_{A_i}</m> ба <m>a_i, (i=1, 2, \ldots , m)</m> сөрөг биш бодит тоо, <m>A_i\subset X , (i=1, 2, \ldots , m)</m> хэмжигдэх олонлогууд байг. <m>n, i</m> бүрийн хувьд 
+<md>A(n,i)=\{x\in A_i\big| f_n(x)\geq (1-\veps) a_i\}</md> гэе. <m>A(n,i)</m> бүр хэмжигдэх бөгөөд  бэхлэгдсэн <m>i</m> бүрийн хувьд
+<m>\{A(n,i)\}_{n=1}^{\infty}</m> дараалал олонлогийн үл буурах дараалал ба <m>A_i=\cup_n A(n,i)</m> байна. Хэрэв <md>g_n=\sum\limits_{i=1}^m (1-\veps) a_i\chi_{A(n,i)}</md> гэвэл дээрх нөхцөл хангана.</p></proof>
+</section>
+<section xml:id="sec-integral-3">
+<title>Сөрөг бус хэмжигдэх функцийн интеграл</title>
+<p>Бидний дараагийн зорилго бол <m>f:X\to [0;\infty]</m> хэмжигдэх функцийн интегралыг тодорхойлох юм.</p>
+<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <md>f:X\to [0;\infty]</md> <m>\A</m>-хэмжигдэх функц байг. <m>\sup\left\{ \intt g d\mu\Big| g\in\La^+, g\leq f\right\}</m>-г <m>f</m> <term>сөрөг бус хэмжигдэх функцийн интеграл</term> <idx>сөрөг бус хэмжигдэх функцийн интеграл</idx> гээд 
+<md>\intt f d\mu=\sup\left\{ \intt g d\mu\Big| g\in\La^+, g\leq f\right\}</md> гэж бичнэ.</p></statement></definition>
+<remark><p>Хэрэв <m>f\in\La^+</m>  бол дээрх тодорхойлолт Тодорхойлолт <xref ref="integral-simpint1"/>-тэй адил болно.</p></remark>
+<p>Сөрөг бус хэмжигдэх функцийн интегралын чанаруудыг батлахад хэрэглэгдэх дараах чанарыг баталъя. Энэ нь Теорем <xref ref="integral-simpint3"/>-н өргөтгөл болно.</p>
+<theorem xml:id="integral-nonnegint1"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, 
+<md>f:X\to [0;\infty]</md> сөрөг бус хэмжигдэх функц <m>f_n\in\La^+, ( n\in\N )</m> ба 
+ <m>\forall x\in A</m> хувьд
+<ol><li><p><m>f_1(x)\leq f_2(x)\leqslant\ldots\leqslant f_n(x)\leqslant\ldots</m>;</p></li><li><p><m>f(x)=\lim\limits_{n}f_n(x)</m></p></li></ol> байх функцэн дараалалын хувьд
+<md>\intt f d\mu=\lim\limits_{n\to\infty} \intt f_n d\mu</md> биелнэ.</p></statement><proof><p><md>\intt f_1 d\mu\leq \intt f_2 d\mu\leq\ldots \leq \intt f d\mu</md> байна. Иймээс <m>\{\intt f_n d\mu\}_n</m> дараалал монотон өсөх учир хязгаартай бөгөөд 
+<md>\lim\limits_{n\to\infty} \intt f_n d\mu\leq \intt f d\mu</md> байх нь илт. Одоо <m>\lim\limits_{n\to\infty} \intt f_n d\mu\geq \intt f d\mu</m> байхыг харуулъя.  Үүний тулд <m>g\in\La^+ , g\leq f</m> бол <m>\intt g d\mu\leq \lim\limits_{n\to\infty}\intt f_n d\mu</m> байхыг батлахад хангалтай. <m>g\in\La^+ , g\leq f</m> байг. <m>h_n=\min\{g, f_n\}</m> үл буурах функцүүдийн дараалал ба <m>h_n\in\La^+ , \lim\limits_{n\to\infty} h_n=g</m>  байна. Иймд Теорем <xref ref="integral-simpint3"/> ёсоор
+<md>\intt g d\mu=\lim\limits_{n} \intt h_n d\mu</md> байна. Мөн 
+<m>\intt h_nd\mu\leq \intt f_n d\mu</m> тул 
+<md>\intt gd\mu\leq \lim\limits_{n}\intt f_n d\mu</md> байна.</p></proof></theorem>
+<theorem xml:id="integral-nonnegint2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[0;\infty]</m> хэмжигдэх функцүүд, <m>\alpha</m> сөрөг бус бодит тоо байг. Дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\intt\alpha f d\mu=\alpha\intt f d\mu</m></p></li><li><p><m>\intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</m></p></li><li><p>Хэрэв бүх <m>x\in X</m> хувьд <m>f(x)\leq g(x)</m> бол   
+<m>\intt f d\mu\leq \intt g d\mu</m></p></li></ol></p></statement><proof><p>Лемм <xref ref="measurable-functions-mesmonsim1"/>-р  <m>\lim_n f_n=f, \lim_n g_n=g</m> байх <m>\{f_n\}_n</m> ба <m>\{g_n\}_n</m> үл буурах энгийн функцүүдийн дараалал олдоно. Тэгвэл <m>\{\alpha f_n\}_n</m> ба <m>\{f_n+g_n\}_n</m> үл буурах энгийн функцүүдийн дараалал болох ба 
+<md>\lim\limits_{n}\alpha f_n=\alpha f \quad , \quad \lim\limits_{n} (f_n+g_n)=f+g</md> байх тул Теорем <xref ref="integral-nonnegint1"/>-р  
+<md>\intt\alpha f d\mu=\alpha\intt f d\mu\quad , \quad \intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</md> батлагдана.   
+<m>(c)</m> хувьд <m>h\leq f\Lra h\leq g</m> тул илт.</p></proof></theorem>
+</section>
+<section xml:id="sec-integral-4">
+<title>Хэмжигдэх функцийн интеграл</title>
+<p>Бидний дараагийн зорилго бол <m>f:X\to [-\infty;\infty]</m> хэмжигдэх функцийн интегралыг тодорхойлох юм.</p>
+<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц байг. <m>f^+, f^-</m> функцүүд сөрөг бус хэмжигдэх функцүүд байдаг тул <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралуудыг тодорхойлж чадна. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд төгсгөлөг байвал <m>f</m> функцийг <term>интегралчлагдах функц</term><idx>интегралчлагдах функц</idx> гэх ба
+<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
+<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
+гэж бичнэ. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд ядаж нэг нь төгсгөлөг байвал <m>f</m> функцийн интеграл оршин байна гэх ба 
+<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
+<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
+гэж бичнэ.</p></statement></definition>
+<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц <m>A\in\A</m> байг. Хэрэв <m>f\chi_A</m> функц интегралчлагдах бол <m>f</m> функцийг <m>A</m> олонлог дээр интегралчлагдах функц гэх ба <md>\intt f\chi_A d\mu</md> тоог <m>f</m> функцийн<term> <m>A</m> олонлог дээрх интеграл</term> гээд  <md>\intt_{A} f d\mu</md> гэж тэмдэглэнэ. Өөрөөр хэлбэл 
+<md>\intt_{A} f d\mu = \intt f\chi_A d\mu</md> байна.</p></statement></definition>
+<definition><statement><p><m>X=\R^n,  \mu=\lambda</m>  бол <m>(\R^n, \lambda)</m>-г Лебегээр интегралчлагдах функцүүдийн огторгуй гэх ба интегралыг<term> Лебегийн интеграл</term> <idx> Лебегийн интеграл</idx> гэнэ.
+<md>\La^1(X, \A , \mu, \R)=\{ f:X\to (-\infty;\infty)\big| f \text{интегралчлагдах функц} \}</md>-г <term>Лебегийн огторгуй </term> <idx>Лебегийн огторгуй </idx> гэх бөгөөд энэ шугаман огторгуй болохыг дараах теоремууд харуулна.</p></statement></definition>
+<theorem xml:id="integral-th-12-6"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[-\infty;\infty]</m> интегралчлагдах функцүүд,</p>
+<p><m>\alpha</m> бодит тоо байг. Дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\alpha f</m> ба <m>(f+g)</m> функцүүд интегралчлагдана.</p></li><li><p><m>\intt\alpha f d\mu=\alpha\intt f d\mu</m> ( тогтмол үржигдэхүүн гаргах чанар)</p></li><li><p><m>\intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</m> (аддитив чанар)</p></li><li><p>Хэрэв бүх <m>x\in X</m> хувьд <m>f(x)\leq g(x)</m> бол   
+<m>\intt f d\mu\leq \intt g d\mu\text{ (монотон чанар)}</m></p></li></ol></p></statement><proof><p>Илэрхий</p></proof></theorem>
+<theorem><statement><p><m>f</m> функц интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>|f|</m> функц интегралчлагдах юм.</p></statement><proof><p><m>|f|=f^++f^-</m> байдаг. Мөн <m>\intt f^+d \mu, \intt f^+d \mu</m> интегралууд төгсгөлөг учир 
+<md>\intt |f|d \mu=\intt f^+d \mu+\intt f^-d \mu</md> байна.</p></proof></theorem>
+<corollary><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бол
+<md>|\intt f d\mu|\leq \intt |f| d\mu</md> байна.</p></statement></corollary>
+</section>
+<exercises xml:id="sem-integral"><title>Семинарын бодлогууд</title>
+<exercise><statement><p><m>f(x) \in L(X)</m> ба <m>A</m> олонлог дээр <m>f(x) \ge 0</m> бөгөөд 
+<md>\int_A f(x) \, d\mu = 0</md>
+байг. <m>A</m> олонлог дээр бараг <m>f(x) = 0</m> байна гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>f(x) \in L(A)</m> байх бөгөөд дурын хэмжигдэхүүн <m>B \subset A</m> (<m>B \in M</m>) олонлогийн хувьд 
+<md>\int_B f(x) \, d\mu = 0</md>
+тэнцэтгэл биелдэг байг. <m>A</m> олонлог дээр бараг бүх цэгт <m>f(x) = 0</m> байна гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\mu(A) \lt  \infty</m> ба <m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэхүүн бөгөөд төгсгөлөг байг. Мөн <m>k = 0, 1, \dots</m> хувьд <m>E_k(f) = \{x \in A : k \le |f(x)| \lt  k+1\}</m> гэе. <m>f(x) \in L(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь 
+<md>\sum_{k=1}^{\infty} k \mu(E_k(f)) \lt  \infty</md>
+байх явдал юм гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\mathbb{R}</m> дээрх Лебегийн сонгодог хэмжээийн хувьд хэмжигдэхүүн, сөрөг бус (сөрөг биш), төгсгөлөг бөгөөд <m>\sum_{k=1}^{\infty} k \mu(E_k(f)) \lt  \infty</m> нөхцөлийг хангах боловч <m>f(x) \notin L(\mathbb{R})</m> байх функцийн жишээг байгуул (10.54 бодлыг үз).</p></statement></exercise>
+<exercise><statement><p><m>\mu(A) \lt  \infty</m> ба <m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэхүүн байг. <m>k = 0, 1, \dots</m> хувьд <m>F_k(f) = \{x \in A : |f(x)| \ge k\}</m> гэе. <m>f(x) \in L(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь 
+<md>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</md>
+байх явдал юм гэж батал.</p></statement></exercise>
+<exercise><statement><p><m>\mathbb{R}</m> олонлог дээр хэмжигдэхүүн, сөрөг бус, төгсгөлөг бөгөөд <m>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</m> нөхцөлийг хангах боловч <m>f(x) \notin L(\mathbb{R})</m> байх функцийн жишээг байгуул (10.56 бодлогыг үз).</p></statement></exercise>
+<exercise><statement><p><m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэхүүн бөгөөд <m>k = 0, 1, 2, \dots</m> хувьд <m>D_k(f) = \{x \in A : |f(x)| \ge 2^{-k}\}</m> гэе. <m>f(x) \in L(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</m> ба <m>\sum_{k=1}^{\infty} 2^{-k} \mu(D_k(f)) \lt  \infty</m> байх явдал юм гэж батал (10.56 бодлогыг үз).</p></statement></exercise>
+<exercise><statement><p><m>f(x) \in L(A)</m> байг. <m>k \to \infty</m> үед <m>\mu(F_k(f)) = o\left(\frac{1}{k}\right)</m> байна гэж батал (10.56 бодлогыг үз).</p></statement></exercise>
+<exercise><statement><p><m>f(x)</m> нь <m>A</m> олонлог дээр төгсгөлөг, хэмжигдэхүүн функц байг. <m>A</m> олонлог дээр <m>f(x) \cdot g(x) \in L(A)</m> байх эерэг, хэмжигдэхүүн <m>g(x)</m> функц оршин байна гэж батал.</p></statement></exercise>
+</exercises>
 </chapter>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<exercises xml:id="sem-outer-measure">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise>
+    <statement><p><m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>Y\subset X</m> байг. <m>\nu^{\star}(A)=\mu^{\star}(A\cap Y)</m>, <m>A\subset X</m> гэж тодорхойлсон <m>\nu^{\star}</m> функц <m>X</m> дээр гадаад хэмжээ болохыг батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>\mu^{\star}_1, \mu^{\star}_2</m> нь <m>X</m> дээрх гадаад хэмжээнүүд байг. <m>\mu^{\star}_1+\mu^{\star}_2</m> ба <m>\max\{\mu^{\star}_1,\mu^{\star}_2\}</m> функцүүд гадаад хэмжээ болох уу? Хариугаа батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Тоологдом олонлог бүрийн Лебегийн гадаад хэмжээ тэгтэй тэнцүү гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>a\lt b</m> бол <m>\ls([a,b])=\ls((a,b))=b-a</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Дурын <m>A\subset\R</m> ба <m>x\in\R</m> тооны хувьд <m>\ls(A+x)=\ls(A)</m>, мөн <m>c\gt 0</m> үед <m>\ls(cA)=c\,\ls(A)</m> гэж батал. Энд <m>A+x=\{a+x\mid a\in A\}</m>, <m>cA=\{ca\mid a\in A\}</m>.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Дурын <m>A\subset\R</m> ба <m>\veps\gt 0</m> тооны хувьд <m>A\subset G</m> ба <m>\ls(G)\leq\ls(A)+\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал.</p></statement>
+  </exercise>
+</exercises>

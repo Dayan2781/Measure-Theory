@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<exercises xml:id="sem-product-measure">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise>
+    <statement><p><m>\br\times\br=\mathscr{B}_{\R^2}</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>E\in\alg_1\times\alg_2</m> бол дурын <m>x\in X_1</m> хувьд <m>E_x=\{y\in X_2\mid (x,y)\in E\}\in\alg_2</m> гэж батал. Эсрэг өгүүлбэр үнэн үү?</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f\colon X_1\to\R</m> нь <m>\alg_1</m>-хэмжигдэх, <m>g\colon X_2\to\R</m> нь <m>\alg_2</m>-хэмжигдэх бол <m>h(x,y)=f(x)g(y)</m> функц <m>\alg_1\times\alg_2</m>-хэмжигдэх болохыг батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>X_1=X_2=[0,1]</m>, <m>\mu</m> нь Лебегийн хэмжээ, <m>\nu</m> нь тоолох хэмжээ, <m>D=\{(x,x)\mid x\in[0,1]\}</m> байг.
+      <md>\int_{X_1}\Big(\int_{X_2}\chi_D\,d\nu\Big)d\mu \neq \int_{X_2}\Big(\int_{X_1}\chi_D\,d\mu\Big)d\nu</md>
+    гэж харуулж, энэ нь Фубиний теоремын аль нөхцөлийг зөрчиж байгааг тайлбарла.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>[0,1]^2</m> дээр
+      <md>f(x,y)=\begin{cases}\dfrac{x^2-y^2}{(x^2+y^2)^2}, &amp; (x,y)\neq(0,0),\\ 0, &amp; (x,y)=(0,0)\end{cases}</md>
+    функцийн давталттай хоёр интегралыг бодож, тэдгээр нь ялгаатай гэж харуул. <m>f\notin L^1([0,1]^2)</m> гэдгийг шалга.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f\geq 0</m> хэмжигдэх функц бол
+      <md>\int_X f\,d\mu=\int_0^{\infty}\mu(\{x\mid f(x)\gt t\})\,dt</md>
+    гэж Фубиний теоремыг ашиглан батал.</p></statement>
+  </exercise>
+</exercises>

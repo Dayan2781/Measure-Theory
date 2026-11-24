@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Шинээр бичсэн семинарын бодлогууд (эх LaTeX-д байгаагүй). Багш шалгах. -->
+<exercises xml:id="sem-indefinite-integral">
+  <title>Семинарын бодлогууд</title>
+
+  <exercise>
+    <statement><p>Монотон функцийн тасралтгүй биш цэгүүдийн олонлог хамгийн ихдээ тоологдом гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>[a,b]</m> дээр Липшицийн нөхцөл хангах функц зааглагдсан өөрчлөлттэй бөгөөд абсолют тасралтгүй функц болохыг батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f(x)=x\sin\dfrac{1}{x}</m> (<m>x\neq0</m>), <m>f(0)=0</m> функц <m>[0,1]</m> дээр тасралтгүй боловч зааглагдсан өөрчлөлттэй биш гэж харуул. <m>g(x)=x^2\sin\dfrac{1}{x}</m> функцийн хувьд ямар байх вэ?</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f</m> нь <m>[a,b]</m> дээр зааглагдсан өөрчлөлттэй бол хоёр монотон үл буурах функцийн ялгавар хэлбэрээр бичигдэнэ гэж батал.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p>Канторын функц <m>[0,1]</m> дээр тасралтгүй, монотон үл буурах боловч абсолют тасралтгүй биш гэж харуул.</p></statement>
+  </exercise>
+
+  <exercise>
+    <statement><p><m>f\in L^1([a,b])</m> ба <m>F(x)=\int_a^x f\,d\lambda</m> бол <m>F</m> абсолют тасралтгүй бөгөөд <m>\bigvee\limits_a^b[F]=\int_a^b|f|\,d\lambda</m> гэж батал.</p></statement>
+  </exercise>
+</exercises>
