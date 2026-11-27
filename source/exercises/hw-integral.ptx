@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Гэрийн даалгавар 11 (интеграл). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<!-- Гэрийн даалгавар 9 (сөрөг бус функцийн интеграл). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-integral">
   <title>Гэрийн даалгавар</title>
-  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
 
   <exercise xml:id="hw-integral-1">
     <statement><p><m>([0;1],\lambda)</m> дээр <m>f(x)=k</m>, хэрэв <m>x\in(2^{-k};2^{-k+1}]</m> <m>(k\in\N)</m> гэж тодорхойлсон функцийн интегралыг ол.</p></statement>
   </exercise>
 
   <exercise xml:id="hw-integral-2">
-    <statement><p><m>f\geqslant 0</m> хэмжигдэх, <m>\int_Xf\,d\mu\lt\infty</m> бол <m>\mu(\{f=\infty\})=0</m> ба <m>\{f\gt 0\}</m> нь <m>\sigma</m>-төгсгөлөг хэмжээтэй гэж батал.</p></statement>
-  </exercise>
-
-  <exercise xml:id="hw-integral-3">
     <statement><p>(Чебышёвын тэнцэтгэл биш) <m>f\geqslant 0</m> хэмжигдэх, <m>c\gt 0</m> бол <m>\mu(\{f\geqslant c\})\leqslant\frac1c\int_Xf\,d\mu</m> гэж батал.</p></statement>
   </exercise>
 
+  <exercise xml:id="hw-integral-3">
+    <statement><p><m>f\geqslant 0</m> хэмжигдэх, <m>\int_Xf\,d\mu\lt\infty</m> бол <m>\mu(\{f=\infty\})=0</m> ба <m>\{f\gt 0\}</m> нь <m>\sigma</m>-төгсгөлөг хэмжээтэй гэж батал.</p></statement>
+  </exercise>
+
   <exercise xml:id="hw-integral-4">
-    <statement><p><m>f\in\La^1(X)</m> бол <m>\Bigl|\int_Xf\,d\mu\Bigr|\leqslant\int_X|f|\,d\mu</m> бөгөөд тэнцэл биелэх нөхцлийг ол.</p></statement>
+    <statement><p>Энгийн функцүүдийн өсөх дарааллаар ойртгож <m>\int_{[0;1)}x^2\,d\lambda(x)=\frac13</m> гэж батал.</p></statement>
+    <hint><p>Семинарын 7-р бодлогын аргыг хэрэглэ.</p></hint>
   </exercise>
 
   <exercise xml:id="hw-integral-5">
-    <statement><p>(Интегралын абсолют тасралтгүй чанар) <m>f\in\La^1(X)</m> бол <m>\forall\veps\ \exists\delta</m>: <m>\mu(A)\lt\delta\Rightarrow\int_A|f|\lt\veps</m> гэж батал.</p></statement>
-    <hint><p><m>|f|\wedge n</m> зааглагдсан функцээр ойртго.</p></hint>
+    <statement><p><m>f\colon X\to[0;\infty]</m> хэмжигдэх, <m>A,B\in\A</m>, <m>A\cap B=\emptyset</m> бол <m>\int f\chi_{A\cup B}\,d\mu=\int f\chi_A\,d\mu+\int f\chi_B\,d\mu</m> гэж батал. Мөн <m>A\subset B</m> бол <m>\int f\chi_A\,d\mu\leqslant\int f\chi_B\,d\mu</m> гэж батал.</p></statement>
   </exercise>
 
   <exercise xml:id="hw-integral-6">
-    <statement><p><m>(\N,\mathscr{P}(\N),\mu)</m> тоолох хэмжээтэй огторгуйд <m>f\colon\N\to\R</m> интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\sum|f(n)|\lt\infty</m> бөгөөд <m>\int f\,d\mu=\sum f(n)</m> гэж батал.</p></statement>
+    <statement><p><m>c_n\geqslant 0</m>, <m>A_n\in\A</m> <m>(n\in\N)</m> (огтлолцож болно) ба <m>f=\sum_{n=1}^{\infty}c_n\chi_{A_n}</m> бол <m>\int f\,d\mu=\sum_{n=1}^{\infty}c_n\mu(A_n)</m> гэж батал.</p></statement>
+    <hint><p>Хэсгийн нийлбэрүүд энгийн функцүүдийн өсөх дараалал болно.</p></hint>
   </exercise>
 
 </exercises>

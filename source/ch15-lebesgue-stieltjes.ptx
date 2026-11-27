@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: @add:lebesgue-stieltjes:1- -->
+<chapter xml:id="ch-lebesgue-stieltjes" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Лебег–Стилтьесийн хэмжээ ба интеграл</title>
+<section xml:id="sec-lebesgue-stieltjes-1">
+<title>Лебег–Стилтьесийн хэмжээ</title>
+<p>Лебегийн хэмжээг байгуулахдаа интервалын уртыг <m>b-a</m> гэж авсан. Үүний оронд үл буурах функцийн өсөлтийг "урт" болгон авбал илүү ерөнхий хэмжээнүүд гарна. Энэ бүлэгт <m>F\colon\R\to\R</m> нь үл буурах, баруунаасаа тасралтгүй функц байна.</p>
+<definition xml:id="lebesgue-stieltjes-lsouter"><statement><p><m>A\subset\R</m> бүрийн хувьд
+<md>\lambda_F^{\star}(A)=\inf\Bigl\{\sum_{i=1}^{\infty}\bigl(F(b_i)-F(a_i)\bigr): A\subset\bigcup_{i=1}^{\infty}(a_i;b_i]\Bigr\}</md>
+гэж тодорхойлсон <m>\lambda_F^{\star}</m> функцийг <m>F</m> функцээр үүсгэсэн <term>Лебег–Стилтьесийн гадаад хэмжээ</term><idx>Лебег–Стилтьесийн гадаад хэмжээ</idx> гэнэ.</p></statement></definition>
+<p><m>F(x)=x</m> үед хагас задгай интервалуудаар хучсан ч Лебегийн гадаад хэмжээ <m>\ls</m> гарна.</p>
+<theorem xml:id="lebesgue-stieltjes-lsmeas"><statement><p><m>\lambda_F^{\star}</m> нь <m>\R</m> дээрх гадаад хэмжээ бөгөөд Борелийн олонлог бүр <m>\lambda_F^{\star}</m>-хэмжигдэх. Мөн <m>a\lt b</m> бүрийн хувьд
+<md>\lambda_F^{\star}\bigl((a;b]\bigr)=F(b)-F(a).</md></p></statement><proof><p><em>Гадаад хэмжээ.</em> <m>\lambda_F^{\star}(\vn)=0</m> ба монотон чанар тодорхойлолтоос шууд гарна. <m>A=\bigcup_kA_k</m>, <m>\sum_k\lambda_F^{\star}(A_k)\lt\infty</m> байг. <m>\veps\gt 0</m> бүрийн хувьд <m>A_k</m>-г хучих, <m>\sum_i(F(b_{k,i})-F(a_{k,i}))\lt\lambda_F^{\star}(A_k)+\veps 2^{-k}</m> байх <m>(a_{k,i};b_{k,i}]</m> интервалууд авбал бүх интервалууд нийлээд <m>A</m>-г хучих тул <m>\lambda_F^{\star}(A)\leq\sum_k\lambda_F^{\star}(A_k)+\veps</m>.</p>
+<p><em>Хагас интервалын хэмжээ.</em> <m>(a;b]</m> өөрөө өөрийгөө хучих тул <m>\lambda_F^{\star}((a;b])\leq F(b)-F(a)</m>. Эсрэг тэнцэл бишийг харуулъя. <m>(a;b]\subset\bigcup_i(a_i;b_i]</m> ба <m>\veps\gt 0</m> байг. <m>F</m> баруунаасаа тасралтгүй тул <m>F(a+\delta)\lt F(a)+\veps</m> байх <m>0\lt\delta\lt b-a</m>, мөн <m>F(b_i')\lt F(b_i)+\veps 2^{-i}</m> байх <m>b_i'\gt b_i</m> олдоно. Тэгвэл <m>[a+\delta;b]</m> компакт олонлог <m>(a_i;b_i')</m> задгай интервалуудаар хучигдах тул Гейне–Борелийн теоремоор төгсгөлөг тооны <m>(a_{i_1};b_{i_1}'),\ldots,(a_{i_m};b_{i_m}')</m> интервалаар хучигдана. Эдгээрийг <m>a_{i_1}\lt a+\delta</m>, <m>b_{i_j}'\gt a_{i_{j+1}}</m>, <m>b_{i_m}'\gt b</m> байхаар дугаарлаж (илүүдлийг хаяж) болох тул
+<md>F(b)-F(a+\delta)\leq\sum_{j=1}^{m}\bigl(F(b_{i_j}')-F(a_{i_j})\bigr)\leq\sum_{i=1}^{\infty}\bigl(F(b_i)-F(a_i)\bigr)+\veps.</md>
+Иймд <m>F(b)-F(a)\leq\sum_i(F(b_i)-F(a_i))+2\veps</m>. Доод зааг аваад <m>\veps\to 0</m> гэвэл <m>F(b)-F(a)\leq\lambda_F^{\star}((a;b])</m>.</p>
+<p><em>Борелийн олонлог хэмжигдэх.</em> Хэмжигдэх олонлогууд <m>\sigma</m>-алгебр үүсгэх (Теорем <xref ref="caratheodory-ghthb"/>) ба <m>(-\infty;c]</m> хэлбэрийн олонлогууд <m>\br</m>-г төрүүлэх тул <m>E=(-\infty;c]</m> хэмжигдэх гэж харуулахад хангалттай. <m>T\subset\R</m>, <m>\lambda_F^{\star}(T)\lt\infty</m>, <m>T\subset\bigcup_i(a_i;b_i]</m> байг. <m>I_i=(a_i;b_i]</m> интервалыг <m>I_i\cap E</m> ба <m>I_i\setminus E</m> гэсэн (хоосон байж болох) хагас задгай интервалд хуваахад <m>F</m>-ийн өсөлт нэмэгдэнэ:
+<md>F(b_i)-F(a_i)=\bigl(F(\min\{b_i,c\})-F(a_i)\bigr)^{+}+\bigl(F(b_i)-F(\max\{a_i,c\})\bigr)^{+}.</md>
+<m>T\cap E\subset\bigcup_i(I_i\cap E)</m>, <m>T\setminus E\subset\bigcup_i(I_i\setminus E)</m> тул
+<md>\lambda_F^{\star}(T\cap E)+\lambda_F^{\star}(T\setminus E)\leq\sum_i\bigl(F(b_i)-F(a_i)\bigr).</md>
+Доод зааг авбал Каратеодорийн нөхцөл <m>\lambda_F^{\star}(T\cap E)+\lambda_F^{\star}(T\setminus E)\leq\lambda_F^{\star}(T)</m> гарна.</p></proof></theorem>
+<p>Каратеодорийн теоремоор <m>\lambda_F^{\star}</m>-ийн Борелийн <m>\sigma</m>-алгебр дээрх зааглалт хэмжээ болно. Үүнийг <m>\mu_F</m> гэж тэмдэглээд <m>F</m> функцээр үүсгэсэн <term>Лебег–Стилтьесийн хэмжээ</term><idx>Лебег–Стилтьесийн хэмжээ</idx> гэнэ. Тодорхойлолтоос <m>\mu_F</m> нь зааглагдсан олонлог бүр дээр төгсгөлөг.</p>
+<example><p><ol marker="a)"><li><p><m>F(x)=x</m> бол <m>\mu_F=\lambda</m> (Борелийн олонлогууд дээр).</p></li><li><p><m>F=\chi_{[0;\infty)}</m> бол <m>\mu_F=\delta_0</m>: <m>(a;b]</m> нь <m>0</m>-ийг агуулбал <m>F(b)-F(a)=1</m>, эс бөгөөс <m>0</m>.</p></li><li><p><m>x_k\in\R</m>, <m>p_k\geq 0</m>, <m>\sum_kp_k\lt\infty</m> ба <m>F(x)=\sum_{x_k\leq x}p_k</m> бол <m>\mu_F=\sum_kp_k\delta_{x_k}</m>.</p></li><li><p><m>F</m> нь Канторын функц бол <m>\mu_F([0;1])=1</m>, гэвч <m>\mu_F([0;1]\setminus C)=0</m>: Канторын олонлогийн гүйцээлтийн интервал бүр дээр <m>F</m> тогтмол. Иймд <m>\mu_F</m> нь Лебегийн тэг хэмжээтэй олонлог дээр төвлөрсөн боловч цэг бүр дээр тэг утгатай.</p></li></ol></p></example>
+<proposition xml:id="lebesgue-stieltjes-lspoint"><statement><p><m>a\lt b</m> бол
+<md>\mu_F(\{a\})=F(a)-F(a-),\quad \mu_F((a;b))=F(b-)-F(a),\quad \mu_F([a;b])=F(b)-F(a-).</md>
+Ялангуяа <m>F</m> тасралтгүй байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu_F</m> цэг бүр дээр тэг утгатай байх явдал.</p></statement><proof><p><m>\{a\}=\bigcap_n(a-\frac1n;a]</m> буурах дарааллын огтлол бөгөөд <m>\mu_F((a-1;a])\lt\infty</m> тул хэмжээний дээрээс тасралтгүй чанараар <m>\mu_F(\{a\})=\lim_n(F(a)-F(a-\frac1n))=F(a)-F(a-)</m>. Үлдсэн хоёр тэнцэтгэл <m>(a;b)=(a;b]\setminus\{b\}</m>, <m>[a;b]=\{a\}\cup(a;b]</m> гэдгээс гарна.</p></proof></proposition>
+<theorem xml:id="lebesgue-stieltjes-lsuniq"><statement><p><m>\mu</m> нь <m>\br</m> дээрх, зааглагдсан олонлог бүр дээр төгсгөлөг хэмжээ ба бүх <m>a\lt b</m>-ийн хувьд <m>\mu((a;b])=F(b)-F(a)</m> бол <m>\mu=\mu_F</m>.</p></statement><proof><p><m>A\in\br</m>, <m>A\subset\bigcup_i(a_i;b_i]</m> бол <m>\mu(A)\leq\sum_i\mu((a_i;b_i])=\sum_i(F(b_i)-F(a_i))</m>, иймд <m>\mu(A)\leq\mu_F(A)</m>. Одоо <m>A\subset(a;b]</m> гэж үзье. Өмнөх тэнцэл бишийг <m>(a;b]\setminus A</m>-д хэрэглэвэл
+<md>\mu(A)=F(b)-F(a)-\mu((a;b]\setminus A)\geq F(b)-F(a)-\mu_F((a;b]\setminus A)=\mu_F(A).</md>
+Иймд зааглагдсан Борелийн олонлог дээр <m>\mu=\mu_F</m>. Дурын <m>A\in\br</m>-ийг <m>A=\bigsqcup_{k\in\Z}A\cap(k;k+1]</m> гэж задлаад тоологдом аддитив чанарыг хэрэглэвэл <m>\mu(A)=\mu_F(A)</m>.</p></proof></theorem>
+<p>Иймд <m>\R</m> дээрх, зааглагдсан олонлог дээр төгсгөлөг Борелийн хэмжээ бүр ямар нэг <m>F</m>-ийн Лебег–Стилтьесийн хэмжээ байна: <m>x\geq 0</m> үед <m>F(x)=\mu((0;x])</m>, <m>x\lt 0</m> үед <m>F(x)=-\mu((x;0])</m> гэж авахад хангалттай. <m>F</m> ба <m>F+c</m> нэг ижил хэмжээ үүсгэнэ.</p>
+</section>
+<section xml:id="sec-lebesgue-stieltjes-2">
+<title>Лебег–Стилтьесийн интеграл</title>
+<definition xml:id="lebesgue-stieltjes-lsint"><statement><p><m>f</m> нь Борелээр хэмжигдэх функц бөгөөд <m>\mu_F</m> хэмжээгээр интегралчлагдах бол
+<md>\int_Af\,dF=\int_Af\,d\mu_F\qquad(A\in\br)</md>
+гэж тэмдэглээд <term>Лебег–Стилтьесийн интеграл</term><idx>Лебег–Стилтьесийн интеграл</idx> гэнэ.</p></statement></definition>
+<p>Иймд хэмжээгээр интеграл авах тухай бүх теорем (монотон нийлэлт, Фатугийн лемм, зааглагдсан нийлэлт) Лебег–Стилтьесийн интегралд шууд хэрэглэгдэнэ.</p>
+<theorem xml:id="lebesgue-stieltjes-lsrs"><statement><p><m>f</m> нь <m>[a;b]</m> дээр тасралтгүй, <m>a=x_0\lt x_1\lt\ldots\lt x_n=b</m> хуваалтын диаметр <m>d=\max_i(x_i-x_{i-1})</m>, <m>\xi_i\in[x_{i-1};x_i]</m> бол
+<md>\lim_{d\to 0}\sum_{i=1}^{n}f(\xi_i)\bigl(F(x_i)-F(x_{i-1})\bigr)=\int_{(a;b]}f\,dF.</md>
+Өөрөөр хэлбэл тасралтгүй функцийн Риман–Стилтьесийн интеграл Лебег–Стилтьесийн интегралтай тэнцүү.</p></statement><proof><p><m>g=\sum_if(\xi_i)\chi_{(x_{i-1};x_i]}</m> энгийн функцийн интеграл нь Теорем <xref ref="lebesgue-stieltjes-lsmeas"/>-ээр яг дээрх нийлбэртэй тэнцүү. <m>f</m> жигд тасралтгүй тул <m>\veps\gt 0</m> бүрийн хувьд <m>d</m> хангалттай бага үед <m>(a;b]</m> дээр <m>|f-g|\lt\veps</m>. Иймд
+<md>\Bigl|\int_{(a;b]}f\,dF-\sum_if(\xi_i)\bigl(F(x_i)-F(x_{i-1})\bigr)\Bigr|\leq\veps\bigl(F(b)-F(a)\bigr).</md></p></proof></theorem>
+<theorem xml:id="lebesgue-stieltjes-lsac"><statement><p><m>g\geq 0</m> нь <m>\R</m>-ийн зааглагдсан интервал бүр дээр Лебегээр интегралчлагдах ба <m>F(x)=F(0)+\int_0^xg\,d\lambda</m> бол Борелийн <m>f\geq 0</m> функц бүрийн хувьд
+<md>\int_{\R}f\,dF=\int_{\R}fg\,d\lambda.</md></p></statement><proof><p><m>\nu(A)=\int_Ag\,d\lambda</m> <m>(A\in\br)</m> нь Беппо Левийн теоремоор хэмжээ бөгөөд зааглагдсан олонлог дээр төгсгөлөг, <m>\nu((a;b])=\int_a^bg\,d\lambda=F(b)-F(a)</m>. Теорем <xref ref="lebesgue-stieltjes-lsuniq"/>-ээр <m>\nu=\mu_F</m>. Иймд <m>f=\chi_A</m> үед тэнцэтгэл биелнэ, шугаман чанараар сөрөг биш энгийн функцэд биелнэ. Ерөнхий <m>f\geq 0</m>-ийг сөрөг биш энгийн функцүүдийн өсөх дарааллын хязгаар <m>\varphi_n\uparrow f</m> гэж бичээд хоёр талд Монотон нийлэлтийн теоремыг (Теорем <xref ref="limit-theorems-th-15-1"/>) хэрэглэнэ.</p></proof></theorem>
+<p>Ялангуяа <m>F</m> нь абсолют тасралтгүй бол <m>\int_{(a;b]}f\,dF=\int_a^bf F'\,d\lambda</m>.</p>
+<example><p><ol marker="a)"><li><p><m>F(x)=x+\chi_{[1;\infty)}(x)</m> бол <m>\mu_F=\lambda+\delta_1</m> тул
+<md>\int_{(0;2]}x^2\,dF=\int_0^2x^2\,dx+1=\frac{11}{3}.</md></p></li><li><p><m>F</m> нь Канторын функц бол <m>F'=0</m> бараг бүх цэгт, гэвч <m>\int_{[0;1]}1\,dF=1\neq 0=\int_0^1F'\,d\lambda</m>. Иймд Теорем <xref ref="lebesgue-stieltjes-lsac"/>-д <m>F</m> абсолют тасралтгүй байх нөхцөл зайлшгүй. Канторын хэмжээ <m>x\mapsto 1-x</m> буулгалтын хувьд тэгш хэмтэй тул <m>\int_{[0;1]}x\,dF=\int_{[0;1]}(1-x)\,dF</m>, улмаар <m>\int_{[0;1]}x\,dF=\frac12</m>.</p></li></ol></p></example>
+</section>
+<xi:include href="./exercises/sem-lebesgue-stieltjes.ptx"/>
+<xi:include href="./exercises/hw-lebesgue-stieltjes.ptx"/>
+</chapter>

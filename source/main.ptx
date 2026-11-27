@@ -11,18 +11,18 @@
     <xi:include href="./ch02-borel.ptx" />
     <xi:include href="./ch03-measure.ptx" />
     <xi:include href="./ch04-outer-measure.ptx" />
-    <xi:include href="./ch05-caratheodory.ptx" />
-    <xi:include href="./ch06-lebesgue-measure.ptx" />
-    <xi:include href="./ch07-regularity.ptx" />
-    <xi:include href="./ch08-complete-measure.ptx" />
-    <xi:include href="./ch09-measurable-functions.ptx" />
-    <xi:include href="./ch10-convergence.ptx" />
-    <xi:include href="./ch11-integral.ptx" />
-    <xi:include href="./ch12-limit-theorems.ptx" />
-    <xi:include href="./ch13-lp-spaces.ptx" />
-    <xi:include href="./ch14-product-measure.ptx" />
-    <xi:include href="./ch15-indefinite-integral.ptx" />
-    <xi:include href="./ch16-differentiation.ptx" />
+    <xi:include href="./ch05-lebesgue-measure.ptx" />
+    <xi:include href="./ch06-regularity.ptx" />
+    <xi:include href="./ch07-measurable-functions.ptx" />
+    <xi:include href="./ch08-convergence.ptx" />
+    <xi:include href="./ch09-integral.ptx" />
+    <xi:include href="./ch10-integral-2.ptx" />
+    <xi:include href="./ch11-limit-theorems.ptx" />
+    <xi:include href="./ch12-lp-spaces.ptx" />
+    <xi:include href="./ch13-indefinite-integral.ptx" />
+    <xi:include href="./ch14-differentiation.ptx" />
+    <xi:include href="./ch15-lebesgue-stieltjes.ptx" />
+    <xi:include href="./ch16-product-measure.ptx" />
 
     <xi:include href="./backmatter.ptx" />
   </book>

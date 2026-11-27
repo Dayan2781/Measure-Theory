@@ -4,52 +4,53 @@
   <title>Семинарын бодлогууд</title>
 
   <exercise xml:id="sem-outer-measure-1">
-    <statement><p><m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>Y\subset X</m> байг. <m>\nu^{\star}(A)=\mu^{\star}(A\cap Y)</m> <m>(A\subset X)</m> функц <m>X</m> дээрх гадаад хэмжээ гэж батал.</p></statement>
-    <hint><p><m>\bigl(\bigcup A_n\bigr)\cap Y=\bigcup(A_n\cap Y)</m> ба <m>\mu^{\star}</m>-ийн хагас аддитив чанар.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-outer-measure-2">
-    <statement><p><m>\mu^{\star}_1,\mu^{\star}_2</m> нь <m>X</m> дээрх гадаад хэмжээнүүд байг. <m>\mu^{\star}_1+\mu^{\star}_2</m> ба <m>\max\{\mu^{\star}_1,\mu^{\star}_2\}</m> функцүүд гадаад хэмжээ болох уу?</p></statement>
-    <hint><p>Хоёулаа болно. Максимумын хувьд <m>\mu^{\star}_i\bigl(\bigcup A_n\bigr)\leqslant\sum_n\mu^{\star}_i(A_n)\leqslant\sum_n\max\{\mu^{\star}_1,\mu^{\star}_2\}(A_n)</m>.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-outer-measure-3">
     <statement><p>Тоологдом олонлог бүрийн Лебегийн гадаад хэмжээ тэгтэй тэнцүү гэж батал.</p></statement>
     <hint><p><m>\{x_n\}</m> цэгийг <m>\varepsilon 2^{-n}</m> урттай интервалаар хучих.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-outer-measure-4">
+  <exercise xml:id="sem-outer-measure-2">
     <statement><p><m>a\lt b</m> бол <m>\ls([a;b])=\ls((a;b))=b-a</m> гэж батал.</p></statement>
     <hint><p><m>\leqslant</m> тал нь илт. <m>\geqslant</m> талыг харуулахдаа <m>[a;b]</m>-г хучих задгай интервалуудаас Гейне–Борелийн теоремоор төгсгөлөг дэд хучилт сонгож, тэдгээрийн уртын нийлбэр <m>b-a</m>-аас багагүйг индукцээр батал.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-outer-measure-5">
+  <exercise xml:id="sem-outer-measure-3">
     <statement><p>Дурын <m>A\subset\R</m>, <m>x\in\R</m> ба <m>c\gt 0</m> хувьд <m>\ls(A+x)=\ls(A)</m>, <m>\ls(cA)=c\,\ls(A)</m> гэж батал.</p></statement>
     <hint><p><m>A</m>-г хучих <m>(a_i;b_i)</m> интервалууд <m>A+x</m>-ийг хучих <m>(a_i+x;b_i+x)</m>, <m>cA</m>-г хучих <m>(ca_i;cb_i)</m> интервалуудтай харилцан нэг утгатай харгалзана.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-outer-measure-6">
+  <exercise xml:id="sem-outer-measure-4">
     <statement><p>Дурын <m>A\subset\R</m> ба <m>\veps\gt 0</m> хувьд <m>A\subset G</m>, <m>\ls(G)\leqslant\ls(A)+\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал.</p></statement>
     <hint><p>Тодорхойлолтоор <m>\sum(b_i-a_i)\lt\ls(A)+\veps</m> байх хучилт аваад <m>G=\bigcup(a_i;b_i)</m> гэ.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-outer-measure-7">
-    <statement><p>Зааглагдсан олонлогийн Лебегийн гадаад хэмжээ төгсгөлөг гэж харуул. Зааглагдаагүй боловч төгсгөлөг (тэг биш) гадаад хэмжээтэй олонлогийн жишээ гарга.</p></statement>
-    <hint><p><m>A\subset(-M;M)</m>. Жишээ: <m>\bigcup_n[n;n+2^{-n}]</m>.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-outer-measure-8">
-    <statement><p><m>\ls(A)=0</m> бол <m>A</m> ямар ч интервал агуулахгүй гэж батал. Эсрэг нь үнэн үү?</p></statement>
-    <hint><p>Монотон чанар ба 4-р бодлого. Иррационал тоонуудын олонлог интервал агуулахгүй боловч гадаад хэмжээ нь тэг биш (5-р семинар).</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-outer-measure-9">
+  <exercise xml:id="sem-outer-measure-5">
     <statement><p>Дурын <m>\veps\gt 0</m> хувьд бүх рационал тоог агуулсан, <m>\ls(G)\lt\veps</m> байх задгай <m>G</m> олонлог олдоно гэж батал. <m>G\neq\R</m> гэж харуул.</p></statement>
     <hint><p><m>r_n</m>-ийг <m>\veps 2^{-n-1}</m> урттай задгай интервалаар хуч. <m>\ls(\R)=\infty</m>.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-outer-measure-10">
-    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^{\star}(A)=\inf\{\mu(B): B\in\alg,\ A\subset B\}</m> гэвэл <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ бөгөөд <m>\alg</m> дээр <m>\mu</m>-тэй давхцана гэж батал.</p></statement>
-    <hint><p><m>A_n\subset B_n</m>, <m>\mu(B_n)\lt\mu^{\star}(A_n)+\veps 2^{-n}</m> байх <m>B_n\in\alg</m> аваад <m>\bigcup B_n</m>-ийг ашигла.</p></hint>
+  <exercise xml:id="sem-outer-measure-6">
+    <statement><p><m>A</m> нь <m>[0;1]</m> хэрчмийн иррационал тоонуудын олонлог бол <m>\ls(A)=1</m> гэж батал.</p></statement>
+    <hint><p><m>1=\ls([0;1])\leqslant\ls(A)+\ls(\Q\cap[0;1])=\ls(A)</m>.</p></hint>
   </exercise>
+
+  <exercise xml:id="sem-outer-measure-7">
+    <statement><p><m>A,B\subset\R</m> зааглагдсан бөгөөд бүх <m>a\in A</m>, <m>b\in B</m> хувьд <m>|a-b|\geqslant\alpha</m> байх <m>\alpha\gt 0</m> олдвол <m>\ls(A\cup B)=\ls(A)+\ls(B)</m> гэж батал.</p></statement>
+    <hint><p><m>A\cup B</m>-г хучих интервалуудыг <m>\alpha</m>-аас богино интервалуудад хувааж, <m>A</m>-тай ба <m>B</m>-тэй огтлолцдог хоёр бүлэгт ангил: нэг интервал хоёуланг нь огтолж чадахгүй.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-8">
+    <statement><p>[Ульянов, 7.18, 7.23-тай харьцуул] <m>\mu^{\star}</m>-хэмжигдэх олонлогуудын бүл гүйцээлт ба хоёр олонлогийн огтлолын хувьд битүү гэдгийг тодорхойлолтоос шууд батал.</p></statement>
+    <hint><p>Тодорхойлолт <m>A</m> ба <m>A^c</m>-ийн хувьд тэгш хэмтэй. Огтлолын хувьд <m>T\cap(A\cap B)^c=(T\cap A\cap B^c)\cup(T\cap A^c)</m> гэж задлаад хагас аддитив чанар ашигла.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-9">
+    <statement><p>[Ульянов, 7.35] <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ, <m>\mu</m> нь <m>\mu^{\star}</m>-хэмжигдэх олонлогууд дээрх зааглалт байг. <m>A</m> хэмжигдэх, <m>\mu(A)=0</m>, <m>B\subset A</m> бол <m>B</m> хэмжигдэх бөгөөд <m>\mu(B)=0</m> гэж батал.</p></statement>
+    <hint><p><m>\mu^{\star}(B)=0</m>. Дурын <m>T</m> хувьд <m>\mu^{\star}(T\cap B)+\mu^{\star}(T\setminus B)\leqslant 0+\mu^{\star}(T)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-outer-measure-10">
+    <statement><p><m>X=\{1,2,3\}</m>, <m>\mu^{\star}(\emptyset)=0</m>, <m>\mu^{\star}(X)=2</m>, бусад <m>A\subset X</m> дээр <m>\mu^{\star}(A)=1</m> байг. <m>\mu^{\star}</m> гадаад хэмжээ болохыг шалгаад, бүх <m>\mu^{\star}</m>-хэмжигдэх олонлогийг ол.</p></statement>
+    <hint><p><m>A=\{1\}</m> ба <m>T=\{1,2\}</m>-ийг шалга. Хэмжигдэх олонлог нь зөвхөн <m>\emptyset</m> ба <m>X</m> гэдгийг харуул.</p></hint>
+  </exercise>
+
 </exercises>
