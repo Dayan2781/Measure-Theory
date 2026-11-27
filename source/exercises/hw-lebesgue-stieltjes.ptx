@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 15 (Лебег–Стилтьесийн хэмжээ ба интеграл). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-lebesgue-stieltjes">
+  <title>Гэрийн даалгавар</title>
+  <introduction><p><m>F</m> нь үл буурах, баруунаасаа тасралтгүй функц, <m>\mu_F</m> нь түүгээр үүсгэсэн Лебег–Стилтьесийн хэмжээ.</p></introduction>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-1">
+    <statement><p><m>x\lt 0</m> үед <m>F(x)=0</m>, <m>0\leqslant x\lt 1</m> үед <m>F(x)=\frac x2</m>, <m>x\geqslant 1</m> үед <m>F(x)=1</m> байг. <m>\mu_F(\{1\})</m>, <m>\mu_F([0;1))</m> ба <m>\int_{\R}x\,dF(x)</m>-ийг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-2">
+    <statement><p><m>F</m> зааглагдсан бол <m>\mu_F(\R)=\lim_{x\to\infty}F(x)-\lim_{x\to-\infty}F(x)</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-3">
+    <statement><p><m>F(x)=\arctg x</m> байг. <m>\mu_F(\R)</m> ба <m>\int_{\R}\frac{dF(x)}{1+x^2}</m>-ийг ол. <m>f(x)=x</m> функц <m>\mu_F</m> хэмжээгээр интегралчлагдах уу?</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-4">
+    <statement><p><m>r_1,r_2,\ldots</m> нь бүх рационал тоонуудын дугаарлалт ба <m>F=\sum_{n=1}^{\infty}2^{-n}\chi_{[r_n;\infty)}</m> байг. <m>F</m> нь баруунаасаа тасралтгүй, хатуу өсөх, яг рационал цэгүүд дээр тасралттай бөгөөд <m>\mu_F(\Q)=1</m>, <m>\mu_F(\R\setminus\Q)=0</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-5">
+    <statement><p><m>F(x)=x+\lfloor x\rfloor</m> бол <m>\int_{(0;2]}x\,dF(x)</m>-ийг Риман–Стилтьесийн нийлбэрийн хязгаар ба <m>\mu_F</m>-ийн задаргаа гэсэн хоёр аргаар ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-lebesgue-stieltjes-6">
+    <statement><p><m>F</m> тасралтгүй, хатуу өсөх бол Борелийн <m>A</m> олонлог бүрийн хувьд <m>F(A)</m> Борелийн олонлог бөгөөд <m>\mu_F(A)=\lambda(F(A))</m> гэж батал.</p></statement>
+    <hint><p><m>\nu(A)=\lambda(F(A))</m> хэмжээ болохыг харуулаад Теорем <xref ref="lebesgue-stieltjes-lsuniq"/>-ийг хэрэглэ.</p></hint>
+  </exercise>
+
+</exercises>

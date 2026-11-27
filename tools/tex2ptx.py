@@ -166,6 +166,10 @@ class Ctx:
 
     def lid(self, label):
         lab = label.strip()
+        g = GLOBAL_LABELS.get(lab)
+        if lab not in self.labels and isinstance(g, tuple) and g[0] != self.prefix:
+            # label of a piece merged from another lecture keeps its original id prefix
+            self.labels[lab] = self._mk(g[0], lab)
         if lab not in self.labels:
             safe = re.sub(r"[^A-Za-z0-9_-]", "-", lab)
             if not re.match(r"[A-Za-z]", safe):
@@ -612,7 +616,12 @@ def split_sections(s):
 # ---------------------------------------------------------------- driver
 def read_piece(src_dir, spec):
     f, a, b = spec["file"], spec.get("from", 1), spec.get("to")
-    lines = (src_dir / f).read_text(encoding="utf-8").split("\n")
+    if f.startswith("@add:"):
+        # lecture text written for the book itself (no original lecture file)
+        path = Path(__file__).resolve().parent / "additions" / (f[5:] + ".tex")
+    else:
+        path = src_dir / f
+    lines = path.read_text(encoding="utf-8").split("\n")
     if "ranges" in spec:
         return "\n".join("\n".join(lines[x - 1:y]) for x, y in spec["ranges"]) + spec.get("append", "")
     return "\n".join(lines[a - 1:b]) + spec.get("append", "")
@@ -692,7 +701,7 @@ def main():
     for ch in cfg["chapters"]:
         for spec in ch["pieces"]:
             for lab in re.findall(r"\\label\{([^}]*)\}", preprocess(read_piece(src_dir, spec))):
-                GLOBAL_LABELS.setdefault(lab.strip(), (ch["slug"],))
+                GLOBAL_LABELS.setdefault(lab.strip(), (spec.get("prefix", ch["slug"]),))
     for ch in cfg["chapters"]:
         if only and ch["slug"] not in only:
             continue

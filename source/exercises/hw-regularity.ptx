@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Гэрийн даалгавар 7 (регуляр чанар). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<!-- Гэрийн даалгавар 6 (Лебегийн хэмжээний чанарууд). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-regularity">
   <title>Гэрийн даалгавар</title>
   <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
 
   <exercise xml:id="hw-regularity-1">
-    <statement><p><m>E\subset\R</m> Лебегээр хэмжигдэх байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь дурын <m>\veps\gt 0</m> хувьд <m>F\subset E</m>, <m>\ls(E\setminus F)\lt\veps</m> байх битүү <m>F</m> олдох явдал гэж батал.</p></statement>
-  </exercise>
-
-  <exercise xml:id="hw-regularity-2">
     <statement><p><m>\mu</m> нь <m>(\R,\br)</m> дээрх төгсгөлөг хэмжээ бол <m>B\in\br</m> бүрийн хувьд
       <md>\mu(B)=\inf\{\mu(U): U\supset B,\ U\text{ задгай}\}=\sup\{\mu(F): F\subset B,\ F\text{ битүү}\}</md>
     гэж батал.</p></statement>
     <hint><p>Энэ хоёр нөхцлийг хангах <m>B</m> олонлогуудын бүл <m>\sigma</m>-алгебр бөгөөд бүх битүү олонлогийг агуулахыг харуул (<m>F=\bigcap_n\{x:\operatorname{dist}(x,F)\lt\frac1n\}</m>).</p></hint>
   </exercise>
 
-  <exercise xml:id="hw-regularity-3">
-    <statement><p><m>E\subset\R</m> хэмжигдэх, <m>\alpha\gt 0</m> ба зааглагдсан интервал бүр <m>I</m>-ийн хувьд <m>\lambda(E\cap I)\geqslant\alpha\,\lambda(I)</m> байг. <m>\lambda(\R\setminus E)=0</m> гэж батал.</p></statement>
-  </exercise>
-
-  <exercise xml:id="hw-regularity-4">
-    <statement><p><m>A\subset\R</m> дурын олонлог байг. <m>A\subset G</m>, <m>\lambda(G)=\ls(A)</m> байх <m>G_{\delta}</m> олонлог <m>G</m> олдох ба хэмжигдэх <m>E</m> бүрийн хувьд <m>\ls(A\cap E)=\lambda(G\cap E)</m> гэж батал.</p></statement>
-  </exercise>
-
-  <exercise xml:id="hw-regularity-5">
+  <exercise xml:id="hw-regularity-2">
     <statement><p><m>E\subset\R</m> хэмжигдэх, <m>\lambda(E)\lt\infty</m> бол <m>\varphi(x)=\lambda\bigl(E\cap(E+x)\bigr)</m> функц <m>x=0</m> цэг дээр тасралтгүй гэж батал.</p></statement>
     <hint><p>Семинарын 2-р бодлогоор <m>E</m>-г төгсгөлөг тооны интервалын нэгдлээр ойртго.</p></hint>
   </exercise>
 
-  <exercise xml:id="hw-regularity-6">
+  <exercise xml:id="hw-regularity-3">
     <statement><p><m>H\subset\R</m> нь нэмэх үйлдлийн хувьд дэд бүлэг бөгөөд хэмжигдэх, <m>\lambda(H)\gt 0</m> бол <m>H=\R</m> гэж батал.</p></statement>
     <hint><p>Штейнгаусын теорем.</p></hint>
   </exercise>
+
+  <exercise xml:id="hw-regularity-4">
+    <statement><p><m>(X,\alg,\mu)</m> хэмжээт огторгуй байг. <m>B\in\alg_{\mu}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>A\subset B\subset C</m>, <m>\mu(C\setminus A)=0</m> байх <m>A,C\in\alg</m> олдох явдал гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-regularity-5">
+    <statement><p>Борелийн <m>\sigma</m>-алгебрын Лебегийн хэмжээгээрх гүйцээлт нь Лебегийн <m>\sigma</m>-алгебртай тэнцүү гэж батал.</p></statement>
+    <hint><p>Семинарын 1-р бодлого (регуляр чанар).</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-regularity-6">
+    <statement><p><m>\mu</m> нь <m>(X,\alg)</m> дээрх төгсгөлөг хэмжээ бол <m>A\in\alg_{\mu}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu^*(A)+\mu^*(X\setminus A)=\mu(X)</m> гэж батал.</p></statement>
+  </exercise>
+
 </exercises>

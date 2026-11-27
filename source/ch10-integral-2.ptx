@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Эх файл: 10integralD.tex:119-; 11limit theorem.tex:1-92 -->
+<chapter xml:id="ch-integral-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Хэмжигдэх функцийн интеграл ба бараг тэнцүү функц</title>
+<section xml:id="sec-integral-2-1">
+<title>Хэмжигдэх функцийн интеграл</title>
+<p>Бидний дараагийн зорилго бол <m>f:X\to [-\infty;\infty]</m> хэмжигдэх функцийн интегралыг тодорхойлох юм.</p>
+<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц байг. <m>f^+, f^-</m> функцүүд сөрөг бус хэмжигдэх функцүүд байдаг тул <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралуудыг тодорхойлж чадна. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд төгсгөлөг байвал <m>f</m> функцийг <term>интегралчлагдах функц</term><idx>интегралчлагдах функц</idx> гэх ба
+<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
+<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
+гэж бичнэ. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд ядаж нэг нь төгсгөлөг байвал <m>f</m> функцийн интеграл оршин байна гэх ба 
+<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
+<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
+гэж бичнэ.</p></statement></definition>
+<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц <m>A\in\A</m> байг. Хэрэв <m>f\chi_A</m> функц интегралчлагдах бол <m>f</m> функцийг <m>A</m> олонлог дээр интегралчлагдах функц гэх ба <md>\intt f\chi_A d\mu</md> тоог <m>f</m> функцийн<term> <m>A</m> олонлог дээрх интеграл</term> гээд  <md>\intt_{A} f d\mu</md> гэж тэмдэглэнэ. Өөрөөр хэлбэл 
+<md>\intt_{A} f d\mu = \intt f\chi_A d\mu</md> байна.</p></statement></definition>
+<definition><statement><p><m>X=\R^n,  \mu=\lambda</m>  бол интегралыг<term> Лебегийн интеграл</term> <idx> Лебегийн интеграл</idx> гэнэ.
+<md>\La^1(X, \A , \mu, \R)=\{ f:X\to (-\infty;\infty)\big| f \text{ интегралчлагдах функц} \}</md>-г <term>интегралчлагдах функцүүдийн огторгуй</term> <idx>интегралчлагдах функцүүдийн огторгуй</idx> гэх бөгөөд энэ шугаман огторгуй болохыг дараах теоремууд харуулна.</p></statement></definition>
+<theorem xml:id="integral-th-12-6"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to\R</m> интегралчлагдах функцүүд,</p>
+<p><m>\alpha</m> бодит тоо байг. Дараах чанарууд биелнэ.
+<ol marker="a)"><li><p><m>\alpha f</m> ба <m>(f+g)</m> функцүүд интегралчлагдана.</p></li><li><p><m>\intt\alpha f d\mu=\alpha\intt f d\mu</m> ( тогтмол үржигдэхүүн гаргах чанар)</p></li><li><p><m>\intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</m> (аддитив чанар)</p></li><li><p>Хэрэв бүх <m>x\in X</m> хувьд <m>f(x)\leq g(x)</m> бол   
+<m>\intt f d\mu\leq \intt g d\mu\text{ (монотон чанар)}</m></p></li></ol></p></statement><proof><p>Илэрхий</p></proof></theorem>
+<theorem><statement><p><m>f</m> функц интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>|f|</m> функц интегралчлагдах юм.</p></statement><proof><p><m>|f|=f^++f^-</m> байдаг. Хэрэв <m>f</m> интегралчлагдах бол <m>\intt f^+d \mu, \intt f^-d \mu</m> интегралууд төгсгөлөг учир 
+<md>\intt |f|d \mu=\intt f^+d \mu+\intt f^-d \mu\lt \infty</md> байна. Эсрэгээр, <m>f^+, f^-\leq|f|</m> тул монотон чанараар <m>\intt f^{\pm}d\mu\leq\intt|f|d\mu\lt \infty</m> байна.</p></proof></theorem>
+<corollary><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бол
+<md>|\intt f d\mu|\leq \intt |f| d\mu</md> байна.</p></statement></corollary>
+</section>
+<section xml:id="sec-integral-2-2">
+<title>Бараг тэнцүү функцийн чанарууд</title>
+<definition><title>Бараг биелэх чанар</title><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>P(x)</m> нь <m>x\in X</m> цэгүүдээс хамаарсан хэллэг байг. 
+ <md>T=\{x\in X\mid P(x)\text{ хэллэг үнэн }\}</md> олонлогийг <m>P(x)</m> хэллэгийн үнэний муж гэнэ. Хэрэв
+ <md>\exists A\in\A , A\supset T^c , \mu(A)=0</md> бол <m>P(x)</m> хэллэгийг <m>X</m> огторгуйд бараг үнэн  хэллэг гэнэ.</p></statement></definition>
+<example><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[-\infty;\infty]</m> хэмжигдэх функцүүд байг. <m>\{x\in X\mid f(x)\neq g(x)\}</m> олонлог хэмжигдэх олонлог байна. Хэрэв 
+<md>\mu(\{x\in X\mid f(x)\neq g(x)\})=0</md> бол эдгээр функцүүдийг бараг тэнцүү функцүүд гэнэ.</p>
+<p><m>(\R, \br, \lambda)</m> Борелийн хэмжээт огторгуй, 
+ <md>f(x)=x+2 ,\quad  g(x)=\left\{
+ \begin{array}{cc}
+ \dfrac{x^2-4}{x-2}&amp; x\neq 2\\ 
+ 0&amp; x=2
+ \end{array}
+ \right.</md> функцүүд бараг тэнцүү юм. Учир нь 
+<md>\lambda(\{x\in X\mid f(x)\neq g(x)\})=\lambda(\{2\})=0</md> байна.</p></example>
+<theorem xml:id="limit-theorems-th-13-1"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to[-\infty;\infty]</m> хэмжигдэх бараг тэнцүү функцүүд байг. Хэрэв эдгээр функцүүдийн хувьд <m>\intt f d\mu</m> эсвэл <m>\intt g d\mu</m> интегралуудын ядаж нэг оршин байвал хоёул оршин байх бөгөөд тэнцүү байна.</p></statement><proof><p>Эхлээд сөрөг бус функцүүдийн хувьд баталъя. 
+<md>A=\{x\in X\mid f(x)\neq g(x)\}</md> ба 
+<md>h(x)=\left\{
+\begin{array}{cc}
+\infty&amp; x\in A\\ 
+0&amp; x\notin A
+\end{array}
+\right.</md> гэе. Мэдээж <m>A</m> хэмжигдэх олонлог, <m>f</m> ба <m>g</m> бараг тэнцүү хэмжигдэх функцүүд учир ба <m>\mu(A)=0</m> байна. Иймд 
+<m>\intt hd\mu=0</m> болно. Учир нь <m>h(x)=\lim_{n\to\infty} n\chi_A(x)</m> тул үл буурах функцийн дарааллын цэгэн хязгаар байна. <m>\forall x\in X</m> хувьд <m>f(x)\leq g(x)+h(x)</m> байна.
+ Иймд интегралын монотон чанараар <md>\intt fd\mu\leq \intt (g+h) d\mu=
+\intt gd\mu+\intt hd\mu=\intt gd\mu</md> болно. Мөн адилаар <m>\forall x\in X</m> хувьд <m>g(x)\leq f(x)+h(x)</m> байна. Иймд интегралын монотон чанараар <md>\intt gd\mu\leq \intt (f+h) d\mu=\intt fd\mu+\intt hd\mu=\intt fd\mu</md> болж  <m>\intt fd\mu=\intt gd\mu</m> батлагдав. Сөрөг утга авдаг тохиолдолд <m>f=f^+-f^- , g=g^+-g^-</m> задаргааг ашиглавал хялбар батлагдана.</p></proof></theorem>
+<theorem xml:id="limit-theorems-th-13-2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[0;\infty]</m> хэмжигдэх  функц байг. Хэрэв <m>t</m> эерэг тоо, <m>A_t=\{x\in X\mid f(x)\geq t\}</m> гэе. Тэгвэл 
+<md>\mu(A_t)\leq \dfrac1{t}\intt_{A_t} fd\mu\leq \dfrac1{t}\intt f d\mu</md> байна.</p></statement><proof><p><m>0\leq t\chi_{A_t}\leq f\chi_{A_t}\leq f</m> байх нь ойлгомжтой. Интегралын монотон чанараар 
+<md>t\mu(A_t)=\intt t\chi_{A_t}d\mu \leq \intt f\chi_{A_t}d\mu \leq \intt fd\mu</md> болж батлагдав.</p></proof></theorem>
+<corollary xml:id="limit-theorems-cor-13-1"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах  функц бол <m>\{x\in X\mid f(x)\neq 0\}</m> олонлог <m>\sigma</m>-төгсгөлөг байна.</p></statement><proof><p><m>f</m> интегралчлагдах функц тул <m>|f|</m> интегралчлагдах сөрөг бус функц байна. Иймд Теорем <xref ref="limit-theorems-th-13-2"/>-оор 
+<md>A_n:=\left\{x\in X\mid |f(x)|\geq \dfrac1{n}\right\}</md> олонлог бүр төгсгөлөг хэмжээтэй байна. Мөн 
+<md>\{x\in X\mid f(x)\neq 0\}=\cup_nA_n</md> тул  <m>\{x\in X\mid f(x)\neq 0\}</m> олонлог <m>\sigma</m>-төгсгөлөг байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-2"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> хэмжигдэх  функц бөгөөд <m>\intt |f|d\mu=0</m> бол <m>f</m> функц <m>X</m> дээр бараг тэг байна.</p></statement><proof><p>Теорем <xref ref="limit-theorems-th-13-2"/>-оор натурал тоо <m>n</m> бүрийн хувьд 
+<md>\mu(\left\{x\in X\mid |f(x)|\geq \dfrac1{n}\right\})\leq n\intt |f|d\mu=0</md> байна. Тиймээс 
+<md>\left\{x\in X\mid |f(x)|\neq 0 \right\}=\cup_n \left\{x\in X\mid |f(x)|\geq\dfrac1{n} \right\}</md> тэнцэтгэл ба 
+<m>\mu</m>-н тоологдом хагас аддитив чанараас 
+<md>\mu(\{x\in X\mid f(x)\neq 0\})\leq \sum_n\mu(\left\{x\in X\mid |f(x)|\geq\dfrac1{n} \right\})
+=0</md> болж батлагдав.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-3"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бөгөөд дурын <m>A\in\A</m> хувьд <m>\intt_A f d\mu\geq 0</m> бол <m>f</m> функц <m>X</m> дээр бараг бүх цэгт сөрөг бус <m>( f\geq 0 )</m> байна.</p></statement><proof><p><m>A=\{x\in X\mid f(x)\lt 0\}</m> гэе. <m>A\in\A</m> тул <m>0\leq\intt_A f d\mu=\intt f\chi_A d\mu\leq 0</m> байна. Иймд 
+<md>0=-\intt_A fd\mu=\intt -f\chi_A d\mu=\intt |f\chi_A| d\mu</md> тул Мөрдлөгөө <xref ref="limit-theorems-cor-13-2"/>-оор <m>f\chi_A</m> бараг тэг байна. Иймд <m>\mu(A)=0</m> буюу <m>f</m> бараг бүх цэгт сөрөг бус байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-4"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бол <m>|f|\lt \infty</m> бараг үнэн байна.</p></statement><proof><p>Теорем <xref ref="limit-theorems-th-13-2"/>-г <m>|f|</m> функцэд хэрэглэвэл дурын натурал тооны хувьд
+<md>\mu(\{x\in X\mid |f(x)|\geq n\})\leq \dfrac{1}{n}\intt |f|d\mu</md>  байна. Тиймээс 
+<md>\mu(\{x\in X\mid |f(x)|=\infty\})\leq \mu(\{x\in X\mid |f(x)|\geq n\})\leq 
+\dfrac{1}{n}\intt |f|d\mu</md> мөн дурын натурал тооны хувьд биелнэ. <m>\intt |f|d\mu</m> төгсгөлөг тул <m>n\to \infty</m> хязгаар авбал <m>\mu(\{x\in X\mid |f(x)|=\infty\})=0</m> байна.</p></proof></corollary>
+<corollary xml:id="limit-theorems-cor-13-5"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> хэмжигдэх функц байг. <m>f</m> интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\La^1(X, \A , \mu, \R)=\{ f:X\to (-\infty;\infty)\big| f-\text{ интегралчлагдах функц } \}</m>-д <m>f</m>-тэй бараг тэнцүү функц олдох явдал юм.</p></statement></corollary>
+<remark><p>Өөрөөр хэлбэл <m>[-\infty;\infty]</m> утгатай <m>f</m> функц интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь түүнтэй  бараг тэнцүү <m>\R</m> утгатай функц олдоно.</p></remark>
+<proof><p>Хэрэв <m>f</m> тэй бараг тэнцүү <m>\La^1(X, \A , \mu, \R)</m> ангийн функц байдаг бол <m>f</m> функц интегралчлагдах нь Теорем <xref ref="limit-theorems-th-13-1"/>-с гарна.</p>
+<p><m>f</m> интегралчлагдах , <m>A=\{x\in X\mid |f(x)|=\infty\}</m> гэе. Мэдээж <m>A\in\A</m> байх ба Мөрдлөгөө <xref ref="limit-theorems-cor-13-4"/>-өөр <m>\mu(A)=0</m> байна. Хэрэв 
+<m>f_0(x)=\left\{
+\begin{array}{cc}
+f(x)&amp; x\in A^c\\ 
+0&amp; x\in A
+\end{array}\right.</m> гэвэл <m>f, f_0</m> функцүүд бараг тэнцүү бөгөөд 
+<m>f_0\in \La^1(X, \A , \mu, \R)</m> байх нь илт. Иймд мөрдлөгөө батлагдав.</p></proof>
+</section>
+<xi:include href="./exercises/sem-integral-2.ptx"/>
+<xi:include href="./exercises/hw-integral-2.ptx"/>
+</chapter>

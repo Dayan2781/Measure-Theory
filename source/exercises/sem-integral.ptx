@@ -1,64 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 11-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<!-- 9-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-integral">
   <title>Семинарын бодлогууд</title>
 
   <exercise xml:id="sem-integral-1">
-    <statement><p><m>f(x) \in \La^1(X)</m> ба <m>A</m> олонлог дээр <m>f(x) \ge 0</m> бөгөөд 
-<md>\int_A f(x) \, d\mu = 0</md>
-байг. <m>A</m> олонлог дээр бараг бүх цэгт <m>f(x) = 0</m> байна гэж батал.</p></statement>
-    <hint><p><m>A_n=\{x\in A: f(x)\geqslant\frac1n\}</m> бол <m>\frac1n\mu(A_n)\leqslant\int_Af\,d\mu=0</m>.</p></hint>
+    <statement><p><m>([0;1],\br,\lambda)</m> дээр <m>f=2\chi_{[0;\frac13)}+5\chi_{[\frac13;\frac12]}+\chi_{\Q\cap(\frac12;1]}</m> энгийн функцийн интегралыг ол.</p></statement>
+    <hint><p>Олонлогууд үл огтлолцох тул <m>\int f\,d\lambda=2\cdot\frac13+5\cdot\frac16+1\cdot\lambda(\Q\cap(\frac12;1])=\frac32</m>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-2">
-    <statement><p><m>f(x) \in \La^1(A)</m> байх бөгөөд дурын хэмжигдэх <m>B \subset A</m> (<m>B \in \mathscr{A}</m>) олонлогийн хувьд 
-<md>\int_B f(x) \, d\mu = 0</md>
-тэнцэтгэл биелдэг байг. <m>A</m> олонлог дээр бараг бүх цэгт <m>f(x) = 0</m> байна гэж батал.</p></statement>
-    <hint><p><m>B=\{f\gt 0\}\cap A</m> ба <m>B=\{f\lt 0\}\cap A</m> олонлогуудад 1-р бодлогыг хэрэглэ.</p></hint>
+    <statement><p><m>a_1,\ldots,a_m\geqslant 0</m>, <m>A_1,\ldots,A_m\in\A</m> (огтлолцож болно) бол <m>f=\sum_{i=1}^ma_i\chi_{A_i}</m> энгийн функцийн хувьд <m>\int f\,d\mu=\sum_{i=1}^ma_i\mu(A_i)</m> гэж батал.</p></statement>
+    <hint><p><m>a_i\chi_{A_i}</m> бүр <m>\La^+</m>-д харьяалагдах ба интеграл нь <m>a_i\mu(A_i)</m>. Энгийн функцийн интегралын аддитив чанарыг <m>m-1</m> удаа хэрэглэ.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-3">
-    <statement><p><m>\mu(A) \lt  \infty</m> ба <m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэх бөгөөд төгсгөлөг байг. Мөн <m>k = 0, 1, \dots</m> хувьд <m>E_k(f) = \{x \in A : k \le |f(x)| \lt  k+1\}</m> гэе. <m>f(x) \in \La^1(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь 
-<md>\sum_{k=1}^{\infty} k \mu(E_k(f)) \lt  \infty</md>
-байх явдал юм гэж батал.</p></statement>
-    <hint><p><m>\sum_kk\chi_{E_k}\leqslant|f|\leqslant\sum_k(k+1)\chi_{E_k}</m> ба <m>\mu(A)\lt\infty</m>.</p></hint>
+    <statement><p><m>a\in X</m>, <m>\{a\}\in\A</m> ба <m>\delta_a</m> нь <m>a</m> цэг дээр төвлөрсөн цэгэн масс байг. Сөрөг бус хэмжигдэх <m>f\colon X\to[0;\infty]</m> бүрийн хувьд <m>\int f\,d\delta_a=f(a)</m> гэж батал.</p></statement>
+    <hint><p>Эхлээд <m>f\in\La^+</m> үед шалга: <m>\sum_ia_i\delta_a(A_i)</m> нийлбэрт зөвхөн <m>a\in A_i</m> байх нэмэгдэхүүн үлдэнэ. Ерөнхий <m>f</m>-ийг <m>f_n\uparrow f</m>, <m>f_n\in\La^+</m> гэж ойртгоод Теорем <xref ref="integral-nonnegint1"/>-ийг хэрэглэ.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-4">
-    <statement><p><m>\mathbb{R}</m> дээрх Лебегийн хэмжээний хувьд хэмжигдэх, сөрөг бус (сөрөг биш), төгсгөлөг бөгөөд <m>\sum_{k=1}^{\infty} k \mu(E_k(f)) \lt  \infty</m> нөхцөлийг хангах боловч <m>f(x) \notin \La^1(\mathbb{R})</m> байх функцийн жишээг байгуул.</p></statement>
-    <hint><p><m>f=\chi_{[0;\infty)}\cdot\frac12</m> гэх мэт: <m>E_k=\emptyset</m> <m>(k\geqslant 1)</m>, гэвч <m>\int f=\infty</m>.</p></hint>
+    <statement><p><m>x_k\in\R</m>, <m>c_k\geqslant 0</m> <m>(k\in\N)</m> ба <m>\mu=\sum_kc_k\delta_{x_k}</m> нь <m>\br</m> дээрх хэмжээ байг. Сөрөг бус Борелийн <m>f</m> функц бүрийн хувьд <m>\int f\,d\mu=\sum_kc_kf(x_k)</m> гэж батал.</p></statement>
+    <hint><p>Энгийн функцэд: <m>\sum_ia_i\mu(A_i)=\sum_ia_i\sum_kc_k\chi_{A_i}(x_k)=\sum_kc_kf(x_k)</m> (сөрөг бус цувааны байр солих). Дараа нь 3-р бодлогын адилаар хязгаарт шилж.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-5">
-    <statement><p><m>\mu(A) \lt  \infty</m> ба <m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэх байг. <m>k = 0, 1, \dots</m> хувьд <m>F_k(f) = \{x \in A : |f(x)| \ge k\}</m> гэе. <m>f(x) \in \La^1(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь 
-<md>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</md>
-байх явдал юм гэж батал.</p></statement>
-    <hint><p><m>\sum_{k\geqslant 1}\mu(F_k)=\sum_kk\mu(E_k)</m> (давхар цувааны байр солих).</p></hint>
+    <statement><p><m>f\colon X\to[0;\infty]</m> хэмжигдэх бол <m>\int f\,d\mu=0</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\mu(\{x:f(x)\gt 0\})=0</m> гэж батал.</p></statement>
+    <hint><p>Хүрэлцээтэй: <m>g\in\La^+</m>, <m>g\leqslant f</m> бол <m>g</m> нь <m>\{f\gt 0\}</m>-ээс гадна тэг тул <m>\int g=0</m>. Зайлшгүй: <m>\frac1n\chi_{\{f\geqslant 1/n\}}\leqslant f</m> тул <m>\mu(\{f\geqslant\frac1n\})=0</m>; <m>\{f\gt 0\}=\bigcup_n\{f\geqslant\frac1n\}</m>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-6">
-    <statement><p><m>\mathbb{R}</m> олонлог дээр хэмжигдэх, сөрөг бус, төгсгөлөг бөгөөд <m>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</m> нөхцөлийг хангах боловч <m>f(x) \notin \La^1(\mathbb{R})</m> байх функцийн жишээг байгуул.</p></statement>
-    <hint><p><m>f(x)=\frac1{1+|x|}</m>: <m>F_k=\emptyset</m> <m>(k\geqslant 2)</m>.</p></hint>
+    <statement><p><m>A\in\A</m>, <m>\mu(A)=0</m> бол дурын хэмжигдэх <m>f\colon X\to[0;\infty]</m> (утга нь <m>\infty</m> байж болно) функцийн хувьд <m>\int f\chi_A\,d\mu=0</m> гэж батал.</p></statement>
+    <hint><p><m>\{f\chi_A\gt 0\}\subset A</m> тул 5-р бодлогыг хэрэглэ.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-7">
-    <statement><p><m>f(x)</m> функц нь <m>A</m> олонлог дээр хэмжигдэх бөгөөд <m>k = 0, 1, 2, \dots</m> хувьд <m>D_k(f) = \{x \in A : |f(x)| \ge 2^{-k}\}</m> гэе. <m>f(x) \in \La^1(A)</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\sum_{k=1}^{\infty} \mu(F_k(f)) \lt  \infty</m> ба <m>\sum_{k=1}^{\infty} 2^{-k} \mu(D_k(f)) \lt  \infty</m> байх явдал юм гэж батал.</p></statement>
-    <hint><p><m>\{|f|\lt 1\}</m> дээр <m>2^{-k-1}\chi_{\{2^{-k-1}\leqslant|f|\lt 2^{-k}\}}</m> хэсгүүдэд хувааж 3, 5-р бодлогын аргыг давт.</p></hint>
+    <statement><p><m>f_n=\sum_{k=0}^{2^n-1}\frac{k}{2^n}\chi_{[\frac k{2^n};\frac{k+1}{2^n})}</m> энгийн функцүүдийн дарааллыг ашиглан <m>\int_{[0;1)}x\,d\lambda(x)=\frac12</m> гэж батал.</p></statement>
+    <hint><p><m>f_n\uparrow x</m> <m>[0;1)</m> дээр. <m>\int f_n=\frac1{4^n}\sum_{k=0}^{2^n-1}k=\frac{2^n-1}{2^{n+1}}\to\frac12</m>. Теорем <xref ref="integral-nonnegint1"/>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-8">
-    <statement><p><m>f(x) \in \La^1(A)</m> байг. <m>k \to \infty</m> үед <m>\mu(F_k(f)) = o\left(\frac{1}{k}\right)</m> байна гэж батал.</p></statement>
-    <hint><p><m>k\mu(F_k)\leqslant\int_{F_k}|f|\,d\mu\to 0</m> (<m>\mu(F_k)\to 0</m> ба интегралын абсолют тасралтгүй чанар).</p></hint>
+    <statement><p><m>f,g\colon X\to[0;\infty]</m> хэмжигдэх бол
+<md>\int\max\{f,g\}\,d\mu+\int\min\{f,g\}\,d\mu=\int f\,d\mu+\int g\,d\mu</md>
+ба <m>\int\max\{f,g\}\,d\mu\leqslant\int f\,d\mu+\int g\,d\mu</m> гэж батал.</p></statement>
+    <hint><p><m>\max\{f,g\}+\min\{f,g\}=f+g</m> ба хоёр функц хэмжигдэх. Теорем <xref ref="integral-nonnegint2"/>-ийн аддитив чанар.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-9">
-    <statement><p><m>\mu</m> нь <m>\sigma</m>-төгсгөлөг хэмжээ, <m>f(x)</m> нь <m>A</m> олонлог дээр төгсгөлөг, хэмжигдэх функц байг. <m>A</m> олонлог дээр <m>f(x) \cdot g(x) \in \La^1(A)</m> байх эерэг, хэмжигдэх <m>g(x)</m> функц оршин байна гэж батал.</p></statement>
-    <hint><p><m>A=\bigcup A_n</m>, <m>\mu(A_n)\lt\infty</m>, <m>E_{n,k}=A_n\cap\{k\leqslant|f|\lt k+1\}</m> дээр <m>g=\frac{2^{-n-k}}{(k+1)(1+\mu(E_{n,k}))}</m>.</p></hint>
+    <statement><p><m>f(x)=\frac1x</m> функц <m>(0;1]</m> дээр төгсгөлөг боловч <m>\int_{(0;1]}f\,d\lambda=\infty</m> гэж батал.</p></statement>
+    <hint><p><m>g_N=\sum_{k=0}^{N}2^k\chi_{(2^{-k-1};2^{-k}]}\leqslant f</m> энгийн функц, <m>\int g_N=\frac{N+1}2</m>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-integral-10">
-    <statement><p><m>([0;1],\lambda)</m> дээр Дирихлегийн функц <m>D=\chi_{\Q\cap[0;1]}</m>-ийн Лебегийн интегралыг ол. Энэ функц Риманы утгаар интегралчлагдах уу?</p></statement>
-    <hint><p><m>D=0</m> бараг бүх цэгт тул <m>\int D\,d\lambda=0</m>. Дээд, доод Дарбугийн нийлбэр <m>1</m> ба <m>0</m>.</p></hint>
+    <statement><p><m>\mu,\nu</m> нь <m>(X,\A)</m> дээрх хэмжээнүүд бол сөрөг бус хэмжигдэх <m>f</m> бүрийн хувьд <m>\int f\,d(\mu+\nu)=\int f\,d\mu+\int f\,d\nu</m> гэж батал.</p></statement>
+    <hint><p>Энгийн функцэд тодорхойлолтоос шууд. Лемм <xref ref="measurable-functions-mesmonsim1"/>-ээр <m>f_n\uparrow f</m> аваад гурван хэмжээнд Теорем <xref ref="integral-nonnegint1"/>-ийг хэрэглэ.</p></hint>
   </exercise>
 
 </exercises>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 6-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<!-- 5-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-lebesgue-measure">
   <title>Семинарын бодлогууд</title>
 
@@ -25,7 +25,7 @@
 
   <exercise xml:id="sem-lebesgue-measure-5">
     <statement><p><m>\ls(A)\lt\infty</m> үед: <m>A\in\PZM_{\ls}</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь дурын <m>\veps\gt 0</m> хувьд <m>A\subseteq U</m>, <m>\ls(U\setminus A)\lt\veps</m> байх задгай <m>U</m> олдох явдал гэж батал.</p></statement>
-    <hint><p>Зайлшгүй: 4-р семинарын 6-р бодлого ба <m>\lambda(U\setminus A)=\lambda(U)-\lambda(A)</m>. Хүрэлцээтэй: <m>G=\bigcap U_n</m> гээд <m>\ls(G\setminus A)=0</m>, <m>A=G\setminus(G\setminus A)</m>.</p></hint>
+    <hint><p>Зайлшгүй: 4-р семинарын 4-р бодлого ба <m>\lambda(U\setminus A)=\lambda(U)-\lambda(A)</m>. Хүрэлцээтэй: <m>G=\bigcap U_n</m> гээд <m>\ls(G\setminus A)=0</m>, <m>A=G\setminus(G\setminus A)</m>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-lebesgue-measure-6">

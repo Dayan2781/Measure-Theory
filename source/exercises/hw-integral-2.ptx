@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Гэрийн даалгавар 10 (хэмжигдэх функцийн интеграл ба бараг тэнцүү функц). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<exercises xml:id="hw-integral2">
+  <title>Гэрийн даалгавар</title>
+
+  <exercise xml:id="hw-integral2-1">
+    <statement><p><m>\mu</m> гүйцэд хэмжээ, <m>f</m> хэмжигдэх ба <m>g=f</m> бараг бүх цэгт бол <m>g</m> хэмжигдэх гэж батал. <m>\mu</m> гүйцэд биш үед энэ нь үнэн биш байж болохыг жишээгээр харуул.</p></statement>
+    <hint><p>Жишээнд <m>(\R,\br,\lambda)</m> ба Канторын олонлогийн Борелийн биш дэд олонлогийг ашигла.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-integral2-2">
+    <statement><p><m>[1;\infty)</m> дээр <m>f(x)=n</m>, хэрэв <m>x\in\Q\cap[n;n+1)</m>, <m>f(x)=\frac1{n^2}</m>, хэрэв <m>x\in[n;n+1)\setminus\Q</m> <m>(n\in\N)</m> гэж тодорхойлсон функц Лебегээр интегралчлагдах эсэхийг тогтоож, интегралыг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-integral2-3">
+    <statement><p><m>f\in\La^1(X)</m> бол <m>\Bigl|\int_Xf\,d\mu\Bigr|\leqslant\int_X|f|\,d\mu</m> бөгөөд тэнцэл биелэх нөхцлийг ол.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-integral2-4">
+    <statement><p><m>f\in\La^1(X)</m>, <m>g</m> хэмжигдэх ба <m>|g|\leqslant M</m> бараг бүх цэгт бол <m>fg\in\La^1(X)</m> ба <m>\Bigl|\int_Xfg\,d\mu\Bigr|\leqslant M\int_X|f|\,d\mu</m> гэж батал.</p></statement>
+  </exercise>
+
+  <exercise xml:id="hw-integral2-5">
+    <statement><p>(Интегралын абсолют тасралтгүй чанар) <m>f\in\La^1(X)</m> бол <m>\forall\veps\gt 0\ \exists\delta\gt 0</m>: <m>\mu(A)\lt\delta\Rightarrow\int_A|f|\,d\mu\lt\veps</m> гэж батал.</p></statement>
+    <hint><p><m>|f|</m>-ийг зааглагдсан энгийн функцээр доороос нь ойртго.</p></hint>
+  </exercise>
+
+  <exercise xml:id="hw-integral2-6">
+    <statement><p><m>(\N,\mathscr{P}(\N),\mu)</m> тоолох хэмжээтэй огторгуйд <m>f\colon\N\to\R</m> интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\sum|f(n)|\lt\infty</m> бөгөөд <m>\int f\,d\mu=\sum f(n)</m> гэж батал.</p></statement>
+  </exercise>
+
+</exercises>

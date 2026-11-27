@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Эх файл: 10integralD.tex:1- -->
+<!-- Эх файл: 10integralD.tex:1-118 -->
 <chapter xml:id="ch-integral" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Интеграл</title>
+<title>Сөрөг бус функцийн интеграл</title>
 <section xml:id="sec-integral-1">
-<title>Интеграл</title>
+<title>Сөрөг бус функцийн интеграл</title>
 <p>Бид интегралын онолыг эхлээд энгийн, сөрөг бус утгатай хэмжигдэх функцүүдийн хувьд, түүний дараа сөрөг бус хэмжигдэх функцүүдийн хувьд эцэст нь дурын хэмжигдэх функцийн хувьд 
 байгуулах болно.</p>
 </section>
@@ -72,29 +72,6 @@ a_i\mu(A_i\cap B_k)=\sum\limits_{k=1}^n \sum\limits_{i=1}^m b_k\mu(A_i\cap B_k)=
 <md>\lim\limits_{n}\alpha f_n=\alpha f \quad , \quad \lim\limits_{n} (f_n+g_n)=f+g</md> байх тул Теорем <xref ref="integral-nonnegint1"/>-р  
 <md>\intt\alpha f d\mu=\alpha\intt f d\mu\quad , \quad \intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</md> батлагдана.   
 <m>(c)</m> хувьд <m>h\in\La^+</m>, <m>h\leq f</m> бол <m>h\leq g</m> тул тодорхойлолтоос илт.</p></proof></theorem>
-</section>
-<section xml:id="sec-integral-4">
-<title>Хэмжигдэх функцийн интеграл</title>
-<p>Бидний дараагийн зорилго бол <m>f:X\to [-\infty;\infty]</m> хэмжигдэх функцийн интегралыг тодорхойлох юм.</p>
-<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц байг. <m>f^+, f^-</m> функцүүд сөрөг бус хэмжигдэх функцүүд байдаг тул <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралуудыг тодорхойлж чадна. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд төгсгөлөг байвал <m>f</m> функцийг <term>интегралчлагдах функц</term><idx>интегралчлагдах функц</idx> гэх ба
-<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
-<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
-гэж бичнэ. Хэрэв <m>\intt f^+ d\mu , \intt f^- d\mu</m> интегралууд ядаж нэг нь төгсгөлөг байвал <m>f</m> функцийн интеграл оршин байна гэх ба 
-<md>\intt f^+ d\mu - \intt f^- d\mu</md> тоог <m>f</m> функцийн интеграл гээд 
-<md>\intt f d\mu=\intt f^+ d\mu - \intt f^- d\mu</md>
-гэж бичнэ.</p></statement></definition>
-<definition><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to [-\infty;\infty]</m> <m>\A</m>-хэмжигдэх функц <m>A\in\A</m> байг. Хэрэв <m>f\chi_A</m> функц интегралчлагдах бол <m>f</m> функцийг <m>A</m> олонлог дээр интегралчлагдах функц гэх ба <md>\intt f\chi_A d\mu</md> тоог <m>f</m> функцийн<term> <m>A</m> олонлог дээрх интеграл</term> гээд  <md>\intt_{A} f d\mu</md> гэж тэмдэглэнэ. Өөрөөр хэлбэл 
-<md>\intt_{A} f d\mu = \intt f\chi_A d\mu</md> байна.</p></statement></definition>
-<definition><statement><p><m>X=\R^n,  \mu=\lambda</m>  бол интегралыг<term> Лебегийн интеграл</term> <idx> Лебегийн интеграл</idx> гэнэ.
-<md>\La^1(X, \A , \mu, \R)=\{ f:X\to (-\infty;\infty)\big| f \text{ интегралчлагдах функц} \}</md>-г <term>интегралчлагдах функцүүдийн огторгуй</term> <idx>интегралчлагдах функцүүдийн огторгуй</idx> гэх бөгөөд энэ шугаман огторгуй болохыг дараах теоремууд харуулна.</p></statement></definition>
-<theorem xml:id="integral-th-12-6"><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f, g:X\to\R</m> интегралчлагдах функцүүд,</p>
-<p><m>\alpha</m> бодит тоо байг. Дараах чанарууд биелнэ.
-<ol marker="a)"><li><p><m>\alpha f</m> ба <m>(f+g)</m> функцүүд интегралчлагдана.</p></li><li><p><m>\intt\alpha f d\mu=\alpha\intt f d\mu</m> ( тогтмол үржигдэхүүн гаргах чанар)</p></li><li><p><m>\intt (f+g) d\mu=\intt f d\mu+\intt g d\mu</m> (аддитив чанар)</p></li><li><p>Хэрэв бүх <m>x\in X</m> хувьд <m>f(x)\leq g(x)</m> бол   
-<m>\intt f d\mu\leq \intt g d\mu\text{ (монотон чанар)}</m></p></li></ol></p></statement><proof><p>Илэрхий</p></proof></theorem>
-<theorem><statement><p><m>f</m> функц интегралчлагдах зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>|f|</m> функц интегралчлагдах юм.</p></statement><proof><p><m>|f|=f^++f^-</m> байдаг. Хэрэв <m>f</m> интегралчлагдах бол <m>\intt f^+d \mu, \intt f^-d \mu</m> интегралууд төгсгөлөг учир 
-<md>\intt |f|d \mu=\intt f^+d \mu+\intt f^-d \mu\lt \infty</md> байна. Эсрэгээр, <m>f^+, f^-\leq|f|</m> тул монотон чанараар <m>\intt f^{\pm}d\mu\leq\intt|f|d\mu\lt \infty</m> байна.</p></proof></theorem>
-<corollary><statement><p><m>(X, \A, \mu)</m> хэмжээт огторгуй, <m>f:X\to[-\infty;\infty]</m> интегралчлагдах функц бол
-<md>|\intt f d\mu|\leq \intt |f| d\mu</md> байна.</p></statement></corollary>
 </section>
 <xi:include href="./exercises/sem-integral.ptx"/>
 <xi:include href="./exercises/hw-integral.ptx"/>

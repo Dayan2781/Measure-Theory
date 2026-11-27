@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Гэрийн даалгавар 4 (гадаад хэмжээ). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
+<!-- Гэрийн даалгавар 4 (гадаад хэмжээ ба Каратеодорийн теорем). Бодолт нь багшийн компьютер дээр хадгалагдана. -->
 <exercises xml:id="hw-outer-measure">
   <title>Гэрийн даалгавар</title>
-  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан.</p></introduction>
+  <introduction><p>[Ульянов] гэж тэмдэглэсэн бодлогуудыг П.Л. Ульянов, А.Н. Бахвалов, М.И. Дьяченко, К.С. Казарян, П. Сифуэнтес, <q>Действительный анализ в задачах</q> (М.: Физматлит, 2005) номоос авч, энэ номын тэмдэглэгээнд тохируулсан. 4–6-р бодлогуудад <m>\mu^{\star}</m> нь <m>X</m> дээрх гадаад хэмжээ байна.</p></introduction>
 
   <exercise xml:id="hw-outer-measure-1">
     <statement><p>[Ульянов, 7.13] <m>A,B\subset\R</m> ба <m>\ls(A)</m>, <m>\ls(B)</m> төгсгөлөг бол <m>|\ls(A)-\ls(B)|\leqslant\ls(A\,\triangle\,B)</m> гэж батал. Энд <m>A\,\triangle\,B=(A\setminus B)\cup(B\setminus A)</m>.</p></statement>
@@ -18,14 +18,18 @@
   </exercise>
 
   <exercise xml:id="hw-outer-measure-4">
-    <statement><p><m>A\subset[0;1]</m>, <m>\ls(A)=1</m> байг. <m>[0;1]\setminus A</m> олонлог ямар ч интервал агуулахгүй гэж батал.</p></statement>
+    <statement><p><m>\mu^{\star}(A)=0</m> бол <m>A</m> олонлог <m>\mu^{\star}</m>-хэмжигдэх гэж батал.</p></statement>
   </exercise>
 
   <exercise xml:id="hw-outer-measure-5">
-    <statement><p>Лебегийн гадаад хэмжээний тодорхойлолтод задгай интервалуудын оронд битүү хэрчмүүдээр хучсан ч ижил утга гарна гэж батал:
-      <md>\ls(A)=\inf\Bigl\{\sum_{i=1}^{\infty}(b_i-a_i): A\subset\bigcup_{i=1}^{\infty}[a_i;b_i]\Bigr\}.</md></p></statement>
+    <statement><p>[Ульянов, 7.15-тай харьцуул] <m>A</m> нь <m>\mu^{\star}</m>-хэмжигдэх, <m>B\subset X</m> дурын олонлог бол
+      <md>\mu^{\star}(A\cup B)+\mu^{\star}(A\cap B)=\mu^{\star}(A)+\mu^{\star}(B)</md>
+    гэж батал.</p></statement>
   </exercise>
+
   <exercise xml:id="hw-outer-measure-6">
-    <statement><p><m>A\subset\R</m> байг. <m>g(t)=\ls\bigl(A\cap(-\infty;t)\bigr)</m> <m>(t\in\R)</m> функц үл буурах бөгөөд <m>\ls(A)\lt\infty</m> үед <m>|g(t)-g(s)|\leqslant|t-s|</m> гэж батал.</p></statement>
+    <statement><p><m>E\subset\R</m> нь <m>\ls</m>-хэмжигдэх, <m>x\in\R</m> бол <m>E+x</m> олонлог мөн <m>\ls</m>-хэмжигдэх гэж батал.</p></statement>
+    <hint><p><m>\ls</m> шилжилтээр хувирдаггүйг (семинарын 3-р бодлого) ашигла.</p></hint>
   </exercise>
+
 </exercises>

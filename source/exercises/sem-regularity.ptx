@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 7-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<!-- 6-р семинар: 10 бодлого, бодлого бүр заавартай. -->
 <exercises xml:id="sem-regularity">
   <title>Семинарын бодлогууд</title>
 
@@ -14,42 +14,45 @@
   </exercise>
 
   <exercise xml:id="sem-regularity-3">
-    <statement><p><m>E\subset[0;1]</m> Лебегээр хэмжигдэх олонлог ба дурын <m>0\leqslant a\lt b\leqslant 1</m> тоонуудын хувьд <m>\lambda(E\cap(a;b))\leqslant\frac{1}{2}(b-a)</m> байг. <m>\lambda(E)=0</m> гэж батал.</p></statement>
-    <hint><p>Нөхцөл задгай интервалуудын үл огтлолцох нэгдэлд шилжинэ: <m>\lambda(E\cap U)\leqslant\frac12\lambda(U)</m>. <m>E\subset U</m>, <m>\lambda(U)\lt\lambda(E)+\veps</m> байх задгай <m>U</m> авбал <m>\lambda(E)\leqslant\frac12(\lambda(E)+\veps)</m>.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-regularity-4">
     <statement><p><m>\lambda(E)\gt 0</m> байх дурын Лебегээр хэмжигдэх <m>E\subset\R</m> олонлог тэг биш хэмжээтэй компакт дэд олонлог агуулна гэж батал.</p></statement>
     <hint><p>Ямар нэг <m>n</m> хувьд <m>\lambda(E\cap[-n;n])\gt 0</m>. Дотоод регуляр чанараар <m>E\cap[-n;n]</m>-д хэмжээ нь тэг биш битүү олонлог олдоно; энэ нь зааглагдсан тул компакт.</p></hint>
   </exercise>
 
-  <exercise xml:id="sem-regularity-5">
-    <statement><p><m>\R</m> дээрх тоолох хэмжээ (<m>\mu(A)=|A|</m>, <m>A</m> төгсгөлөг үед; бусад үед <m>\infty</m>) Борелийн <m>\sigma</m>-алгебр дээр регуляр хэмжээ болох уу? Хариугаа батал.</p></statement>
-    <hint><p>Үгүй: <m>\mu(\{0\})=1</m> боловч <m>0</m>-ийг агуулсан задгай олонлог бүр төгсгөлгүй тул <m>\mu(U)=\infty</m>. Гадаад регуляр чанар зөрчигдөнө.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-regularity-6">
-    <statement><p><m>\mu</m> нь <m>\br</m> дээрх хэмжээ, дурын <m>x\in\R</m> ба <m>B\in\br</m> хувьд <m>\mu(B+x)=\mu(B)</m>, мөн <m>\mu([0;1))=1</m> байг. <m>\mu=\lambda</m> гэж батал.</p></statement>
-    <hint><p><m>[0;1)</m> нь <m>[\frac kn;\frac{k+1}n)</m> гэсэн <m>n</m> шилжүүлгийн нэгдэл тул <m>\mu([0;\frac1n))=\frac1n</m>. Эндээс рационал төгсгөлтэй хагас задгай интервал бүр дээр <m>\mu=\lambda</m>; ийм интервалууд <m>\br</m>-г төрүүлж, огтлолын хувьд битүү бүл үүсгэх тул хэмжээ ганц утгатай тодорхойлогдоно.</p></hint>
-  </exercise>
-
-  <exercise xml:id="sem-regularity-7">
+  <exercise xml:id="sem-regularity-4">
     <statement><p>[Ульянов, 7.40-тэй харьцуул] <m>A\subset\R</m> зааглагдсан олонлогийн хувьд <m>\lambda_*(A)=\sup\{\lambda(F): F\subset A,\ F\text{ битүү}\}</m> гэж тодорхойлъё. <m>A</m> Лебегээр хэмжигдэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>\lambda_*(A)=\ls(A)</m> гэж батал.</p></statement>
     <hint><p>Зайлшгүй: дотоод регуляр чанар. Хүрэлцээтэй: <m>F_n\subset A\subset G_n</m>, <m>\lambda(G_n)-\lambda(F_n)\lt\frac2n</m> байхаар сонговол <m>\ls(A\setminus\bigcup F_n)\leqslant\lambda(G_n\setminus F_n)\to 0</m>.</p></hint>
   </exercise>
 
+  <exercise xml:id="sem-regularity-5">
+    <statement><p>(Штейнгаус) <m>E\subset\R</m> хэмжигдэх, <m>\lambda(E)\gt 0</m> бол <m>E-E=\{x-y: x,y\in E\}</m> олонлог <m>0</m>-ийн ямар нэг орчныг агуулна гэж батал.</p></statement>
+    <hint><p>3-р бодлогоор <m>E</m>-г компакт гэж үзэж болно. <m>E\subset U</m>, <m>\lambda(U)\lt 2\lambda(E)</m> байх задгай <m>U</m> ба <m>E+(-\delta;\delta)\subset U</m> байх <m>\delta\gt 0</m> ав. <m>|x|\lt\delta</m> бол <m>E</m> ба <m>E+x</m> нь <m>U</m>-д агуулагдах тул огтлолцоно.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-regularity-6">
+    <statement><p><ol marker="a)"><li><p><m>\br</m> <m>\sigma-</m>алгебрын 0 цэг дээр төвлөрсөн цэгэн массаар гүйцээлтийг ол.</p></li><li><p><m>\alg</m> нь <m>\R^2</m> дээрх бүх босоо шулуунуудын бүлийг агуулсан <m>\sigma-</m>алгебр байг. <m>\alg</m> <m>\sigma-</m>алгебрын <m>(0;0)</m> цэг дээр төвлөрсөн цэгэн массаар гүйцээлтийг ол.</p></li></ol></p></statement>
+    <hint><p>a) хэсэгт <m>0\notin N</m> бол <m>\delta_0(N)=0</m> тул <m>\R\setminus\{0\}</m>-ийн бүх дэд олонлог тэг олонлогт агуулагдана: гүйцээлт нь <m>\mathscr{P}(\R)</m>. b) хэсэгт <m>(0;0)</m>-г агуулахгүй хэмжигдэх олонлог болох <m>\R^2</m>-аас босоо шулууныг хасна: гүйцээлт нь мөн <m>\mathscr{P}(\R^2)</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-regularity-7">
+    <statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд 
+<md>A_0\subset A\subset A_1 \ \wedge \ \mu(A_0)=\mu_*(A) \ \wedge \ \mu(A_1)=\mu^*(A)</md>
+нөхцлийг хангах <m>A_0\in\alg</m>, <m>A_1\in\alg</m> олонлогууд олдоно гэж батал.</p></statement>
+    <hint><p><m>\mu(B_n)\lt\mu^*(A)+\frac1n</m> байх <m>B_n\supset A</m> аваад <m>A_1=\bigcap B_n</m>. Дотоод хэмжээний хувьд <m>C_n\subset A</m>, <m>\mu(C_n)\to\mu_*(A)</m> аваад <m>A_0=\bigcup C_n</m>.</p></hint>
+  </exercise>
+
   <exercise xml:id="sem-regularity-8">
-    <statement><p>[Ульянов, 7.42-той харьцуул] <m>A\subset[0;1]</m> бол <m>\lambda_*(A)+\ls([0;1]\setminus A)=1</m> гэж батал. Энд <m>\lambda_*</m> нь 7-р бодлогын дотоод хэмжээ.</p></statement>
-    <hint><p><m>F\subset A</m> битүү байх нь <m>[0;1]\setminus F\supset[0;1]\setminus A</m> харьцангуй задгай байхтай эквивалент. <m>\lambda([0;1]\setminus F)=1-\lambda(F)</m> ба гадаад хэмжээг задгай олонлогоор ойртгох.</p></hint>
+    <statement><p><m>\mu</m> нь <m>(X,\alg)</m> хэмжигдэх огторгуй дээрх хэмжээ байг. <m>A\subset X</m> бүрийн хувьд <m>\mu^*(A)+\mu_*(A^c)=\mu(X)</m> тэнцэтгэл биелнэ гэж батал.</p></statement>
+    <hint><p><m>B\subset A^c</m>, <m>B\in\alg</m> байх нь <m>X\setminus B\supset A</m> байхтай эквивалент. <m>\mu(X)\lt\infty</m> үед <m>\mu(X\setminus B)=\mu(X)-\mu(B)</m>; <m>\mu(X)=\infty</m> үеийг тусад нь шалга.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-regularity-9">
-    <statement><p><m>\delta_0</m> цэгэн масс <m>(\R,\br)</m> дээр регуляр хэмжээ болох уу? <m>\sum_{n=1}^{\infty}\delta_{1/n}</m> хэмжээ регуляр уу?</p></statement>
-    <hint><p><m>\delta_0</m> регуляр: <m>0\in B</m> бол <m>K=\{0\}</m> компакт, <m>U=\R</m> задгай; <m>0\notin B</m> бол <m>K=\emptyset</m>, <m>U=\R\setminus\{0\}</m>. Хоёр дахь хэмжээний хувьд <m>\{0\}</m> олонлогийг ав: <m>\mu(\{0\})=0</m>, гэвч <m>0</m>-ийн орчин бүр төгсгөлгүй олон <m>1/n</m> агуулах тул гадаад регуляр чанар зөрчигдөнө.</p></hint>
+    <statement><p><m>A\subset\R</m> олонлог бүрийн хувьд <m>\lambda(B)=\ls(A)</m> ба <m>A\subset B</m> байх <m>B</m> Борелийн олонлог олдоно гэж батал.</p></statement>
+    <hint><p><m>A\subset G_n</m>, <m>\lambda(G_n)\lt\ls(A)+\frac1n</m> байх задгай <m>G_n</m> аваад <m>B=\bigcap G_n</m> (<m>G_{\delta}</m>). <m>\ls(A)=\infty</m> бол <m>B=\R</m>.</p></hint>
   </exercise>
 
   <exercise xml:id="sem-regularity-10">
-    <statement><p>(Штейнгаус) <m>E\subset\R</m> хэмжигдэх, <m>\lambda(E)\gt 0</m> бол <m>E-E=\{x-y: x,y\in E\}</m> олонлог <m>0</m>-ийн ямар нэг орчныг агуулна гэж батал.</p></statement>
-    <hint><p>4-р бодлогоор <m>E</m>-г компакт гэж үзэж болно. <m>E\subset U</m>, <m>\lambda(U)\lt 2\lambda(E)</m> байх задгай <m>U</m> ба <m>E+(-\delta;\delta)\subset U</m> байх <m>\delta\gt 0</m> ав. <m>|x|\lt\delta</m> бол <m>E</m> ба <m>E+x</m> нь <m>U</m>-д агуулагдах тул огтлолцоно.</p></hint>
+    <statement><p><m>0\lt \alpha\lt 1</m> байх <m>\alpha</m> тоо бүрийн хувьд <m>\lambda(C)=\alpha</m> байх хоосон дотортой, битүү <m>C\subset[0,1]</m> олонлог олдоно гэж харуул.</p></statement>
+    <hint><p>Канторын олонлогийн байгуулалтад <m>k</m>-р алхамд <m>2^{k-1}</m> завсрын голоос урт нь <m>(1-\alpha)3^{-k}</m> байх задгай интервалыг ав. Хасагдсан нийт урт <m>1-\alpha</m>, үлдэгдэл битүү, интервал агуулахгүй.</p></hint>
   </exercise>
+
 </exercises>

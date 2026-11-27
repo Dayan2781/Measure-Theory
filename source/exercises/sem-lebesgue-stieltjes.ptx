@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 15-р семинар: 10 бодлого, бодлого бүр заавартай. -->
+<exercises xml:id="sem-lebesgue-stieltjes">
+  <title>Семинарын бодлогууд</title>
+  <introduction><p>Энэ семинарт <m>F,G\colon\R\to\R</m> нь үл буурах, баруунаасаа тасралтгүй функцүүд, <m>\mu_F</m> нь <m>F</m>-ээр үүсгэсэн Лебег–Стилтьесийн хэмжээ.</p></introduction>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-1">
+    <statement><p><m>x\geqslant 0</m> үед <m>F(x)=x^2</m>, <m>x\lt 0</m> үед <m>F(x)=0</m> байг. <m>\mu_F((0;2])</m>, <m>\mu_F([-1;1])</m>, <m>\mu_F(\{0\})</m> ба <m>\mu_F((-\infty;0))</m>-ийг ол.</p></statement>
+    <hint><p>Теорем <xref ref="lebesgue-stieltjes-lsmeas"/> ба Өгүүлбэр <xref ref="lebesgue-stieltjes-lspoint"/>: <m>4</m>, <m>1</m>, <m>0</m>, <m>0</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-2">
+    <statement><p><m>F(x)=\lfloor x\rfloor</m> (бүхэл хэсэг) бол <m>\mu_F=\sum_{n\in\Z}\delta_n</m> гэж батал. <m>\int_{(0;\frac52]}x\,dF(x)</m>-ийг ол.</p></statement>
+    <hint><p>Хоёр хэмжээ <m>(a;b]</m> интервалууд дээр <m>(a;b]</m>-д орох бүхэл тоонуудын тоотой тэнцүү; Теорем <xref ref="lebesgue-stieltjes-lsuniq"/>. Интеграл нь <m>1+2=3</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-3">
+    <statement><p><m>a\lt b</m> бол <m>\mu_F([a;b))=F(b-)-F(a-)</m> ба <m>\mu_F((-\infty;a])=F(a)-\lim_{x\to-\infty}F(x)</m> гэж батал.</p></statement>
+    <hint><p><m>[a;b)=\{a\}\cup(a;b)</m> ба Өгүүлбэр <xref ref="lebesgue-stieltjes-lspoint"/>. Хоёр дахь нь <m>(-n;a]\uparrow(-\infty;a]</m> ба хэмжээний доороос тасралтгүй чанар.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-4">
+    <statement><p><m>\{x:\mu_F(\{x\})\gt 0\}</m> олонлог тоологдом гэж батал. Үүнээс үл буурах функц хамгийн ихдээ тоологдом тооны тасралтын цэгтэй гэдгийг гарга.</p></statement>
+    <hint><p><m>(k;k+1]</m> дотор <m>\mu_F(\{x\})\geqslant\frac1n</m> байх цэгийн тоо <m>n\bigl(F(k+1)-F(k)\bigr)</m>-ээс хэтрэхгүй.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-5">
+    <statement><p><m>\mu_F=\mu_G</m> байх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь <m>F-G</m> тогтмол байх явдал гэж батал.</p></statement>
+    <hint><p><m>\mu_F((0;x])=\mu_G((0;x])</m> гэдгээс <m>x\gt 0</m> үед <m>F(x)-F(0)=G(x)-G(0)</m>; <m>x\lt 0</m> үед <m>(x;0]</m>-ийг ав.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-6">
+    <statement><p><m>x\lt\frac12</m> үед <m>F(x)=x</m>, <m>x\geqslant\frac12</m> үед <m>F(x)=x+1</m> байг. <m>\mu_F</m>-ийг <m>\lambda</m> ба цэгэн массаар илэрхийлж, <m>\int_{[0;1]}x\,dF(x)</m>-ийг ол.</p></statement>
+    <hint><p><m>\mu_F=\lambda+\delta_{1/2}</m>; интеграл нь <m>\frac12+\frac12=1</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-7">
+    <statement><p><m>F(x)=x^3</m> бол <m>\int_{[0;1]}e^x\,dF(x)</m>-ийг ол.</p></statement>
+    <hint><p>Теорем <xref ref="lebesgue-stieltjes-lsac"/>, <m>g(x)=3x^2</m>: <m>\int_0^13x^2e^x\,dx=3e-6</m>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-8">
+    <statement><p><m>\mu</m> нь <m>\br</m> дээрх төгсгөлөг хэмжээ ба <m>F(x)=\mu((-\infty;x])</m> байг. <m>F</m> үл буурах, баруунаасаа тасралтгүй, <m>\lim_{x\to-\infty}F(x)=0</m>, <m>\lim_{x\to\infty}F(x)=\mu(\R)</m> ба <m>\mu_F=\mu</m> гэж батал.</p></statement>
+    <hint><p>Баруунаасаа тасралтгүй: <m>(-\infty;x+\frac1n]\downarrow(-\infty;x]</m>, <m>\mu</m> төгсгөлөг. <m>\mu((a;b])=F(b)-F(a)</m> тул Теорем <xref ref="lebesgue-stieltjes-lsuniq"/>.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-9">
+    <statement><p><m>x_1,\ldots,x_m\in\R</m>, <m>p_1,\ldots,p_m\gt 0</m> ба <m>F=\sum_{k=1}^mp_k\chi_{[x_k;\infty)}</m> бол сөрөг бус Борелийн <m>f</m> бүрийн хувьд <m>\int_{\R}f\,dF=\sum_{k=1}^mp_kf(x_k)</m> гэж батал.</p></statement>
+    <hint><p><m>\mu_F=\sum_kp_k\delta_{x_k}</m> (лекцийн жишээ) ба 9-р семинарын 4-р бодлого.</p></hint>
+  </exercise>
+
+  <exercise xml:id="sem-lebesgue-stieltjes-10">
+    <statement><p><m>\mu_{F+G}=\mu_F+\mu_G</m> гэж батал. Үүнээс сөрөг бус Борелийн <m>f</m> бүрийн хувьд <m>\int f\,d(F+G)=\int f\,dF+\int f\,dG</m> гэдгийг гарга.</p></statement>
+    <hint><p><m>\mu_F+\mu_G</m> нь <m>(a;b]</m> дээр <m>(F+G)(b)-(F+G)(a)</m> утгатай; Теорем <xref ref="lebesgue-stieltjes-lsuniq"/>. Хоёр дахь нь 9-р семинарын 10-р бодлого.</p></hint>
+  </exercise>
+
+</exercises>
